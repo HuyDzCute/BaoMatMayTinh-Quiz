@@ -78,6 +78,7 @@ async function syncUserProfile(u: User) {
 /** Doc: Merge anonymous local history into the new Google account's Firestore history. */
 async function mergeLocalHistoryToCloud(googleUid: string) {
   if (!db) return;
+  const firestore = db;
   try {
     const raw = localStorage.getItem(HISTORY_KEY);
     if (!raw) return;
@@ -87,7 +88,7 @@ async function mergeLocalHistoryToCloud(googleUid: string) {
     // Write all entries in parallel; if any fail, continue with the rest
     const writeResults = await Promise.allSettled(
       localHistory.map((result) =>
-        addDoc(collection(db, "users", googleUid, "history"), {
+        addDoc(collection(firestore, "users", googleUid, "history"), {
           playerName: result.playerName ?? "Nguoi choi",
           setId: result.setId ?? "",
           setName: result.setName ?? "",
