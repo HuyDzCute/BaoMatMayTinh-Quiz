@@ -22,3 +22,9 @@ services:
         value: "1:959918893638:web:999afbf6e9cf3d44fcb847"
       - key: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
         value: G-6G3SVTBPS4
+
+cronJobs:
+  - name: keep-alive
+    schedule: "*/14 * * * *"
+    url: https://baomatmaytinh-quiz.onrender.com
+    disabled: false
