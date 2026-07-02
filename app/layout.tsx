@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Orbitron, Inter, JetBrains_Mono } from "next/font/google";
+import { Orbitron, Inter, JetBrains_Mono, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/lib/auth";
 
@@ -21,6 +21,13 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500", "600"],
 });
 
+const sourceSerif = Source_Serif_4({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
 export const metadata: Metadata = {
   title: "Trắc Nghiệm QTHTM",
   description: "Ứng dụng luyện thi trắc nghiệm Quản Trị Hệ Thống Mạng",
@@ -35,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={`${orbitron.variable} ${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
+    <html lang="vi" className={`${orbitron.variable} ${inter.variable} ${jetbrainsMono.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <body className="antialiased min-h-screen" suppressHydrationWarning style={{ backgroundColor: "#0a0f1e", color: "#f1f5f9" }}>
         <AuthProvider>{children}</AuthProvider>
       </body>

@@ -11,15 +11,30 @@ import {
   setDoc,
   getDoc,
   increment,
+  serverTimestamp,
   Unsubscribe,
 } from "firebase/firestore";
 import { db, auth, isFirebaseConfigured } from "./firebase";
-import { onAuthStateChanged } from "firebase/auth";
 
 const HISTORY_KEY = "qthtm_quiz_history";
 const LEADERBOARD_KEY = "qthtm_leaderboard";
 const PLAYER_KEY = "qthtm_player_name";
 const QUIZ_STATE_KEY = "qthtm_quiz_state";
+const ANON_SESSION_KEY = "qthtm_anon_session_id";
+
+function getOrCreateAnonSessionId(): string {
+  if (typeof window === "undefined") return "anon-unknown";
+  try {
+    let sid = localStorage.getItem(ANON_SESSION_KEY);
+    if (!sid) {
+      sid = `anon-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+      localStorage.setItem(ANON_SESSION_KEY, sid);
+    }
+    return sid;
+  } catch {
+    return `anon-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+  }
+}
 
 // ─────────────────────────────────────────
 //   LocalStorage helpers (offline fallback)
@@ -73,7 +88,6 @@ export function clearQuizState(): void {
 //   Save result (cloud-first, local fallback)
 // ─────────────────────────────────────────
 export async function saveResult(result: QuizResult): Promise<{ cloud: boolean; local: boolean }> {
-  // Wait for auth to resolve to avoid race condition (e.g. quiz submitted before auth.currentUser is set)
   const _auth = auth;
   if (isFirebaseConfigured && _auth) {
     await new Promise<void>((resolve) => {
@@ -86,18 +100,14 @@ export async function saveResult(result: QuizResult): Promise<{ cloud: boolean; 
     });
   }
 
-  let uid = "anonymous";
-  let isAnon = false;
-  if (isFirebaseConfigured && _auth) {
-    uid = _auth.currentUser?.uid ?? "anonymous";
-    isAnon = _auth.currentUser?.isAnonymous ?? false;
-  }
+  const currentUser = isFirebaseConfigured && _auth ? _auth.currentUser : null;
+  const uid = currentUser ? currentUser.uid : `local-${getOrCreateAnonSessionId()}`;
+  const isAnon = currentUser ? currentUser.isAnonymous : false;
 
   const playerName = (result.playerName && result.playerName.trim().length >= 2)
     ? result.playerName.trim().slice(0, 30)
     : "Anonymouse";
 
-  // 1. Luu local history (truoc khi goi getHistory lan 2)
   const history = getHistory();
   const exists = history.some((h) => h.id === result.id);
   if (!exists) {
@@ -107,7 +117,6 @@ export async function saveResult(result: QuizResult): Promise<{ cloud: boolean; 
 
   let cloudSaved = false;
 
-  // 2. Cloud: leaderboard (ai cung duoc phep)
   if (isFirebaseConfigured && db) {
     try {
       await addDoc(collection(db, "leaderboard"), {
@@ -120,8 +129,7 @@ export async function saveResult(result: QuizResult): Promise<{ cloud: boolean; 
         timestamp: Date.now(),
       });
 
-      // 3. Cloud: history subcollection — chi non-anonymous moi duoc luu
-      if (uid !== "anonymous" && !isAnon) {
+      if (!isAnon) {
         await addDoc(collection(db, "users", uid, "history"), {
           playerName,
           setId: result.setId,
@@ -132,15 +140,33 @@ export async function saveResult(result: QuizResult): Promise<{ cloud: boolean; 
           wrongCount: result.wrongCount,
           percentage: result.percentage,
           answers: result.answers ?? [],
+          speakingAnswers: result.speakingAnswers ?? [],
+          timeSpent: result.timeSpent,
+          date: result.date,
+          timestamp: Date.now(),
+        });
+      } else if (currentUser) {
+        // Anonymous Firebase user: save to their anonymous Firebase UID
+        await addDoc(collection(db, "users", currentUser.uid, "history"), {
+          playerName,
+          setId: result.setId,
+          setName: result.setName,
+          score: result.score,
+          totalQuestions: result.totalQuestions,
+          correctCount: result.correctCount,
+          wrongCount: result.wrongCount,
+          percentage: result.percentage,
+          answers: result.answers ?? [],
+          speakingAnswers: result.speakingAnswers ?? [],
           timeSpent: result.timeSpent,
           date: result.date,
           timestamp: Date.now(),
         });
       }
 
-      // 4. Cloud: cap nhat thong ke user (chi non-anonymous)
-      if (uid !== "anonymous" && !isAnon) {
-        const userRef = doc(db, "users", uid);
+      // Update user stats — both anonymous and non-anonymous Firebase users
+      if (currentUser) {
+        const userRef = doc(db, "users", currentUser.uid);
         try {
           const snap = await getDoc(userRef);
           if (snap.exists()) {
@@ -151,9 +177,12 @@ export async function saveResult(result: QuizResult): Promise<{ cloud: boolean; 
             });
           } else {
             await setDoc(userRef, {
+              displayName: playerName,
               totalGames: 1,
               bestScore: result.score,
               bestPercentage: result.percentage,
+              isAnonymous: currentUser.isAnonymous,
+              createdAt: serverTimestamp(),
             }, { merge: true });
           }
         } catch (err) {
@@ -167,7 +196,6 @@ export async function saveResult(result: QuizResult): Promise<{ cloud: boolean; 
     }
   }
 
-  // 5. Sync local leaderboard cache (deduplicate by best score)
   const local = getLeaderboardLocal();
   const newEntry: LeaderboardEntry = {
     playerName,
@@ -190,7 +218,7 @@ function getLeaderboardLocal(): LeaderboardEntry[] {
 function deduplicateByBest(entries: LeaderboardEntry[]): LeaderboardEntry[] {
   const map = new Map<string, LeaderboardEntry>();
   for (const e of entries) {
-    const key = e.uid && e.uid !== "anonymous" ? e.uid : e.playerName.toLowerCase().trim();
+    const key = e.uid ? e.uid : e.playerName.toLowerCase().trim();
     const existing = map.get(key);
     if (!existing || e.percentage > existing.percentage || (e.percentage === existing.percentage && e.score > existing.score)) {
       map.set(key, e);
@@ -239,7 +267,7 @@ export function subscribeLeaderboard(
           // Deduplicate: keep best score per uid
           const seen = new Map<string, LeaderboardEntry>();
           for (const e of all) {
-            const key = e.uid && e.uid !== "anonymous" ? e.uid : e.playerName.toLowerCase().trim();
+            const key = e.uid ? e.uid : e.playerName.toLowerCase().trim();
             const prev = seen.get(key);
             if (!prev || e.percentage > prev.percentage || (e.percentage === prev.percentage && e.score > prev.score)) {
               seen.set(key, e);
@@ -298,6 +326,10 @@ export function subscribeHistory(
           if (!active) return;
           const arr: QuizResult[] = snap.docs.map((d) => {
             const data = d.data();
+            const rawAnswers = data.answers ?? [];
+            const answers: (number | string)[] = rawAnswers.map((a: unknown) =>
+              typeof a === "number" ? String(a) : typeof a === "string" && !a.startsWith("{") ? a : a
+            );
             return {
               id: d.id,
               playerName: data.playerName ?? "Nguoi choi",
@@ -308,7 +340,8 @@ export function subscribeHistory(
               correctCount: data.correctCount ?? 0,
               wrongCount: data.wrongCount ?? 0,
               percentage: data.percentage ?? 0,
-              answers: data.answers ?? [],
+              answers,
+              speakingAnswers: Array.isArray(data.speakingAnswers) ? data.speakingAnswers : [],
               timeSpent: data.timeSpent ?? 0,
               date: data.date ?? "",
             };

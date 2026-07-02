@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Header from "@/components/Header";
@@ -10,7 +10,8 @@ import { QuizResult } from "@/lib/types";
 import {
   History, ArrowLeft, ChevronDown, ChevronUp,
   Cloud, CloudOff, CheckCircle, XCircle, MinusCircle,
-  TrendingUp, Target, Zap, Award,   Lock, RefreshCw, AlertTriangle
+  TrendingUp, Target, Zap, Award, RefreshCw, AlertTriangle,
+  Play, Pause, Volume2, Mic
 } from "lucide-react";
 
 interface DayGroup {
@@ -24,8 +25,44 @@ export default function HistoryPage() {
   const [loading, setLoading] = useState(true);
   const [cloudError, setCloudError] = useState(false);
   const [retryKey, setRetryKey] = useState(0);
+  const loadingRef = useRef(true);
   const { user, signInWithGoogle } = useAuth();
   const router = useRouter();
+
+  function AudioPlayerMini({ src }: { src: string }) {
+    const [playing, setPlaying] = useState(false);
+    const [duration, setDuration] = useState(0);
+    const [current, setCurrent] = useState(0);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
+    const toggle = () => {
+      if (!audioRef.current) return;
+      if (playing) { audioRef.current.pause(); } else { audioRef.current.play().catch(() => {}); }
+      setPlaying(!playing);
+    };
+
+    return (
+      <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "6px 10px", borderRadius: "8px", background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.2)" }}>
+        <audio ref={audioRef} src={src}
+          onTimeUpdate={() => setCurrent(audioRef.current?.currentTime ?? 0)}
+          onLoadedMetadata={() => setDuration(audioRef.current?.duration ?? 0)}
+          onEnded={() => { setPlaying(false); setCurrent(0); }}
+        />
+        <button onClick={toggle}
+          style={{ background: "rgba(59,130,246,0.15)", border: "none", borderRadius: "50%", width: "28px", height: "28px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0 }}>
+          {playing ? <Pause size={12} style={{ color: "#60a5fa" }} /> : <Play size={12} style={{ color: "#60a5fa", paddingLeft: "2px" }} />}
+        </button>
+        <input type="range" min={0} max={duration || 1} value={current}
+          onChange={(e) => { if (audioRef.current) { audioRef.current.currentTime = Number(e.target.value); setCurrent(Number(e.target.value)); } }}
+          style={{ flex: 1, accentColor: "#3b82f6", cursor: "pointer", height: "3px" }}
+        />
+        <span style={{ fontSize: "10px", color: "#64748b", fontFamily: "var(--font-jetbrains)", whiteSpace: "nowrap" }}>
+          {duration > 0 ? `${Math.floor(current / 60)}:${String(Math.floor(current % 60)).padStart(2, "0")}` : "—"}
+        </span>
+        <Volume2 size={11} style={{ color: "#3b82f6", flexShrink: 0 }} />
+      </div>
+    );
+  }
 
   useEffect(() => {
     if (!user) {
@@ -33,20 +70,42 @@ export default function HistoryPage() {
       return;
     }
 
+    // Anonymous Firebase user: sync from their cloud subcollection
     if (user.isAnonymous) {
-      // Anonymous: chi dung localStorage
-      setHistory(getHistory());
-      setLoading(false);
-      setCloudError(false);
-      return;
+      let didCancel = false;
+      loadingRef.current = true;
+
+      const unsub = subscribeHistory(user.uid, (cloudHistory) => {
+        if (!didCancel) {
+          loadingRef.current = false;
+          setHistory(cloudHistory);
+          setLoading(false);
+        }
+      });
+
+      const timeout = setTimeout(() => {
+        if (!didCancel && loadingRef.current) {
+          loadingRef.current = false;
+          setCloudError(true);
+          setHistory(getHistory());
+          setLoading(false);
+        }
+      }, 8000);
+
+      return () => {
+        didCancel = true;
+        unsub();
+        clearTimeout(timeout);
+      };
     }
 
     // Google user: dung Firestore cloud sync
     let didCancel = false;
-    setCloudError(false);
+    loadingRef.current = true;
 
     const unsub = subscribeHistory(user.uid, (cloudHistory) => {
       if (!didCancel) {
+        loadingRef.current = false;
         setHistory(cloudHistory);
         setLoading(false);
       }
@@ -54,7 +113,7 @@ export default function HistoryPage() {
 
     // Timeout: neu sau 8s cloud chua tra loi → fallback sang local
     const timeout = setTimeout(() => {
-      if (!didCancel && loading) {
+      if (!didCancel && loadingRef.current) {
         setCloudError(true);
         setHistory(getHistory());
         setLoading(false);
@@ -88,9 +147,6 @@ export default function HistoryPage() {
   const getScoreColor = (pct: number) =>
     pct >= 80 ? "#10b981" : pct >= 60 ? "#f59e0b" : "#ef4444";
 
-  const getTierLabel = (pct: number) =>
-    pct >= 90 ? "S+" : pct >= 80 ? "S" : pct >= 70 ? "A" : pct >= 60 ? "B" : pct >= 50 ? "C" : "D";
-
   const getTierConfig = (pct: number) => {
     if (pct >= 90) return { color: "#f59e0b", bg: "rgba(245,158,11,0.12)", border: "rgba(245,158,11,0.3)", label: "S+" };
     if (pct >= 80) return { color: "#10b981", bg: "rgba(16,185,129,0.12)", border: "rgba(16,185,129,0.3)", label: "S" };
@@ -100,7 +156,8 @@ export default function HistoryPage() {
     return { color: "#94a3b8", bg: "rgba(148,163,184,0.10)", border: "rgba(148,163,184,0.25)", label: "D" };
   };
 
-  const isCloud = user && !user.isAnonymous && !cloudError;
+  // isCloud: Firestore connected and serving data (both Google and anonymous Firebase users)
+  const isCloud = user != null && !cloudError;
 
   // Group history by date
   const dayGroups: DayGroup[] = (() => {
@@ -119,7 +176,6 @@ export default function HistoryPage() {
     ? Math.round(history.reduce((s, e) => s + e.percentage, 0) / totalAttempts)
     : 0;
   const bestScore = totalAttempts > 0 ? Math.max(...history.map((e) => e.percentage)) : 0;
-  const totalTime = history.reduce((s, e) => s + (e.timeSpent || 0), 0);
   const bestTier = totalAttempts > 0 ? getTierConfig(bestScore) : null;
 
   return (
@@ -157,10 +213,17 @@ export default function HistoryPage() {
           </div>
         </div>
 
-        {user?.isAnonymous && !loading && (
+        {user?.isAnonymous && !loading && !isCloud && (
           <div className="his-sync-hint" style={{ background: "rgba(245,158,11,0.10)", border: "1px solid rgba(245,158,11,0.25)" }}>
             <AlertTriangle size={14} style={{ color: "#f59e0b", flexShrink: 0 }} />
             <span>Lich su duoc luu cuc bo tren may nay. <button onClick={() => signInWithGoogle()} style={{ background: "none", border: "none", color: "#60a5fa", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Dang nhap Google</button> de dong bo tren nhieu thiet bi.</span>
+          </div>
+        )}
+
+        {user?.isAnonymous && !loading && isCloud && (
+          <div className="his-sync-hint" style={{ background: "rgba(16,185,129,0.08)", border: "1px solid rgba(16,185,129,0.2)" }}>
+            <Cloud size={14} style={{ color: "#34d399", flexShrink: 0 }} />
+            <span>Lich su dong bo cloud — san sang tren tat ca thiet bi.</span>
           </div>
         )}
 
@@ -249,7 +312,7 @@ export default function HistoryPage() {
         {/* ── Timeline ── */}
         {!loading && history.length > 0 && (
           <div className="his-timeline">
-            {dayGroups.map((group, gi) => (
+            {dayGroups.map((group) => (
               <div key={group.label} className="his-day-group">
                 <div className="his-day-header">
                   <div className="his-day-dot" />
@@ -264,7 +327,7 @@ export default function HistoryPage() {
                     const isExpanded = expandedId === item.id;
                     const scoreColor = getScoreColor(item.percentage);
                     const tier = getTierConfig(item.percentage);
-                    const skipCount = item.answers.filter((a) => a === -1).length;
+                    const skipCount = item.answers.filter((a) => a === -1 || a === "-1").length;
                     const progress = (item.correctCount / item.totalQuestions) * 100;
                     const wrongProgress = (item.wrongCount / item.totalQuestions) * 100;
                     const skipProgress = (skipCount / item.totalQuestions) * 100;
@@ -309,19 +372,34 @@ export default function HistoryPage() {
                           <div className="his-card-center">
                             <p className="his-card-setname">{item.setName}</p>
                             <div className="his-card-meta">
-                              <span className="his-meta-chip" style={{ background: "rgba(16,185,129,0.10)", color: "#34d399", border: "1px solid rgba(16,185,129,0.2)" }}>
-                                <CheckCircle size={10} />
-                                {item.correctCount} dung
-                              </span>
-                              <span className="his-meta-chip" style={{ background: "rgba(239,68,68,0.10)", color: "#f87171", border: "1px solid rgba(239,68,68,0.2)" }}>
-                                <XCircle size={10} />
-                                {item.wrongCount} sai
-                              </span>
-                              {skipCount > 0 && (
-                                <span className="his-meta-chip" style={{ background: "rgba(148,163,184,0.08)", color: "#94a3b8", border: "1px solid rgba(148,163,184,0.15)" }}>
-                                  <MinusCircle size={10} />
-                                  {skipCount} bo
-                                </span>
+                              {item.speakingAnswers && item.speakingAnswers.some(Boolean) ? (
+                                <>
+                                  <span className="his-meta-chip" style={{ background: "rgba(59,130,246,0.10)", color: "#60a5fa", border: "1px solid rgba(59,130,246,0.2)" }}>
+                                    <Mic size={10} />
+                                    {item.speakingAnswers.filter(Boolean).length}/{item.totalQuestions} thu am
+                                  </span>
+                                  <span className="his-meta-chip" style={{ background: "rgba(16,185,129,0.10)", color: "#34d399", border: "1px solid rgba(16,185,129,0.2)" }}>
+                                    <CheckCircle size={10} />
+                                    {item.correctCount} dung
+                                  </span>
+                                </>
+                              ) : (
+                                <>
+                                  <span className="his-meta-chip" style={{ background: "rgba(16,185,129,0.10)", color: "#34d399", border: "1px solid rgba(16,185,129,0.2)" }}>
+                                    <CheckCircle size={10} />
+                                    {item.correctCount} dung
+                                  </span>
+                                  <span className="his-meta-chip" style={{ background: "rgba(239,68,68,0.10)", color: "#f87171", border: "1px solid rgba(239,68,68,0.2)" }}>
+                                    <XCircle size={10} />
+                                    {item.wrongCount} sai
+                                  </span>
+                                  {skipCount > 0 && (
+                                    <span className="his-meta-chip" style={{ background: "rgba(148,163,184,0.08)", color: "#94a3b8", border: "1px solid rgba(148,163,184,0.15)" }}>
+                                      <MinusCircle size={10} />
+                                      {skipCount} bo
+                                    </span>
+                                  )}
+                                </>
                               )}
                             </div>
                           </div>
@@ -416,6 +494,23 @@ export default function HistoryPage() {
                               <p className="his-detail-time">
                                 Thoi gian lam bai: <strong style={{ color: "#60a5fa" }}>{formatTime(item.timeSpent)}</strong>
                               </p>
+                            )}
+                            {/* Speaking recordings */}
+                            {item.speakingAnswers && item.speakingAnswers.some(Boolean) && (
+                              <div style={{ marginTop: "12px", paddingTop: "12px", borderTop: "1px solid rgba(51,65,85,0.3)" }}>
+                                <p style={{ fontSize: "11px", fontWeight: 600, color: "#60a5fa", marginBottom: "8px", display: "flex", alignItems: "center", gap: "4px" }}>
+                                  <Mic size={12} />
+                                  Cac ban ghi am ({item.speakingAnswers.filter(Boolean).length}/{item.totalQuestions})
+                                </p>
+                                <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                                  {item.speakingAnswers.map((audio, qi) => audio ? (
+                                    <div key={qi}>
+                                      <p style={{ fontSize: "10px", color: "#475569", marginBottom: "3px" }}> Cau {qi + 1}</p>
+                                      <AudioPlayerMini src={audio} />
+                                    </div>
+                                  ) : null)}
+                                </div>
+                              </div>
                             )}
                           </div>
                         )}

@@ -20,7 +20,23 @@ import { auth, db, googleProvider, isFirebaseConfigured } from "@/lib/firebase";
 import { setPlayerName } from "@/lib/storage";
 
 const ANON_UID_KEY = "qthtm_anon_uid";
+const ANON_SESSION_KEY = "qthtm_anon_session_id";
 const HISTORY_KEY = "qthtm_quiz_history";
+
+/** Tạo/mã hóa session ID ngẫu nhiên cho anonymous user. */
+function getOrCreateAnonSessionId(): string {
+  if (typeof window === "undefined") return "anon-unknown";
+  try {
+    let sid = localStorage.getItem(ANON_SESSION_KEY);
+    if (!sid) {
+      sid = `anon-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+      localStorage.setItem(ANON_SESSION_KEY, sid);
+    }
+    return sid;
+  } catch {
+    return `anon-${Date.now()}-${Math.random().toString(36).slice(2, 10)}`;
+  }
+}
 
 export type AppUser = {
   uid: string;
@@ -98,6 +114,7 @@ async function mergeLocalHistoryToCloud(googleUid: string) {
           wrongCount: result.wrongCount ?? 0,
           percentage: result.percentage ?? 0,
           answers: result.answers ?? [],
+          speakingAnswers: result.speakingAnswers ?? [],
           timeSpent: result.timeSpent ?? 0,
           date: result.date ?? new Date().toISOString(),
           timestamp: Date.now(),
@@ -117,12 +134,15 @@ async function mergeLocalHistoryToCloud(googleUid: string) {
 }
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [user, setUser] = useState<AppUser | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState<AppUser | null>(() => {
+    // Skip Firebase on server or when not configured
+    if (!isFirebaseConfigured || !auth) return null;
+    return null; // real user comes from onAuthStateChanged
+  });
+  const [loading, setLoading] = useState(() => !isFirebaseConfigured || !auth ? false : true);
 
   useEffect(() => {
     if (!isFirebaseConfigured || !auth) {
-      setLoading(false);
       return;
     }
     const unsub = onAuthStateChanged(auth, async (u) => {
@@ -151,25 +171,55 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signInWithGoogle = useCallback(async () => {
     if (!auth) throw new Error("Firebase chưa được cấu hình");
-    await signInWithPopup(auth, googleProvider);
+    try {
+      await signInWithPopup(auth, googleProvider);
+    } catch (err) {
+      console.warn("[auth] Google sign-in blocked by API key restriction:", err);
+      throw err;
+    }
   }, []);
 
   const signInAnon = useCallback(async () => {
-    if (!auth) throw new Error("Firebase chưa được cấu hình");
-    await signInAnonymously(auth);
+    if (!auth) {
+      const sid = getOrCreateAnonSessionId();
+      setUser({ uid: sid, displayName: "Khach", email: null, photoURL: null, isAnonymous: true });
+      setLoading(false);
+      return;
+    }
+    try {
+      await signInAnonymously(auth);
+    } catch (err) {
+      console.warn("[auth] Anonymous sign-in blocked, continuing as offline guest:", err);
+      const sid = getOrCreateAnonSessionId();
+      setUser({ uid: sid, displayName: "Khach", email: null, photoURL: null, isAnonymous: true });
+      setLoading(false);
+    }
   }, []);
 
   /** Sign-in anonymous + immediately save the player's chosen name + sync to Firestore. */
   const signInAnonWithName = useCallback(async (name: string) => {
-    if (!auth) throw new Error("Firebase chưa được cấu hình");
-    await signInAnonymously(auth);
-    setPlayerName(name.trim());
+    const trimmed = name.trim();
+    if (!auth) {
+      const sid = getOrCreateAnonSessionId();
+      setUser({ uid: sid, displayName: trimmed, email: null, photoURL: null, isAnonymous: true });
+      setPlayerName(trimmed);
+      setLoading(false);
+      return;
+    }
+    try {
+      await signInAnonymously(auth);
+    } catch (err) {
+      console.warn("[auth] Anonymous sign-in blocked, saving name offline:", err);
+      const sid = getOrCreateAnonSessionId();
+      setUser({ uid: sid, displayName: trimmed, email: null, photoURL: null, isAnonymous: true });
+    }
+    setPlayerName(trimmed);
     const u = auth.currentUser;
     if (u && db) {
       try {
         const userRef = doc(db, "users", u.uid);
         await setDoc(userRef, {
-          displayName: name.trim(),
+          displayName: trimmed,
           isAnonymous: true,
           createdAt: serverTimestamp(),
           totalGames: 0,

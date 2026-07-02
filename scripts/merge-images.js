@@ -1,5 +1,4 @@
-const sharp = require("sharp");
-const path = require("path");
+import sharp from "sharp";
 
 const img1 = "C:/Users/USER/.cursor/projects/c-Users-USER-Downloads-BaoMatMayTinh/assets/c__Users_USER_AppData_Roaming_Cursor_User_workspaceStorage_125eaaf31bf6e0d4d1d51d903647913d_images_image-795ab2ea-ca67-47ea-8a81-c7d49b17d175.png";
 const img2 = "C:/Users/USER/.cursor/projects/c-Users-USER-Downloads-BaoMatMayTinh/assets/c__Users_USER_AppData_Roaming_Cursor_User_workspaceStorage_125eaaf31bf6e0d4d1d51d903647913d_images_image-2d3ac736-6ea8-49d3-879a-cc3ef91039ea.png";

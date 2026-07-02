@@ -1,27 +1,38 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { QuizResult } from "@/lib/types";
-import { Trophy, Target, Clock, TrendingUp } from "lucide-react";
+import { Clock, TrendingUp } from "lucide-react";
 
 interface ResultCardProps {
   result: QuizResult;
 }
+
+// Generate confetti once at module load (not during render)
+const CONFETTI_COLORS = ["#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#06b6d4", "#a855f7"];
+const CONFETTI_PARTICLES = Array.from({ length: 40 }, () => ({
+  left: `${Math.random() * 100}%`,
+  duration: `${2 + Math.random() * 2}s`,
+  delay: `${Math.random() * 0.5}s`,
+  color: CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
+  size: `${6 + Math.random() * 8}px`,
+  shape: Math.random() > 0.5 ? "50%" : "0",
+}));
 
 export default function ResultCard({ result }: ResultCardProps) {
   const [displayedScore, setDisplayedScore] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
   const animationRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  // Score count-up animation
   useEffect(() => {
     const duration = 1500;
     const steps = 60;
     const increment = result.score / steps;
-    let current = 0;
     let step = 0;
 
     animationRef.current = setInterval(() => {
       step++;
-      current = Math.min(result.score, Math.round(increment * step));
+      const current = Math.min(result.score, Math.round(increment * step));
       setDisplayedScore(current);
       if (step >= steps) {
         clearInterval(animationRef.current!);
@@ -36,7 +47,7 @@ export default function ResultCard({ result }: ResultCardProps) {
     return () => {
       if (animationRef.current) clearInterval(animationRef.current);
     };
-  }, [result.score]);
+  }, [result.score, result.percentage]);
 
   const grade = result.percentage >= 90 ? "A+" : result.percentage >= 80 ? "A" : result.percentage >= 70 ? "B" : result.percentage >= 60 ? "C" : result.percentage >= 50 ? "D" : "F";
   const gradeColor = result.percentage >= 80 ? "#10b981" : result.percentage >= 60 ? "#f59e0b" : "#ef4444";
@@ -51,18 +62,18 @@ export default function ResultCard({ result }: ResultCardProps) {
     <>
       {showConfetti && (
         <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
-          {Array.from({ length: 40 }).map((_, i) => (
+          {CONFETTI_PARTICLES.map((p, i) => (
             <div
               key={i}
               className="absolute top-0"
               style={{
-                left: `${Math.random() * 100}%`,
-                animation: `confetti-fall ${2 + Math.random() * 2}s linear forwards`,
-                animationDelay: `${Math.random() * 0.5}s`,
-                backgroundColor: ["#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#06b6d4", "#a855f7"][Math.floor(Math.random() * 6)],
-                width: `${6 + Math.random() * 8}px`,
-                height: `${6 + Math.random() * 8}px`,
-                borderRadius: Math.random() > 0.5 ? "50%" : "0",
+                left: p.left,
+                animation: `confetti-fall ${p.duration} linear forwards`,
+                animationDelay: p.delay,
+                backgroundColor: p.color,
+                width: p.size,
+                height: p.size,
+                borderRadius: p.shape,
               }}
             />
           ))}

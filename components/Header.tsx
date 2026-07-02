@@ -2,17 +2,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { History, Trophy, Menu, X, LogIn, LogOut, Sun, Moon } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useAuth } from "@/lib/auth";
 import { getPlayerName } from "@/lib/storage";
 
-type NavLink = {
-  href: string;
-  label: string;
-  Icon: React.ComponentType<{ size?: number }>;
-};
-
-const navLinks = (user: { isAnonymous: boolean } | null): Array<{ href: string; label: string; Icon: React.ComponentType<{ size?: number }> }> => [
+const navLinks = (user: { isAnonymous: boolean } | null) => [
   { href: "/history", label: "Lịch sử", Icon: History },
   { href: "/leaderboard", label: "Bảng xếp hạng", Icon: Trophy },
 ].filter((link) => {
@@ -24,16 +18,10 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [authMenuOpen, setAuthMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
-
-  useEffect(() => {
-    const saved = localStorage.getItem("qthtm_theme") as "dark" | "light" | null;
-    if (saved === "light" || saved === "dark") {
-      setTheme(saved);
-      document.documentElement.classList.remove("dark", "light");
-      document.documentElement.classList.add(saved);
-    }
-  }, []);
+  const [theme, setTheme] = useState<"dark" | "light">(() => {
+    if (typeof window === "undefined") return "dark";
+    return (localStorage.getItem("qthtm_theme") as "dark" | "light") ?? "dark";
+  });
 
   const toggleTheme = () => {
     const next = theme === "dark" ? "light" : "dark";

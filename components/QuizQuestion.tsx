@@ -9,7 +9,7 @@ interface QuizQuestionProps {
   question: Question;
   index: number;
   total: number;
-  selectedAnswer: number;
+  selectedAnswer: number | string;
   onSelectAnswer: (index: number) => void;
   showResult?: boolean;
 }
@@ -24,6 +24,14 @@ export default function QuizQuestion({
 }: QuizQuestionProps) {
   const [animatingIndex, setAnimatingIndex] = useState<number | null>(null);
 
+  if (!question) {
+    return (
+      <div className="animate-fade-slide-up p-6 rounded-2xl text-center" style={{ backgroundColor: "rgba(239,68,68,0.08)", border: "1px solid rgba(239,68,68,0.2)", color: "#fca5a5" }}>
+        <p className="text-sm font-medium">Câu hỏi không khả dụng.</p>
+      </div>
+    );
+  }
+
   const handleSelect = (idx: number) => {
     if (showResult) return;
     setAnimatingIndex(idx);
@@ -31,8 +39,10 @@ export default function QuizQuestion({
     setTimeout(() => setAnimatingIndex(null), 200);
   };
 
+  const selectedIdx = typeof selectedAnswer === "number" ? selectedAnswer : parseInt(selectedAnswer, 10);
+  const isSelectedAt = (idx: number) => selectedIdx === idx;
   const getAnswerStyle = (idx: number) => {
-    const isSelected = selectedAnswer === idx;
+    const isSelected = isSelectedAt(idx);
     const isCorrect = question.correct === idx;
 
     if (showResult) {
@@ -53,11 +63,11 @@ export default function QuizQuestion({
         </span>
         {showResult && (
           <span className="text-xs font-medium px-3 py-1.5 rounded-full flex items-center gap-1.5" style={
-            selectedAnswer === question.correct
+            selectedIdx === question.correct
               ? { backgroundColor: "rgba(16,185,129,0.15)", color: "#10b981" }
               : { backgroundColor: "rgba(239,68,68,0.15)", color: "#ef4444" }
           }>
-            {selectedAnswer === question.correct ? <><CheckCircle size={13} /> Đúng</> : <><XCircle size={13} /> Sai</>}
+            {selectedIdx === question.correct ? <><CheckCircle size={13} /> Đúng</> : <><XCircle size={13} /> Sai</>}
           </span>
         )}
       </div>
@@ -71,7 +81,7 @@ export default function QuizQuestion({
       <div className="space-y-3">
         {question.answers.map((answer, idx) => {
           const style = getAnswerStyle(idx);
-          const isSelected = selectedAnswer === idx;
+          const isSelected = isSelectedAt(idx);
           const isCorrect = question.correct === idx;
           const isAnimating = animatingIndex === idx;
 

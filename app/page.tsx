@@ -9,7 +9,7 @@ import { Info, Keyboard, Zap } from "lucide-react";
 export default function HomePage() {
   const router = useRouter();
 
-  const handleSelect = (setId: string, subSetId: string, questionCount: number) => {
+  const handleSelect = (setId: string, subSetId: string) => {
     router.push(`/quiz/${subSetId}`);
   };
 

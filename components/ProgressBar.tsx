@@ -1,12 +1,11 @@
 "use client";
 
 interface ProgressBarProps {
-  current: number;
   total: number;
   answered: number;
 }
 
-export default function ProgressBar({ current, total, answered }: ProgressBarProps) {
+export default function ProgressBar({ total, answered }: ProgressBarProps) {
   const progress = total > 0 ? (answered / total) * 100 : 0;
   const color = progress < 50 ? "#ef4444" : progress < 80 ? "#f59e0b" : "#10b981";
 

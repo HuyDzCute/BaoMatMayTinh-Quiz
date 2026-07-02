@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { subscribeLeaderboard } from "@/lib/storage";
@@ -14,23 +14,26 @@ export default function LeaderboardPage() {
   const [loading, setLoading] = useState(true);
   const [showCount, setShowCount] = useState(10);
   const [cloudError, setCloudError] = useState(false);
+  const loadingRef = useRef(true);
   const { isCloudEnabled, user } = useAuth();
 
   const [retryKey, setRetryKey] = useState(0);
 
   useEffect(() => {
     let didCancel = false;
-    setCloudError(false);
+    loadingRef.current = true;
 
     const unsub = subscribeLeaderboard((data) => {
       if (!didCancel) {
+        loadingRef.current = false;
         setEntries(data);
         setLoading(false);
       }
     });
 
     const timeout = setTimeout(() => {
-      if (!didCancel && loading) {
+      if (!didCancel && loadingRef.current) {
+        loadingRef.current = false;
         setCloudError(true);
         setLoading(false);
       }
@@ -44,14 +47,10 @@ export default function LeaderboardPage() {
   }, [retryKey]);
 
   const handleRetry = () => {
+    loadingRef.current = true;
     setLoading(true);
     setCloudError(false);
     setRetryKey((k) => k + 1);
-  };
-
-  const formatDate = (iso: string) => {
-    const d = new Date(iso);
-    return d.toLocaleDateString("vi-VN", { day: "2-digit", month: "2-digit", year: "numeric" });
   };
 
   const uniqueSets = Array.from(new Set(entries.map((e) => e.setName)));
@@ -81,7 +80,7 @@ export default function LeaderboardPage() {
   const topScore = totalPlayers > 0 ? filtered[0].percentage : 0;
 
   // Find current user's entry and rank
-  const myUid = user?.uid && !user.isAnonymous ? user.uid : null;
+  const myUid = user && !user.isAnonymous ? user.uid : null;
   const myRank = myUid ? filtered.findIndex((e) => e.uid === myUid) + 1 : 0;
   const myEntry = myRank > 0 ? filtered[myRank - 1] : null;
 
@@ -214,7 +213,7 @@ export default function LeaderboardPage() {
                   </p>
                   <p className="lb-podium-pts">{top3[1].score} diem</p>
                 </div>
-                {user?.uid && user.uid !== "anonymous" && top3[1].uid === user.uid && (
+                {user && !user.isAnonymous && top3[1].uid === user.uid && (
                   <span className="lb-you-tag">Ban</span>
                 )}
               </div>
@@ -237,7 +236,7 @@ export default function LeaderboardPage() {
                   </p>
                   <p className="lb-podium-pts">{top3[0].score} diem</p>
                 </div>
-                {user?.uid && user.uid !== "anonymous" && top3[0].uid === user.uid && (
+                {user && !user.isAnonymous && top3[0].uid === user.uid && (
                   <span className="lb-you-tag">Ban</span>
                 )}
               </div>
@@ -257,7 +256,7 @@ export default function LeaderboardPage() {
                   </p>
                   <p className="lb-podium-pts">{top3[2].score} diem</p>
                 </div>
-                {user?.uid && user.uid !== "anonymous" && top3[2].uid === user.uid && (
+                {user && !user.isAnonymous && top3[2].uid === user.uid && (
                   <span className="lb-you-tag">Ban</span>
                 )}
               </div>
@@ -332,7 +331,7 @@ export default function LeaderboardPage() {
                       </p>
                       <p className="lb-tier-pts">{entry.score} diem</p>
                     </div>
-                    {user?.uid && user.uid !== "anonymous" && entry.uid === user.uid && (
+                    {user && !user.isAnonymous && entry.uid === user.uid && (
                       <span className="lb-you-tag">Ban</span>
                     )}
                   </div>

@@ -7,28 +7,36 @@ import ResultCard from "@/components/ResultCard";
 import AnswerReview from "@/components/AnswerReview";
 import Footer from "@/components/Footer";
 import { QuizResult, Question } from "@/lib/types";
-import { RotateCcw, Trophy, History, Eye, Home, Cloud, CloudOff, Save } from "lucide-react";
-import { getQuizSet } from "@/lib/data";
+import { RotateCcw, Trophy, Eye, Home, Cloud, CloudOff, Save } from "lucide-react";
 
 export default function ResultPage() {
   const router = useRouter();
-  const [result, setResult] = useState<QuizResult | null>(null);
-  const [questions, setQuestions] = useState<Question[]>([]);
-  const [showReview, setShowReview] = useState(false);
-  const [cloudSaved, setCloudSaved] = useState(false);
-
-  useEffect(() => {
+  const [result] = useState<QuizResult | null>(() => {
+    if (typeof window === "undefined") return null;
     try {
       const r = sessionStorage.getItem("qthtm_result");
+      return r ? JSON.parse(r) : null;
+    } catch { return null; }
+  });
+  const [questions] = useState<Question[]>(() => {
+    if (typeof window === "undefined") return [];
+    try {
       const q = sessionStorage.getItem("qthtm_questions");
+      return q ? JSON.parse(q) : [];
+    } catch { return []; }
+  });
+  const [showReview, setShowReview] = useState(false);
+  const [cloudSaved] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    try {
       const c = sessionStorage.getItem("qthtm_cloud_saved");
-      if (r) setResult(JSON.parse(r));
-      if (q) setQuestions(JSON.parse(q));
-      if (c) setCloudSaved(JSON.parse(c));
-    } catch {
-      router.push("/");
-    }
-  }, [router]);
+      return c ? JSON.parse(c) : false;
+    } catch { return false; }
+  });
+
+  useEffect(() => {
+    if (!result) router.replace("/");
+  }, [result, router]);
 
   if (!result) {
     return (
@@ -124,7 +132,11 @@ export default function ResultPage() {
             <h3 className="text-lg font-bold mb-5" style={{ color: "#f1f5f9", fontFamily: "var(--font-orbitron)" }}>
               Xem lại bài làm
             </h3>
-            <AnswerReview questions={questions} answers={result.answers} />
+            <AnswerReview
+              questions={questions}
+              answers={result.answers}
+              speakingAnswers={result.speakingAnswers}
+            />
           </div>
         )}
       </main>
