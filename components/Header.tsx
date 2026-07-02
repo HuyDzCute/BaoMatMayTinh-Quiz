@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { History, Trophy, Menu, X, LogIn, LogOut, Sun, Moon } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "@/lib/auth";
 import { getPlayerName } from "@/lib/storage";
 
@@ -18,10 +18,17 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [authMenuOpen, setAuthMenuOpen] = useState(false);
-  const [theme, setTheme] = useState<"dark" | "light">(() => {
-    if (typeof window === "undefined") return "dark";
-    return (localStorage.getItem("qthtm_theme") as "dark" | "light") ?? "dark";
-  });
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect -- must read localStorage after mount to avoid hydration mismatch */
+    const stored = localStorage.getItem("qthtm_theme") as "dark" | "light" | null;
+    const resolved = stored ?? "dark";
+    setTheme(resolved);
+    document.documentElement.classList.remove("dark", "light");
+    document.documentElement.classList.add(resolved);
+    /* eslint-enable react-hooks/set-state-in-effect */
+  }, []);
 
   const toggleTheme = () => {
     const next = theme === "dark" ? "light" : "dark";
@@ -120,7 +127,7 @@ export default function Header() {
           {isCloudEnabled && (
             <div className="relative">
               {loading ? (
-                <div className="hdr-auth-skeleton" aria-hidden="true" />
+                <div className="hdr-auth-skeleton" suppressHydrationWarning aria-hidden="true" />
               ) : user ? (
                 <button
                   onClick={() => setAuthMenuOpen((v) => !v)}
@@ -144,6 +151,7 @@ export default function Header() {
                 <button
                   onClick={() => setAuthMenuOpen((v) => !v)}
                   className="hdr-signin-btn"
+                  suppressHydrationWarning
                   aria-label="Đăng nhập"
                 >
                   <LogIn size={13} />

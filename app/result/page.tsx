@@ -11,28 +11,23 @@ import { RotateCcw, Trophy, Eye, Home, Cloud, CloudOff, Save } from "lucide-reac
 
 export default function ResultPage() {
   const router = useRouter();
-  const [result] = useState<QuizResult | null>(() => {
-    if (typeof window === "undefined") return null;
+  const [result, setResult] = useState<QuizResult | null>(null);
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [showReview, setShowReview] = useState(false);
+  const [cloudSaved, setCloudSaved] = useState(false);
+
+  useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect -- must read sessionStorage after mount to avoid hydration mismatch */
     try {
       const r = sessionStorage.getItem("qthtm_result");
-      return r ? JSON.parse(r) : null;
-    } catch { return null; }
-  });
-  const [questions] = useState<Question[]>(() => {
-    if (typeof window === "undefined") return [];
-    try {
+      if (r) setResult(JSON.parse(r));
       const q = sessionStorage.getItem("qthtm_questions");
-      return q ? JSON.parse(q) : [];
-    } catch { return []; }
-  });
-  const [showReview, setShowReview] = useState(false);
-  const [cloudSaved] = useState<boolean>(() => {
-    if (typeof window === "undefined") return false;
-    try {
+      if (q) setQuestions(JSON.parse(q));
       const c = sessionStorage.getItem("qthtm_cloud_saved");
-      return c ? JSON.parse(c) : false;
-    } catch { return false; }
-  });
+      if (c) setCloudSaved(JSON.parse(c));
+    } catch { /* ignore parse errors */ }
+    /* eslint-enable react-hooks/set-state-in-effect */
+  }, []);
 
   useEffect(() => {
     if (!result) router.replace("/");

@@ -139,7 +139,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (!isFirebaseConfigured || !auth) return null;
     return null; // real user comes from onAuthStateChanged
   });
-  const [loading, setLoading] = useState(() => !isFirebaseConfigured || !auth ? false : true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (!isFirebaseConfigured || !auth) {
