@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { History, Trophy, Menu, X, LogIn, LogOut, Sun, Moon } from "lucide-react";
+import { History, Trophy, Menu, X, LogIn, LogOut, Sun, Moon, BookOpen } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/lib/auth";
 import { getPlayerName } from "@/lib/storage";
+import FlashcardDueIndicator from "@/components/FlashcardDueIndicator";
 
 const navLinks = (user: { isAnonymous: boolean } | null) => [
+  { href: "/flashcards", label: "Học từ vựng", Icon: BookOpen },
   { href: "/history", label: "Lịch sử", Icon: History },
   { href: "/leaderboard", label: "Bảng xếp hạng", Icon: Trophy },
 ].filter((link) => {
@@ -75,8 +77,11 @@ export default function Header() {
           })}
         </nav>
 
-        {/* ── Right cluster: Social + Auth + Mobile toggle ── */}
+        {/* ── Right cluster: Flashcard due badge + Social + Auth + Mobile toggle ── */}
         <div className="flex items-center gap-1.5 shrink-0">
+          {/* Due flashcard indicator — only renders on flashcards routes */}
+          <FlashcardDueIndicator />
+
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}

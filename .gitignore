@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local-only helper scripts (installers, scratch, caches)
+/.tmp/
+
+# dev runtime artifacts (created by `next dev` and tool wrappers)
+/.deverr.log
+/.devout.log
+/.tools/
+/.tools_listing.txt

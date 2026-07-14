@@ -17,7 +17,7 @@ import {
 } from "firebase/auth";
 import { doc, getDoc, setDoc, serverTimestamp, collection, addDoc } from "firebase/firestore";
 import { auth, db, googleProvider, isFirebaseConfigured } from "@/lib/firebase";
-import { setPlayerName } from "@/lib/storage";
+import { setPlayerName, getPendingSyncCount, retryPendingSync as doRetryPendingSync } from "@/lib/storage";
 
 const ANON_UID_KEY = "qthtm_anon_uid";
 const ANON_SESSION_KEY = "qthtm_anon_session_id";
@@ -50,10 +50,13 @@ type AuthContextValue = {
   user: AppUser | null;
   loading: boolean;
   isCloudEnabled: boolean;
+  isOnline: boolean;
+  pendingSyncCount: number;
   signInWithGoogle: () => Promise<void>;
   signInAnon: () => Promise<void>;
   signInAnonWithName: (name: string) => Promise<void>;
   signOut: () => Promise<void>;
+  retryPendingSync: () => Promise<void>;
 };
 
 const AuthContext = createContext<AuthContextValue | null>(null);
@@ -140,6 +143,43 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return null; // real user comes from onAuthStateChanged
   });
   const [loading, setLoading] = useState(true);
+  const [isOnline, setIsOnline] = useState(true);
+  const [pendingSyncCount, setPendingSyncCount] = useState(0);
+
+  // Track online/offline status
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    
+    const handleOnline = async () => {
+      setIsOnline(true);
+      // Retry pending syncs when coming back online
+      if (isFirebaseConfigured) {
+        const result = await doRetryPendingSync();
+        if (result.success > 0) {
+          console.info(`[auth] Synced ${result.success} pending items`);
+        }
+        setPendingSyncCount(getPendingSyncCount());
+      }
+    };
+    
+    const handleOffline = () => {
+      setIsOnline(false);
+    };
+
+    // Set initial state
+    setIsOnline(navigator.onLine);
+    
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+    
+    // Update pending count on mount
+    setPendingSyncCount(getPendingSyncCount());
+    
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, []);
 
   useEffect(() => {
     if (!isFirebaseConfigured || !auth) {
@@ -235,16 +275,28 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await fbSignOut(auth);
   }, []);
 
+  const retryPendingSync = useCallback(async () => {
+    if (!isFirebaseConfigured) return;
+    const result = await doRetryPendingSync();
+    setPendingSyncCount(getPendingSyncCount());
+    if (result.success > 0) {
+      console.info(`[auth] Retry synced ${result.success} items, ${result.failed} failed`);
+    }
+  }, []);
+
   return (
     <AuthContext.Provider
       value={{
         user,
         loading,
         isCloudEnabled: isFirebaseConfigured,
+        isOnline,
+        pendingSyncCount,
         signInWithGoogle,
         signInAnon,
         signInAnonWithName,
         signOut,
+        retryPendingSync,
       }}
     >
       {children}

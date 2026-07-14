@@ -11,7 +11,7 @@ import {
   History, ArrowLeft, ChevronDown, ChevronUp,
   Cloud, CloudOff, CheckCircle, XCircle, MinusCircle,
   TrendingUp, Target, Zap, Award, RefreshCw, AlertTriangle,
-  Play, Pause, Volume2, Mic
+  Play, Pause, Volume2, Mic, Wifi, WifiOff, Upload
 } from "lucide-react";
 
 interface DayGroup {
@@ -19,87 +19,72 @@ interface DayGroup {
   items: QuizResult[];
 }
 
+function AudioPlayerMini({ src }: { src: string }) {
+  const [playing, setPlaying] = useState(false);
+  const [duration, setDuration] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const toggle = () => {
+    if (!audioRef.current) return;
+    if (playing) { audioRef.current.pause(); } else { audioRef.current.play().catch(() => {}); }
+    setPlaying(!playing);
+  };
+
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "6px 10px", borderRadius: "8px", background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.2)" }}>
+      <audio ref={audioRef} src={src}
+        onTimeUpdate={() => setCurrent(audioRef.current?.currentTime ?? 0)}
+        onLoadedMetadata={() => setDuration(audioRef.current?.duration ?? 0)}
+        onEnded={() => { setPlaying(false); setCurrent(0); }}
+      />
+      <button onClick={toggle}
+        style={{ background: "rgba(59,130,246,0.15)", border: "none", borderRadius: "50%", width: "28px", height: "28px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0 }}>
+        {playing ? <Pause size={12} style={{ color: "#60a5fa" }} /> : <Play size={12} style={{ color: "#60a5fa", paddingLeft: "2px" }} />}
+      </button>
+      <input type="range" min={0} max={duration || 1} value={current}
+        onChange={(e) => { if (audioRef.current) { audioRef.current.currentTime = Number(e.target.value); setCurrent(Number(e.target.value)); } }}
+        style={{ flex: 1, accentColor: "#3b82f6", cursor: "pointer", height: "3px" }}
+      />
+      <span style={{ fontSize: "10px", color: "#64748b", fontFamily: "var(--font-jetbrains)", whiteSpace: "nowrap" }}>
+        {duration > 0 ? `${Math.floor(current / 60)}:${String(Math.floor(current % 60)).padStart(2, "0")}` : "—"}
+      </span>
+      <Volume2 size={11} style={{ color: "#3b82f6", flexShrink: 0 }} />
+    </div>
+  );
+}
+
 export default function HistoryPage() {
   const [history, setHistory] = useState<QuizResult[]>([]);
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [authLoading, setAuthLoading] = useState(true);
   const [cloudError, setCloudError] = useState(false);
   const [retryKey, setRetryKey] = useState(0);
   const loadingRef = useRef(true);
-  const { user, signInWithGoogle } = useAuth();
+  const { user, signInWithGoogle, isOnline, pendingSyncCount, retryPendingSync } = useAuth();
   const router = useRouter();
 
-  function AudioPlayerMini({ src }: { src: string }) {
-    const [playing, setPlaying] = useState(false);
-    const [duration, setDuration] = useState(0);
-    const [current, setCurrent] = useState(0);
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-
-    const toggle = () => {
-      if (!audioRef.current) return;
-      if (playing) { audioRef.current.pause(); } else { audioRef.current.play().catch(() => {}); }
-      setPlaying(!playing);
-    };
-
-    return (
-      <div style={{ display: "flex", alignItems: "center", gap: "8px", padding: "6px 10px", borderRadius: "8px", background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.2)" }}>
-        <audio ref={audioRef} src={src}
-          onTimeUpdate={() => setCurrent(audioRef.current?.currentTime ?? 0)}
-          onLoadedMetadata={() => setDuration(audioRef.current?.duration ?? 0)}
-          onEnded={() => { setPlaying(false); setCurrent(0); }}
-        />
-        <button onClick={toggle}
-          style={{ background: "rgba(59,130,246,0.15)", border: "none", borderRadius: "50%", width: "28px", height: "28px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", flexShrink: 0 }}>
-          {playing ? <Pause size={12} style={{ color: "#60a5fa" }} /> : <Play size={12} style={{ color: "#60a5fa", paddingLeft: "2px" }} />}
-        </button>
-        <input type="range" min={0} max={duration || 1} value={current}
-          onChange={(e) => { if (audioRef.current) { audioRef.current.currentTime = Number(e.target.value); setCurrent(Number(e.target.value)); } }}
-          style={{ flex: 1, accentColor: "#3b82f6", cursor: "pointer", height: "3px" }}
-        />
-        <span style={{ fontSize: "10px", color: "#64748b", fontFamily: "var(--font-jetbrains)", whiteSpace: "nowrap" }}>
-          {duration > 0 ? `${Math.floor(current / 60)}:${String(Math.floor(current % 60)).padStart(2, "0")}` : "—"}
-        </span>
-        <Volume2 size={11} style={{ color: "#3b82f6", flexShrink: 0 }} />
-      </div>
-    );
-  }
-
+  // Wait for auth to initialize before redirecting
   useEffect(() => {
+    // Short timeout to let Firebase auth initialize
+    const timer = setTimeout(() => {
+      setAuthLoading(false);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Redirect only after auth is loaded and there's no user + subscribe to history
+  useEffect(() => {
+    // Wait for auth to initialize
+    if (authLoading) return;
+    
     if (!user) {
       router.replace("/");
       return;
     }
 
-    // Anonymous Firebase user: sync from their cloud subcollection
-    if (user.isAnonymous) {
-      let didCancel = false;
-      loadingRef.current = true;
-
-      const unsub = subscribeHistory(user.uid, (cloudHistory) => {
-        if (!didCancel) {
-          loadingRef.current = false;
-          setHistory(cloudHistory);
-          setLoading(false);
-        }
-      });
-
-      const timeout = setTimeout(() => {
-        if (!didCancel && loadingRef.current) {
-          loadingRef.current = false;
-          setCloudError(true);
-          setHistory(getHistory());
-          setLoading(false);
-        }
-      }, 8000);
-
-      return () => {
-        didCancel = true;
-        unsub();
-        clearTimeout(timeout);
-      };
-    }
-
-    // Google user: dung Firestore cloud sync
+    // User is loaded - subscribe to their history (works for both anonymous and Google users)
     let didCancel = false;
     loadingRef.current = true;
 
@@ -114,6 +99,7 @@ export default function HistoryPage() {
     // Timeout: neu sau 8s cloud chua tra loi → fallback sang local
     const timeout = setTimeout(() => {
       if (!didCancel && loadingRef.current) {
+        loadingRef.current = false;
         setCloudError(true);
         setHistory(getHistory());
         setLoading(false);
@@ -125,7 +111,7 @@ export default function HistoryPage() {
       unsub();
       clearTimeout(timeout);
     };
-  }, [user, router, retryKey]);
+  }, [user, router, retryKey, authLoading]);
 
   const formatDate = (iso: string) => {
     if (!iso) return "";
@@ -158,6 +144,9 @@ export default function HistoryPage() {
 
   // isCloud: Firestore connected and serving data (both Google and anonymous Firebase users)
   const isCloud = user != null && !cloudError;
+
+  // Combined loading state
+  const isInitialLoading = loading || authLoading;
 
   // Group history by date
   const dayGroups: DayGroup[] = (() => {
@@ -234,8 +223,24 @@ export default function HistoryPage() {
           </div>
         )}
 
+        {/* ── Offline & Pending Sync Banner ── */}
+        {!isOnline && (
+          <div className="his-sync-hint" style={{ background: "rgba(245,158,11,0.10)", border: "1px solid rgba(245,158,11,0.25)", marginBottom: "12px" }}>
+            <WifiOff size={14} style={{ color: "#f59e0b", flexShrink: 0 }} />
+            <span>Ban dang offline. Ket qua se dong bo khi co mang tro lai.</span>
+          </div>
+        )}
+        
+        {isOnline && pendingSyncCount > 0 && (
+          <div className="his-sync-hint" style={{ background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.2)", marginBottom: "12px" }}>
+            <Upload size={14} style={{ color: "#60a5fa", flexShrink: 0 }} />
+            <span>Co {pendingSyncCount} ket qua dang cho dong bo. </span>
+            <button onClick={retryPendingSync} style={{ background: "none", border: "none", color: "#60a5fa", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Dong bo ngay</button>
+          </div>
+        )}
+
         {/* ── Stats Bar ── */}
-        {!loading && history.length > 0 && (
+        {!isInitialLoading && history.length > 0 && (
           <div className="his-stats-bar">
             <div className="his-stat-item">
               <div className="his-stat-icon" style={{ background: "rgba(6,182,212,0.12)", border: "1px solid rgba(6,182,212,0.25)", color: "#22d3ee" }}>
@@ -282,7 +287,7 @@ export default function HistoryPage() {
         )}
 
         {/* ── Loading ── */}
-        {loading && (
+        {isInitialLoading && (
           <div className="space-y-3">
             <div className="his-stats-bar" style={{ height: "68px", marginBottom: "16px" }} />
             {[0, 1, 2, 3].map((i) => (
@@ -292,7 +297,7 @@ export default function HistoryPage() {
         )}
 
         {/* ── Empty ── */}
-        {!loading && history.length === 0 && (
+        {!isInitialLoading && history.length === 0 && (
           <div className="his-empty-state">
             <div className="his-empty-icon">
               <History size={40} />
@@ -310,7 +315,7 @@ export default function HistoryPage() {
         )}
 
         {/* ── Timeline ── */}
-        {!loading && history.length > 0 && (
+        {!isInitialLoading && history.length > 0 && (
           <div className="his-timeline">
             {dayGroups.map((group) => (
               <div key={group.label} className="his-day-group">

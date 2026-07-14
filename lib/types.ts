@@ -92,6 +92,83 @@ export interface LeaderboardEntry {
   uid?: string;
 }
 
+// ─────────────────────────────────────────
+//   Flashcard (Quizlet-style vocabulary learning)
+// ─────────────────────────────────────────
+
+/** Difficulty bucket used by the simple SRS scheduler. */
+export type FlashcardBucket = "new" | "learning" | "known";
+
+export interface Flashcard {
+  id: string;
+  /** Term shown on the front (e.g. "ephemeral"). */
+  front: string;
+  /** Definition / translation shown on the back. */
+  back: string;
+  /** Optional IPA pronunciation. */
+  pronunciation?: string;
+  /** Optional example sentence. */
+  example?: string;
+}
+
+/** A user-importable vocabulary set (e.g. "IELTS 5000 - 100 từ đầu tiên"). */
+export interface FlashcardSet {
+  /** Stable identifier; built-in sets use a `builtin:` prefix, user sets
+   *  use a `user:` prefix, imported sets use `import:`. */
+  id: string;
+  name: string;
+  description: string;
+  /** Lucide icon name (e.g. "book-open"). */
+  icon: string;
+  /** Accent color (hex). */
+  color: string;
+  cards: Flashcard[];
+  /** `true` for seeded sets shipped in `lib/flashcards-data.ts`; `false` for
+   *  user-created / imported sets stored in localStorage. */
+  builtin?: boolean;
+}
+
+/** Per-card progress (the SRS state). Stored under
+ *  `qthtm_flashcard_progress` keyed by `${setId}::${cardId}`.
+ *
+ *  Uses the SM-2 spaced-repetition algorithm:
+ *    - `easeFactor` starts at 2.5 and shifts on each rating (min 1.3).
+ *    - `interval` is the number of days until the next review.
+ *    - `repetitions` is the number of consecutive successful reviews.
+ *    - `bucket` is a derived display field (new / learning / known).
+ */
+export interface FlashcardProgress {
+  cardId: string;
+  bucket: FlashcardBucket;
+  /** Total times this card was reviewed. */
+  reviews: number;
+  /** Times the user rated it as correct/known. */
+  correct: number;
+  /** ISO timestamp of last review (undefined if never reviewed). */
+  lastReviewedAt?: string;
+  /** When set, the card is scheduled to be re-shown on this ISO date. */
+  nextReviewAt?: string;
+
+  // ── SM-2 state ────────────────────────────────────────────────────────
+  /** Ease factor, 1.3 – 2.5+ (default 2.5). Higher = easier card. */
+  easeFactor?: number;
+  /** Current interval in days until next review. */
+  interval?: number;
+  /** Consecutive successful ("good"/"easy") reviews. Resets on "again". */
+  repetitions?: number;
+  /** ISO date of when this card is next due. Same as nextReviewAt for clarity. */
+  dueAt?: string;
+}
+
+export interface FlashcardStudyState {
+  /** Cards the user is currently studying — a queue, not a stored artifact. */
+  queue: string[];
+  /** Index into `queue`. */
+  currentIndex: number;
+  /** ISO timestamp the user opened the study session. */
+  startedAt: string;
+}
+
 export interface QuizState {
   setId: string;
   setName: string;

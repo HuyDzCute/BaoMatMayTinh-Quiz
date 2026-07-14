@@ -6,7 +6,7 @@ import { subscribeLeaderboard } from "@/lib/storage";
 import { useAuth } from "@/lib/auth";
 import Footer from "@/components/Footer";
 import { LeaderboardEntry } from "@/lib/types";
-import { Trophy, ArrowLeft, Medal, Crown, Filter, Cloud, CloudOff, Users, Target, TrendingUp, RefreshCw } from "lucide-react";
+import { Trophy, ArrowLeft, Medal, Crown, Filter, Cloud, CloudOff, Users, Target, TrendingUp, RefreshCw, Wifi, WifiOff, Upload } from "lucide-react";
 
 export default function LeaderboardPage() {
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
@@ -15,7 +15,7 @@ export default function LeaderboardPage() {
   const [showCount, setShowCount] = useState(10);
   const [cloudError, setCloudError] = useState(false);
   const loadingRef = useRef(true);
-  const { isCloudEnabled, user } = useAuth();
+  const { isCloudEnabled, user, isOnline, pendingSyncCount, retryPendingSync } = useAuth();
 
   const [retryKey, setRetryKey] = useState(0);
 
@@ -126,6 +126,22 @@ export default function LeaderboardPage() {
           <div className="lb-cloud-pill" style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.25)", color: "#f87171", marginLeft: "auto", marginBottom: 12, width: "100%", justifyContent: "center" }}>
             <RefreshCw size={11} />
             <span>Khong ket noi cloud — hien thi du lieu cuc bo. <button onClick={handleRetry} style={{ background: "none", border: "none", color: "#60a5fa", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Thu lai</button></span>
+          </div>
+        )}
+
+        {/* ── Offline & Pending Sync Banner ── */}
+        {!isOnline && (
+          <div className="lb-cloud-pill" style={{ background: "rgba(245,158,11,0.1)", border: "1px solid rgba(245,158,11,0.25)", color: "#f59e0b", marginLeft: "auto", marginBottom: 12, width: "100%", justifyContent: "center" }}>
+            <WifiOff size={11} />
+            <span>Ban dang offline — hien thi du lieu cuc bo.</span>
+          </div>
+        )}
+        
+        {isOnline && pendingSyncCount > 0 && (
+          <div className="lb-cloud-pill" style={{ background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.2)", color: "#60a5fa", marginLeft: "auto", marginBottom: 12, width: "100%", justifyContent: "center" }}>
+            <Upload size={11} />
+            <span>Co {pendingSyncCount} ket qua dang cho dong bo. </span>
+            <button onClick={retryPendingSync} style={{ background: "none", border: "none", color: "#93c5fd", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Dong bo ngay</button>
           </div>
         )}
 
