@@ -626,7 +626,7 @@ function categorizeAllCards(): {
         });
         continue;
       }
-      if (p.repetitions === 0 && p.bucket !== "new") {
+      if (p.repetitions === 0) {
         lapse.push({ card: { ...base, progress: p }, bucket: "lapse" });
         continue;
       }
