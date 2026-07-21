@@ -241,8 +241,10 @@ export default function MatchGame({ setName, cards, pairCount, onFinish, bestTim
   useEffect(() => {
     if (!state.pickedLeft || !state.pickedRight) return;
     const tid = window.setTimeout(() => {
-      if (state.pickedLeft === state.pickedRight) {
-        dispatch({ type: "RESOLVE_CORRECT", id: state.pickedLeft });
+      const left = state.pickedLeft;
+      const right = state.pickedRight;
+      if (left !== null && right !== null && left === right) {
+        dispatch({ type: "RESOLVE_CORRECT", id: left });
       } else {
         dispatch({ type: "RESOLVE_WRONG" });
       }
