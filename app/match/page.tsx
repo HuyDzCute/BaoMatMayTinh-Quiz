@@ -15,6 +15,7 @@ import {
   type MatchRecord,
 } from "@/lib/match-storage";
 import LevelBadge from "@/components/LevelBadge";
+import { playSfx } from "@/lib/sound";
 
 /**
  * Match hub — the "/match" landing page.
@@ -130,7 +131,7 @@ export default function MatchHubPage() {
               }}
             >
               Chưa có bộ thẻ nào. Hãy vào{" "}
-              <Link href="/flashcards" className="underline" style={{ color: "#60a5fa" }}>
+              <Link href="/flashcards" onClick={() => playSfx("click")} className="underline" style={{ color: "#60a5fa" }}>
                 Học từ vựng
               </Link>{" "}
               để tạo bộ mới.
@@ -143,6 +144,7 @@ export default function MatchHubPage() {
                   <li key={set.id}>
                     <Link
                       href={`/match/play/${encodeURIComponent(set.id)}`}
+                      onClick={() => playSfx("click")}
                       className="block p-4 rounded-xl transition-all hover:-translate-y-0.5"
                       style={{
                         backgroundColor: "rgba(30,41,59,0.5)",

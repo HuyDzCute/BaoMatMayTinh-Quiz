@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QTHTM Quiz
 
-## Getting Started
+Ứng dụng luyện thi trắc nghiệm **Quản Trị Hệ Thống Mạng** với 4 bộ đề (QTHTM 190, QTHTM 150, Linux 350, SAI LÀ TỒI), kèm các tính năng mở rộng:
 
-First, run the development server:
+- **Quiz** — trắc nghiệm 4 đáp án, timer mỗi câu + timer tổng.
+- **IELTS Reading / Speaking** — sub-section với passage dài + ghi âm câu trả lời.
+- **Flashcards** — học từ vựng với thuật toán SM-2 spaced repetition, import CSV/TXT, thẻ built-in + user.
+- **Match Game** — ghép thuật ngữ với định nghĩa, có level & kỷ lục cá nhân.
+- **Leaderboard / History** — bảng xếp hạng + lịch sử thi, có fallback localStorage khi offline.
+
+Built on **Next.js 16 + React 19 + Tailwind v4 + Firebase 12 (Firestore + Auth)**.
+
+---
+
+## Tài liệu
+
+| File | Nội dung |
+| --- | --- |
+| [`SPEC.md`](./SPEC.md) | Concept, design language, layout, components, data model. |
+| [`FIREBASE_SETUP.md`](./FIREBASE_SETUP.md) | Hướng dẫn tạo Firebase project + Rules + Auth. |
+| [`VERCEL_DEPLOY.md`](./VERCEL_DEPLOY.md) | **Hướng dẫn deploy lên Vercel từng bước.** |
+| [`.env.local.example`](./.env.local.example) | Mẫu biến môi trường cần điền. |
+
+---
+
+## Chạy local
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Cần Node.js 18+ (đã test với Node 20 LTS)
+npm install --legacy-peer-deps
+cp .env.local.example .env.local       # điền config Firebase nếu có
+npm run dev                            # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> `--legacy-peer-deps` là cần thiết vì `lucide-react@^1.22.0` (phiên bản
+> hiện đang dùng) chỉ hỗ trợ React ≤ 18. Khi upgrade lucide-react lên
+> bản mới hơn, có thể bỏ flag này.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deploy
 
-## Learn More
+Xem **[`VERCEL_DEPLOY.md`](./VERCEL_DEPLOY.md)** để biết cách import vào
+Vercel và điền biến môi trường Firebase. Vercel sẽ tự nhận diện Next.js
+và dùng `vercel.json` trong repo.
 
-To learn more about Next.js, take a look at the following resources:
+Có thể deploy sang Render cũng được — `render.yaml` đã có sẵn nhưng
+**không còn chứa Firebase secrets** (đã chuyển sang env vars để tránh
+lộ key trong git history).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Kiến trúc ngắn gọn
 
-## Deploy on Vercel
+```
+app/                  # Next.js App Router
+  page.tsx            # Trang chủ (chọn bộ đề)
+  quiz/[setId]/       # Quiz chính
+  result/             # Kết quả
+  leaderboard/        # BXH
+  history/            # Lịch sử
+  flashcards/         # Flashcards hub + review + stats + study
+  match/              # Match game hub + play
+components/           # UI components
+lib/                  # Firebase init, storage, data, types, speech
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **`lib/firebase.ts`** — Khởi tạo Firebase an toàn. Nếu thiếu env
+  vars, app chạy ở chế độ offline (localStorage only).
+- **`lib/storage.ts`** — Lưu/đọc kết quả quiz: cloud-first, local fallback.
+- **`lib/auth.tsx`** — AuthProvider (Google + Anonymous) + retry queue.
+- **`lib/flashcards-storage.ts`** — LocalStorage cho flashcards + SM-2.
+- **`lib/match-storage.ts`** — Kỷ lục Match game + level system.
+- **`lib/fuzzy-match.ts`** — Levenshtein + diacritics tolerance.
+- **`lib/speech.ts`** — Web Speech API wrapper.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Scripts
+
+```bash
+npm run dev       # Next.js dev server
+npm run build     # production build (output vào .next/)
+npm run start     # serve production build
+npm run lint      # ESLint
+```

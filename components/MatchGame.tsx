@@ -10,6 +10,7 @@ import {
   getMatchLevelState,
 } from "@/lib/match-storage";
 import LevelBadge, { LevelUpBadge } from "./LevelBadge";
+import { playSfx } from "@/lib/sound";
 
 /* ─────────────────────────────────────────
    Types & helpers
@@ -180,6 +181,18 @@ export default function MatchGame({ setName, cards, pairCount, onFinish, bestTim
     getMatchLevelState().totalCompleted
   );
 
+  // Run `onExit` once when the component is torn down (browser nav away,
+  // route change, etc.) so the parent can stop timers/recorders cleanly.
+  const exitFiredRef = useRef(false);
+  useEffect(() => {
+    return () => {
+      if (!exitFiredRef.current) {
+        exitFiredRef.current = true;
+        onExit?.();
+      }
+    };
+  }, [onExit]);
+
   // ── Timer ────────────────────────────────────────────────────────────
   const [elapsedMs, setElapsedMs] = useState(0);
   const startedAtRef = useRef<number | null>(null);
@@ -198,8 +211,13 @@ export default function MatchGame({ setName, cards, pairCount, onFinish, bestTim
   }, []);
 
   // ── When the reducer reports finished, freeze the timer and notify the parent. ──
+  const finishChimed = useRef(false);
   useEffect(() => {
     if (state.status !== "finished" || finalTimeRef.current != null) return;
+    if (!finishChimed.current) {
+      finishChimed.current = true;
+      playSfx("complete");
+    }
     const finalMs = startedAtRef.current ? performance.now() - startedAtRef.current : elapsedMs;
     finalTimeRef.current = finalMs;
 
@@ -245,14 +263,19 @@ export default function MatchGame({ setName, cards, pairCount, onFinish, bestTim
       const right = state.pickedRight;
       if (left !== null && right !== null && left === right) {
         dispatch({ type: "RESOLVE_CORRECT", id: left });
+        playSfx("correct");
       } else {
         dispatch({ type: "RESOLVE_WRONG" });
+        playSfx("wrong");
       }
     }, 600);
     return () => window.clearTimeout(tid);
   }, [state.pickedLeft, state.pickedRight]);
 
   const handlePick = (side: "left" | "right", id: string) => {
+    // Light click feedback when a tile is selected (skipped while the
+    // wrong-flash animation is playing to avoid spam).
+    playSfx("tick");
     dispatch({ type: "PICK", side, id });
   };
 
@@ -330,7 +353,7 @@ export default function MatchGame({ setName, cards, pairCount, onFinish, bestTim
       </div>
 
       {/* ── Progress ── */}
-      <div className="mb-6">
+      <div className="mb-6" role="status" aria-live="polite" aria-atomic="true">
         <div className="flex items-center justify-between mb-1.5 text-xs">
           <span style={{ color: "#94a3b8" }}>
             Đã ghép <strong style={{ color: "#f1f5f9" }}>{matchedCount}</strong> / {total} cặp
@@ -466,7 +489,15 @@ function TileButton({ tile, isMatched, isPicked, isWrong, locked, onClick }: Til
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`w-full text-left px-4 py-3 rounded-xl font-medium text-sm sm:text-base transition-all ${animation}`}
+      aria-pressed={isPicked}
+      aria-label={
+        isMatched
+          ? `${tile.text} — đã ghép đúng`
+          : isPicked
+            ? `${tile.text} — đang chọn`
+            : tile.text
+      }
+      className={`w-full text-left px-4 py-3 rounded-xl font-medium text-sm sm:text-base transition-all ${animation} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500`}
       style={{
         backgroundColor: bg,
         border,

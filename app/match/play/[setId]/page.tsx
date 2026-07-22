@@ -12,6 +12,7 @@ import {
   getAllMatchRecords,
   type MatchRecord,
 } from "@/lib/match-storage";
+import { playSfx } from "@/lib/sound";
 
 /* ─────────────────────────────────────────
    Difficulty presets
@@ -90,6 +91,7 @@ export default function MatchPlayPage() {
   );
 
   const handlePlayAgain = useCallback(() => {
+    playSfx("click");
     setResult(null);
     setReplayKey((k) => k + 1);
   }, []);
@@ -120,7 +122,7 @@ export default function MatchPlayPage() {
           </p>
           <button
             type="button"
-            onClick={() => router.push("/match")}
+            onClick={() => { playSfx("click"); router.push("/match") }}
             className="text-sm px-4 py-2 rounded-lg"
             style={{
               backgroundColor: "rgba(30,41,59,0.5)",
@@ -152,7 +154,7 @@ export default function MatchPlayPage() {
           </p>
           <button
             type="button"
-            onClick={() => router.push("/match")}
+            onClick={() => { playSfx("click"); router.push("/match") }}
             className="text-sm px-4 py-2 rounded-lg"
             style={{
               backgroundColor: "rgba(30,41,59,0.5)",
@@ -219,7 +221,7 @@ export default function MatchPlayPage() {
                   <button
                     key={opt.value}
                     type="button"
-                    onClick={() => setPairCount(opt.value)}
+                    onClick={() => { playSfx("click"); setPairCount(opt.value); }}
                     className="px-3 py-4 rounded-xl font-medium transition-all hover:-translate-y-0.5 text-center"
                     style={{
                       backgroundColor: "rgba(30,41,59,0.5)",

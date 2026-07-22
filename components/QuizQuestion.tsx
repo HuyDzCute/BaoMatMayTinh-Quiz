@@ -1,7 +1,8 @@
 "use client";
 import { Question } from "@/lib/types";
 import { CheckCircle, XCircle, Circle } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { playSfx } from "@/lib/sound";
 
 const LETTERS = ["A", "B", "C", "D"];
 
@@ -23,6 +24,28 @@ export default function QuizQuestion({
   showResult = false,
 }: QuizQuestionProps) {
   const [animatingIndex, setAnimatingIndex] = useState<number | null>(null);
+  // Refs let us only play the correct/wrong chime once per transition
+  // into `showResult`, instead of on every re-render.
+  const wasShowingResult = useRef(false);
+
+  // Reset per-question state when the question changes.
+  const questionKey = question?.id ?? index;
+  useEffect(() => {
+    wasShowingResult.current = false;
+  }, [questionKey]);
+
+  // Sound effect: when the result panel first appears, play the verdict.
+  useEffect(() => {
+    if (!showResult || wasShowingResult.current) return;
+    wasShowingResult.current = true;
+    const correctIdx = typeof question.correct === "number" ? question.correct : -1;
+    const selected =
+      typeof selectedAnswer === "number"
+        ? selectedAnswer
+        : parseInt(selectedAnswer, 10);
+    if (correctIdx >= 0 && selected === correctIdx) playSfx("correct");
+    else playSfx("wrong");
+  }, [showResult, question.correct, selectedAnswer]);
 
   if (!question) {
     return (
@@ -36,6 +59,7 @@ export default function QuizQuestion({
     if (showResult) return;
     setAnimatingIndex(idx);
     onSelectAnswer(idx);
+    playSfx("click");
     setTimeout(() => setAnimatingIndex(null), 200);
   };
 

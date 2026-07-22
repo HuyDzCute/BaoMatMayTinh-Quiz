@@ -60,6 +60,7 @@ import {
   type SetStudyStats,
 } from "@/lib/flashcards-storage";
 import type { FlashcardSet } from "@/lib/types";
+import { playSfx } from "@/lib/sound";
 
 export default function FlashcardsHubPage() {
   const [sets, setSets] = useState<FlashcardSet[]>([]);
@@ -95,10 +96,15 @@ export default function FlashcardsHubPage() {
 
   const handleDelete = useCallback(
     (setId: string) => {
+      playSfx("click");
       const confirmed = window.confirm("Xóa bộ thẻ này? Tiến độ học cũng sẽ bị xóa.");
-      if (!confirmed) return;
+      if (!confirmed) {
+        playSfx("click");
+        return;
+      }
       deleteUserFlashcardSet(setId);
       refresh();
+      playSfx("complete");
     },
     [refresh],
   );
@@ -125,7 +131,7 @@ export default function FlashcardsHubPage() {
           <button
             type="button"
             className="fc-btn fc-btn-primary"
-            onClick={() => setShowImport(true)}
+            onClick={() => { playSfx("click"); setShowImport(true); }}
           >
             <Plus size={14} />
             Tạo bộ thẻ mới
@@ -133,12 +139,12 @@ export default function FlashcardsHubPage() {
           <button
             type="button"
             className="fc-btn fc-btn-ghost"
-            onClick={() => setShowImport(true)}
+            onClick={() => { playSfx("click"); setShowImport(true); }}
           >
             <Upload size={14} />
             Import CSV / TXT
           </button>
-          <Link href="/flashcards/stats" className="fc-btn fc-btn-ghost">
+          <Link href="/flashcards/stats" onClick={() => playSfx("click")} className="fc-btn fc-btn-ghost">
             <BarChart3 size={14} />
             Thống kê
           </Link>
@@ -148,7 +154,7 @@ export default function FlashcardsHubPage() {
         </div>
 
         {crossDue.totalDue > 0 ? (
-          <Link href="/flashcards/review" className="fc-cross-cta">
+          <Link href="/flashcards/review" onClick={() => playSfx("click")} className="fc-cross-cta">
             <div className="fc-cross-cta-icon">
               <Zap size={20} />
             </div>
@@ -223,9 +229,28 @@ export default function FlashcardsHubPage() {
         {sets.length === 0 && (
           <div className="fc-empty">
             <div className="fc-empty-icon">
-              <Library size={22} />
+              <Library size={32} />
             </div>
-            <p style={{ margin: 0 }}>Chưa có bộ thẻ nào — bấm &ldquo;Tạo bộ thẻ mới&rdquo; để import.</p>
+            <p className="fc-empty-title">Thư viện thẻ của bạn đang trống</p>
+            <p className="fc-empty-sub">
+              Tạo bộ thẻ mới để bắt đầu ôn tập. Bạn có thể soạn tay hoặc import nhanh từ CSV / TXT.
+            </p>
+            <div className="fc-empty-actions">
+              <button
+                type="button"
+                className="fc-btn fc-btn-primary"
+                onClick={() => { playSfx("click"); setShowImport(true); }}
+              >
+                <Plus size={14} /> Tạo bộ thẻ mới
+              </button>
+              <button
+                type="button"
+                className="fc-btn fc-btn-ghost"
+                onClick={() => { playSfx("click"); setShowImport(true); }}
+              >
+                <Upload size={14} /> Import CSV / TXT
+              </button>
+            </div>
           </div>
         )}
       </main>
@@ -312,6 +337,7 @@ function SetCard({
       <div className="flex items-center gap-2 mt-1">
         <Link
           href={`/flashcards/${encodeURIComponent(set.id)}`}
+          onClick={() => playSfx("click")}
           className="fc-btn fc-btn-primary"
           style={{ flex: 1 }}
         >

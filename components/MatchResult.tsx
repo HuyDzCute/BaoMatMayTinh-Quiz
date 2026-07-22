@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Trophy, RotateCcw, Home, Target, Clock, AlertTriangle, Sparkles } from "lucide-react";
 import { formatMatchTime, formatMatchTimeLong } from "@/lib/match-storage";
 import LevelBadge, { LevelUpBadge } from "./LevelBadge";
+import { playSfx } from "@/lib/sound";
 
 interface LevelUpInfo {
   name: string;
@@ -162,7 +163,7 @@ export default function MatchResult({
       <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
         <button
           type="button"
-          onClick={onPlayAgain}
+          onClick={() => { playSfx("click"); onPlayAgain(); }}
           className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold text-sm transition-all"
           style={{
             background: "linear-gradient(135deg, #3b82f6, #06b6d4)",
@@ -175,6 +176,7 @@ export default function MatchResult({
         </button>
         <Link
           href="/match"
+          onClick={() => playSfx("click")}
           className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium text-sm transition-colors"
           style={{
             backgroundColor: "rgba(30,41,59,0.5)",
@@ -187,6 +189,7 @@ export default function MatchResult({
         </Link>
         <Link
           href="/"
+          onClick={() => playSfx("click")}
           className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-medium text-sm transition-colors"
           style={{
             backgroundColor: "rgba(30,41,59,0.5)",

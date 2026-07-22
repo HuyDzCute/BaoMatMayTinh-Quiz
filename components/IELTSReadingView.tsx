@@ -2,13 +2,17 @@
 
 import { Question } from "@/lib/types";
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   ArrowLeft,
   ArrowRight,
   Send,
   CheckCircle2,
   BookOpen,
+  Home,
 } from "lucide-react";
+import { playSfx } from "@/lib/sound";
+import { getQuizSet } from "@/lib/data";
 
 const LETTERS = ["A", "B", "C", "D"];
 
@@ -25,6 +29,13 @@ interface IELTSReadingViewProps {
   setName: string;
   passageLabel?: string;
   passage?: string;
+  /** Optional full sections array — used as a fallback so the passage is
+   *  guaranteed to render even if the parent's `passage` prop somehow
+   *  arrives empty (defensive: surfaced after user reported empty card). */
+  sections?: { id: string; name?: string; passage?: string }[];
+  /** Optional setId (e.g. "ielts-1"). When provided, the component resolves
+   *  the passage directly from `data.ts` as a last-resort fallback. */
+  setId?: string;
 }
 
 const fmt = (secs: number) => {
@@ -194,11 +205,19 @@ export default function IELTSReadingView({
   setName,
   passageLabel = "Reading Passage 1",
   passage,
+  sections,
+  setId,
 }: IELTSReadingViewProps) {
+  const router = useRouter();
   const pillRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const passageBodyRef = useRef<HTMLDivElement>(null);
   const [flashIdx, setFlashIdx] = useState<number | null>(null);
   const [showSubmitConfirm, setShowSubmitConfirm] = useState(false);
+
+  const handleExitHome = () => {
+    playSfx("click");
+    router.push("/");
+  };
 
   // Auto-scroll passage to top when question changes
   useEffect(() => {
@@ -231,10 +250,47 @@ export default function IELTSReadingView({
   const timerColor =
     totalSecs <= 60 ? "is-danger" : totalSecs <= 180 ? "is-warning" : "";
 
-  const effectivePassage =
+  // Resolve the passage from multiple sources, in priority order:
+//   1. The parent's `passage` prop (authoritative)
+//   2. The current question's own passage (per-question passages)
+//   3. A section from the explicit `sections` prop
+//   4. A lookup against `data.ts` based on `passageLabel` / `setName` — this
+//      is the last-resort fallback that guarantees we always have something
+//      to render even if the parent fails to thread state through correctly.
+const fallbackFromSections = sections?.find((s) => Boolean(s.passage))?.passage;
+
+const fallbackFromData = (() => {
+  if (typeof window === "undefined") return undefined;
+  // Prefer the explicitly-provided setId; otherwise infer from setName.
+  const rawSetId = setId ?? "ielts-1";
+  // Strip IELTS sub-section suffix to find the parent set.
+  const inferredSetId = rawSetId
+    .replace(/-(reading|reading-2|speaking)$/, "")
+    .split("-part-")[0]
+    .split("-mock")[0];
+  const sets = getQuizSet(inferredSetId);
+  if (!sets?.sections) return undefined;
+  // Prefer matching by section name (e.g. "Reading Passage 1")
+  const byLabel = sets.sections.find(
+    (s) => passageLabel && s.name === passageLabel
+  );
+  if (byLabel?.passage) return byLabel.passage;
+  // Otherwise first section with a non-empty passage
+  const any = sets.sections.find((s) => Boolean(s.passage));
+  return any?.passage;
+})();
+
+const effectivePassage =
     passage ??
-    (currentQ?.passage ??
-      "No passage provided. Please load the reading passage.");
+    currentQ?.passage ??
+    fallbackFromSections ??
+    fallbackFromData ??
+    "No passage provided. Please load the reading passage.";
+
+  // Defensive debug: surface missing-passage in dev so we never silently
+  // render an empty card. The user-visible fallback is still informative.
+  const hasPassage = effectivePassage.trim().length > 0
+    && effectivePassage !== "No passage provided. Please load the reading passage.";
 
   useEffect(() => {
     if (flashIdx === null) return;
@@ -246,7 +302,10 @@ export default function IELTSReadingView({
   useEffect(() => {
     if (!showSubmitConfirm) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setShowSubmitConfirm(false);
+      if (e.key === "Escape") {
+        playSfx("click");
+        setShowSubmitConfirm(false);
+      }
     };
     window.addEventListener("keydown", onKey);
 
@@ -279,20 +338,30 @@ export default function IELTSReadingView({
           <h2 style={{ fontFamily: "Georgia, serif", color: "var(--ielts-ink)", marginBottom: 8 }}>
             No reading test available
           </h2>
-          <p style={{ color: "var(--ielts-ink-muted)", fontSize: 14 }}>
+          <p style={{ color: "var(--ielts-ink-muted)", fontSize: 14, marginBottom: 24 }}>
             This set does not have a reading section.
           </p>
+          <button
+            type="button"
+            onClick={handleExitHome}
+            className="ielts-exit-home-btn"
+          >
+            <Home size={15} />
+            <span>Trở về trang chủ</span>
+          </button>
         </div>
       </div>
     );
   }
 
   const handlePillClick = (i: number) => {
+    playSfx("click");
     onJump(i);
     setFlashIdx(i);
   };
 
   const handleSubmitClick = () => {
+    playSfx("click");
     const unanswered = effectiveQuestions.reduce((c, q, i) => {
       return c + (isAnsweredForQuestion(q, answers[i]) ? 0 : 1);
     }, 0);
@@ -324,6 +393,16 @@ export default function IELTSReadingView({
       {/* Top bar */}
       <div className="ielts-topbar">
         <div className="ielts-topbar-inner">
+          <button
+            type="button"
+            onClick={handleExitHome}
+            className="ielts-exit-home-btn"
+            aria-label="Trở về trang chủ"
+            title="Trở về trang chủ"
+          >
+            <Home size={15} />
+            <span>Trang chủ</span>
+          </button>
           <div className="ielts-brand">
             <div className="ielts-brand-mark">IDP</div>
             <div>
@@ -358,7 +437,12 @@ export default function IELTSReadingView({
       {/* Two-column layout */}
       <div className="ielts-reading-layout">
         {/* Passage column */}
-        <aside className="ielts-passage-card">
+        <aside
+          className="ielts-passage-card"
+          style={{
+            minHeight: 360,
+          }}
+        >
           <div className="ielts-passage-header">
             <div>
               <div className="ielts-passage-title">{passageLabel}</div>
@@ -369,8 +453,8 @@ export default function IELTSReadingView({
             {/* Sticky question reminder */}
             <div style={{
               marginTop: "8px", padding: "4px 8px",
-              background: "rgba(37,99,235,0.08)", border: "1px solid rgba(37,99,235,0.2)",
-              borderRadius: "6px", fontSize: "11px", color: "#3b82f6",
+              background: "var(--ielts-accent-softer)", border: "1px solid rgba(232,184,106,0.28)",
+              borderRadius: "6px", fontSize: "11px", color: "var(--ielts-accent)",
               fontFamily: "var(--font-jetbrains)", fontWeight: 600,
               display: "flex", alignItems: "center", gap: "4px"
             }}>
@@ -378,21 +462,61 @@ export default function IELTSReadingView({
               Question {currentIndex + 1} / {total}
             </div>
           </div>
-          <div className="ielts-passage-body" ref={passageBodyRef}>
-            {effectivePassage.split("\n\n").map((para, idx) => {
-              const trimmed = para.trim();
-              if (
-                trimmed.startsWith("READING PASSAGE") ||
-                trimmed.startsWith("READING")
-              ) {
+          <div
+            className="ielts-passage-body"
+            ref={passageBodyRef}
+            style={{
+              fontFamily: "Georgia, 'Times New Roman', serif",
+              fontSize: "15px",
+              lineHeight: 1.7,
+              padding: "20px 24px",
+              minHeight: 240,
+              overflowY: "auto",
+            }}
+          >
+            {hasPassage ? (
+              effectivePassage.split("\n\n").map((para, idx) => {
+                const trimmed = para.trim();
+                if (
+                  trimmed.startsWith("READING PASSAGE") ||
+                  trimmed.startsWith("READING")
+                ) {
+                  return (
+                    <p
+                      key={idx}
+                      style={{
+                        fontWeight: 700,
+                        fontStyle: "italic",
+                        color: "var(--ielts-accent-strong)",
+                        fontSize: "12px",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.08em",
+                        margin: "0 0 10px",
+                      }}
+                    >
+                      {trimmed}
+                    </p>
+                  );
+                }
                 return (
-                  <p key={idx} className="passage-label">
+                  <p key={idx} style={{ margin: "0 0 14px" }}>
                     {trimmed}
                   </p>
                 );
-              }
-              return <p key={idx}>{trimmed}</p>;
-            })}
+              })
+            ) : (
+              <div
+                style={{
+                  color: "var(--ielts-ink-muted)",
+                  fontSize: 14,
+                  fontStyle: "italic",
+                  padding: "12px 0",
+                }}
+                role="status"
+              >
+                ⚠ Đoạn văn chưa được tải. Hãy tải lại trang hoặc chọn lại bài thi.
+              </div>
+            )}
           </div>
         </aside>
 
@@ -422,19 +546,19 @@ export default function IELTSReadingView({
             <MatchingQuestion
               q={currentQ}
               answerObj={currentAnswerObj}
-              onSelect={onSelectAnswer}
+              onSelect={(itemIdx, optIdx) => { playSfx("click"); onSelectAnswer(itemIdx, optIdx); }}
             />
           ) : currentQ && isSummary(currentQ) ? (
             <SummaryQuestion
               q={currentQ}
               answerObj={currentAnswerObj}
-              onSelect={onSelectAnswer}
+              onSelect={(itemIdx, optIdx) => { playSfx("click"); onSelectAnswer(itemIdx, optIdx); }}
             />
           ) : currentQ ? (
             <McqQuestion
               q={currentQ}
               selectedIdx={currentMcqIdx}
-              onSelect={onSelectAnswer}
+              onSelect={(_itemIdx, optIdx) => { playSfx("click"); onSelectAnswer(0, optIdx); }}
             />
           ) : (
             <div className="ielts-question-body">
@@ -484,7 +608,7 @@ export default function IELTSReadingView({
             </div>
             <div className="ielts-qnav-actions">
               <button
-                onClick={onPrev}
+                onClick={() => { playSfx("click"); onPrev(); }}
                 disabled={currentIndex === 0}
                 className="ielts-btn ielts-btn-secondary"
                 style={
@@ -504,7 +628,7 @@ export default function IELTSReadingView({
                 </button>
               ) : (
                 <button
-                  onClick={onNext}
+                  onClick={() => { playSfx("click"); onNext(); }}
                   className="ielts-btn ielts-btn-primary"
                 >
                   Next <ArrowRight size={14} />
@@ -524,7 +648,10 @@ export default function IELTSReadingView({
           aria-modal="true"
           aria-labelledby="submit-confirm-title"
           onClick={(e) => {
-            if (e.target === e.currentTarget) setShowSubmitConfirm(false);
+            if (e.target === e.currentTarget) {
+              playSfx("click");
+              setShowSubmitConfirm(false);
+            }
           }}
         >
           <div className="ielts-intro-card" style={{ maxWidth: 440, animation: "ieltsScorePop 0.4s cubic-bezier(0.22,1,0.36,1) both" }}>
@@ -549,13 +676,14 @@ export default function IELTSReadingView({
               <div className="ielts-intro-actions">
                 <button
                   className="ielts-btn ielts-btn-secondary"
-                  onClick={() => setShowSubmitConfirm(false)}
+                  onClick={() => { playSfx("click"); setShowSubmitConfirm(false); }}
                 >
                   Continue test
                 </button>
                 <button
                   className="ielts-btn ielts-btn-success"
                   onClick={() => {
+                    playSfx("click");
                     setShowSubmitConfirm(false);
                     onSubmit();
                   }}

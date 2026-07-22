@@ -12,6 +12,7 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { useCallback, useEffect, useReducer, useRef } from "react";
+import { playSfx } from "@/lib/sound";
 
 interface IELTSSpeakingViewProps {
   questions: Question[];
@@ -21,6 +22,8 @@ interface IELTSSpeakingViewProps {
   onAudioAnswer: (index: number, audio: string | undefined) => void;
   onPrev: () => void;
   onNext: () => void;
+  /** Direct jump to a specific prompt — avoids racing N times `onPrev/onNext`. */
+  onJump: (index: number) => void;
   onSubmit: () => void;
   totalSecs: number;
   setName: string;
@@ -58,6 +61,7 @@ type SpeakingUIState = {
   recState: RecState;
   elapsed: number;
   audioUrl: string | undefined;
+  saveError?: string;
 };
 
 type SpeakingUIAction =
@@ -67,24 +71,27 @@ type SpeakingUIAction =
   | { type: "tick"; elapsed: number }
   | { type: "unsupported" }
   | { type: "denied" }
+  | { type: "save_error"; message: string }
   | { type: "reset_timer" };
 
 function speakingUIReducer(state: SpeakingUIState, action: SpeakingUIAction): SpeakingUIState {
   switch (action.type) {
     case "reset":
-      return { recState: action.audioUrl ? "recorded" : "idle", elapsed: 0, audioUrl: action.audioUrl };
+      return { recState: action.audioUrl ? "recorded" : "idle", elapsed: 0, audioUrl: action.audioUrl, saveError: undefined };
     case "start_recording":
-      return { recState: "recording", elapsed: 0, audioUrl: undefined };
+      return { recState: "recording", elapsed: 0, audioUrl: undefined, saveError: undefined };
     case "stop_recording":
-      return { recState: "recorded", elapsed: 0, audioUrl: action.audioUrl };
+      return { recState: "recorded", elapsed: 0, audioUrl: action.audioUrl, saveError: undefined };
     case "tick":
       return { ...state, elapsed: action.elapsed };
     case "unsupported":
-      return { recState: "unsupported", elapsed: 0, audioUrl: undefined };
+      return { recState: "unsupported", elapsed: 0, audioUrl: undefined, saveError: undefined };
     case "denied":
-      return { recState: "denied", elapsed: 0, audioUrl: undefined };
+      return { recState: "denied", elapsed: 0, audioUrl: undefined, saveError: undefined };
+    case "save_error":
+      return { ...state, recState: "idle", saveError: action.message };
     case "reset_timer":
-      return { recState: "idle", elapsed: 0, audioUrl: undefined };
+      return { recState: "idle", elapsed: 0, audioUrl: undefined, saveError: undefined };
     default:
       return state;
   }
@@ -97,6 +104,7 @@ export default function IELTSSpeakingView({
   onAudioAnswer,
   onPrev,
   onNext,
+  onJump,
   onSubmit,
   totalSecs,
   setName,
@@ -114,8 +122,9 @@ export default function IELTSSpeakingView({
     recState: "idle",
     elapsed: 0,
     audioUrl: undefined,
+    saveError: undefined,
   });
-  const { recState, elapsed, audioUrl } = uiState;
+  const { recState, elapsed, audioUrl, saveError } = uiState;
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
@@ -157,6 +166,7 @@ export default function IELTSSpeakingView({
   const reRecord = () => {
     onAudioAnswer(currentIndex, undefined);
     dispatchUI({ type: "reset_timer" });
+    playSfx("click");
   };
 
   useEffect(() => {
@@ -173,6 +183,8 @@ export default function IELTSSpeakingView({
   useEffect(() => {
     if (totalSecs <= 0 && recState === "recording") {
       stopRecording();
+      // Distinct chime so the user knows the section timer cut them off.
+      playSfx("complete");
     }
   }, [totalSecs, recState, stopRecording]);
 
@@ -180,12 +192,15 @@ export default function IELTSSpeakingView({
     if (typeof window === "undefined") return;
     if (!navigator.mediaDevices?.getUserMedia) {
       dispatchUI({ type: "unsupported" });
+      playSfx("wrong");
       return;
     }
     if (typeof MediaRecorder === "undefined") {
       dispatchUI({ type: "unsupported" });
+      playSfx("wrong");
       return;
     }
+    playSfx("click");
 
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -213,11 +228,27 @@ export default function IELTSSpeakingView({
         const blob = new Blob(chunksRef.current, { type: mime });
         chunksRef.current = [];
         try {
+          // Hard cap at ~6MB to avoid blowing up Firestore (1MB doc limit after
+          // base64 inflation). Anything larger is almost certainly a runaway
+          // recording the user didn't intend.
+          if (blob.size > 6 * 1024 * 1024) {
+            dispatchUI({
+              type: "save_error",
+              message: "Bản ghi quá lớn (>6MB). Vui lòng thu lại với thời lượng ngắn hơn.",
+            });
+            return;
+          }
           const b64 = await blobToBase64(blob);
           onAudioAnswer(currentIndex, b64);
           dispatchUI({ type: "stop_recording", audioUrl: b64 });
-        } catch {
-          dispatchUI({ type: "reset_timer" });
+          playSfx("complete");
+        } catch (err) {
+          console.warn("[speaking] save failed:", err);
+          dispatchUI({
+            type: "save_error",
+            message: "Không lưu được bản ghi. Vui lòng thử thu lại.",
+          });
+          playSfx("wrong");
         } finally {
           releaseStream();
         }
@@ -232,6 +263,7 @@ export default function IELTSSpeakingView({
     } catch (err) {
       console.warn("[speaking] getUserMedia failed:", err);
       dispatchUI({ type: "denied" });
+      playSfx("wrong");
       releaseStream();
     }
   }, [currentIndex, onAudioAnswer, releaseStream]);
@@ -239,13 +271,13 @@ export default function IELTSSpeakingView({
   const timerColor =
     totalSecs <= 60 ? "is-danger" : totalSecs <= 180 ? "is-warning" : "";
 
-  const partLabel = "Part 1 — Introduction";
+  const partLabel = "Phần 1 — Giới thiệu";
 
   if (total === 0) {
     return (
       <div className="ielts-speaking-page">
-        <div className="ielts-topbar">
-          <div className="ielts-topbar-inner">
+        <div className="ielts-speaking-topbar">
+          <div className="ielts-speaking-topbar-inner">
             <div className="ielts-brand">
               <div className="ielts-brand-mark">IDP</div>
               <div>
@@ -257,10 +289,10 @@ export default function IELTSSpeakingView({
         </div>
         <div className="ielts-speaking-card" style={{ textAlign: "center", padding: "64px 32px" }}>
           <h2 style={{ fontFamily: "Georgia, serif", color: "var(--ielts-ink)", marginBottom: 8 }}>
-            No speaking test available
+            Chưa có phần thi Speaking
           </h2>
           <p style={{ color: "var(--ielts-ink-muted)", fontSize: 14 }}>
-            This set does not have a speaking section.
+            Bộ câu hỏi này chưa bao gồm phần Speaking.
           </p>
         </div>
       </div>
@@ -280,8 +312,8 @@ export default function IELTSSpeakingView({
             </div>
           </div>
           <div className="ielts-topbar-actions">
-            <div className="ielts-progress-text">
-              <strong>{answeredCount}</strong> / {total} answered
+            <div className="ielts-progress-text" aria-live="polite" aria-atomic="true">
+              Đã thu <strong>{answeredCount}</strong> / {total} câu
             </div>
             <div className={`ielts-timer-pill ${timerColor}`}>
               <svg
@@ -306,46 +338,57 @@ export default function IELTSSpeakingView({
             {partLabel}
           </div>
           <p className="ielts-speaking-part-meta">
-            Prompt {currentIndex + 1} of {total}
+            Câu hỏi {currentIndex + 1} / {total}
           </p>
         </header>
 
-        {/* Progress dots — show which prompts have been recorded */}
-        <div style={{ display: "flex", justifyContent: "center", gap: "6px", marginBottom: "16px", flexWrap: "wrap" }}>
-          {(audioAnswers ?? []).map((audio, i) => (
-            <button
-              key={i}
-              title={`Cau ${i + 1}: ${audio ? "Da thu" : "Chua thu"}`}
-              onClick={() => {
-                const diff = i - currentIndex;
-                if (diff < 0) for (let k = 0; k < Math.abs(diff); k++) onPrev();
-                else if (diff > 0) for (let k = 0; k < diff; k++) onNext();
-                dispatchUI({ type: "reset", audioUrl: audio ?? undefined });
-                if (audio) dispatchUI({ type: "stop_recording", audioUrl: audio });
-                dispatchUI({ type: "reset_timer" });
-              }}
-              style={{
-                width: "28px", height: "28px",
-                borderRadius: "50%", border: "none",
-                cursor: "pointer",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: "11px", fontWeight: 700, fontFamily: "var(--font-jetbrains)",
-                background: i === currentIndex
-                  ? (audio ? "rgba(59,130,246,0.25)" : "rgba(51,65,85,0.4)")
-                  : (audio ? "rgba(16,185,129,0.15)" : "rgba(51,65,85,0.3)"),
-                color: i === currentIndex
-                  ? (audio ? "#60a5fa" : "#94a3b8")
-                  : (audio ? "#34d399" : "#475569"),
-                outline: i === currentIndex
-                  ? (audio ? "1px solid rgba(59,130,246,0.5)" : "1px solid rgba(100,116,139,0.4)")
-                  : "1px solid transparent",
-                transition: "all 0.15s",
-                boxShadow: i === currentIndex ? (audio ? "0 0 8px rgba(59,130,246,0.3)" : "none") : "none",
-              }}
-            >
-              {i + 1}
-            </button>
-          ))}
+        {/* Progress dots — show which prompts have been recorded. aria-label
+            announces the current position to screen readers. */}
+        <div
+          role="tablist"
+          aria-label="Danh sách câu hỏi Speaking"
+          style={{ display: "flex", justifyContent: "center", gap: "6px", marginBottom: "16px", flexWrap: "wrap" }}
+        >
+          {(audioAnswers ?? []).map((audio, i) => {
+            const isCurrent = i === currentIndex;
+            const label = audio ? `Câu ${i + 1}: đã thu âm` : `Câu ${i + 1}: chưa thu âm`;
+            return (
+              <button
+                key={i}
+                type="button"
+                role="tab"
+                aria-selected={isCurrent}
+                aria-label={label}
+                title={label}
+                onClick={() => {
+                  playSfx("click");
+                  // Jump directly so we don't race N times onPrev/onNext, which
+                  // used to flicker the prompt mid-transition.
+                  onJump(i);
+                }}
+                style={{
+                  width: "28px", height: "28px",
+                  borderRadius: "50%", border: "none",
+                  cursor: "pointer",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: "11px", fontWeight: 700, fontFamily: "var(--font-jetbrains)",
+                  background: isCurrent
+                    ? (audio ? "rgba(59,130,246,0.25)" : "rgba(51,65,85,0.4)")
+                    : (audio ? "rgba(16,185,129,0.15)" : "rgba(51,65,85,0.3)"),
+                  color: isCurrent
+                    ? (audio ? "#60a5fa" : "#94a3b8")
+                    : (audio ? "#34d399" : "#475569"),
+                  outline: isCurrent
+                    ? (audio ? "1px solid rgba(59,130,246,0.5)" : "1px solid rgba(100,116,139,0.4)")
+                    : "1px solid transparent",
+                  transition: "all 0.15s",
+                  boxShadow: isCurrent ? (audio ? "0 0 8px rgba(59,130,246,0.3)" : "none") : "none",
+                }}
+              >
+                {i + 1}
+              </button>
+            );
+          })}
         </div>
 
         {/* Body */}
@@ -370,16 +413,16 @@ export default function IELTSSpeakingView({
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
               </svg>
-              Quick tips
+              Mẹo nhanh
             </div>
             <div className="ielts-speaking-tip-item">
-              Structure your response: introduction — main points — brief conclusion.
+              Bố cục câu trả lời: mở bài — các ý chính — kết bài ngắn gọn.
             </div>
             <div className="ielts-speaking-tip-item">
-              Speak at a natural pace — do not rush or memorise scripted answers.
+              Nói với tốc độ tự nhiên — đừng vội vàng hoặc học thuộc kịch bản.
             </div>
             <div className="ielts-speaking-tip-item">
-              Use specific examples and personal experience where appropriate.
+              Dùng ví dụ cụ thể và trải nghiệm cá nhân khi phù hợp.
             </div>
           </div>
 
@@ -389,18 +432,22 @@ export default function IELTSSpeakingView({
               <div className="ielts-speaking-record-warning" role="alert">
                 <MicOff size={16} />
                 <span>
-                  Your browser does not support audio recording. Please use the
-                  latest version of Chrome, Edge, or Firefox to record your
-                  speaking answers.
+                  Trình duyệt không hỗ trợ ghi âm. Vui lòng dùng Chrome, Edge
+                  hoặc Firefox phiên bản mới nhất để thu âm câu trả lời.
                 </span>
               </div>
             ) : recState === "denied" ? (
               <div className="ielts-speaking-record-warning" role="alert">
                 <MicOff size={16} />
                 <span>
-                  Microphone access was blocked. Allow microphone permission in
-                  your browser settings, then click <em>Re-record</em>.
+                  Quyền truy cập micro đang bị chặn. Hãy mở cài đặt trình duyệt
+                  để cấp quyền micro, sau đó nhấn <em>Ghi lại</em>.
                 </span>
+              </div>
+            ) : saveError ? (
+              <div className="ielts-speaking-record-warning" role="alert" aria-live="assertive">
+                <MicOff size={16} />
+                <span>{saveError}</span>
               </div>
             ) : null}
 
@@ -411,7 +458,7 @@ export default function IELTSSpeakingView({
                   onClick={startRecording}
                   className="ielts-btn ielts-btn-primary ielts-speaking-record-btn"
                 >
-                  <Mic size={16} /> Start recording
+                  <Mic size={16} /> Bắt đầu ghi âm
                 </button>
               )}
 
@@ -422,11 +469,11 @@ export default function IELTSSpeakingView({
                     onClick={stopRecording}
                     className="ielts-btn ielts-btn-danger ielts-speaking-record-btn is-recording"
                   >
-                    <Square size={14} fill="currentColor" /> Stop
+                    <Square size={14} fill="currentColor" /> Dừng
                   </button>
                   <div className="ielts-speaking-record-timer" aria-live="polite">
                     <span className="ielts-speaking-record-dot" />
-                    REC · {fmtDuration(elapsed)}
+                    ĐANG THU · {fmtDuration(elapsed)}
                   </div>
                 </>
               )}
@@ -437,13 +484,14 @@ export default function IELTSSpeakingView({
                     controls
                     src={audioUrl}
                     className="ielts-speaking-audio"
+                    aria-label={`Bản ghi âm câu ${currentIndex + 1}`}
                   />
                   <button
                     type="button"
                     onClick={reRecord}
                     className="ielts-btn ielts-btn-secondary"
                   >
-                    <RotateCcw size={14} /> Re-record
+                    <RotateCcw size={14} /> Ghi lại
                   </button>
                 </>
               )}
@@ -451,11 +499,12 @@ export default function IELTSSpeakingView({
 
             <p className="ielts-speaking-record-help">
               {recState === "idle" &&
-                "Click Start recording, speak for 1–2 minutes, then click Stop. Your audio will be saved with this attempt."}
+                "Nhấn Bắt đầu ghi âm, nói trong 1–2 phút, rồi nhấn Dừng. Bản ghi sẽ được lưu cùng lượt thi này."}
               {recState === "recording" &&
-                "Recording… speak clearly. Click Stop when you finish."}
+                "Đang ghi âm — nói rõ ràng. Nhấn Dừng khi hoàn thành."}
               {recState === "recorded" &&
-                "Recording saved. Re-record any time before submitting."}
+                "Đã lưu bản ghi. Bạn có thể ghi lại bất kỳ lúc nào trước khi nộp bài."}
+              {saveError && "Vui lòng ghi lại để tiếp tục."}
             </p>
           </div>
 
@@ -463,31 +512,31 @@ export default function IELTSSpeakingView({
           <div className="ielts-speaking-footer">
             <div className="ielts-speaking-footer-tip">
               <Clock size={12} />
-              Quality over speed — speak clearly and at a natural pace
+              Chất lượng quan trọng hơn tốc độ — nói rõ ràng và tự nhiên
             </div>
-            <div style={{ display: "flex", gap: 8 }}>
+              <div style={{ display: "flex", gap: 8 }}>
               <button
-                onClick={onPrev}
+                onClick={() => { playSfx("click"); onPrev(); }}
                 disabled={currentIndex === 0}
                 className="ielts-btn ielts-btn-secondary"
                 style={currentIndex === 0 ? { opacity: 0.4, cursor: "not-allowed" } : {}}
               >
-                <ArrowLeft size={14} /> Previous
+                <ArrowLeft size={14} /> Câu trước
               </button>
               {isLast ? (
                 <button
-                  onClick={onSubmit}
+                  onClick={() => { playSfx("click"); onSubmit(); }}
                   className="ielts-btn ielts-btn-success"
-                  title={answeredCount === 0 ? "Submit without recording any prompts" : undefined}
+                  title={answeredCount === 0 ? "Nộp bài khi chưa thu câu nào" : undefined}
                 >
-                  <Send size={14} /> Submit test
+                  <Send size={14} /> Nộp bài
                 </button>
               ) : (
                 <button
-                  onClick={onNext}
+                  onClick={() => { playSfx("click"); onNext(); }}
                   className="ielts-btn ielts-btn-primary"
                 >
-                  Next <ArrowRight size={14} />
+                  Câu tiếp <ArrowRight size={14} />
                 </button>
               )}
             </div>

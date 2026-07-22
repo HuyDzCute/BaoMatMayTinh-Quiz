@@ -20,6 +20,7 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { speak, stopSpeaking } from "@/lib/speech";
+import { playSfx } from "@/lib/sound";
 import {
   buildFilteredCrossSetReview,
   buildChoiceOptionsFromPool,
@@ -242,6 +243,8 @@ function CrossSetReviewInner() {
       const wasCorrect = rating === "good" || rating === "easy";
       setReviewed((c) => c + 1);
       if (wasCorrect) setCorrect((c) => c + 1);
+      // Quick verdict chime so each rating feels acknowledged.
+      playSfx(wasCorrect ? "correct" : "wrong");
 
       setFlipped(false);
       setAnimating(true);
@@ -258,6 +261,7 @@ function CrossSetReviewInner() {
         advanceLockRef.current = null;
         if (currentIndex + 1 >= queue.length) {
           setDone(true);
+          playSfx("complete");
         } else {
           setCurrentIndex((i) => i + 1);
         }
@@ -335,7 +339,10 @@ function CrossSetReviewInner() {
       if (modeRef.current === "flip") {
         if (e.key === " " || e.key === "Enter") {
           e.preventDefault();
-          if (!flippedRef.current) setFlipped(true);
+          if (!flippedRef.current) {
+            setFlipped(true);
+            playSfx("flip");
+          }
         } else if (flippedRef.current) {
           if (e.key === "1") advance("again");
           else if (e.key === "2") advance("hard");
@@ -398,25 +405,38 @@ function CrossSetReviewInner() {
           </section>
           <FilterChips counts={counts} active={filter} onChange={switchFilter} />
 
-          <div className="fc-empty">
+          <div className="fc-empty fc-empty--success">
             <div className="fc-empty-icon">
-              <CircleSlash size={22} />
+              <CircleSlash size={32} />
             </div>
-            <p style={{ margin: 0, color: "#cbd5e1", fontWeight: 600 }}>
+            <p className="fc-empty-title">
               {filter === "lapses"
-                ? "Không có thẻ nào bị sai gần đây."
+                ? "Không có thẻ hay sai"
                 : filter === "due"
-                  ? "Không có thẻ nào đến hạn."
+                  ? "Không có thẻ đến hạn"
                   : filter === "new"
-                    ? "Bạn đã học hết tất cả thẻ mới!"
-                    : "Tuyệt vời! Hiện không có thẻ nào đến hạn ôn."}
+                    ? "Bạn đã học hết thẻ mới"
+                    : "Tuyệt vời! Đã hết thẻ cần ôn"}
             </p>
-            <p style={{ margin: "6px 0 0", color: "#94a3b8", fontSize: 13 }}>
-              {filter !== "all" ? "Thử chọn bộ lọc khác — hoặc " : ""}Hãy quay lại sau, hoặc vào từng bộ để học thêm từ mới.
+            <p className="fc-empty-sub">
+              {filter !== "all"
+                ? "Thử chuyển sang bộ lọc khác hoặc quay lại sau."
+                : "Hãy quay lại sau, hoặc vào từng bộ để học thêm từ mới."}
             </p>
-            <Link href="/flashcards" className="fc-btn fc-btn-primary" style={{ marginTop: 16 }}>
-              <ListChecks size={14} /> Về danh sách bộ thẻ
-            </Link>
+            <div className="fc-empty-actions">
+              <Link href="/flashcards" className="fc-btn fc-btn-primary">
+                <ListChecks size={14} /> Về danh sách bộ thẻ
+              </Link>
+              {filter !== "all" && (
+                <button
+                  type="button"
+                  className="fc-btn fc-btn-ghost"
+                  onClick={() => switchFilter("all")}
+                >
+                  <Layers size={14} /> Xem tất cả
+                </button>
+              )}
+            </div>
           </div>
         </main>
         <Footer />
@@ -643,7 +663,10 @@ function CrossSetReviewInner() {
               onClick={() => {
                 if (mode === "choice") return;
                 if (mode !== "flip" || animating) return;
-                if (!flipped) setFlipped(true);
+                if (!flipped) {
+                  setFlipped(true);
+                  playSfx("flip");
+                }
               }}
             >
               <div className="fc-card-face">

@@ -111,12 +111,15 @@ export default function AnswerReview({ questions, answers, speakingAnswers }: An
 
   return (
     <div>
-      <div className="flex gap-2 mb-5">
+      <div role="tablist" aria-label="Lọc câu hỏi" className="flex gap-2 mb-5">
         {(["all", "correct", "wrong"] as const).map((f) => (
           <button
             key={f}
+            type="button"
+            role="tab"
+            aria-selected={filter === f}
             onClick={() => setFilter(f)}
-            className="px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200"
+            className="px-4 py-2 rounded-full text-xs font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
             style={{
               backgroundColor: filter === f ? "#3b82f6" : "#1e293b",
               color: filter === f ? "#fff" : "#94a3b8",

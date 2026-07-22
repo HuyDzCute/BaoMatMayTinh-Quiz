@@ -1,3 +1,16 @@
+# Render deployment is OPTIONAL — Vercel is the primary target.
+# This file is kept for parity with the existing deployment but no longer
+# embeds Firebase secrets (those moved to environment variables).
+#
+# To deploy on Render with Firebase:
+#   1. Set the NEXT_PUBLIC_FIREBASE_* env vars in the Render dashboard
+#      (Environment → Add Secret File / Environment Variable).
+#   2. Push to the branch Render is tracking — Render will read this file.
+#
+# Notes:
+#   - Build uses `--legacy-peer-deps` because lucide-react's published
+#     peer deps occasionally lag behind React 19.
+#   - Region "singapore" minimizes latency for VN users.
 services:
   - type: web
     name: baomatmaytinh-quiz
@@ -8,20 +21,22 @@ services:
     startCommand: npx next start -p $PORT
     healthCheckPath: /
     envVars:
+      # Firebase — populate these in the Render dashboard.
+      # NEVER commit the real values to source control.
       - key: NEXT_PUBLIC_FIREBASE_API_KEY
-        value: AIzaSyBC-Z-KnCcCYF8M7uB3VHZJBxyOOnw4vww
+        sync: false
       - key: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
-        value: puin-2a8df.firebaseapp.com
+        sync: false
       - key: NEXT_PUBLIC_FIREBASE_PROJECT_ID
-        value: puin-2a8df
+        sync: false
       - key: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
-        value: puin-2a8df.firebasestorage.app
+        sync: false
       - key: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
-        value: "959918893638"
+        sync: false
       - key: NEXT_PUBLIC_FIREBASE_APP_ID
-        value: "1:959918893638:web:999afbf6e9cf3d44fcb847"
+        sync: false
       - key: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
-        value: G-6G3SVTBPS4
+        sync: false
 
 cronJobs:
   - name: keep-alive

@@ -43,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={`${orbitron.variable} ${inter.variable} ${jetbrainsMono.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
-      <body className="antialiased min-h-screen" suppressHydrationWarning style={{ backgroundColor: "#0a0f1e", color: "#f1f5f9" }}>
+      <body className="antialiased min-h-screen" suppressHydrationWarning>
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

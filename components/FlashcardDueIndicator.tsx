@@ -20,16 +20,27 @@ export default function FlashcardDueIndicator() {
   const [count, setCount] = useState(0);
   const [mounted, setMounted] = useState(false);
 
+  // On quiz routes the badge has nothing to do — skip the entire effect
+  // body so it can't possibly cause a render loop in the quiz tree.
+  const isQuizRoute =
+    typeof pathname === "string" &&
+    pathname.startsWith("/quiz/") &&
+    pathname !== "/quiz";
+
   const refresh = useCallback(() => {
+    if (isQuizRoute) return;
     try {
       const summary = getCrossSetDueSummary();
       setCount(summary.totalDue);
     } catch {
       setCount(0);
     }
-  }, []);
+  }, [isQuizRoute]);
 
   useEffect(() => {
+    if (isQuizRoute) {
+      return;
+    }
     setMounted(true);
     refresh();
     function onStorage(e: StorageEvent) {
@@ -50,18 +61,23 @@ export default function FlashcardDueIndicator() {
       window.removeEventListener("storage", onStorage);
       window.removeEventListener("qthtm:flashcard-progress-changed", onCustom);
     };
-  }, [refresh]);
+    // refresh is intentionally stable via useCallback; safe to omit.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isQuizRoute]);
 
-  // Don't render on the review page itself
+  // Show on every page *except* the dedicated review surface itself, where
+  // the user already sees the queue. We also skip /quiz/[setId] when an
+  // attempt is already in progress (lesson > flashcard nag).
   if (!mounted) return null;
+  if (isQuizRoute) return null;
   if (pathname?.startsWith("/flashcards/review")) return null;
-  // Only show on Flashcards-related routes to avoid distracting on the quiz pages
-  const onFlashcardsRoute =
-    pathname === "/flashcards" ||
-    pathname?.startsWith("/flashcards/");
-  if (!onFlashcardsRoute) return null;
 
   if (count === 0) {
+    // Only surface the empty bell on flashcards routes so the home page
+    // doesn't get a noisy widget when there's nothing due.
+    const onFlashcardsRoute =
+      pathname === "/flashcards" || pathname?.startsWith("/flashcards/");
+    if (!onFlashcardsRoute) return null;
     return (
       <Link
         href="/flashcards/review"
@@ -69,7 +85,7 @@ export default function FlashcardDueIndicator() {
         aria-label="Không có thẻ nào đến hạn ôn"
         title="Hiện không có thẻ nào đến hạn — vào để xem"
       >
-        <Bell size={14} />
+        <Bell size={14} aria-hidden="true" />
       </Link>
     );
   }
@@ -81,7 +97,7 @@ export default function FlashcardDueIndicator() {
       aria-label={`Có ${count} thẻ đến hạn ôn — bấm để bắt đầu`}
       title={`Ôn ${count} thẻ đến hạn từ tất cả bộ`}
     >
-      <Zap size={14} />
+      <Zap size={14} aria-hidden="true" />
       <span className="hdr-due-indicator-text">Ôn tập</span>
       <span className="hdr-due-indicator-badge">{count}</span>
     </Link>

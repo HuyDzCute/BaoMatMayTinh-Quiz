@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState, useMemo } from "react";
 import Link from "next/link";
+import { playSfx } from "@/lib/sound";
 
 // YYYY-MM-DD in the user's *local* timezone. `toISOString().slice(0, 10)`
 // returns UTC, which makes a user in UTC+7 reviewing at 22:00 local appear
@@ -117,7 +118,7 @@ export default function FlashcardStatsPage() {
       <main className="flex-1 fc-page">
         <div className="fc-stats-page">
           <header className="fc-study-header" style={{ marginBottom: 18 }}>
-            <Link href="/flashcards" className="fc-study-back">
+            <Link href="/flashcards" onClick={() => playSfx("click")} className="fc-study-back">
               <ArrowLeft size={13} /> Thư viện
             </Link>
             <div className="fc-study-title-block">
@@ -128,14 +129,16 @@ export default function FlashcardStatsPage() {
 
           {!hasAnyActivity ? (
             <div className="fc-empty-state">
-              <div className="fc-stat-icon" style={{ margin: "0 auto" }}>
-                <Layers size={18} />
+              <div className="fc-empty-icon" style={{ width: 72, height: 72, margin: 0 }}>
+                <Layers size={32} />
               </div>
               <h2>Chưa có hoạt động nào</h2>
-              <p>Hãy mở một bộ thẻ bất kỳ và bắt đầu ôn tập để xem thống kê.</p>
-              <Link href="/flashcards" className="fc-btn fc-btn-primary inline-flex">
-                <Repeat size={14} /> Đi tới thư viện
-              </Link>
+              <p>Hãy mở một bộ thẻ bất kỳ và bắt đầu ôn tập để xem thống kê chi tiết của bạn.</p>
+              <div className="fc-empty-actions">
+                <Link href="/flashcards" onClick={() => playSfx("click")} className="fc-btn fc-btn-primary">
+                  <Repeat size={14} /> Đi tới thư viện
+                </Link>
+              </div>
             </div>
           ) : (
             <>
@@ -293,6 +296,7 @@ export default function FlashcardStatsPage() {
                             <td style={{ textAlign: "right" }}>
                               <Link
                                 href={`/flashcards/${encodeURIComponent(r.id)}`}
+                                onClick={() => playSfx("click")}
                                 className="fc-row-study"
                               >
                                 <Repeat size={11} /> Học

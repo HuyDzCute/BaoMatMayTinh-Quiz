@@ -13,6 +13,7 @@ import {
   TrendingUp, Target, Zap, Award, RefreshCw, AlertTriangle,
   Play, Pause, Volume2, Mic, Wifi, WifiOff, Upload
 } from "lucide-react";
+import { playSfx } from "@/lib/sound";
 
 interface DayGroup {
   label: string;
@@ -27,6 +28,7 @@ function AudioPlayerMini({ src }: { src: string }) {
 
   const toggle = () => {
     if (!audioRef.current) return;
+    playSfx("click");
     if (playing) { audioRef.current.pause(); } else { audioRef.current.play().catch(() => {}); }
     setPlaying(!playing);
   };
@@ -175,7 +177,7 @@ export default function HistoryPage() {
 
         {/* ── Header ── */}
         <div className="flex items-center gap-4 mb-6">
-          <Link href="/" className="his-back-btn">
+          <Link href="/" onClick={() => playSfx("click")} className="his-back-btn">
             <ArrowLeft size={18} />
           </Link>
           <div className="his-title-group">
@@ -205,7 +207,7 @@ export default function HistoryPage() {
         {user?.isAnonymous && !loading && !isCloud && (
           <div className="his-sync-hint" style={{ background: "rgba(245,158,11,0.10)", border: "1px solid rgba(245,158,11,0.25)" }}>
             <AlertTriangle size={14} style={{ color: "#f59e0b", flexShrink: 0 }} />
-            <span>Lich su duoc luu cuc bo tren may nay. <button onClick={() => signInWithGoogle()} style={{ background: "none", border: "none", color: "#60a5fa", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Dang nhap Google</button> de dong bo tren nhieu thiet bi.</span>
+            <span>Lich su duoc luu cuc bo tren may nay. <button onClick={async () => { playSfx("click"); try { await signInWithGoogle(); playSfx("complete"); } catch { playSfx("wrong"); } }} style={{ background: "none", border: "none", color: "#60a5fa", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Dang nhap Google</button> de dong bo tren nhieu thiet bi.</span>
           </div>
         )}
 
@@ -219,7 +221,7 @@ export default function HistoryPage() {
         {cloudError && !user?.isAnonymous && (
           <div className="his-sync-hint" style={{ background: "rgba(239,68,68,0.08)", border: "1px solid rgba(239,68,68,0.2)" }}>
             <RefreshCw size={14} style={{ color: "#f87171", flexShrink: 0 }} />
-            <span>Khong ket noi duoc cloud — hien thi du lieu cuc bo. <button onClick={() => { setLoading(true); setCloudError(false); setRetryKey((k) => k + 1); }} style={{ background: "none", border: "none", color: "#60a5fa", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Thu lai</button></span>
+            <span>Khong ket noi duoc cloud — hien thi du lieu cuc bo. <button onClick={() => { playSfx("click"); setLoading(true); setCloudError(false); setRetryKey((k) => k + 1); }} style={{ background: "none", border: "none", color: "#60a5fa", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Thu lai</button></span>
           </div>
         )}
 
@@ -235,7 +237,7 @@ export default function HistoryPage() {
           <div className="his-sync-hint" style={{ background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.2)", marginBottom: "12px" }}>
             <Upload size={14} style={{ color: "#60a5fa", flexShrink: 0 }} />
             <span>Co {pendingSyncCount} ket qua dang cho dong bo. </span>
-            <button onClick={retryPendingSync} style={{ background: "none", border: "none", color: "#60a5fa", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Dong bo ngay</button>
+            <button onClick={async () => { playSfx("click"); try { await retryPendingSync(); playSfx("complete"); } catch { playSfx("wrong"); } }} style={{ background: "none", border: "none", color: "#60a5fa", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Dong bo ngay</button>
           </div>
         )}
 
@@ -308,7 +310,7 @@ export default function HistoryPage() {
                 ? "Hay bat dau thi de dong bo lich su len cloud!"
                 : "Hay bat dau thi de xem lich su tai day!"}
             </p>
-            <Link href="/" className="his-cta-btn">
+            <Link href="/" onClick={() => playSfx("click")} className="his-cta-btn">
               Bat dau thi ngay
             </Link>
           </div>
@@ -345,7 +347,7 @@ export default function HistoryPage() {
                       >
                         <button
                           className="his-card-header"
-                          onClick={() => setExpandedId(isExpanded ? null : item.id)}
+                          onClick={() => { playSfx("click"); setExpandedId(isExpanded ? null : item.id); }}
                         >
                           {/* Left: tier badge + score */}
                           <div className="his-card-left">

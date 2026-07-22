@@ -9,7 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@types/howler": "^2.2.13",
     "firebase": "^12.15.0",
+    "howler": "^2.2.4",
     "lucide-react": "^1.22.0",
     "next": "16.2.9",
     "react": "19.2.4",

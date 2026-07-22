@@ -5,6 +5,7 @@ import {
   BookOpen, GraduationCap, Terminal, AlertTriangle,
   ChevronDown, ChevronUp, CheckCircle2, Globe, BookText, Mic
 } from "lucide-react";
+import { playSfx } from "@/lib/sound";
 
 const iconMap: Record<string, React.ElementType> = {
   "book-open": BookOpen,
@@ -27,10 +28,12 @@ export default function SetSelector({ onSelect }: SetSelectorProps) {
   const [expandedSet, setExpandedSet] = useState<string | null>(null);
 
   const handleSetClick = (setId: string) => {
+    playSfx("click");
     setExpandedSet(expandedSet === setId ? null : setId);
   };
 
   const handleSubSetClick = (setId: string, subSetId: string, questionCount: number) => {
+    playSfx("click");
     onSelect(setId, subSetId, questionCount);
   };
 
@@ -41,6 +44,8 @@ export default function SetSelector({ onSelect }: SetSelectorProps) {
         const subSets = getSubSets(set.id);
         const isExpanded = expandedSet === set.id;
         const isIelts = set.id === "ielts-1";
+        const headerId = `set-header-${set.id}`;
+        const panelId = `set-panel-${set.id}`;
 
         return (
           <div
@@ -54,9 +59,13 @@ export default function SetSelector({ onSelect }: SetSelectorProps) {
           >
             {/* Card header */}
             <button
-              className="w-full px-5 py-4 flex items-center justify-between transition-all duration-150"
+              type="button"
+              id={headerId}
+              className="w-full px-5 py-4 flex items-center justify-between transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
               style={{ backgroundColor: "transparent" }}
               onClick={() => handleSetClick(set.id)}
+              aria-expanded={isExpanded}
+              aria-controls={panelId}
               onMouseEnter={(e) => {
                 if (!isExpanded) {
                   e.currentTarget.style.backgroundColor = "rgba(30,41,59,0.4)";
@@ -138,6 +147,9 @@ export default function SetSelector({ onSelect }: SetSelectorProps) {
             {/* Sub-items */}
             {isExpanded && (
               <div
+                id={panelId}
+                role="region"
+                aria-labelledby={headerId}
                 className="border-t grid grid-cols-1 sm:grid-cols-2 gap-1.5 p-2"
                 style={{ borderColor: "rgba(51,65,85,0.3)" }}
               >
@@ -146,7 +158,9 @@ export default function SetSelector({ onSelect }: SetSelectorProps) {
                   return (
                   <button
                     key={sub.id}
-                    className="w-full text-left px-4 py-3 rounded-lg transition-all duration-150 flex items-center justify-between gap-3"
+                    type="button"
+                    aria-label={`Bắt đầu ${sub.name} — ${sub.questionCount} câu`}
+                    className="w-full text-left px-4 py-3 rounded-lg transition-all duration-150 flex items-center justify-between gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
                     style={{
                       backgroundColor: "rgba(15,23,42,0.6)",
                       border: "1px solid rgba(51,65,85,0.3)",

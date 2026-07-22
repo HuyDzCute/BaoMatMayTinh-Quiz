@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { QuizResult } from "@/lib/types";
 import { Clock, TrendingUp } from "lucide-react";
+import { playSfx } from "@/lib/sound";
 
 interface ResultCardProps {
   result: QuizResult;
@@ -23,6 +24,15 @@ export default function ResultCard({ result }: ResultCardProps) {
   const [showConfetti, setShowConfetti] = useState(false);
   const animationRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  // Sound effect: a one-shot victory chime when the card appears.
+  // Ref-guarded so navigating back-and-forth doesn't replay it.
+  const completionChimed = useRef(false);
+  useEffect(() => {
+    if (completionChimed.current) return;
+    completionChimed.current = true;
+    playSfx("complete");
+  }, []);
+
   // Score count-up animation
   useEffect(() => {
     const duration = 1500;
@@ -39,6 +49,8 @@ export default function ResultCard({ result }: ResultCardProps) {
         setDisplayedScore(result.score);
         if (result.percentage >= 80) {
           setShowConfetti(true);
+          // Subtle tick when confetti starts — reinforces the win moment.
+          playSfx("tick");
           setTimeout(() => setShowConfetti(false), 4000);
         }
       }
@@ -51,6 +63,7 @@ export default function ResultCard({ result }: ResultCardProps) {
 
   const grade = result.percentage >= 90 ? "A+" : result.percentage >= 80 ? "A" : result.percentage >= 70 ? "B" : result.percentage >= 60 ? "C" : result.percentage >= 50 ? "D" : "F";
   const gradeColor = result.percentage >= 80 ? "#10b981" : result.percentage >= 60 ? "#f59e0b" : "#ef4444";
+  const isSpeaking = result.sectionType === "speaking";
 
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
@@ -83,6 +96,9 @@ export default function ResultCard({ result }: ResultCardProps) {
       <div className="text-center animate-fade-slide-up">
         <div className="relative inline-block mb-6">
           <div
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
             className="w-40 h-40 rounded-full flex flex-col items-center justify-center mx-auto animate-count-up"
             style={{
               background: `conic-gradient(${gradeColor}40 ${result.percentage * 3.6}deg, #1e293b 0deg)`,
@@ -100,6 +116,7 @@ export default function ResultCard({ result }: ResultCardProps) {
             </span>
           </div>
           <span
+            aria-hidden="true"
             className="absolute -top-2 -right-2 w-12 h-12 rounded-full flex items-center justify-center text-lg font-black border-2"
             style={{
               backgroundColor: `${gradeColor}20`,
@@ -113,10 +130,14 @@ export default function ResultCard({ result }: ResultCardProps) {
         </div>
 
         <h2 className="text-xl font-bold mb-2" style={{ color: "#f1f5f9", fontFamily: "var(--font-orbitron)" }}>
-          {result.percentage >= 80 ? "Xuất sắc!" : result.percentage >= 60 ? "Khá tốt!" : result.percentage >= 50 ? "Cố gắng hơn!" : "Cần ôn lại!"}
+          {isSpeaking
+            ? "Đã nộp bài Speaking"
+            : result.percentage >= 80 ? "Xuất sắc!" : result.percentage >= 60 ? "Khá tốt!" : result.percentage >= 50 ? "Cố gắng hơn!" : "Cần ôn lại!"}
         </h2>
         <p className="text-sm mb-8" style={{ color: "#94a3b8" }}>
-          Bạn đã hoàn thành bài thi <strong style={{ color: "#f1f5f9" }}>{result.setName}</strong>
+          {isSpeaking
+            ? `Bạn đã hoàn thành bài Speaking ${result.setName}. Hãy dùng tab Xem lại bài để nghe lại các bản ghi âm.`
+            : <>Bạn đã hoàn thành bài thi <strong style={{ color: "#f1f5f9" }}>{result.setName}</strong></>}
         </p>
 
         <div className="grid grid-cols-3 gap-3 max-w-md mx-auto mb-8">
@@ -128,12 +149,12 @@ export default function ResultCard({ result }: ResultCardProps) {
           <div className="p-4 rounded-xl text-center" style={{ backgroundColor: "#111827", border: "1px solid #334155" }}>
             <XIcon className="mx-auto mb-1" />
             <p className="text-2xl font-black" style={{ color: "#ef4444", fontFamily: "var(--font-jetbrains)" }}>{result.wrongCount}</p>
-            <p className="text-xs mt-1" style={{ color: "#94a3b8" }}>Sai</p>
+            <p className="text-xs mt-1" style={{ color: "#94a3b8" }}>{isSpeaking ? "Chưa thu" : "Sai"}</p>
           </div>
           <div className="p-4 rounded-xl text-center" style={{ backgroundColor: "#111827", border: "1px solid #334155" }}>
             <TrendingUp className="mx-auto mb-1" size={18} style={{ color: "#06b6d4" }} />
-            <p className="text-2xl font-black" style={{ color: "#06b6d4", fontFamily: "var(--font-jetbrains)" }}>{result.percentage}%</p>
-            <p className="text-xs mt-1" style={{ color: "#94a3b8" }}>Chính xác</p>
+            <p className="text-2xl font-black" style={{ color: "#06b6d4", fontFamily: "var(--font-jetbrains)" }}>{isSpeaking ? `${result.totalQuestions}` : `${result.percentage}%`}</p>
+            <p className="text-xs mt-1" style={{ color: "#94a3b8" }}>{isSpeaking ? "Câu hỏi" : "Chính xác"}</p>
           </div>
         </div>
 

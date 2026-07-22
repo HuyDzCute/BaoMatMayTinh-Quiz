@@ -14,9 +14,14 @@
   --color-text-secondary: #94a3b8;
   --color-border: #334155;
 
-  --font-heading: "Orbitron", sans-serif;
-  --font-body: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  /* Bind Tailwind theme tokens to the next/font variables supplied by
+     app/layout.tsx. Without this, --font-heading/-font-body/-font-mono
+     resolve to "Inter, sans-serif" / "Orbitron, sans-serif" literals and
+     the actual webfonts are never applied. */
+  --font-heading: var(--font-orbitron), "Orbitron", sans-serif;
+  --font-body: var(--font-inter), "Inter", sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
+  --font-serif: var(--font-serif), "Source Serif 4", Georgia, serif;
 }
 
 /*    Light Mode    */
@@ -140,8 +145,39 @@ html.light .his-card-skeleton {
   background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
 }
 
+/* IELTS Reading / Speaking always uses the warm parchment palette regardless
+   of the global theme toggle. The .ielts-* tokens below are scoped to the
+   IELTS shell only, so clicking the header theme button still flips the rest
+   of the app (header, quiz cards, flashcards) between dark/light. */
 * {
   box-sizing: border-box;
+}
+
+/* Screen-reader-only utility: hides visually while keeping content
+   available to assistive technology. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respect users who prefer less motion: drop the bouncy / pulsing
+   animations but keep instant transitions for state changes. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 body {
@@ -2884,30 +2920,101 @@ body {
    IELTS READING   Premium British Council level
    ========================================================= */
 
-/* CSS design tokens — applied via .ielts-page and .ielts-speaking-page */
+/* =========================================================
+   IELTS READING   British Council — Official Premium Edition
+   Palette: deep inkwell navy + warm ivory paper + signature gold.
+   Type:   Orbitron (display), Source Serif 4 (passage), Inter (UI),
+           JetBrains Mono (numerals / system).
+   ========================================================= */
+
 .ielts-page,
 .ielts-speaking-page {
-  --ielts-bg: #f6f8fb;
-  --ielts-surface: #ffffff;
-  --ielts-paper: #ffffff;
-  --ielts-paper-alt: #f8fafc;
-  --ielts-border: #e2e8f0;
-  --ielts-border-strong: #cbd5e1;
-  --ielts-ink: #0f172a;
-  --ielts-ink-muted: #475569;
-  --ielts-ink-faint: #94a3b8;
-  --ielts-accent: #2563eb;
-  --ielts-accent-strong: #1d4ed8;
-  --ielts-accent-soft: #dbeafe;
-  --ielts-accent-softer: #eff6ff;
-  --ielts-success: #059669;
-  --ielts-success-soft: #d1fae5;
-  --ielts-danger: #dc2626;
-  --ielts-danger-soft: #fee2e2;
-  --ielts-warning: #d97706;
-  --ielts-highlight: #fef9c3;
+  /* Deep inkwell — true British Council navy, slightly desaturated for long
+     reading sessions without losing depth. */
+  --ielts-bg: #0b1530;
+  --ielts-bg-tint: #0e1a3d;
+  /* Layered surfaces — paper feels lighter than the background so cards
+     truly float. */
+  --ielts-surface: #142046;
+  --ielts-paper: #15224d;
+  --ielts-paper-alt: #1b2a5e;
+  --ielts-paper-hi: #1f316b;
+  /* Hairline gold borders for premium feel. */
+  --ielts-border: rgba(232,184,106,0.16);
+  --ielts-border-strong: rgba(232,184,106,0.32);
+  /* Warm ivory ink — classic British Council cream. */
+  --ielts-ink: #f4ecd8;
+  --ielts-ink-muted: #d9c89b;
+  --ielts-ink-faint: #8c9bc4;
+  /* Signature gold — slightly warmer than the previous tone, paired with a
+     deep amber for hover and a glowing halo for emphasis. */
+  --ielts-accent: #e8b86a;
+  --ielts-accent-strong: #c89244;
+  --ielts-accent-glow: rgba(232,184,106,0.45);
+  --ielts-accent-soft: rgba(232,184,106,0.18);
+  --ielts-accent-softer: rgba(232,184,106,0.08);
+  /* Status colours — tuned for dark navy so they read instantly. */
+  --ielts-success: #7dd3a0;
+  --ielts-success-soft: rgba(125,211,160,0.16);
+  --ielts-danger: #ff8a80;
+  --ielts-danger-soft: rgba(255,138,128,0.16);
+  --ielts-warning: #ffcb6b;
+  --ielts-highlight: rgba(232,184,106,0.32);
+
+  /* Premium drop shadow token (used across cards & modal). */
+  --ielts-shadow-card:
+    0 1px 0 rgba(255,255,255,0.04) inset,
+    0 1px 2px rgba(0,0,0,0.4),
+    0 12px 32px -8px rgba(0,0,0,0.55);
+  --ielts-shadow-modal:
+    0 40px 80px -20px rgba(0,0,0,0.7),
+    0 0 0 1px rgba(232,184,106,0.2);
 }
-.ielts-page { background: var(--ielts-bg); color: var(--ielts-ink); min-height: 100vh; font-family: "Inter", system-ui, sans-serif; }
+
+/* Page wrapper — adds a subtle radial vignette so the centre of attention
+   sits on the content, not the corners. */
+.ielts-page {
+  background:
+    radial-gradient(ellipse at top, rgba(232,184,106,0.05) 0%, transparent 60%),
+    linear-gradient(180deg, var(--ielts-bg) 0%, #08102a 100%);
+  background-attachment: fixed;
+  color: var(--ielts-ink);
+  min-height: 100vh;
+  font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Back-to-home pill — sits in the top bar; minimal, ivory-on-glass. */
+.ielts-exit-home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--ielts-border-strong);
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  color: var(--ielts-ink-muted);
+  font-family: var(--font-jetbrains), "Inter", system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.22,1,0.36,1);
+}
+.ielts-exit-home-btn:hover {
+  border-color: var(--ielts-accent);
+  color: var(--ielts-accent);
+  background: var(--ielts-accent-softer);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px -8px var(--ielts-accent-glow);
+}
+.ielts-exit-home-btn:active { transform: translateY(0); }
+.ielts-exit-home-btn:focus-visible {
+  outline: 2px solid var(--ielts-accent);
+  outline-offset: 2px;
+}
 
 /* Topbar entrance */
 @keyframes ieltstopEnter {
@@ -2918,237 +3025,317 @@ body {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: #ffffff;
+  background: linear-gradient(180deg, rgba(11,21,48,0.92) 0%, rgba(11,21,48,0.78) 100%);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
   border-bottom: 1px solid var(--ielts-border);
   animation: ieltstopEnter 0.4s ease-out both;
 }
+.ielts-topbar::after {
+  /* hairline gold accent under the bar */
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--ielts-accent-soft) 20%,
+    var(--ielts-accent) 50%,
+    var(--ielts-accent-soft) 80%,
+    transparent 100%);
+  opacity: 0.5;
+  pointer-events: none;
+}
 .ielts-topbar-inner {
-  max-width: 1280px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 14px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 18px;
   flex-wrap: wrap;
 }
 .ielts-topbar-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
-/* Brand: British Council inspired — clean & authoritative */
+/* Brand — full block, serif name + uppercase eyebrow. */
 .ielts-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: "Georgia", "Times New Roman", serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--ielts-ink);
-  letter-spacing: -0.01em;
+  gap: 12px;
+  padding-left: 18px;
+  border-left: 1px solid var(--ielts-border-strong);
 }
 .ielts-brand-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 6px;
-  background: var(--ielts-accent);
-  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f0c674 0%, #c89244 100%);
+  color: #0b1530;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-weight: 800;
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  box-shadow: 0 2px 8px rgba(37,99,235,0.35);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    0 6px 18px -6px var(--ielts-accent-glow);
+}
+.ielts-brand > div > div:first-child {
+  font-family: var(--font-serif), "Source Serif 4", Georgia, serif;
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--ielts-ink);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
 }
 .ielts-brand-sub {
   font-family: var(--font-inter), "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 11px;
-  color: var(--ielts-ink-faint);
+  font-weight: 600;
+  font-size: 10px;
+  color: var(--ielts-accent);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
-  margin-top: 1px;
+  letter-spacing: 0.22em;
+  margin-top: 3px;
 }
+
+/* Timer pill — refined gold ring with breathing animation when warning. */
 .ielts-timer-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
+  gap: 8px;
+  padding: 7px 14px;
   border-radius: 999px;
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 13px;
-  background: var(--ielts-accent-softer);
+  letter-spacing: 0.04em;
+  background: linear-gradient(180deg, rgba(232,184,106,0.14) 0%, rgba(232,184,106,0.06) 100%);
   color: var(--ielts-accent);
-  border: 1px solid var(--ielts-accent-soft);
+  border: 1px solid var(--ielts-border-strong);
+  box-shadow: 0 0 0 0 transparent;
+  transition: all 200ms ease;
 }
 .ielts-timer-pill.is-warning {
-  background: #fff7ed;
+  background: linear-gradient(180deg, rgba(255,203,107,0.2) 0%, rgba(255,203,107,0.08) 100%);
   color: var(--ielts-warning);
-  border-color: #fed7aa;
+  border-color: rgba(255,203,107,0.4);
+  animation: ieltsPulseWarn 1.8s ease-in-out infinite;
 }
 .ielts-timer-pill.is-danger {
-  background: var(--ielts-danger-soft);
+  background: linear-gradient(180deg, rgba(255,138,128,0.2) 0%, rgba(255,138,128,0.08) 100%);
   color: var(--ielts-danger);
-  border-color: #fecaca;
+  border-color: rgba(255,138,128,0.4);
+  animation: ieltsPulseDanger 1.1s ease-in-out infinite;
 }
+@keyframes ieltsPulseWarn {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,203,107,0); }
+  50%      { box-shadow: 0 0 0 6px rgba(255,203,107,0.18); }
+}
+@keyframes ieltsPulseDanger {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,138,128,0); }
+  50%      { box-shadow: 0 0 0 6px rgba(255,138,128,0.22); }
+}
+
 .ielts-progress-text {
-  font-size: 12px;
-  color: var(--ielts-ink-muted);
-  font-weight: 500;
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 11px;
+  color: var(--ielts-ink-faint);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
 }
 .ielts-progress-text strong {
   color: var(--ielts-ink);
   font-weight: 700;
+  font-size: 13px;
 }
 
-/* Reading layout */
+/* Reading layout — wider, more breathing room. */
 .ielts-reading-layout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
-  max-width: 1280px;
+  gap: 28px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 28px;
 }
 @media (min-width: 960px) {
   .ielts-reading-layout {
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-    gap: 32px;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 36px;
   }
 }
 
-/* Passage card — paper texture */
+/* Passage card — the headline premium surface. Cream-on-navy, gold hairline,
+   subtle inner glow at the top. */
 .ielts-passage-card {
-  background: var(--ielts-paper);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 40%),
+    var(--ielts-paper);
   border: 1px solid var(--ielts-border);
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(15,23,42,0.05), 0 4px 16px rgba(15,23,42,0.04);
+  border-top: 1px solid var(--ielts-border-strong);
+  border-radius: 14px;
+  box-shadow: var(--ielts-shadow-card);
   overflow: hidden;
   position: sticky;
-  top: 76px;
-  max-height: calc(100vh - 100px);
+  top: 84px;
+  max-height: calc(100vh - 108px);
   display: flex;
   flex-direction: column;
 }
 .ielts-passage-header {
-  padding: 16px 22px;
+  padding: 18px 26px;
   border-bottom: 1px solid var(--ielts-border);
-  background: var(--ielts-paper-alt);
+  background: linear-gradient(180deg, var(--ielts-paper-hi) 0%, var(--ielts-paper) 100%);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 8px;
+  gap: 12px;
 }
 .ielts-passage-title {
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: var(--font-serif), "Source Serif 4", Georgia, serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 22px;
   color: var(--ielts-ink);
-  line-height: 1.4;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
 }
 .ielts-passage-tag {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--ielts-accent);
   background: var(--ielts-accent-softer);
-  border: 1px solid var(--ielts-accent-soft);
-  padding: 3px 8px;
+  border: 1px solid var(--ielts-border-strong);
+  padding: 4px 10px;
   border-radius: 4px;
 }
+/* Passage body — true editorial typography: justified, generous leading,
+   first paragraph with a subtle drop cap. */
 .ielts-passage-body {
-  padding: 28px 30px;
-  font-family: "Georgia", "Times New Roman", serif;
+  padding: 32px 36px;
+  font-family: var(--font-serif), "Source Serif 4", "Georgia", serif;
   font-size: 16.5px;
-  line-height: 1.8;
+  line-height: 1.85;
   color: var(--ielts-ink);
+  text-align: justify;
+  hyphens: auto;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--ielts-border-strong) transparent;
   flex: 1;
 }
-.ielts-passage-body::-webkit-scrollbar { width: 6px; }
+.ielts-passage-body::-webkit-scrollbar { width: 8px; }
+.ielts-passage-body::-webkit-scrollbar-track { background: transparent; }
 .ielts-passage-body::-webkit-scrollbar-thumb {
   background: var(--ielts-border-strong);
-  border-radius: 3px;
+  border-radius: 4px;
 }
-.ielts-passage-body p { margin: 0 0 16px; }
+.ielts-passage-body p {
+  margin: 0 0 18px;
+  text-indent: 1.5em;
+}
+.ielts-passage-body p:first-child {
+  text-indent: 0;
+}
+.ielts-passage-body p:first-child::first-letter {
+  font-family: var(--font-serif), "Source Serif 4", Georgia, serif;
+  font-size: 3.4em;
+  font-weight: 700;
+  float: left;
+  line-height: 0.9;
+  margin: 0.05em 0.12em 0 -0.05em;
+  color: var(--ielts-accent);
+}
 .ielts-passage-body p:last-child { margin-bottom: 0; }
 .ielts-passage-body .passage-label {
   font-weight: 700;
   font-style: italic;
-  color: var(--ielts-ink-muted);
-  font-size: 13px;
+  color: var(--ielts-accent);
+  font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
-  font-family: var(--font-inter), "Inter", sans-serif;
+  letter-spacing: 0.16em;
+  margin-bottom: 14px;
+  font-family: var(--font-jetbrains), "Inter", sans-serif;
+  text-indent: 0;
 }
 .ielts-passage-body .passage-sub {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--ielts-ink);
-  margin: 20px 0 8px;
+  margin: 26px 0 10px;
+  font-style: italic;
+  text-indent: 0;
 }
 .ielts-passage-body mark.passage-hl {
-  background: var(--ielts-highlight);
-  padding: 1px 2px;
-  border-radius: 2px;
+  background: linear-gradient(180deg, transparent 60%, var(--ielts-highlight) 60%);
+  padding: 0 2px;
+  border-radius: 0;
+  color: var(--ielts-ink);
 }
 
-/* Question card */
+/* Question card — premium companion to passage card. Accent gold rail on
+   the left + elevated shadow. */
 .ielts-question-card {
-  background: var(--ielts-paper);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 40%),
+    var(--ielts-paper);
   border: 1px solid var(--ielts-border);
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(15,23,42,0.05), 0 4px 16px rgba(15,23,42,0.04);
+  border-left: 3px solid var(--ielts-accent);
+  border-radius: 14px;
+  box-shadow: var(--ielts-shadow-card);
   display: flex;
   flex-direction: column;
-  animation: ieltstCardEnter 0.4s cubic-bezier(0.22,1,0.36,1) 0.1s both;
+  animation: ieltstCardEnter 0.5s cubic-bezier(0.22,1,0.36,1) 0.1s both;
 }
 @keyframes ieltstCardEnter {
   0%   { opacity: 0; transform: translateY(12px); }
   100% { opacity: 1; transform: translateY(0); }
 }
 .ielts-question-header {
-  padding: 18px 24px;
+  padding: 20px 28px;
   border-bottom: 1px solid var(--ielts-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  background: var(--ielts-paper-alt);
+  background: linear-gradient(180deg, var(--ielts-paper-hi) 0%, var(--ielts-paper) 100%);
 }
 .ielts-question-num {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 22px;
+  font-family: var(--font-serif), "Source Serif 4", Georgia, serif;
+  font-size: 26px;
   font-weight: 700;
   color: var(--ielts-ink);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
 }
 .ielts-question-num small {
   color: var(--ielts-ink-faint);
   font-weight: 500;
   font-size: 14px;
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: var(--font-serif), "Source Serif 4", Georgia, serif;
 }
 .ielts-question-num-of {
   color: var(--ielts-ink-faint);
   font-weight: 500;
   font-size: 14px;
-  font-family: "Georgia", "Times New Roman", serif;
-  margin-left: 4px;
+  font-family: var(--font-serif), "Source Serif 4", Georgia, serif;
+  margin-left: 2px;
 }
 
 /* Pill tag (for matching/summary) */
@@ -3170,92 +3357,101 @@ body {
   opacity: 0.75;
 }
 
-/* Question type badge */
+/* Question type badge — refined for dark mode. */
 .ielts-qtype-badge {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 4px 10px;
+  padding: 5px 11px;
   border-radius: 999px;
   font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   border: 1px solid;
 }
-.ielts-qtype-mcq    { color: var(--ielts-accent); background: var(--ielts-accent-soft); border-color: var(--ielts-accent-soft); }
-.ielts-qtype-matching { color: #7c3aed; background: #ede9fe; border-color: #ddd6fe; }
-.ielts-qtype-summary  { color: #b45309; background: #fef3c7; border-color: #fde68a; }
+.ielts-qtype-mcq    { color: var(--ielts-accent); background: var(--ielts-accent-softer); border-color: var(--ielts-border-strong); }
+.ielts-qtype-matching { color: #b39bff; background: rgba(179,155,255,0.1); border-color: rgba(179,155,255,0.3); }
+.ielts-qtype-summary  { color: var(--ielts-warning); background: rgba(255,203,107,0.1); border-color: rgba(255,203,107,0.3); }
 
 /* Status pill */
 .ielts-q-status {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.16em;
   color: var(--ielts-success);
   background: var(--ielts-success-soft);
-  border: 1px solid #a7f3d0;
-  padding: 3px 9px;
+  border: 1px solid rgba(125,211,160,0.35);
+  padding: 4px 10px;
   border-radius: 4px;
 }
 .ielts-q-status.is-empty {
   color: var(--ielts-ink-faint);
-  background: #f1f5f9;
+  background: rgba(255,255,255,0.03);
   border-color: var(--ielts-border);
 }
 
 .ielts-question-body {
-  padding: 24px 26px;
+  padding: 26px 28px;
 }
 .ielts-question-prompt {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 17px;
+  font-family: var(--font-serif), "Source Serif 4", "Georgia", serif;
+  font-size: 17.5px;
   line-height: 1.65;
   color: var(--ielts-ink);
-  margin: 0 0 22px;
+  margin: 0 0 24px;
   font-weight: 600;
+  letter-spacing: -0.005em;
 }
 .ielts-options {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+/* Options — premium list with subtle inset shadow and gold focus ring. */
 .ielts-option {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 14px 16px;
-  border: 1.5px solid var(--ielts-border);
-  border-radius: 8px;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 1px solid var(--ielts-border);
+  border-radius: 10px;
   background: var(--ielts-surface);
   cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  transition: all 180ms cubic-bezier(0.22,1,0.36,1);
   text-align: left;
   width: 100%;
   font-size: 15px;
   line-height: 1.55;
   color: var(--ielts-ink);
   font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
 }
 .ielts-option:hover {
   border-color: var(--ielts-accent);
-  background: var(--ielts-accent-softer);
-  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  background: var(--ielts-paper-hi);
+  box-shadow:
+    0 0 0 1px var(--ielts-accent-soft),
+    0 6px 18px -8px var(--ielts-accent-glow);
   transform: translateX(2px);
 }
 .ielts-option.is-selected {
   border-color: var(--ielts-accent);
-  background: var(--ielts-accent-soft);
+  background:
+    linear-gradient(180deg, rgba(232,184,106,0.18) 0%, rgba(232,184,106,0.06) 100%);
   color: var(--ielts-ink);
-  box-shadow: inset 0 0 0 1px var(--ielts-accent), 0 2px 8px rgba(37,99,235,0.1);
+  box-shadow:
+    inset 0 0 0 1px var(--ielts-accent),
+    0 6px 20px -8px var(--ielts-accent-glow);
 }
 .ielts-option-letter {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 1.5px solid var(--ielts-border-strong);
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
@@ -3263,18 +3459,19 @@ body {
   font-size: 12px;
   color: var(--ielts-ink-muted);
   flex-shrink: 0;
-  background: var(--ielts-surface);
+  background: var(--ielts-bg-tint);
   margin-top: 1px;
-  transition: all 0.15s ease;
+  transition: all 180ms ease;
 }
 .ielts-option:hover .ielts-option-letter {
   border-color: var(--ielts-accent);
   color: var(--ielts-accent);
 }
 .ielts-option.is-selected .ielts-option-letter {
-  background: var(--ielts-accent);
-  border-color: var(--ielts-accent);
-  color: #fff;
+  background: linear-gradient(135deg, #f0c674 0%, #c89244 100%);
+  border-color: transparent;
+  color: #0b1530;
+  box-shadow: 0 4px 10px -4px var(--ielts-accent-glow);
 }
 .ielts-option.is-correct {
   border-color: var(--ielts-success);
@@ -3283,7 +3480,7 @@ body {
 .ielts-option.is-correct .ielts-option-letter {
   background: var(--ielts-success);
   border-color: var(--ielts-success);
-  color: #fff;
+  color: #0b1530;
 }
 .ielts-option.is-wrong {
   border-color: var(--ielts-danger);
@@ -3292,34 +3489,35 @@ body {
 .ielts-option.is-wrong .ielts-option-letter {
   background: var(--ielts-danger);
   border-color: var(--ielts-danger);
-  color: #fff;
+  color: #0b1530;
 }
 
-/* Question nav */
+/* Question nav — premium grid of question pills. */
 .ielts-qnav {
-  padding: 16px 24px;
+  padding: 20px 28px;
   border-top: 1px solid var(--ielts-border);
-  background: var(--ielts-paper-alt);
+  background: linear-gradient(180deg, var(--ielts-paper) 0%, var(--ielts-paper-hi) 100%);
 }
 .ielts-qnav-title {
-  font-size: 11px;
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 10px;
   font-weight: 700;
-  color: var(--ielts-ink-faint);
+  color: var(--ielts-accent);
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  margin: 0 0 10px;
+  letter-spacing: 0.22em;
+  margin: 0 0 12px;
 }
 .ielts-qnav-grid {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
-  gap: 6px;
+  gap: 7px;
 }
 @media (max-width: 600px) {
   .ielts-qnav-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
 }
 .ielts-qnav-pill {
-  height: 34px;
-  border-radius: 6px;
+  height: 36px;
+  border-radius: 8px;
   border: 1px solid var(--ielts-border);
   background: var(--ielts-surface);
   color: var(--ielts-ink-muted);
@@ -3327,7 +3525,7 @@ body {
   font-weight: 700;
   font-size: 12px;
   cursor: pointer;
-  transition: all 0.12s ease;
+  transition: all 150ms cubic-bezier(0.22,1,0.36,1);
   position: relative;
   overflow: hidden;
 }
@@ -3336,59 +3534,67 @@ body {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: rgba(37,99,235,0.06);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, transparent 100%);
   opacity: 0;
-  transition: opacity 0.15s;
+  transition: opacity 150ms;
 }
-.ielts-qnav-pill:hover::after { opacity: 1; }
 .ielts-qnav-pill:hover {
   border-color: var(--ielts-accent);
   color: var(--ielts-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -6px var(--ielts-accent-glow);
 }
+.ielts-qnav-pill:hover::after { opacity: 1; }
 .ielts-qnav-pill.is-answered {
-  background: var(--ielts-success-soft);
-  border-color: #a7f3d0;
+  background: linear-gradient(180deg, rgba(125,211,160,0.22) 0%, rgba(125,211,160,0.08) 100%);
+  border-color: rgba(125,211,160,0.45);
   color: var(--ielts-success);
 }
 .ielts-qnav-pill.is-active {
-  background: var(--ielts-accent);
-  border-color: var(--ielts-accent);
-  color: #fff;
-  box-shadow: 0 0 0 3px var(--ielts-accent-soft), 0 2px 8px rgba(37,99,235,0.3);
+  background: linear-gradient(135deg, #f0c674 0%, #c89244 100%);
+  border-color: transparent;
+  color: #0b1530;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    0 0 0 3px var(--ielts-accent-soft),
+    0 8px 22px -8px var(--ielts-accent-glow);
 }
 @keyframes ieltsFlashPill {
-  0%   { box-shadow: 0 0 0 0 var(--ielts-accent-soft); }
-  50%  { box-shadow: 0 0 0 10px var(--ielts-accent-soft); }
-  100% { box-shadow: 0 0 0 0 var(--ielts-accent-soft); }
+  0%   { box-shadow: 0 0 0 0 var(--ielts-accent-glow); }
+  50%  { box-shadow: 0 0 0 12px var(--ielts-accent-soft); }
+  100% { box-shadow: 0 0 0 0 var(--ielts-accent-glow); }
 }
 .ielts-qnav-pill.is-flash {
-  animation: ieltsFlashPill 0.7s ease-out;
+  animation: ieltsFlashPill 0.8s ease-out;
 }
 
-/* Matching question styles */
+/* Matching question styles — refined cards on navy. */
 .matching-container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 .matching-row {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  padding: 12px 14px;
-  border: 1.5px solid var(--ielts-border);
-  border-radius: 8px;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--ielts-border);
+  border-radius: 10px;
   background: var(--ielts-surface);
-  transition: border-color 0.15s;
+  transition: border-color 180ms, box-shadow 180ms, transform 180ms;
 }
-.matching-row:hover { border-color: var(--ielts-accent); }
+.matching-row:hover {
+  border-color: var(--ielts-border-strong);
+  box-shadow: 0 4px 14px -8px var(--ielts-accent-glow);
+}
 .matching-item-num {
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-weight: 700;
   color: var(--ielts-accent);
-  min-width: 22px;
+  min-width: 24px;
   padding-top: 2px;
   font-size: 13px;
-  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
 }
 .matching-item-text {
   flex: 1;
@@ -3398,76 +3604,91 @@ body {
   font-family: var(--font-inter), "Inter", system-ui, sans-serif;
 }
 .matching-select {
-  padding: 7px 10px;
-  border: 1.5px solid var(--ielts-border);
-  border-radius: 6px;
-  background: var(--ielts-surface);
+  padding: 8px 12px;
+  border: 1px solid var(--ielts-border-strong);
+  border-radius: 8px;
+  background: var(--ielts-bg-tint);
   color: var(--ielts-ink);
   font-size: 13.5px;
   cursor: pointer;
-  min-width: 130px;
-  transition: border-color 0.15s;
+  min-width: 140px;
+  transition: border-color 180ms, box-shadow 180ms;
   font-family: var(--font-inter), "Inter", system-ui, sans-serif;
 }
 .matching-select:focus {
   outline: none;
   border-color: var(--ielts-accent);
-  box-shadow: 0 0 0 2px var(--ielts-accent-soft);
+  box-shadow: 0 0 0 3px var(--ielts-accent-soft);
 }
 
 /* Summary question styles */
 .summary-container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 .summary-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 14px;
-  border: 1.5px solid var(--ielts-border);
-  border-radius: 8px;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1px solid var(--ielts-border);
+  border-radius: 10px;
   background: var(--ielts-surface);
+  transition: border-color 180ms, box-shadow 180ms;
+}
+.summary-row:hover {
+  border-color: var(--ielts-border-strong);
+  box-shadow: 0 4px 14px -8px var(--ielts-accent-glow);
 }
 .summary-item-text {
   flex: 1;
   font-size: 14.5px;
   color: var(--ielts-ink);
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: var(--font-serif), "Source Serif 4", Georgia, serif;
   line-height: 1.55;
 }
 
 .ielts-qnav-actions {
-  margin-top: 14px;
+  margin-top: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
 }
 .ielts-btn {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 10px 18px;
-  border-radius: 8px;
+  gap: 7px;
+  padding: 11px 20px;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.15s ease;
-  border: 1.5px solid transparent;
+  transition: all 180ms cubic-bezier(0.22,1,0.36,1);
+  border: 1px solid transparent;
   font-family: var(--font-inter), "Inter", system-ui, sans-serif;
+  letter-spacing: 0.01em;
 }
 .ielts-btn-primary {
-  background: var(--ielts-accent);
-  color: #fff;
-  border-color: var(--ielts-accent);
-  box-shadow: 0 2px 6px rgba(37,99,235,0.25);
+  background: linear-gradient(135deg, #f0c674 0%, #c89244 100%);
+  color: #0b1530;
+  border-color: transparent;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    0 6px 16px -6px var(--ielts-accent-glow);
 }
-.ielts-btn-primary:hover { background: var(--ielts-accent-strong); box-shadow: 0 4px 12px rgba(37,99,235,0.35); transform: translateY(-1px); }
+.ielts-btn-primary:hover {
+  background: linear-gradient(135deg, #f5d08a 0%, #d49c4e 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.4),
+    0 10px 22px -8px var(--ielts-accent-glow);
+  transform: translateY(-1px);
+}
 .ielts-btn-primary:disabled {
-  background: #cbd5e1;
-  border-color: #cbd5e1;
+  background: rgba(255,255,255,0.05);
+  color: var(--ielts-ink-faint);
+  border-color: var(--ielts-border);
   cursor: not-allowed;
   box-shadow: none;
 }
@@ -3476,47 +3697,63 @@ body {
   color: var(--ielts-ink);
   border-color: var(--ielts-border-strong);
 }
-.ielts-btn-secondary:hover { background: #f1f5f9; }
+.ielts-btn-secondary:hover {
+  background: var(--ielts-paper-hi);
+  border-color: var(--ielts-accent-soft);
+  transform: translateY(-1px);
+}
 .ielts-btn-ghost {
   background: transparent;
   color: var(--ielts-ink-muted);
   border-color: transparent;
 }
-.ielts-btn-ghost:hover { background: #f1f5f9; color: var(--ielts-ink); }
-.ielts-btn-success {
-  background: var(--ielts-success);
-  color: #fff;
-  border-color: var(--ielts-success);
-  box-shadow: 0 2px 6px rgba(5,150,105,0.25);
+.ielts-btn-ghost:hover {
+  background: rgba(255,255,255,0.04);
+  color: var(--ielts-ink);
 }
-.ielts-btn-success:hover { background: #047857; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(5,150,105,0.35); }
+.ielts-btn-success {
+  background: linear-gradient(135deg, #7dd3a0 0%, #4cb282 100%);
+  color: #0b1530;
+  border-color: transparent;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3),
+    0 6px 16px -6px rgba(125,211,160,0.45);
+}
+.ielts-btn-success:hover {
+  background: linear-gradient(135deg, #92dbb1 0%, #5cc090 100%);
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    0 10px 22px -8px rgba(125,211,160,0.5);
+}
 
-/* Answer reveal panel */
+/* Answer reveal panel — premium framed block. */
 .ielts-answer-reveal {
-  margin: 0 26px 20px;
-  border-radius: 10px;
-  border: 1.5px solid var(--ielts-border);
+  margin: 0 28px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--ielts-border);
   overflow: hidden;
   animation: ieltsRevealIn 0.5s cubic-bezier(0.22,1,0.36,1) both;
+  background: var(--ielts-surface);
 }
 @keyframes ieltsRevealIn {
   0%   { opacity: 0; transform: translateY(10px) scaleY(0.95); transform-origin: top; }
   100% { opacity: 1; transform: translateY(0) scaleY(1); }
 }
 .ielts-reveal-header {
-  padding: 12px 16px;
+  padding: 14px 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 8px;
 }
 .ielts-reveal-correct {
-  background: var(--ielts-success-soft);
-  border-bottom: 1px solid #a7f3d0;
+  background: linear-gradient(180deg, rgba(125,211,160,0.18) 0%, rgba(125,211,160,0.06) 100%);
+  border-bottom: 1px solid rgba(125,211,160,0.3);
 }
 .ielts-reveal-wrong {
-  background: var(--ielts-danger-soft);
-  border-bottom: 1px solid #fecaca;
+  background: linear-gradient(180deg, rgba(255,138,128,0.18) 0%, rgba(255,138,128,0.06) 100%);
+  border-bottom: 1px solid rgba(255,138,128,0.3);
 }
 .ielts-reveal-badge {
   display: inline-flex;
@@ -3524,13 +3761,13 @@ body {
   gap: 5px;
   padding: 4px 10px;
   border-radius: 999px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.ielts-reveal-correct .ielts-reveal-badge { background: var(--ielts-success); color: #fff; }
-.ielts-reveal-wrong .ielts-reveal-badge { background: var(--ielts-danger); color: #fff; }
+.ielts-reveal-correct .ielts-reveal-badge { background: var(--ielts-success); color: #0b1530; }
+.ielts-reveal-wrong .ielts-reveal-badge { background: var(--ielts-danger); color: #0b1530; }
 .ielts-reveal-score {
   font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: 14px;
@@ -3538,17 +3775,17 @@ body {
 }
 .ielts-reveal-correct .ielts-reveal-score { color: var(--ielts-success); }
 .ielts-reveal-wrong .ielts-reveal-score { color: var(--ielts-danger); }
-.ielts-reveal-body { padding: 14px 16px; }
+.ielts-reveal-body { padding: 16px 18px; }
 .ielts-reveal-explanation {
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: var(--font-serif), "Source Serif 4", "Georgia", serif;
   font-size: 14.5px;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--ielts-ink-muted);
   margin: 0;
 }
 .ielts-reveal-explanation strong { color: var(--ielts-ink); }
 
-/* Score summary modal */
+/* Score summary modal — the celebratory centrepiece. */
 .ielts-score-modal {
   position: fixed;
   inset: 0;
@@ -3557,8 +3794,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: rgba(15,23,42,0.6);
-  backdrop-filter: blur(8px);
+  background: radial-gradient(ellipse at center, rgba(11,21,48,0.85) 0%, rgba(0,0,0,0.92) 100%);
+  backdrop-filter: blur(14px);
   animation: ieltsModalBg 0.3s ease both;
 }
 @keyframes ieltsModalBg {
@@ -3566,53 +3803,75 @@ body {
   to   { opacity: 1; }
 }
 .ielts-score-card {
-  background: var(--ielts-paper);
-  border: 1px solid var(--ielts-border);
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(15,23,42,0.25), 0 0 0 1px rgba(37,99,235,0.05);
+  background:
+    linear-gradient(180deg, var(--ielts-paper-hi) 0%, var(--ielts-paper) 100%);
+  border: 1px solid var(--ielts-border-strong);
+  border-radius: 18px;
+  box-shadow: var(--ielts-shadow-modal);
   width: 100%;
-  max-width: 480px;
+  max-width: 500px;
   overflow: hidden;
-  animation: ieltsScorePop 0.5s cubic-bezier(0.22,1,0.36,1) both;
+  animation: ieltsScorePop 0.55s cubic-bezier(0.22,1,0.36,1) both;
+  position: relative;
+}
+.ielts-score-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--ielts-accent) 50%,
+    transparent 100%);
+  opacity: 0.6;
 }
 @keyframes ieltsScorePop {
-  0%   { opacity: 0; transform: scale(0.88) translateY(20px); }
+  0%   { opacity: 0; transform: scale(0.9) translateY(20px); }
   100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 .ielts-score-banner {
-  padding: 32px 28px 28px;
+  padding: 36px 32px 28px;
   text-align: center;
-  background: linear-gradient(180deg, #ffffff 0%, var(--ielts-accent-softer) 100%);
+  background:
+    radial-gradient(ellipse at top, rgba(232,184,106,0.18) 0%, transparent 70%),
+    var(--ielts-paper);
   border-bottom: 1px solid var(--ielts-border);
+  position: relative;
 }
 .ielts-score-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.24em;
   color: var(--ielts-accent);
-  background: var(--ielts-accent-soft);
-  border: 1px solid var(--ielts-accent-soft);
-  padding: 3px 10px;
+  background: var(--ielts-accent-softer);
+  border: 1px solid var(--ielts-border-strong);
+  padding: 4px 12px;
   border-radius: 999px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .ielts-score-big {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 64px;
+  font-family: var(--font-serif), "Source Serif 4", "Georgia", serif;
+  font-size: 72px;
   font-weight: 700;
-  color: var(--ielts-accent);
+  background: linear-gradient(180deg, #f5d08a 0%, #c89244 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
   line-height: 1;
-  letter-spacing: -0.03em;
-  margin-bottom: 4px;
+  letter-spacing: -0.04em;
+  margin-bottom: 6px;
 }
 .ielts-score-label {
-  font-size: 14px;
-  color: var(--ielts-ink-muted);
   font-family: var(--font-inter), "Inter", sans-serif;
+  font-size: 13px;
+  color: var(--ielts-ink-muted);
+  letter-spacing: 0.06em;
 }
 .ielts-score-stats {
   display: grid;
@@ -3621,51 +3880,56 @@ body {
   background: var(--ielts-border);
 }
 .ielts-score-stat {
-  padding: 16px 12px;
+  padding: 18px 12px;
   text-align: center;
   background: var(--ielts-paper);
 }
 .ielts-score-stat-val {
-  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
-  font-size: 22px;
+  font-family: var(--font-serif), "Source Serif 4", "Georgia", serif;
+  font-size: 26px;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 .ielts-score-stat-label {
-  font-size: 10px;
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 9px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   color: var(--ielts-ink-faint);
 }
 .ielts-score-stat.is-correct .ielts-score-stat-val { color: var(--ielts-success); }
 .ielts-score-stat.is-wrong   .ielts-score-stat-val { color: var(--ielts-danger); }
 .ielts-score-stat.is-skip    .ielts-score-stat-val { color: var(--ielts-ink-muted); }
 .ielts-score-actions {
-  padding: 20px 28px 24px;
+  padding: 22px 30px 26px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
-.ielts-score-actions .ielts-btn { justify-content: center; padding: 13px 20px; font-size: 15px; }
+.ielts-score-actions .ielts-btn {
+  justify-content: center;
+  padding: 13px 22px;
+  font-size: 15px;
+}
 
-/* Skeleton shimmer for reading */
+/* Skeleton shimmer for reading — premium loading state. */
 @keyframes ieltsSkShimmer {
   0%   { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
 .ielts-skeleton-passage {
   height: 400px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, var(--ielts-border) 25%, var(--ielts-paper-alt) 50%, var(--ielts-border) 75%);
+  border-radius: 14px;
+  background: linear-gradient(90deg, var(--ielts-surface) 25%, var(--ielts-paper-hi) 50%, var(--ielts-surface) 75%);
   background-size: 200% 100%;
   animation: ieltsSkShimmer 1.6s ease-in-out infinite;
 }
 .ielts-skeleton-question {
   height: 300px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, var(--ielts-border) 25%, var(--ielts-paper-alt) 50%, var(--ielts-border) 75%);
+  border-radius: 14px;
+  background: linear-gradient(90deg, var(--ielts-surface) 25%, var(--ielts-paper-hi) 50%, var(--ielts-surface) 75%);
   background-size: 200% 100%;
   animation: ieltsSkShimmer 1.6s ease-in-out infinite;
 }
@@ -3685,7 +3949,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: #ffffff;
+  background: var(--ielts-paper);
   border-bottom: 1px solid var(--ielts-border);
   animation: ieltstopEnter 0.4s ease-out both;
 }
@@ -3745,7 +4009,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--ielts-accent);
-  background: #fff;
+  background: var(--ielts-paper);
   border: 1px solid var(--ielts-accent-soft);
   padding: 4px 12px;
   border-radius: 4px;
@@ -3955,7 +4219,7 @@ body {
 .ielts-textarea:focus {
   border-color: var(--ielts-accent);
   box-shadow: 0 0 0 3px var(--ielts-accent-soft);
-  background: #fff;
+  background: var(--ielts-paper);
 }
 .ielts-textarea-meta {
   display: flex;
@@ -4029,7 +4293,10 @@ body {
    ========================================================= */
 .ielts-intro {
   min-height: 100vh;
-  background: var(--ielts-bg);
+  background:
+    radial-gradient(ellipse at top, rgba(232,184,106,0.06) 0%, transparent 60%),
+    linear-gradient(180deg, var(--ielts-bg) 0%, #08102a 100%);
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4037,18 +4304,24 @@ body {
 }
 .ielts-intro-card {
   width: 100%;
-  max-width: 540px;
-  background: var(--ielts-paper);
+  max-width: 560px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 40%),
+    var(--ielts-paper);
   border: 1px solid var(--ielts-border);
-  border-radius: 14px;
-  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+  border-left: 3px solid var(--ielts-accent);
+  border-radius: 16px;
+  box-shadow: var(--ielts-shadow-modal);
   overflow: hidden;
-  animation: ieltstCardEnter 0.5s cubic-bezier(0.22,1,0.36,1) both;
+  animation: ieltstCardEnter 0.55s cubic-bezier(0.22,1,0.36,1) both;
+  position: relative;
 }
 .ielts-intro-banner {
-  padding: 26px 32px 22px;
+  padding: 30px 36px 24px;
   border-bottom: 1px solid var(--ielts-border);
-  background: linear-gradient(180deg, #ffffff 0%, var(--ielts-accent-softer) 100%);
+  background:
+    radial-gradient(ellipse at top right, rgba(232,184,106,0.18) 0%, transparent 60%),
+    linear-gradient(180deg, var(--ielts-paper-hi) 0%, var(--ielts-paper) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -4056,41 +4329,45 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   color: var(--ielts-accent);
-  background: #fff;
-  border: 1px solid var(--ielts-accent-soft);
-  padding: 4px 10px;
-  border-radius: 4px;
-  margin-bottom: 12px;
+  background: var(--ielts-accent-softer);
+  border: 1px solid var(--ielts-border-strong);
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
 }
 .ielts-intro-title {
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: var(--font-serif), "Source Serif 4", "Georgia", serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 28px;
   color: var(--ielts-ink);
-  margin: 0 0 4px;
-  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
 }
 .ielts-intro-sub {
+  font-family: var(--font-inter), "Inter", sans-serif;
   font-size: 14px;
   color: var(--ielts-ink-muted);
   margin: 0;
 }
 .ielts-intro-section {
-  padding: 22px 32px;
+  padding: 24px 36px;
   border-bottom: 1px solid var(--ielts-border);
 }
 .ielts-intro-section:last-of-type { border-bottom: none; }
 .ielts-intro-section-title {
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
   font-size: 10px;
-  font-weight: 800;
-  color: var(--ielts-ink-faint);
+  font-weight: 700;
+  color: var(--ielts-accent);
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.22em;
   margin: 0 0 14px;
 }
 .ielts-info-grid {
@@ -4099,61 +4376,67 @@ body {
   gap: 12px;
 }
 .ielts-info-cell {
-  background: var(--ielts-paper-alt);
+  background: linear-gradient(180deg, var(--ielts-paper-hi) 0%, var(--ielts-surface) 100%);
   border: 1px solid var(--ielts-border);
-  border-radius: 8px;
-  padding: 12px 14px;
+  border-radius: 10px;
+  padding: 14px 16px;
+  transition: border-color 180ms;
 }
+.ielts-info-cell:hover { border-color: var(--ielts-border-strong); }
 .ielts-info-cell-label {
-  font-size: 10px;
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 9px;
   font-weight: 700;
   color: var(--ielts-ink-faint);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin: 0 0 4px;
+  letter-spacing: 0.16em;
+  margin: 0 0 6px;
 }
 .ielts-info-cell-value {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 16px;
-  font-weight: 600;
+  font-family: var(--font-serif), "Source Serif 4", "Georgia", serif;
+  font-size: 17px;
+  font-weight: 700;
   color: var(--ielts-ink);
   margin: 0;
+  letter-spacing: -0.01em;
 }
 .ielts-intro-instructions {
-  font-family: "Georgia", "Times New Roman", serif;
+  font-family: var(--font-serif), "Source Serif 4", "Georgia", serif;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--ielts-ink-muted);
   margin: 0;
 }
 .ielts-intro-form {
-  padding: 22px 32px 26px;
+  padding: 24px 36px 28px;
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 .ielts-intro-label {
-  font-size: 11px;
+  font-family: var(--font-jetbrains), "JetBrains Mono", monospace;
+  font-size: 10px;
   font-weight: 700;
   color: var(--ielts-ink-muted);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.16em;
 }
 .ielts-intro-input {
   width: 100%;
-  padding: 12px 14px;
+  padding: 13px 16px;
   font-family: var(--font-inter), "Inter", system-ui, sans-serif;
   font-size: 15px;
   color: var(--ielts-ink);
-  background: #fff;
-  border: 1.5px solid var(--ielts-border);
-  border-radius: 8px;
+  background: var(--ielts-bg-tint);
+  border: 1px solid var(--ielts-border-strong);
+  border-radius: 10px;
   outline: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 .ielts-intro-input:focus {
   border-color: var(--ielts-accent);
   box-shadow: 0 0 0 3px var(--ielts-accent-soft);
+  background: var(--ielts-paper);
 }
 .ielts-intro-input.is-error {
   border-color: var(--ielts-danger);
@@ -4169,7 +4452,7 @@ body {
   gap: 10px;
   margin-top: 4px;
 }
-.ielts-intro-actions .ielts-btn { flex: 1; justify-content: center; padding: 12px 18px; font-size: 14px; border-radius: 8px; }
+.ielts-intro-actions .ielts-btn { flex: 1; justify-content: center; padding: 13px 18px; font-size: 14px; border-radius: 10px; }
 
 @media (max-width: 700px) {
   .ielts-speaking-intro-banner,
@@ -4461,27 +4744,33 @@ body {
 }
 
 .fc-btn-primary {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: #fff;
-  border-color: rgba(96, 165, 250, 0.4);
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+  background: linear-gradient(135deg, #f0c674 0%, #c89244 100%);
+  color: #0b1530;
+  border-color: transparent;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.35),
+    0 6px 18px -6px rgba(232,184,106,0.45);
+  font-weight: 700;
 }
 
 .fc-btn-primary:hover {
-  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  background: linear-gradient(135deg, #f5d08a 0%, #d49c4e 100%);
   transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.4),
+    0 10px 24px -8px rgba(232,184,106,0.55);
 }
 
 .fc-btn-ghost {
-  background: rgba(15, 23, 42, 0.4);
-  color: #cbd5e1;
-  border-color: rgba(51, 65, 85, 0.45);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ielts-ink-muted, #d9c89b);
+  border-color: var(--ielts-border, rgba(232,184,106,0.16));
 }
 
 .fc-btn-ghost:hover {
-  background: rgba(30, 41, 59, 0.6);
-  color: #f1f5f9;
-  border-color: rgba(96, 165, 250, 0.4);
+  background: rgba(232,184,106,0.08);
+  color: var(--ielts-ink, #f4ecd8);
+  border-color: var(--ielts-border-strong, rgba(232,184,106,0.32));
 }
 
 .fc-btn-danger {
@@ -4497,24 +4786,97 @@ body {
 
 .fc-empty {
   text-align: center;
-  padding: 48px 24px;
-  border-radius: 14px;
-  background: rgba(15, 23, 42, 0.4);
-  border: 1px dashed rgba(51, 65, 85, 0.5);
-  color: #94a3b8;
+  padding: 64px 32px;
+  border-radius: 18px;
+  background:
+    radial-gradient(ellipse at top, rgba(232,184,106,0.10) 0%, transparent 70%),
+    linear-gradient(180deg, var(--ielts-paper-hi) 0%, var(--ielts-paper) 100%);
+  border: 1px solid var(--ielts-border);
+  border-top: 1px solid var(--ielts-border-strong);
+  color: var(--ielts-ink-muted);
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  animation: fcCardEnter 0.5s cubic-bezier(0.22,1,0.36,1) both;
+  box-shadow: var(--ielts-shadow-card, 0 12px 32px -8px rgba(0,0,0,0.4));
+}
+.fc-empty::before {
+  /* hairline gold glow at the top — ties into British Council style */
+  content: "";
+  position: absolute;
+  top: 0; left: 12%; right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--ielts-accent) 50%,
+    transparent 100%);
+  opacity: 0.5;
 }
 
 .fc-empty-icon {
   display: inline-flex;
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
-  background: rgba(59, 130, 246, 0.1);
-  color: #60a5fa;
-  margin-bottom: 12px;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(232,184,106,0.25) 0%, transparent 70%),
+    linear-gradient(135deg, var(--ielts-accent-soft) 0%, var(--ielts-accent-softer) 100%);
+  color: var(--ielts-accent);
+  margin-bottom: 4px;
+  border: 1px solid var(--ielts-border-strong);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 8px 22px -8px var(--ielts-accent-glow);
+}
+.fc-empty-icon svg { width: 32px; height: 32px; }
+
+.fc-empty-title {
+  margin: 0;
+  font-family: var(--font-serif), "Source Serif 4", "Georgia", serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ielts-ink);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+.fc-empty-sub {
+  margin: 0;
+  color: var(--ielts-ink-faint);
+  font-size: 13.5px;
+  line-height: 1.55;
+  max-width: 360px;
+}
+.fc-empty-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+/* Variant: success / "all done" — slightly greener halo */
+.fc-empty--success .fc-empty-icon {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(125,211,160,0.28) 0%, transparent 70%),
+    linear-gradient(135deg, rgba(125,211,160,0.18) 0%, rgba(125,211,160,0.08) 100%);
+  color: var(--ielts-success);
+  border-color: rgba(125,211,160,0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 8px 22px -8px rgba(125,211,160,0.45);
+}
+
+/* Tag-level helper applied to existing JSX where the title paragraph is just
+   one <p> — target by `--ielts-ink` so we don't have to refactor every caller. */
+.fc-empty p {
+  margin: 0;
 }
 
 /* ===== Study session ===== */
@@ -5221,20 +5583,44 @@ html.light .fc-speaker-btn:hover {
 
 .fc-empty-state {
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(160deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.6));
-  border: 1px dashed rgba(51, 65, 85, 0.5);
-  border-radius: 14px;
-  color: #64748b;
+  padding: 64px 32px;
+  background:
+    radial-gradient(ellipse at top, rgba(232,184,106,0.08) 0%, transparent 70%),
+    linear-gradient(180deg, #1f316b 0%, #15224d 100%);
+  border: 1px solid rgba(232,184,106,0.16);
+  border-top: 1px solid rgba(232,184,106,0.32);
+  border-radius: 18px;
+  color: #d9c89b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 32px -8px rgba(0,0,0,0.4);
+}
+.fc-empty-state::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 12%; right: 12%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #e8b86a 50%, transparent 100%);
+  opacity: 0.5;
 }
 .fc-empty-state h2 {
-  color: #e2e8f0;
-  margin: 12px 0 8px;
-  font-size: 18px;
+  font-family: var(--font-serif, "Source Serif 4"), "Georgia", serif;
+  color: #f4ecd8;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
 }
 .fc-empty-state p {
-  margin: 0 0 18px;
-  font-size: 13px;
+  margin: 0;
+  font-size: 13.5px;
+  color: #8c9bc4;
+  line-height: 1.55;
+  max-width: 360px;
 }
 
 /* Light theme overrides for stats */

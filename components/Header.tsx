@@ -1,10 +1,11 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { History, Trophy, Menu, X, LogIn, LogOut, Sun, Moon, BookOpen, Layers } from "lucide-react";
-import { useState, useEffect } from "react";
+import { History, Trophy, Menu, X, LogIn, LogOut, Sun, Moon, BookOpen, Layers, Volume2, VolumeX } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 import { useAuth } from "@/lib/auth";
 import { getPlayerName } from "@/lib/storage";
+import { useSoundEnabled, playSfx } from "@/lib/sound";
 import FlashcardDueIndicator from "@/components/FlashcardDueIndicator";
 
 const navLinks = (user: { isAnonymous: boolean } | null) => [
@@ -33,6 +34,40 @@ export default function Header() {
     /* eslint-enable react-hooks/set-state-in-effect */
   }, []);
 
+  // Close auth/mobile menus with Escape — keeps keyboard users from being
+  // stuck behind an overlay when they tab past it.
+  useEffect(() => {
+    if (!authMenuOpen && !mobileOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setAuthMenuOpen(false);
+        setMobileOpen(false);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [authMenuOpen, mobileOpen]);
+
+  // Restore focus to the trigger button when an overlay closes via Escape so
+  // keyboard navigation stays predictable.
+  const authTriggerRef = useRef<HTMLButtonElement | null>(null);
+  const lastTriggerRef = useRef<"auth" | "mobile" | null>(null);
+  useEffect(() => {
+    if (authMenuOpen) lastTriggerRef.current = "auth";
+    else if (lastTriggerRef.current === "auth" && authTriggerRef.current) {
+      authTriggerRef.current.focus();
+      lastTriggerRef.current = null;
+    }
+  }, [authMenuOpen]);
+  const mobileTriggerRef = useRef<HTMLButtonElement | null>(null);
+  useEffect(() => {
+    if (mobileOpen) lastTriggerRef.current = "mobile";
+    else if (lastTriggerRef.current === "mobile" && mobileTriggerRef.current) {
+      mobileTriggerRef.current.focus();
+      lastTriggerRef.current = null;
+    }
+  }, [mobileOpen]);
+
   const toggleTheme = () => {
     const next = theme === "dark" ? "light" : "dark";
     setTheme(next);
@@ -41,6 +76,15 @@ export default function Header() {
     document.documentElement.classList.add(next);
   };
   const { user, isCloudEnabled, signInWithGoogle, signInAnon, signInAnonWithName, signOut, loading } = useAuth();
+  const { enabled: soundEnabled, toggle: toggleSound } = useSoundEnabled();
+
+  const handleToggleSound = () => {
+    // The hook's `toggle()` flips the snapshot; we let it run, then play a
+    // small confirmation so the user knows the button worked. We call
+    // playSfx *after* the toggle so the demo sound respects the new state.
+    toggleSound();
+    if (!soundEnabled) playSfx("click");
+  };
 
   return (
     <header className="header-bar">
@@ -59,7 +103,7 @@ export default function Header() {
         </Link>
 
         {/* ── Desktop nav ── */}
-        <nav className="hdr-nav">
+        <nav className="hdr-nav" aria-label="Điều hướng chính">
           {navLinks(user).map((link) => {
             const active = pathname === link.href;
             const Icon = link.Icon;
@@ -67,9 +111,10 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                aria-current={active ? "page" : undefined}
                 className={`hdr-link ${active ? "is-active" : ""}`}
               >
-                <span className="hdr-link-icon">
+                <span className="hdr-link-icon" aria-hidden="true">
                   <Icon size={13} />
                 </span>
                 {link.label}
@@ -83,16 +128,30 @@ export default function Header() {
           {/* Due flashcard indicator — only renders on flashcards routes */}
           <FlashcardDueIndicator />
 
+          {/* Sound toggle */}
+          <button
+            onClick={handleToggleSound}
+            aria-label={soundEnabled ? "Tắt âm thanh" : "Bật âm thanh"}
+            title={soundEnabled ? "Tắt âm thanh" : "Bật âm thanh"}
+            className="hdr-burger"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 9, background: "rgba(15,22,45,0.4)", border: "1px solid rgba(51,65,85,0.3)", color: soundEnabled ? "#60a5fa" : "#64748b", cursor: "pointer", transition: "all 0.2s" }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = "#60a5fa"; e.currentTarget.style.borderColor = "rgba(59,130,246,0.4)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = soundEnabled ? "#60a5fa" : "#64748b"; e.currentTarget.style.borderColor = "rgba(51,65,85,0.3)"; }}
+          >
+            {soundEnabled ? <Volume2 size={15} aria-hidden="true" /> : <VolumeX size={15} aria-hidden="true" />}
+          </button>
+
           {/* Theme toggle */}
           <button
-            onClick={toggleTheme}
-            aria-label="Chuyen che do sang toi/sang"
+            onClick={() => { playSfx("click"); toggleTheme(); }}
+            aria-label={theme === "dark" ? "Chuyển sang giao diện sáng" : "Chuyển sang giao diện tối"}
+            title={theme === "dark" ? "Chuyển sang giao diện sáng" : "Chuyển sang giao diện tối"}
             className="hdr-burger"
             style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: 9, background: "rgba(15,22,45,0.4)", border: "1px solid rgba(51,65,85,0.3)", color: "#64748b", cursor: "pointer", transition: "all 0.2s" }}
             onMouseEnter={(e) => { e.currentTarget.style.color = "#60a5fa"; e.currentTarget.style.borderColor = "rgba(59,130,246,0.4)"; }}
             onMouseLeave={(e) => { e.currentTarget.style.color = "#64748b"; e.currentTarget.style.borderColor = "rgba(51,65,85,0.3)"; }}
           >
-            {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
+            {theme === "dark" ? <Sun size={15} aria-hidden="true" /> : <Moon size={15} aria-hidden="true" />}
           </button>
 
           {/* Social */}
@@ -136,14 +195,17 @@ export default function Header() {
                 <div className="hdr-auth-skeleton" suppressHydrationWarning aria-hidden="true" />
               ) : user ? (
                 <button
-                  onClick={() => setAuthMenuOpen((v) => !v)}
+                  ref={authTriggerRef}
+                  onClick={() => { playSfx("click"); setAuthMenuOpen((v) => !v); }}
                   className="hdr-user-btn"
-                  aria-label="Menu tài khoản"
+                  aria-haspopup="menu"
+                  aria-expanded={authMenuOpen}
+                  aria-label={`Mở menu tài khoản của ${user.displayName}`}
                 >
                   {user.photoURL ? (
                     <img
                       src={user.photoURL}
-                      alt={user.displayName}
+                      alt=""
                       className="hdr-user-avatar"
                       referrerPolicy="no-referrer"
                     />
@@ -155,12 +217,15 @@ export default function Header() {
                 </button>
               ) : (
                 <button
-                  onClick={() => setAuthMenuOpen((v) => !v)}
+                  ref={authTriggerRef}
+                  onClick={() => { playSfx("click"); setAuthMenuOpen((v) => !v); }}
                   className="hdr-signin-btn"
                   suppressHydrationWarning
-                  aria-label="Đăng nhập"
+                  aria-haspopup="menu"
+                  aria-expanded={authMenuOpen}
+                  aria-label="Mở menu đăng nhập"
                 >
-                  <LogIn size={13} />
+                  <LogIn size={13} aria-hidden="true" />
                   <span className="hidden sm:inline">Đăng nhập</span>
                 </button>
               )}
@@ -169,7 +234,7 @@ export default function Header() {
                 <>
                   <div
                     className="fixed inset-0 z-30"
-                    onClick={() => setAuthMenuOpen(false)}
+                    onClick={() => { playSfx("click"); setAuthMenuOpen(false); }}
                   />
                   <div className="hdr-auth-menu">
                     {user ? (
@@ -196,10 +261,16 @@ export default function Header() {
                         </div>
                         <button
                           onClick={async () => {
-                            const confirmed = window.confirm("Ban co chac chan muon dang xuat?\nLich su cua ban van duoc luu cuc bo tren may nay.");
+                            playSfx("click");
+                            const confirmed = window.confirm("Bạn có chắc chắn muốn đăng xuất?\nLịch sử của bạn vẫn được lưu cục bộ trên máy này.");
                             if (!confirmed) return;
                             setAuthMenuOpen(false);
-                            await signOut();
+                            try {
+                              await signOut();
+                              playSfx("complete");
+                            } catch {
+                              playSfx("wrong");
+                            }
                           }}
                           className="hdr-auth-menu-item"
                         >
@@ -209,12 +280,15 @@ export default function Header() {
                         {user.isAnonymous && (
                           <button
                             onClick={async () => {
+                              playSfx("click");
                               try {
                                 await signInWithGoogle();
                                 setAuthMenuOpen(false);
+                                playSfx("complete");
                               } catch (err) {
                                 if ((err as { code?: string }).code !== "auth/popup-closed-by-user") {
                                   console.error(err);
+                                  playSfx("wrong");
                                 }
                               }
                             }}
@@ -234,12 +308,15 @@ export default function Header() {
                       <>
                         <button
                           onClick={async () => {
+                            playSfx("click");
                             try {
                               await signInWithGoogle();
                               setAuthMenuOpen(false);
+                              playSfx("complete");
                             } catch (err) {
                               if ((err as { code?: string }).code !== "auth/popup-closed-by-user") {
                                   console.error(err);
+                                  playSfx("wrong");
                                 }
                             }
                           }}
@@ -255,21 +332,27 @@ export default function Header() {
                         </button>
                         <button
                           onClick={async () => {
+                            playSfx("click");
                             try {
                               const savedName = getPlayerName();
                               if (savedName) {
                                 await signInAnon();
                                 setAuthMenuOpen(false);
+                                playSfx("complete");
                               } else {
                                 setAuthMenuOpen(false);
-                                const name = prompt("Nhap ten cua ban de bat dau:");
+                                const name = prompt("Nhập tên của bạn để bắt đầu:");
                                 if (name && name.trim().length >= 2) {
                                   await signInAnonWithName(name.trim());
+                                  playSfx("complete");
+                                } else if (name !== null) {
+                                  playSfx("wrong");
                                 }
                               }
                             } catch (err) {
                               if ((err as { code?: string }).code !== "auth/popup-closed-by-user") {
                                   console.error(err);
+                                  playSfx("wrong");
                                 }
                             }
                           }}
@@ -288,11 +371,14 @@ export default function Header() {
 
           {/* Mobile burger */}
           <button
+            ref={mobileTriggerRef}
             className="hdr-burger sm:hidden"
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label="Toggle menu"
+            onClick={() => { playSfx("click"); setMobileOpen((v) => !v); }}
+            aria-label={mobileOpen ? "Đóng menu" : "Mở menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="hdr-mobile-menu"
           >
-            {mobileOpen ? <X size={16} /> : <Menu size={16} />}
+            {mobileOpen ? <X size={16} aria-hidden="true" /> : <Menu size={16} aria-hidden="true" />}
           </button>
         </div>
       </div>
@@ -302,7 +388,7 @@ export default function Header() {
 
       {/* ── Mobile menu ── */}
       {mobileOpen && (
-        <nav className="hdr-menu sm:hidden">
+        <nav id="hdr-mobile-menu" className="hdr-menu sm:hidden" aria-label="Menu di động">
           {navLinks(user).map((link) => {
             const active = pathname === link.href;
             const Icon = link.Icon;
@@ -310,10 +396,11 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                aria-current={active ? "page" : undefined}
                 className={`hdr-link ${active ? "is-active" : ""}`}
-                onClick={() => setMobileOpen(false)}
+                onClick={() => { playSfx("click"); setMobileOpen(false); }}
               >
-                <span className="hdr-link-icon">
+                <span className="hdr-link-icon" aria-hidden="true">
                   <Icon size={15} />
                 </span>
                 {link.label}
@@ -321,13 +408,13 @@ export default function Header() {
             );
           })}
           <button
-            onClick={() => { toggleTheme(); setMobileOpen(false); }}
+            onClick={() => { playSfx("click"); toggleTheme(); setMobileOpen(false); }}
             className="hdr-link"
           >
-            <span className="hdr-link-icon">
+            <span className="hdr-link-icon" aria-hidden="true">
               {theme === "dark" ? <Sun size={15} /> : <Moon size={15} />}
             </span>
-            Che do {theme === "dark" ? "sang" : "toi"}
+            Chế độ {theme === "dark" ? "sáng" : "tối"}
           </button>
         </nav>
       )}

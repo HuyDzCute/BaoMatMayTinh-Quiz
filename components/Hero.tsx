@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { BookOpen, Layers, Trophy, Activity } from "lucide-react";
 import { quizSets } from "@/lib/data";
+import { playSfx } from "@/lib/sound";
 
 /**
  * Count-up animation: from 0 → target in ~1.2s with easeOutCubic.
@@ -139,7 +140,7 @@ function StatCardItem({ card }: { card: StatCard }) {
 
       {/* click-through overlay (only the leaderboard card is linkable) */}
       {href !== "/" ? (
-        <Link href={href} className="hs-card-link" aria-label={label} />
+        <Link href={href} onClick={() => playSfx("click")} className="hs-card-link" aria-label={label} />
       ) : null}
     </div>
   );

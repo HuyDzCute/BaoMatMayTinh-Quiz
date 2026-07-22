@@ -7,6 +7,7 @@ import { useAuth } from "@/lib/auth";
 import Footer from "@/components/Footer";
 import { LeaderboardEntry } from "@/lib/types";
 import { Trophy, ArrowLeft, Medal, Crown, Filter, Cloud, CloudOff, Users, Target, TrendingUp, RefreshCw, Wifi, WifiOff, Upload } from "lucide-react";
+import { playSfx } from "@/lib/sound";
 
 export default function LeaderboardPage() {
   const [entries, setEntries] = useState<LeaderboardEntry[]>([]);
@@ -47,6 +48,7 @@ export default function LeaderboardPage() {
   }, [retryKey]);
 
   const handleRetry = () => {
+    playSfx("click");
     loadingRef.current = true;
     setLoading(true);
     setCloudError(false);
@@ -60,6 +62,7 @@ export default function LeaderboardPage() {
   const rest = filtered.slice(3, showCount);
 
   const handleFilterChange = (set: string) => {
+    playSfx("click");
     setFilterSet(set);
     setShowCount(10);
   };
@@ -92,7 +95,7 @@ export default function LeaderboardPage() {
 
         {/* ── Header ── */}
         <div className="flex items-center gap-4 mb-6">
-          <Link href="/" className="lb-back-btn">
+          <Link href="/" onClick={() => playSfx("click")} className="lb-back-btn">
             <ArrowLeft size={18} />
           </Link>
           <div className="lb-title-group">
@@ -141,7 +144,7 @@ export default function LeaderboardPage() {
           <div className="lb-cloud-pill" style={{ background: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.2)", color: "#60a5fa", marginLeft: "auto", marginBottom: 12, width: "100%", justifyContent: "center" }}>
             <Upload size={11} />
             <span>Co {pendingSyncCount} ket qua dang cho dong bo. </span>
-            <button onClick={retryPendingSync} style={{ background: "none", border: "none", color: "#93c5fd", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Dong bo ngay</button>
+            <button onClick={async () => { playSfx("click"); try { await retryPendingSync(); playSfx("complete"); } catch { playSfx("wrong"); } }} style={{ background: "none", border: "none", color: "#93c5fd", cursor: "pointer", textDecoration: "underline", padding: 0, font: "inherit" }}>Dong bo ngay</button>
           </div>
         )}
 
@@ -301,7 +304,7 @@ export default function LeaderboardPage() {
             <Trophy size={48} className="mx-auto mb-4" style={{ color: "#334155" }} />
             <p className="lb-empty-title">Chua co ket qua nao</p>
             <p className="lb-empty-sub">Hay thi thu va ghi ten len bang xep hang!</p>
-            <Link href="/" className="lb-cta-btn">
+            <Link href="/" onClick={() => playSfx("click")} className="lb-cta-btn">
               Bat dau thi ngay
             </Link>
           </div>
@@ -385,7 +388,7 @@ export default function LeaderboardPage() {
             </p>
             {visible.length < filtered.length && (
               <button
-                onClick={() => setShowCount((v) => v + 10)}
+                onClick={() => { playSfx("click"); setShowCount((v) => v + 10); }}
                 className="lb-load-more-btn"
               >
                 <span>Xem them {Math.min(10, filtered.length - showCount)} nguoi</span>

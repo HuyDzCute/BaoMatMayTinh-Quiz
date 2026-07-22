@@ -4,12 +4,14 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import SetSelector from "@/components/SetSelector";
 import Footer from "@/components/Footer";
+import { playSfx } from "@/lib/sound";
 import { Info, Keyboard, Zap, Layers, Trophy, Clock, ArrowRight } from "lucide-react";
 
 export default function HomePage() {
   const router = useRouter();
 
   const handleSelect = (setId: string, subSetId: string) => {
+    playSfx("click");
     router.push(`/quiz/${subSetId}`);
   };
 
@@ -57,7 +59,7 @@ export default function HomePage() {
 
         <button
           type="button"
-          onClick={() => router.push("/match")}
+          onClick={() => { playSfx("click"); router.push("/match") }}
           className="w-full text-left p-4 sm:p-5 rounded-2xl flex items-center gap-4 transition-all hover:-translate-y-0.5 animate-fade-slide-up"
           style={{
             animationDelay: "90ms",
