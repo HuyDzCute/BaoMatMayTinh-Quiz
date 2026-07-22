@@ -29,6 +29,7 @@ import {
   getProgressForCard,
   formatInterval,
   buildChoiceOptions,
+  resetSetProgress,
   type SetStudyStats,
 } from "@/lib/flashcards-storage";
 import { scoreAnswer, ratingFromScore, similarity } from "@/lib/fuzzy-match";
@@ -121,6 +122,15 @@ export default function FlashcardStudyPage() {
     const found = getFlashcardSet(setId);
     if (!found) {
       setNotFound(true);
+      return;
+    }
+    // If we resolved to a canonical id that differs from the URL id (e.g. a
+    // legacy `builtin:[[short-id]]` in a bookmark), normalize the URL so the
+    // browser bar shows the canonical id. Replacing rather than pushing means
+    // the user doesn't accumulate a back-history entry every time they open
+    // a stale link.
+    if (found.id !== setId) {
+      router.replace(`/flashcards/${encodeURIComponent(found.id)}`);
       return;
     }
     setSet(found);
@@ -449,6 +459,23 @@ const advance = useCallback(
                 <Trophy size={22} />
               </div>
               <p style={{ margin: 0 }}>Tuyệt vời! Hiện không có thẻ nào cần ôn. Hãy thêm bộ thẻ mới.</p>
+              <button
+                type="button"
+                className="fc-btn fc-btn-ghost mt-3"
+                onClick={() => {
+                  if (
+                    typeof window !== "undefined" &&
+                    window.confirm("Xóa toàn bộ tiến độ SRS của bộ thẻ này?")
+                  ) {
+                    resetSetProgress(set.id);
+                    window.dispatchEvent(new Event("qthtm:flashcard-progress-changed"));
+                    setStats(getSetStats(set.id, set.cards.length));
+                  }
+                }}
+                title="Xóa toàn bộ SRS state cho bộ thẻ này"
+              >
+                <XCircle size={13} /> Xóa tiến độ
+              </button>
             </div>
           ) : currentCard ? (
             <>

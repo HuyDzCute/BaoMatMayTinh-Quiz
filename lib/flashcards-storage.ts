@@ -98,9 +98,37 @@ export function getAllFlashcardSets(): FlashcardSet[] {
 }
 
 export function getFlashcardSet(setId: string): FlashcardSet | undefined {
-  return (
-    getBuiltinFlashcardSet(setId) ?? getUserFlashcardSets().find((s) => s.id === setId)
-  );
+  // Direct lookup first (the happy path).
+  const direct =
+    getBuiltinFlashcardSet(setId) ?? getUserFlashcardSets().find((s) => s.id === setId);
+  if (direct) return direct;
+
+  // Legacy / bookmark compatibility: some earlier code path produced IDs of
+  // the form `builtin:[[short-id]]` instead of the canonical
+  // `builtin:<bucket>-<short-id>`. Try to map those legacy IDs back to a
+  // real built-in set so stale URLs and bookmarks still resolve.
+  const LEGACY_RE = /^builtin:\[\[(.+?)\]\]$/;
+  const m = LEGACY_RE.exec(setId);
+  if (m) {
+    const shortId = m[1];
+
+    // 1) User-imported sets may also have been tagged with this legacy
+    //    `builtin:[[short-id]]` shape. If a user set with this exact id
+    //    exists in localStorage (e.g. someone imported a CSV that produced
+    //    such an id), return it directly.
+    const fromUser = getUserFlashcardSets().find((s) => s.id === setId);
+    if (fromUser) return fromUser;
+
+    // 2) Otherwise look for a built-in whose canonical id ends with the
+    //    short id (covers `builtin:zh-food-cac-mon-khai-vi` → `cac-mon-khai-vi`,
+    //    `builtin:ielts-100-core` → `ielts-100-core`, etc.).
+    const fromBuiltin = builtinFlashcardSets.find(
+      (s) => s.id.endsWith(`-${shortId}`) || s.id.endsWith(shortId),
+    );
+    if (fromBuiltin) return fromBuiltin;
+  }
+
+  return undefined;
 }
 
 /* ─────────────────────────────────────────
@@ -192,6 +220,24 @@ export function getAllProgress(): FlashcardProgress[] {
 
 export function getProgressForSet(setId: string): FlashcardProgress[] {
   return getAllProgress().filter((p) => p.cardId.startsWith(`${setId}::`));
+}
+
+/**
+ * Wipe all SRS progress for a given set. Returns the number of entries
+ * removed. Useful when the user wants to start over (e.g. they previously
+ * rated every card "easy" in a test run and now the queue is permanently
+ * empty for a set they never really learned).
+ */
+export function resetSetProgress(setId: string): number {
+  const prefix = `${setId}::`;
+  const all = getAllProgress();
+  const kept = all.filter((p) => !p.cardId.startsWith(prefix));
+  const removed = all.length - kept.length;
+  if (removed > 0) {
+    lsSet(PROGRESS_KEY, kept);
+    invalidateProgressCache();
+  }
+  return removed;
 }
 
 export function getProgressForCard(setId: string, cardId: string): FlashcardProgress {
