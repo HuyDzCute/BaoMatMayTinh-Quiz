@@ -1,0 +1,19 @@
+{
+  "name": "QuizHub QTHTM",
+  "short_name": "QuizHub",
+  "description": "Ứng dụng luyện thi trắc nghiệm Quản Trị Hệ Thống Mạng",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/profile-with-qr.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "productivity"]
+}

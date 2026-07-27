@@ -1,0 +1,7 @@
+Add 4 new IELTS vocab sets (Global Environment / Technology & Society / Life & Culture / Work & Society) — 773 new flashcards from 43 PDFs
+
+- New files: lib/flashcards-ielts-vocab-10.ts to -13.ts
+- Total cards across all 13 vocab files: 1493 (up from 720)
+- New sets cover: Air Pollution, Animals, Animal Testing/Extinction, Water Pollution, World Hunger, AI, Energy, Technology, Foreign Aid, Government Spending, Stress, Overpopulation, City Life, Culture, Tourism, Transport, Housing, Working from Home, Christmas, Tet Holiday, Sport, Business & Money, Family Structure, Average Life Expectancy, Ageing Population, Health, Throwaway Society, Gap Between Rich & Poor
+- Audit passed: 0 duplicate IDs, 0 empty fields, 0 bad IPA, 0 typos
+- Added audit/extract scripts: final-audit-all.cjs, check-format-all.cjs, check-cross-duplicates.cjs, compare-new-vocab.cjs, merge-pdf-vocab-json.cjs, extract-pdf-text-all.cjs

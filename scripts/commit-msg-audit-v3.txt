@@ -1,0 +1,13 @@
+Audit v2: bổ sung 14 vocab còn thiếu + đối chiếu Oxford 3000 + Paraphrasing
+
+Bổ sung:
+- Family (vocab-2): to get married, account for something
+- Education (vocab-5): nursery school, culture shock, part-time job, favour A over B, stress management, problem-solving, invaluable life lessons, homesickness, frustration, make new friends, different way of living, living on your own (12 cards)
+
+Audit các bộ:
+- IELTS vocab: 1507 cards, 0 duplicate, 0 typo, 0 bad IPA ✅
+- Paraphrasing: 460 cards, 0 duplicate, 0 typo, 0 bad IPA ✅
+- Oxford 3000: 1741 cards, 0 empty, 0 bad IPA ✅ (133 từ trùng lặp là design choice - mỗi từ xuất hiện đúng chủ đề, không dedup)
+- TypeScript build: PASS ✅
+
+UI: page.tsx variant "card" → "row" cho set group IELTS vocab

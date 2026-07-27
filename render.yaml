@@ -1,0 +1,45 @@
+# Render deployment is OPTIONAL — Vercel is the primary target.
+# This file is kept for parity with the existing deployment but no longer
+# embeds Firebase secrets (those moved to environment variables).
+#
+# To deploy on Render with Firebase:
+#   1. Set the NEXT_PUBLIC_FIREBASE_* env vars in the Render dashboard
+#      (Environment → Add Secret File / Environment Variable).
+#   2. Push to the branch Render is tracking — Render will read this file.
+#
+# Notes:
+#   - Build uses `--legacy-peer-deps` because lucide-react's published
+#     peer deps occasionally lag behind React 19.
+#   - Region "singapore" minimizes latency for VN users.
+services:
+  - type: web
+    name: baomatmaytinh-quiz
+    runtime: node
+    region: singapore
+    plan: free
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    startCommand: npx next start -p $PORT
+    healthCheckPath: /
+    envVars:
+      # Firebase — populate these in the Render dashboard.
+      # NEVER commit the real values to source control.
+      - key: NEXT_PUBLIC_FIREBASE_API_KEY
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_APP_ID
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+        sync: false
+
+cronJobs:
+  - name: keep-alive
+    schedule: "*/14 * * * *"
+    url: https://baomatmaytinh-quiz.onrender.com
+    disabled: false

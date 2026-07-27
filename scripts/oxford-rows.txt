@@ -1,0 +1,2408 @@
+[p1] 3000 từ vựng tiếng Anh
+[p1] thông dụng
+[p2] 1. Từ vựng về đồ dùng học tập.................................................................................................3
+[p2] 2. Từ vựng về hành động...........................................................................................................6
+[p2] 3. Từ vựng về hoạt động thường ngày................................................................................... 8
+[p2] 4. Từ vựng về chủ đề biển........................................................................................................ 11
+[p2] 5. Từ vựng về số........................................................................................................................ 13
+[p2] 6. Từ vựng về mua sắm............................................................................................................ 14
+[p2] 7. Từ vựng về phòng ngủ......................................................................................................... 16
+[p2] 8. Từ vựng về tình bạn.............................................................................................................. 18
+[p2] 9. Từ vựng về nhà bếp..............................................................................................................19
+[p2] 10. Từ vựng về đồ trang sức.................................................................................................... 21
+[p2] 11. Từ vựng về môi trường....................................................................................................... 22
+[p2] 12. Từ vựng về phòng khách.................................................................................................. 23
+[p2] 13. Từ vựng về bệnh viện.........................................................................................................25
+[p2] 14. Từ vựng về máy tính.......................................................................................................... 27
+[p2] 15. Từ vựng về công việc nhà................................................................................................ 29
+[p2] 16. Từ vựng về cửa hàng......................................................................................................... 30
+[p2] 17. Từ vựng về giải trí............................................................................................................... 31
+[p2] 18. Từ vựng về du lịch.............................................................................................................. 32
+[p2] 19. Từ vựng về Tết trung thu.................................................................................................. 34
+[p2] 20. Từ vựng về thể thao......................................................................................................... 35
+[p2] 21. Từ vựng về quê hương....................................................................................................... 37
+[p2] 22. Từ vựng về đám cưới........................................................................................................39
+[p2] 23. Từ vựng về sân bay............................................................................................................41
+[p2] 24. Từ vựng về sức khỏe.........................................................................................................42
+[p2] 25. Từ vựng về rau, củ, quả....................................................................................................45
+[p2] 26. Từ vựng về thời gian......................................................................................................... 47
+[p2] 27. Từ vựng về giao thông..................................................................................................... 48
+[p2] 28. Từ vựng về cảm xúc, cảm giác....................................................................................... 51
+[p2] 29. Từ vựng về tính cách........................................................................................................ 52
+[p2] 30. Từ vựng về đồ uống..........................................................................................................54
+[p2] 31. Từ vựng về các loài hoa....................................................................................................55
+[p2] 32. Từ vựng về phim ảnh........................................................................................................ 56
+[p2] 33. Từ vựng về bóng đá.......................................................................................................... 57
+[p2] 34. Từ vựng về Giáng sinh......................................................................................................59
+[p2] 35. Từ vựng về đồ ăn.............................................................................................................. 60
+[p2] 36. Từ vựng về âm nhạc......................................................................................................... 62
+[p2] 1
+[p3] 37. Từ vựng về tình yêu...........................................................................................................64
+[p3] 38. Từ vựng về nhà hàng, khách sạn....................................................................................65
+[p3] 39. Từ vựng về trường học..................................................................................................... 67
+[p3] 40. Từ vựng về màu sắc......................................................................................................... 69
+[p3] 41. Từ vựng về thời tiết............................................................................................................70
+[p3] 42. Từ vựng về quần áo.......................................................................................................... 72
+[p3] 43. Từ vựng về bộ phận cơ thể..............................................................................................74
+[p3] 44. Từ vựng về giáo dục......................................................................................................... 76
+[p3] 45. Từ vựng về gia đình.......................................................................................................... 79
+[p3] 46. Từ vựng về trái cây...........................................................................................................82
+[p3] 47. Từ vựng về động vật.........................................................................................................84
+[p3] 48. Từ vựng về côn trùng....................................................................................................... 86
+[p3] 49. Từ vựng về học tập........................................................................................................... 87
+[p3] 50. Từ vựng về thực vật..........................................................................................................89
+[p3] 51. Từ vựng về quốc gia.......................................................................................................... 90
+[p3] 52. Từ vựng về hải sản............................................................................................................. 91
+[p3] 53. Từ vựng về năng lượng.....................................................................................................92
+[p3] 54. Từ vựng về nghề nghiệp.................................................................................................. 93
+[p3] 55. Từ vựng về chế độ ăn uống.............................................................................................96
+[p3] 56. Từ vựng về thảm họa thiên nhiên...................................................................................97
+[p3] 57. Từ vựng về chỉ đường....................................................................................................... 98
+[p3] 58. Từ vựng về phòng khách sạn.......................................................................................... 99
+[p3] 59. Từ vựng về bưu điện........................................................................................................100
+[p3] 60. Từ vựng về ngân hàng.................................................................................................... 102
+[p3] 2
+[p4] 1. Từ vựng về đồ dùng học tập
+[p4] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p4] Watercolour n /ˈwɔː.təˌkʌl.ər/ Màu nước
+[p4] Thumbtack n /ˈθʌm.tæk/ Đinh ghim
+[p4] Textbook n /ˈtekst.bʊk/ Sách giáo khoa
+[p4] Test Tube n. phr /ˈtest ˌtjuːb/ Ống nghiệm
+[p4] Tape measure n. phr /ˈteɪp ˌmeʒ.ər/ Thước dây
+[p4] Stencil n /ˈsten.səl/ Giấy nến
+[p4] Stapler n /ˈsteɪ.plər/ Đồ dập ghim
+[p4] Staple remover n. phr
+[p4] /ˈsteɪ.plər
+[p4] rɪˈmuː.vər/
+[p4] Cái gỡ ghim bấm
+[p4] Set Square n. phr /ˈset ˌskweər/ Ê-ke
+[p4] Scotch Tape n. phr /ˌskɒtʃ ˈteɪp/
+[p4] Băng dính trong
+[p4] suốt
+[p4] Scissors n /ˈsɪz.əz/ Kéo
+[p4] Ruler n /ˈruː.lər/ Thước
+[p4] Ribbon n /ˈrɪb.ən/ Ruy-băng
+[p4] Protractor n /prəˈtræk.tər/ Thước đo góc
+[p4] Post-it note n. phr /ˈpəʊst.ɪt ˌnəʊt/ Giấy nhớ
+[p4] Pin n /pɪn/ Đinh ghim, kẹp
+[p4] Pencil n /ˈpen.səl/ Bút chì
+[p4] Pencil Sharpener n. phr /ˈpen.səl ˌʃɑː.pən.ər/ Đồ gọt bút chì
+[p4] Pencil Case n. phr /ˈpen.səl ˌkeɪs/ Hộp bút
+[p4] 3
+[p5] Pen n /pen/ Bút mực
+[p5] Paper n /ˈpeɪ.pər/ Giấy
+[p5] Paper fastener n. phr
+[p5] /ˈpeɪ.pər
+[p5] ˈfɑːs.ən.ər/
+[p5] Dụng cụ kẹp giấy
+[p5] Paper Clip n. phr /ˈpeɪ.pə ˌklɪp/ Kẹp giấy
+[p5] Palette n /ˈpæl.ət/ Bảng màu
+[p5] Paint n /peɪnt/ Sơn, màu
+[p5] Paintbrush n. phr /ˈpeɪntˌbrʌʃ/ Chổi sơn
+[p5] Notebook n /ˈnəʊt.bʊk/ Cuốn sổ, vở
+[p5] Map n /mæp/ Bản đồ
+[p5] Magnifying Glass n. phr
+[p5] /ˈmæɡ.nɪ.faɪ.ɪŋ
+[p5] ˌɡlɑːs/
+[p5] Kính lúp
+[p5] Index card n. phr /ˈkɑːd ˌɪn.deks/ Phiếu làm mục lục
+[p5] Highlighter n /ˈhaɪˌlaɪ.tər/ Bút đánh dấu màu
+[p5] Glue n /ɡluː/ Keo
+[p5] Globe n /ɡləʊb/ Quả địa cầu
+[p5] Flash card n. phr /ˈflæʃ ˌkɑːd/ Thẻ ghi nhớ
+[p5] File Holder n. phr /faɪlˈhəʊl.dər/ Tập hồ sơ
+[p5] File cabinet n. phr /ˈfaɪl ˌkæb.ɪ.nət/ Tủ đựng tài liệu
+[p5] Felt pen n. phr /felt pen/ Bút dạ
+[p5] Rubber n /ˈrʌb.ər/ Cục tẩy
+[p5] Duster n /ˈdʌs.tər/ Khăn lau bảng
+[p5] Dossier n /ˈdɒs.i.eɪ/ Hồ sơ
+[p5] 4
+[p6] Dictionary adj /ˈdɪk.ʃən.ər.i/ Từ điển
+[p6] Desk n /desk/ Bàn học
+[p6] Crayon n /ˈkreɪ.ɒn/ Bút chì màu
+[p6] Computer n /kəmˈpjuː.tər/ Máy tính bàn
+[p6] Compass n /ˈkʌm.pəs/ Com-pa
+[p6] Coloured Pencil n. phr /ˈkʌl.əd ˈpen.səl/ Bút chì màu
+[p6] Clock n /klɒk/ Đồng hồ treo tường
+[p6] Clamp n klæmp/ Kẹp
+[p6] Chalk n /tʃɔːk/ Phấn
+[p6] Chair n /tʃeər/ Ghế
+[p6] Carbon paper n. phr /ˈkɑː.bən ˌpeɪ.pər/ Giấy than
+[p6] Calculator n /ˈkæl.kjə.leɪ.tər/ Máy tính cầm tay
+[p6] Bookcase n /ˈbʊk.keɪs/ Giá sách
+[p6] Book n /bʊk/ Sách
+[p6] Board n /bɔːd/ Bảng
+[p6] Blackboard n /ˈblæk.bɔːd/ Bảng đen
+[p6] Binder n /ˈbaɪn.dər/
+[p6] Bìa rời (báo, tạp
+[p6] chí)
+[p6] Beaker n /ˈbiː.kər/ Cốc bêse
+[p6] Ballpoint pen n /ˌbɔːl.pɔɪnt ˈpen/ Bút bi
+[p6] Bag n /bæɡ/ Cặp sách
+[p6] Backpack n /ˈbæk.pæk/ Ba lô
+[p6] Funnel n /ˈfʌn.əl/ Cái phễu
+[p6] 5
+[p7] 6
+[p8] 2. Từ vựng về hành động
+[p8] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p8] Pack v /pæk/ Bó, gói
+[p8] Paint v /peint/ Quét sơn
+[p8] Paste v /peist/ Dán
+[p8] Pick v /pik/ Hái, nhổ
+[p8] Plant v /plænt/ Trồng
+[p8] Play v /plei/ Chơi
+[p8] Point v /pɔint/ Chỉ
+[p8] Pour v /pɔ:/ Rót, đổ
+[p8] Pull v /pul/ Lôi, kéo
+[p8] Push v /puʃ/ Xô, đẩy
+[p8] Rake v /reik/ Cào, cời
+[p8] Read v /ri:d/ Đọc
+[p8] Ride v /raid/ Đi, cưỡi
+[p8] Row v /rou/ Chèo thuyền
+[p8] Run v /rʌn/ Chạy
+[p8] Sail v /seil/ Lái (thuyền buồm)
+[p8] Scrub v /skrʌb/ Lau, chùi, cọ rửa
+[p8] See v /si:/ Thấy, xem
+[p8] Set v /set/ Để, đặt
+[p8] Sew v /soʊ/ May, khâu
+[p8] Shout v /ʃaʊt/ La hét, reo hò
+[p8] 7
+[p9] Show v /ʃou/
+[p9] Cho xem, cho thấy,
+[p9] trưng bày
+[p9] Sing v /siɳ/ Hát, hót
+[p9] Sit v /sit/ Ngồi
+[p9] Skate v /skeit/ Trượt băng
+[p9] Skip v /skip/ Nhảy
+[p9] Sleep v /sli:p/ Ngủ
+[p9] Slide v /slaid/ Trượt
+[p9] Sneeze v /sni:z/ Hắt hơi
+[p9] Spin v /spɪn/ Quay
+[p9] Stand v /stænd/ Đứng
+[p9] Stop v /stɔp/ Ngừng
+[p9] Sweep v /swi:p/ Quét qua; lan ra
+[p9] Swim v /swim/ Bơi
+[p9] Swing v /swɪŋ/ Đu đưa
+[p9] Take v /teik/ Cầm, nắm, lấy
+[p9] Talk v /tɔ:k/ Nói chuyện
+[p9] Tell v /tel/ Nói
+[p9] Throw v /θrəʊ/ Ném, quăng
+[p9] Tie v /tai/ Buộc, cột, trói
+[p9] 8
+[p10] 3. Từ vựng về hoạt động thường ngày
+[p10] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p10] Brush your teeth v. phr /brʌʃ ti:θ/ Đánh răng
+[p10] Buy v /bai/ Mua
+[p10] Comb the hair v. phr /koum ðə heə/ Chải đầu
+[p10] Cook v /kuk/ Nấu ăn
+[p10] Do exercise v. phr /du: eksəsaiz/ Tập thể dục
+[p10] Do your homework v. phr /du ‘houmwə:k/ Làm bài tập về nhà
+[p10] Eat out v. phr /ˈiːt ˌaʊt/ Đi ăn ở ngoài
+[p10] Feed the dog v. phr / :d ðə dɔg/ Cho chó ăn
+[p10] Finish working v. phr /’ niʃ ˈwəːkɪŋ/ Kết thúc công việc
+[p10] Gardening v /ˈɡɑː.dən.ɪŋ/ Làm vườn
+[p10] Get dressed v. phr /get dres/ Mặc quần áo
+[p10] Get up v. phr /get Λp/ Thức dậy
+[p10] Go home v. phr /gou houm/ Về nhà
+[p10] Go shopping v. phr /gouˈʃɒp.ɪŋ/ Đi mua sắm
+[p10] Go to bed v. phr /gou tə bed/ Đi ngủ
+[p10] Go to the movies v. phr /gou tə ðəˈmuː.vi/ Đi xem phim
+[p10] Have a bath v. phr /hæv ə ‘bɑ:θ/ Đi tắm
+[p10] Have a nap v. phr /ˌhæv.ə næp/ Ngủ ngắn
+[p10] Have breakfast v. phr /ˌhævˈbrek.fəst/ Ăn sáng
+[p10] Have dinner v. phr /ˌhævˈdɪn.ər/ Án tối
+[p10] Have lunch v. phr /ˌhæv lʌntʃ/ Ăn trưa
+[p10] 9
+[p11] Have a shower v. phr /hæv ə ˈʃaʊər/ Tắm vòi hoa sen
+[p11] Listen to music v. phr /ˈlɪs.ən tuːˈmjuː.zɪk/ Nghe nhạc
+[p11] Make breakfast v. phr /meik ‘brekfəst/ Làm bữa ăn sáng
+[p11] Make up v. phr /meik Λp/ Trang điểm
+[p11] Meditation n /,medi’teiʃn/ Thiền
+[p11] Play an instrument v. phr
+[p11] /pleɪ
+[p11] ænˈɪn.strə.mənt/
+[p11] Chơi nhạc cụ
+[p11] Play outside v. phr /pleɪ ˌaʊtˈsaɪd/ Đi ra ngoài chơi
+[p11] Play sports v. phr /pleɪ spɔːts/ Chơi thể thao
+[p11] Play video games v. phr
+[p11] /pleɪ ˈvɪd.i.əʊ
+[p11] ˌɡeɪmz/
+[p11] Chơi trò chơi điện
+[p11] tử
+[p11] Read books v. phr /riːd bʊks/ Đọc sách
+[p11] Read newspapers v. phr /ri:d’nju:z,peipəz/ Đọc báo
+[p11] Relax v /rɪˈlæks/ Thư giãn
+[p11] Set the alarm v. phr /set ðə ə’lɑ:m/
+[p11] Đặt chuông báo
+[p11] thức
+[p11] Shave v /∫eiv/ Cạo râu
+[p11] Sleep v /sliːp/ Ngủ
+[p11] Study v /ˈstʌd.i/
+[p11] Học tập, nghiên
+[p11] cứu
+[p11] Surf the internet v. phr /sɜːf ðiː ˈɪn.tə.net/ Lướt mạng
+[p11] Take the rubbish
+[p11] out
+[p11] v. phr /teik ðə ‘rʌbiʃ aut/ Đi đổ rác
+[p11] Drink v /driɳk/ Uống
+[p11] Turn o  phrasal v /tɜrn ɒf/ Tắt
+[p11] 10
+[p12] Visit your friend v. phr /ˈvɪz.ɪt jɔːr frend/ Thăm bạn bè
+[p12] Wake up phrasal v /weik Λp/ Tỉnh giấc
+[p12] Wash your face v. phr /wɒʃ jɔːr feɪs/ Rửa mặt
+[p12] Wash the dishes v. phr /wɔʃ ðə dɪʃ/ Rửa chén
+[p12] Watch television v. phr /wɔtʃ ‘teli,viʤn/ Xem tivi
+[p12] Work v /wə:k/ Làm việc
+[p12] 11
+[p13] 4. Từ vựng về chủ đề biển
+[p13] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p13] Sea n /siː/ Biển
+[p13] Ocean n /ˈəʊʃən/ Đại dương
+[p13] Wave n /weɪv/ Sóng
+[p13] Island n /ˈaɪlənd/ Hòn đảo
+[p13] Harbor n /ˈhɑːr.bɚ/ Cảng biển
+[p13] Lighthouse n /ˈlaɪthaʊs/ Hải đăng
+[p13] Submarine n /ˌsʌbmərˈiːn/ Tàu ngầm
+[p13] Ship n /ʃɪp/ Tàu thuỷ
+[p13] Boat n /bəʊt/ Thuyền
+[p13] Captain n /ˈkæptɪn/ Thuyền trưởng
+[p13] Fisherman n /ˈfɪʃəmən/ Ngư dân
+[p13] Lifeguard n /ˈlaɪfɡɑːd/ Người cứu hộ
+[p13] Seashore n /ˈsiːʃɔːr/ Bờ biển
+[p13] Beach n /biːtʃ/ Bãi biển
+[p13] Coast n /kəʊst/ Bờ (biển)
+[p13] Seagull n /ˈsiː.ɡʌl/ Mòng biển
+[p13] Whale n /weɪl/ Cá voi
+[p13] Shark n /ʃɑːk/ Cá mập
+[p13] Dolphin n /ˈdɒlfɪn/ Cá heo
+[p13] Octopus n /ˈɑːktəpəs/ Bạch tuộc
+[p13] Fish n /fɪʃ/ Cá
+[p13] 12
+[p14] Jelly sh n /ˈdʒelifɪʃ/ Sứa
+[p14] Sea horse n. phr /ˈsiˌhɔrs/ Cá ngựa
+[p14] Seaweed n /ˈsiːwiːd/ Rong biển
+[p14] Coral n /ˈkɒrəl/ San hô
+[p14] Coral reef n. phr /ˌkɒr.əl ˈriːf/ Rạn san hô
+[p14] Shell sh n /ˈʃel.fɪʃ/ Động vật có vỏ
+[p14] Clam n /klæm/ Nghêu
+[p14] Star sh n /ˈstɑːrfɪʃ/ Sao biển
+[p14] Seal n /siːl/ Hải cẩu
+[p14] Turtle n /ˈtɜːtl/ Rùa biển
+[p14] Crab n /kræb/ Cua
+[p14] 13
+[p15] 5. Từ vựng về số
+[p15] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p15] Cardinal number n. phr /ˈkɑr·dən·əl
+[p15] ˈnʌm·bər/
+[p15] Số đếm
+[p15] Ordinal number n. phr /ˈɔr·dən·əl
+[p15] ˈnʌm·bər/
+[p15] Số thứ tự
+[p15] Decimal n /ˈdes.ɪ.məl/ Số thập phân
+[p15] Fraction n /ˈfræk.ʃən/ Phân số
+[p15] Percentage n /pəˈsen.tɪdʒ/ Phần trăm
+[p15] Arithmetic adj/n /əˈrɪθ.mə.tɪk/ Số học
+[p15] Divide v /dɪˈvaɪd/ Chia
+[p15] Plus pre /plʌs/ Cộng
+[p15] Minus pre /ˈmaɪ.nəs/ Trừ
+[p15] Multiply v /ˈmʌl.tɪ.plaɪ/ Nhân
+[p15] Equal adj/v /ˈiː.kwəl/ Ngang bằng, bằng
+[p15] Total adj /ˈtəʊ.təl/ Tổng, tổng số
+[p15] Dozen n /ˈdʌz.ən/ Tá (12 đơn vị)
+[p15] Around adv /əˈraʊnd/ Khoảng
+[p15] Zero n /ˈzɪə.rəʊ/ Số không
+[p15] Hundred n /ˈhʌn.drəd/ Một trăm
+[p15] Thousand n /ˈθaʊ.zənd/ Một nghìn
+[p15] Million n /ˈmɪl.jən/ Một triệu
+[p15] Billion n /ˈbɪl.jən/ Một tỷ
+[p15] 14
+[p16] Half n /hɑːf/ Một nửa
+[p16] 6. Từ vựng về mua sắm
+[p16] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p16] Customer n /ˈkʌs.tə.mər/ Khách hàng
+[p16] Cashier n /kæʃˈɪər/ Nhân viên thu ngân
+[p16] Attendant n /əˈten.dənt/ Người phục vụ
+[p16] Manager n /ˈmæn.ɪ.dʒər/ Giám đốc, quản lý
+[p16] Wallet n /ˈwɒl.ɪt/ Ví tiền
+[p16] Purse n /pɜːs/ Ví tiền (nữ)
+[p16] Scale n /skeɪl/ Cái cân
+[p16] Counter n /ˈkaʊn.tər/ Quầy hàng
+[p16] Barcode reader n. phr /ˈbɑːˌkəʊdˈriː.dər/ Máy đọc mã vạch
+[p16] Receipt n /rɪˈsiːt/ Biên lai
+[p16] Pay v /peɪ/ Trả tiền
+[p16] Expensive adj /ɪkˈspen.sɪv/ Đắt
+[p16] Cheap n /tʃiːp/ Rẻ
+[p16] Discount n /ˈdɪs.kaʊnt/ Giảm giá
+[p16] Sell v /sel/ Bán
+[p16] Price n /praɪs/ Giá cả
+[p16] Trolley n /ˈtrɒl.i/ Xe đẩy
+[p16] Credit card n. phr /ˈkred.ɪt ˌkɑːd/ Thẻ tín dụng
+[p16] Cash n /kæʃ/ Tiền mặt
+[p16] 15
+[p17] Shop n /ʃɒp/ Cửa hàng
+[p17] Money n /ˈmʌn.i/ Tiền
+[p17] Basket n /ˈbɑː.skɪt/ Rổ, giỏ
+[p17] Bag n /bæɡ/ Túi
+[p17] Buy v /baɪ/ Mua
+[p17] Greengrocer n /ˈɡriːŋ.ɡrəʊ.sər/
+[p17] Cửa hàng bán rau
+[p17] quả
+[p17] Housewares n /ˈhaʊs.weəz/ Đồ gia dụng
+[p17] Toy store n. phr /tɔɪ stɔːr/ Cửa hàng đồ chơi
+[p17] Shopping mall n. phr /ˈʃɒp.ɪŋ ˌmɔːl/ Trung tâm mua sắm
+[p17] Grocery store n. phr /ˈɡrəʊ.sər.i ˌstɔːr/ Cửa hàng tạp hóa
+[p17] Convenience store n. phr
+[p17] /kənˈviː.ni.əns
+[p17] ˌstɔːr/
+[p17] Cửa hàng tiện lợi
+[p17] Bargain n /ˈbɑː.ɡɪn/ Mặc cả
+[p17] Refund n/v /ˈriː.fʌnd/ Hoàn lại, trả lại
+[p17] Brochure n /ˈbrəʊ.ʃər/ Tập quảng cáo
+[p17] Liquor store n. phr /ˈlɪk.ə ˌstɔːr/ Quán rượu
+[p17] Drugstore n /ˈdrʌɡ.stɔːr/ Tiệm thuốc
+[p17] Candy store n. phr /ˈkæn.di ˌstɔːr/ Cửa hàng kẹo
+[p17] Gift shop n. phr /ˈɡɪft ˌʃɒp/
+[p17] Cửa hàng đồ lưu
+[p17] niệm
+[p17] Pet shop n. phr /pet ʃɒp/ Tiệm thú cưng
+[p17] Shoe shop n. phr /ʃuːʃɒp/ Tiệm giày
+[p17] Meat shop n. phr /miːt ʃɒp/ Cửa hàng thịt
+[p17] 16
+[p18] Florist n /ˈflɒr.ɪst/ Người bán hoa
+[p18] Butcher n /ˈbʊtʃ.ər/ Người bán thịt
+[p18] 7. Từ vựng về phòng ngủ
+[p18] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p18] Lamp n /læmp/ Đèn
+[p18] Pillowcase n /ˈpɪl.əʊ.keɪs/ Bao gối
+[p18] Curtain n /ˈkɜː.tən/ Rèm
+[p18] Bed n /bed/ Giường
+[p18] Mirror n /ˈmɪr.ər/ Gương
+[p18] Cushion n /ˈkʊʃ.ən/ Đệm
+[p18] Wardrobe n /ˈwɔː.drəʊb/ Tủ quần áo
+[p18] Fitted carpet n. phr /ˌfɪt.ɪd ˈkɑː.pɪt/ Thảm lót sàn
+[p18] Dressing table n. phr /ˈdres.ɪŋ ˌteɪ.bəl/ Bàn trang điểm
+[p18] Wallpaper n /ˈwɔːlˌpeɪ.pər/ Giấy dán tường
+[p18] Pillow n /ˈpɪl.əʊ/ Gối
+[p18] Carpet n /ˈKɑː.pɪt/ Tấm thảm
+[p18] Blind n /blaɪnd/ Mành, rèm che
+[p18] Mattress n /ˈmæt.rəs/ Nệm
+[p18] Bedspread n /ˈbed.spred/ Khăn trải giường
+[p18] Blanket n /ˈblæŋ.kɪt/ Tấm chăn, mền
+[p18] Jewelry n /ˈdʒuːl.ri/ Trang sức
+[p18] Alarm clock n. phr /əˈlɑːm ˌklɒk/ Đồng hồ báo thức
+[p18] 17
+[p19] Air conditioner n. phr /ˈeə kənˌdɪʃ.ən.ər/ Máy điều hòa
+[p19] Box spring n. phr /ˈbɒks ˌsprɪŋ/
+[p19] Khung lò xo nâng
+[p19] nệm
+[p19] Comforter n /ˈkʌm.fə.tər/ Chăn bông
+[p19] Hanger n /ˈhæŋ.ər/ Móc treo (quần áo)
+[p19] Closet n /ˈklɒz.ɪt/
+[p19] Tủ đóng trong
+[p19] tường
+[p19] Comb n /kəʊm/ Lược
+[p19] Light switch n /laɪt swɪtʃ/ Công tắc điện
+[p19] Chest of drawers n. phr /ˌtʃest əv ˈdrɔːz/ Tủ kéo
+[p19] 18
+[p20] 8. Từ vựng về tình bạn
+[p20] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p20] Classmate n /ˈklɑːs.meɪt/ Bạn cùng lớp
+[p20] Schoolmate n /ˈskuːl.meɪt/ Bạn cùng trường
+[p20] Roommate n /ˈruːm.meɪt/ Bạn cùng phòng
+[p20] Soulmate n /ˈsəʊl.meɪt/ Tri kỷ
+[p20] Colleague n /ˈkɒl.iːɡ/ Đồng nghiệp
+[p20] Comradeship n /ˈkɒm.reɪd.ʃɪp/
+[p20] Tình bạn, tình đồng
+[p20] chí
+[p20] Partner n /ˈpɑːt.nər/ Cộng sự
+[p20] Associate n /əˈsəʊ.si.eɪt/
+[p20] Bạn đồng liêu, đồng
+[p20] minh
+[p20] Buddy n /ˈbʌd.i/ Bạn thân
+[p20] Ally n /ˈæl.aɪ/ Đồng minh
+[p20] Companion n /kəmˈpæn.jən/ Bạn đồng hành
+[p20] Pal n /pæl/ Bạn (từ lóng)
+[p20] Friendship n /ˈfrend.ʃɪp/ Tình bạn
+[p20] Close adj /kləʊz/ Thân thiết
+[p20] 19
+[p21] 9. Từ vựng về nhà bếp
+[p21] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p21] Dishwasher n /ˈdɪʃˌwɒʃ.ər/ Máy rửa chén
+[p21] Dish drainer n. phr /dɪʃ ˈdreɪ.nər/ Kệ để chén bát
+[p21] Steamer n /ˈstiː.mər/ Nồi hấp
+[p21] Colander n /ˈkɒl.ən.dər/ Cái chao
+[p21] Lid n /lɪd/ Nắp, vung
+[p21] Blender n /ˈblen.dər/ Máy xay sinh tố
+[p21] Pot n /pɒt/ Nồi
+[p21] Toaster n /ˈtəʊ.stər/ Lò nướng bánh
+[p21] Dishtowel n /ˈdɪʃ.taʊəl/ Khăn lau chén
+[p21] Refrigerator n /rɪˈfrɪdʒ.ər.eɪ.tər/ Tủ lạnh
+[p21] Freezer n /ˈfriː.zər/ Tủ đông
+[p21] Cabinet n /ˈkæb.ɪ.nət/ Tủ (có nhiều ngăn)
+[p21] Microwave n /ˈmaɪ.krə.weɪv/ Lò vi sóng
+[p21] Bowl n /bəʊl/ Bát, chén
+[p21] Cutting board n. phr /ˈkʌt.ɪŋ ˌbɔːd/ Thớt
+[p21] Stove n /stəʊv/ Bếp lò
+[p21] Co ee maker n. phr /ˈkɒf.i ˌmeɪ.kər/ Máy pha cà phê
+[p21] Oven adv /ˈʌv.ən/ Lò, lò nướng
+[p21] Oven cleaner n. phr /ˈʌv.ən ˈkliː.nər/ Nước tẩy rửa lò
+[p21] Jar n /dʒɑːr/ Lọ
+[p21] Sink n /sɪŋk/ Bồn rửa bát
+[p21] 20
+[p22] Dish rack n. phr /ˈdɪʃ ˌræk/
+[p22] Khay để ráo chén
+[p22] đĩa
+[p22] Sponge n /spʌndʒ/ Bọt biển
+[p22] Chopstick n /ˈtʃɒp.stɪk/ Đũa
+[p22] Pan n /pæn/ Chảo
+[p22] Cooker n /ˈkʊk.ər/ Bếp, nồi nấu
+[p22] Mug n /mʌɡ/ Cốc lớn
+[p22] Kettle n /ˈket.əl/ Ấm đun nước
+[p22] Glass n /ɡlɑːs/ Ly
+[p22] Teapot n /ˈtiː.pɒt/ Ấm pha trà
+[p22] Grill n /ɡrɪl/ Vỉ nướng
+[p22] Tray n /treɪ/ Cái khay, cái mâm
+[p22] Whisk n /wɪsk/ Máy đánh trứng
+[p22] Knife n /naɪf/ Dao
+[p22] Spoon n /spuːn/ Muỗng, thìa
+[p22] 21
+[p23] 10. Từ vựng về đồ trang sức
+[p23] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p23] Earring n /ˈɪə.rɪŋ/ Bông tai
+[p23] Necklace n /ˈnek.ləs/ Dây chuyền
+[p23] Bracelet n /ˈbreɪ.slət/ Vòng tay
+[p23] Brooch n /brəʊtʃ/ Trâm cài
+[p23] Hair clip n. phr /ˈHeə ˌklɪp/ Kẹp tóc
+[p23] Wedding ring n. phr /ˈwed.ɪŋ ˌrɪŋ/ Nhẫn cưới
+[p23] Jeweler n /ˈdʒuː.ə.lɚ/ Thợ kim hoàn
+[p23] Jewelry store n. phr /ˈdʒuː.əl.ri stɔː r/ Cửa hàng trang sức
+[p23] Anklet n /ˈæŋ.klət/ Vòng chân
+[p23] Noble adj /ˈnəʊ.bəl/ Quý
+[p23] Luxurious adj /lʌɡˈʒʊə.ri.əs/ Sang trọng, xa hoa
+[p23] Modern adj /ˈmɒd.ən/ Hiện đại
+[p23] Suitable adj /ˈsuː.tə.bəl/ Phù hợp, thích hợp
+[p23] Twinkle v /ˈtwɪŋ.kəl/ Lấp lánh
+[p23] Bead n /biːd/ Hạt (của chuỗi hạt)
+[p23] Hair tie n. phr /ˈheə ˌtaɪ/ Dây buộc tóc
+[p23] Pocket watch n. phr /ˈpɒk.ɪt wɒtʃ/ Đồng hồ bỏ túi
+[p23] Tiepin n /ˈtaɪ.pɪn/ Ghim cà vạt
+[p23] Precious stone n. phr /ˌpreʃ.əs ˈstəʊn/ Đá quý
+[p23] 22
+[p24] 11. Từ vựng về môi trường
+[p24] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p24] Land n /lænd/ Đất, đất đai
+[p24] Pollute v /pəˈluːt/ Làm ô nhiễm
+[p24] Decompose v /ˌdiː.kəmˈpəʊz/ Phân hủy
+[p24] Balance n /ˈbæl.əns/ Sự cân bằng
+[p24] Climate change n. phr /ˈklaɪ.mət ˌtʃeɪndʒ/ Biến đổi khí hậu
+[p24] Global warming n. phr /ˌɡləʊ.bəl ˈwɔː.mɪŋ/ Nóng lên toàn cầu
+[p24] Oil slick n. phr /ˈɔɪl ˌslɪk/ Dầu loang
+[p24] Ozone layer n. phr /ˈəʊ.zəʊn ˌleɪ.ər/ Tầng ozon
+[p24] Biodiversity n
+[p24] /ˌbaɪ.əʊ.daɪˈvɜː.sə.t
+[p24] i/
+[p24] Đa dạng sinh học
+[p24] Ecology n /iˈkɒl.ə.dʒi/ Sinh thái học
+[p24] Water n /ˈwɔː.tər/ Nước
+[p24] Air n /eər/ Không khí
+[p24] Forest n /ˈfɒr.ɪst/ Rừng
+[p24] Flora n /ˈflɔː.rə/ Hệ thực vật
+[p24] Creature n /ˈkriː.tʃər/ Sinh vật
+[p24] Insect n /ˈɪn.sekt/ Côn trùng
+[p24] Reproduction n /ˌriː.prəˈdʌk.ʃən/ Sự sinh sản
+[p24] Wildlife n /ˈwaɪld.laɪf/ Động vật hoang dã
+[p24] Sewage n /ˈsuː.ɪdʒ/ Nước thải
+[p24] Fauna n /ˈfɔː.nə/ Hệ động vật
+[p24] 23
+[p25] 12. Từ vựng về phòng khách
+[p25] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p25] Drapes n /dreɪps/ Màn cửa
+[p25] Cushion n /ˈkʊʃ.ən/ Đệm ngồi
+[p25] Sofa n /ˈsəʊ.fə/ Ghế sô-pha
+[p25] Rug n /rʌɡ/ Tấm thảm
+[p25] Banister n /ˈbæn.ɪ.stər/ Lan can
+[p25] Bookcase n /ˈbʊk.keɪs/ Tủ sách
+[p25] Ceiling n /ˈsiː.lɪŋ/ Trần nhà
+[p25] Clock n /klɒk/ Đồng hồ treo tường
+[p25] Desk n /desk/ Bàn làm việc
+[p25] Frame n /freɪm/ Khung (ảnh, cửa)
+[p25] Lampshade n /ˈlæmp.ʃeɪd/ Chụp đèn
+[p25] Mantelpiece n /ˈmæn.təl.piːs/ Bệ lò sưởi
+[p25] Painting n /ˈpeɪn.tɪŋ/ Bức tranh
+[p25] Remote control n. phr rɪˌməʊt kənˈtrəʊl/ Điều khiển từ xa
+[p25] Speaker n /ˈspiː.kər/ Loa
+[p25] Step n /step/ Bậc thang
+[p25] Stereo system n. phr /ˈster.i.əʊ ˈsɪs.təm/
+[p25] Dàn máy hát (có
+[p25] loa)
+[p25] Stereo n /ˈster.i.əʊ/ Máy xtê-rê-ô
+[p25] Television n /ˈtel.ɪ.vɪʒ.ən/ Ti vi
+[p25] Vase n /vɑːz/ Cái bình, lọ
+[p25] 24
+[p26] Wall unit n. phr /wɔːl ˈjuː.nɪt/ Tủ tường
+[p26] Lamp n /læmp/ Đèn
+[p26] Calendar n /ˈkæl.ən.dər/ Lịch
+[p26] Fan n /fæn/ Cái quạt
+[p26] Chair n /tʃeər/ Cái ghế
+[p26] Stool n /stuːl/ Ghế đẩu
+[p26] Ashtray n /ˈæʃ.treɪ/ Đồ gạt tàn thuốc
+[p26] Bookshelf n /ˈbʊk.ʃelf/ Kệ sách
+[p26] Fuse n /fjuːz/ Cầu chì
+[p26] Switch n /swɪtʃ/ Công tắc
+[p26] Couch n /kaʊtʃ/ Trường kỷ
+[p26] Curtain n /ˈkɜː.tən/ Rèm cửa
+[p26] 25
+[p27] 13. Từ vựng về bệnh viện
+[p27] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p27] Radiologist n /ˌreɪ.diˈɒl.ə.dʒɪst/
+[p27] Bác sĩ chụp
+[p27] X-quang
+[p27] Emergency room n. phr /ɪˈmɜː.dʒən.si ˌruːm/ Phòng cấp cứu
+[p27] Obstetrician n /ˌɒb.stəˈtrɪʃ.ən/ Bác sĩ sản khoa
+[p27] Operating room n. phr /ˈɒp.ər.eɪ.tɪŋ ˌruːm/ Phòng phẫu thuật
+[p27] Needle n /ˈniː.dəl/ Kim tiêm
+[p27] Laboratory n /ləˈbɒr.ə.tər.i/ Phòng thí nghiệm
+[p27] Pharmacy n /ˈfɑː.mə.si/ Tiệm thuốc
+[p27] Hospital bed n. phr /ˈhɒs.pɪ.təl bed/ Giường bệnh
+[p27] Call button n. phr /kɔːl ˈbʌt.ən/ Chuông gọi (y tá)
+[p27] Doctor n /ˈdɒk.tər/ Bác sĩ
+[p27] Nurse n /nɜːs/ Y tá
+[p27] Gurney n /ˈɡɜː.ni/ Xe đẩy tay
+[p27] Waiting room n. phr /ˈweɪ.tɪŋ ˌruːm/ Phòng chờ
+[p27] Surgeon n /ˈsɜː.dʒən/ Bác sĩ phẫu thuật
+[p27] Midwife n /ˈmɪd.waɪf/ Bà đỡ
+[p27] Injection n /ɪnˈdʒek.ʃən/ Việc tiêm thuốc
+[p27] Calcium n /ˈkæl.si.əm/ Canxi
+[p27] Hospital n /ˈhɒs.pɪ.təl/ Bệnh viện
+[p27] Crutch n /krʌtʃ/ Cái nạng
+[p27] Wheelchair n ˈwiːl.tʃeər/ Xe lăn
+[p27] 26
+[p28] Paramedic n /ˌpær.əˈmed.ɪk/ Nhân viên y tế
+[p28] Stretcher n /ˈstretʃ.ər/ Cáng cứu thương
+[p28] Rush n /rʌʃ/
+[p28] Đưa đi, chuyển đi
+[p28] (nhanh)
+[p28] Treat v /triːt/ Điều trị, chữa trị
+[p28] Condition n /kənˈdɪʃ.ən/ Tình trạng
+[p28] Recovery n /rɪˈkʌv.ər.i/ Sự bình phục
+[p28] Su er v /ˈsʌf.ər/ Chịu đựng
+[p28] Deteriorate v /dɪˈtɪə.ri.ə.reɪt/ Xấu đi, tệ hơn
+[p28] Coma n /ˈkəʊ.mə/ Sự hôn mê
+[p28] Common cold n. phr ˌkɒm.ən ˈkəʊld/
+[p28] Bệnh cảm lạnh
+[p28] thông thường
+[p28] 27
+[p29] 14. Từ vựng về máy tính
+[p29] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p29] Monitor n /ˈmɒn.ɪ.tər/ Màn hình
+[p29] Mouse pad n. phr /ˈmaʊs ˌpæd/ Tấm lót chuột
+[p29] Printer n /ˈprɪn.tər/ Máy in
+[p29] Scanner n /ˈskæn.ər/ Máy quét
+[p29] Open v /ˈəʊ.pən/ Khởi động, mở
+[p29] Close v /kləʊz/ Đóng, tắt
+[p29] Delete v /dɪˈliːt/ Xóa, loại bỏ
+[p29] Insert v /ɪnˈsɜːt/ Cho vào, chèn
+[p29] Merge v /mɜːdʒ/ Sát nhập
+[p29] Helpline n /ˈhelp.laɪn/ Đường dây trợ giúp
+[p29] Hard disk n. phr /ˈhɑːd ˌdɪsk/ Ổ cứng
+[p29] Software n /ˈsɒft.weər/ Phần mềm
+[p29] CD-ROM n /ˌsiː.diːˈrɒm/ Đĩa CD dữ liệu
+[p29] Toolbar n /ˈtuːl.bɑːr/ Thanh công cụ
+[p29] Database n /ˈdeɪ.tə.beɪs/ Cơ sở dữ liệu
+[p29] Hacker n /ˈhæk.ər/ Tin tặc
+[p29] Save v /seɪv æz/ Lưu
+[p29] Select v /sɪˈlekt/ Chọn
+[p29] Copy v /ˈkɒp.i/ Sao chép
+[p29] Computer n /kəmˈpjuː.tər/ Máy vi tính
+[p29] Laptop n /ˈlæp.tɒp/ Máy tính xách tay
+[p29] 28
+[p30] Speaker n /ˈspiː.kər/ Loa
+[p30] File n /faɪl/ Tệp, tập tin
+[p30] Disk drive n. phr /ˈdɪsk ˌdraɪv/ Ổ đĩa
+[p30] Battery n /ˈbæt.ər.i/ Pin
+[p30] Click n /klɪk/ Nhấp chuột
+[p30] Type n /taɪp/ Đánh chữ, gõ chữ
+[p30] Mouse n /maʊs/ Con chuột
+[p30] Keyboard n /ˈkiː.bɔːd/ Bàn phím
+[p30] Mouse mat n. phr /ˈmaʊs ˌmæt/ Miếng lót chuột
+[p30] Key n /kiː/ Phím
+[p30] Shut down phrasal v /ʃʌt daʊn/ Tắt máy
+[p30] Folder n /ˈfəʊl.dər/ Thư mục
+[p30] Print v /prɪnt/ In
+[p30] Program n /ˈprəʊ.ɡræm/ Chương trình
+[p30] Search v /sɜːtʃ/
+[p30] Tìm kiếm (thông
+[p30] tin)
+[p30] Screen n /skriːn/ Màn hình
+[p30] 29
+[p31] 15. Từ vựng về công việc nhà
+[p31] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p31] Dusting n /ˈdʌs.tɪŋ/ Việc quét bụi
+[p31] Cooking n /ˈkʊk.ɪŋ/ Việc nấu ăn
+[p31] Ironing n /ˈaɪə.nɪŋ/ Việc ủi đồ
+[p31] Sweep v /swiːp/ Quét dọn
+[p31] Wipe v /waɪp/ Chùi, lau sạch
+[p31] Throw out phrasal v /θrəʊ aʊt/ Vứt, bỏ đi
+[p31] Vacuum v /ˈvæk.juːm/ Hút bụi
+[p31] Cleaning n /ˈkliː.nɪŋ/ Việc dọn dẹp
+[p31] Polish v /ˈpɒl.ɪʃ/ Đánh bóng
+[p31] Fold v /fəʊld/ Gấp gọn, gập lại
+[p31] Scrub v /skrʌb/ Chà, cọ rửa
+[p31] Tighten v /ˈtaɪ.tən/ Thắt, vặn (chặt)
+[p31] Make the bed v. phr /meɪk ðə bed/ Dọn giường
+[p31] Set the table v. phr /set ðəˈteɪ.bəl/ Bày chén bát
+[p31] Clear the table v. phr /klɪər ðəˈteɪ.bəl/ Dọn dẹp chén bát
+[p31] Mow the lawn v. phr /məʊ ðə lɔːn/ Cắt cỏ
+[p31] Dishwashing n /dɪʃˈwɒʃ.ɪŋ/ Việc rửa chén
+[p31] Water the plants v. phr /ˈwɔː.tər ðəˈplɑːnt/ Tưới cây
+[p31] Clean the kitchen v. phr /kliːn ðə ˈkɪʧən/ Lau dọn bếp
+[p31] 30
+[p32] 16. Từ vựng về cửa hàng
+[p32] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p32] Bakery n /ˈbeɪ.kər.i/ Tiệm bánh
+[p32] Bookshop n /ˈbʊk.ʃɒp/ Tiệm sách
+[p32] Butcher's n /ˈbʊtʃ.ər/ Cửa hàng thịt
+[p32] Candy store n. phr /ˈkæn.di ˌstɔːr/ Cửa hàng kẹo
+[p32] Convenience store n. phr
+[p32] /kənˈviː.ni.əns
+[p32] ˌstɔːr/
+[p32] Cửa hàng tiện lợi
+[p32] Greengrocer n /ˈɡriːŋ.ɡrəʊ.sər/
+[p32] Cửa hàng bán rau
+[p32] quả
+[p32] Flower shop n. phr /flaʊər ʃɒp/ Cửa hàng hoa
+[p32] Store n /ˌstɔːr/ Cửa hàng
+[p32] Gift shop n. phr /ˈɡɪft ˌʃɒp/
+[p32] Cửa hàng đồ lưu
+[p32] niệm
+[p32] Shop n /ˌʃɒp/ Cửa hàng
+[p32] Food stall n. phr /fuːd stɔːl/ Quán ăn
+[p32] Fast food
+[p32] restaurant
+[p32] n. phr
+[p32] /ˌfɑːst ˈfuːd
+[p32] ˌres.trɒnt/
+[p32] Cửa hàng thức ăn
+[p32] nhanh
+[p32] Dry-cleaner's n /ˌdraɪˈkliː.nəz/ Tiệm giặt ủi
+[p32] Shoe store n. phr /ʃuːˌstɔːr/ Tiệm giày
+[p32] Barbershop n /ˈbɑː.bə.ʃɒp/ Tiệm cắt tóc nam
+[p32] Newspaper kiosk n. phr
+[p32] /ˈnjuːzˌpeɪ.pər
+[p32] ˈkiː.ɒsk/
+[p32] Sạp báo
+[p32] Bookstall n /ˈbʊk.stɔːl/ Quầy bán sách
+[p32] Sports center n. phr /ˈspɔːrts ˌsen.t̬ɚ/ Trung tâm thể thao
+[p32] 31
+[p33] 17. Từ vựng về giải trí
+[p33] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p33] Play n /pleɪ/ Vở kịch
+[p33] Circus n /ˈsɜː.kəs/ Rạp xiếc
+[p33] Stadium n /ˈsteɪ.di.əm/ Sân vận động
+[p33] Orchestra n /ˈɔː.kɪ.strə/ Ban nhạc, dàn nhạc
+[p33] Scene n /siːn/ Phân cảnh
+[p33] Opera n /ˈɒp.ər.ə/ Nhạc kịch, ô-pê-ra
+[p33] Theater n /ˈθɪə.tər/ Nhà hát
+[p33] Applaud v /əˈplɔːd/ Vỗ tay (tán thưởng)
+[p33] Perform v /pəˈfɔːm/
+[p33] Trình diễn, biểu
+[p33] diễn
+[p33] Exhibit n /ɪɡˈzɪb.ɪt/ Vật triển lãm
+[p33] Art gallery n. phr /ˈɑːt ˌɡæl.ər.i/ Phòng triển lãm
+[p33] Comedy n /ˈkɒm.ə.di/ Hài kịch
+[p33] Chamber music n. phr /ˈtʃeɪm.bə ˌmjuː.zɪk/ Nhạc thính phòng
+[p33] Casino n /kəˈsiː.nəʊ/ Sòng bạc
+[p33] Pub n /pʌb/ Quán rượu
+[p33] Concert hall n. phr /ˈkɒn.sət ˌhɔːl/ Phòng hoà nhạc
+[p33] 32
+[p34] 18. Từ vựng về du lịch
+[p34] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p34] Travel v /ˈtræv.əl/ Du lịch
+[p34] Travel agent n. phr /ˈtræv.əl ˌeɪ.dʒənt/ Đại lý du lịch
+[p34] Vacation n /veɪˈkeɪ.ʃən/ Kỳ nghỉ
+[p34] Flight n /flaɪt/ Chuyến bay
+[p34] Voyage n /ˈvɔɪ.ɪdʒ/ Chuyến hải hành
+[p34] Relax v /rɪˈlæks/ Thư giãn
+[p34] Cancel v /ˈkæn.səl/ Hủy bỏ
+[p34] Homestay n /ˈhəʊm.steɪ/
+[p34] (dịch vụ) lưu trú tại
+[p34] nhà dân bản địa
+[p34] Souvenir n /ˌsuː.vənˈɪər/ Quà lưu niệm
+[p34] Travel sickness n. phr /ˈtræv.əl ˌsɪk.nəs/ Việc say tàu xe
+[p34] Journey n /ˈdʒɜː.ni/ Chuyến đi
+[p34] Peak season n. phr /piːk ˈsiː.zən/ Mùa cao điểm
+[p34] Route n /ruːt/ Tuyến đường
+[p34] Trip n /trɪp/
+[p34] Chuyến đi (ngắn
+[p34] ngày)
+[p34] Excursion n /ɪkˈskɜː.ʃən/ Chuyến tham quan
+[p34] Luggage n /ˈlʌɡ.ɪdʒ/ Hành lý
+[p34] Tourist n /ˈtʊə.rɪst/ Du khách
+[p34] Ticket n /ˈtɪk.ɪt/ Vé
+[p34] Eager adj /ˈiː.ɡər/ Háo hức
+[p34] 33
+[p35] Sunglasses n /ˈsʌŋˌɡlɑː.sɪz/ Kính mát
+[p35] Safari n /səˈfɑː.ri/
+[p35] Chuyến thám hiểm
+[p35] thiên nhiên
+[p35] 34
+[p36] 19. Từ vựng về Tết trung thu
+[p36] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p36] Mid-Autumn
+[p36] Festival
+[p36] n. phr
+[p36] /mɪd ˈɔː.təm
+[p36] ˈfes.tɪ.vəl/
+[p36] Tết Trung thu
+[p36] Moon n /muːn/ Trăng
+[p36] Cake n /keɪk/ Bánh ngọt
+[p36] Toy n /tɔɪ/ Đồ chơi
+[p36] Mask n /mɑːsk/ Mặt nạ
+[p36] Banyan n /ˈbæn.jæn/ Cây đa
+[p36] Lantern n /ˈlæn.tən/ Lồng đèn
+[p36] Bamboo n /bæmˈbuː/ Tre
+[p36] Perform n /pəˈfɔːm/
+[p36] Trình diễn, biểu
+[p36] diễn
+[p36] Celebrate n /ˈsel.ə.breɪt/ Kỷ niệm
+[p36] Family reunion n. phr
+[p36] /ˈfæm.əl.i
+[p36] ˌriːˈjuː.njən/
+[p36] Họp mặt gia đình
+[p36] Rabbit n /ˈræb.ɪt/ Thỏ
+[p36] 35
+[p37] 20. Từ vựng về thể thao
+[p37] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p37] Sport n /spɔːrt/ Thể thao
+[p37] Skiing n /ˈskiː.ɪŋ/ Trượt tuyết
+[p37] Ice skating n. phr /ˈaɪs ˌskeɪ.tɪŋ/ Trượt băng
+[p37] Horse racing n. phr /ˈhɔːrs ˌreɪ.sɪŋ/ Đua ngựa
+[p37] Running n /ˈrʌn.ɪŋ/ Chạy
+[p37] Walking n /ˈwɔː.kɪŋ/ Đi bộ, tản bộ
+[p37] Water sports n. phr /ˈwɔː.tər spɔːrts/ Thể thao dưới nước
+[p37] Boxing n /ˈbɒk.sɪŋ/ Quyền anh
+[p37] Swimming n /ˈswɪm.ɪŋ/ Bơi lội
+[p37] Football n /ˈfʊt.bɔːl/ Bóng đá
+[p37] Basketball n /ˈbæs.kɪtˌbɔːl/ Bóng rổ
+[p37] Badminton n /ˈbæd.mɪn.tən/ Cầu lông
+[p37] Tennis n /ˈtɛn.ɪs/ Quần vợt
+[p37] Table tennis n. phr /ˈteɪ.bəl ˈtɛn.ɪs/ Bóng bàn
+[p37] Baseball n /ˈbeɪs.bɔːl/ Bóng chày
+[p37] Cycling n /ˈsaɪ.klɪŋ/ Đua xe đạp, đạp xe
+[p37] Golf n /ɡɑːlf/ Đánh gôn
+[p37] Contact sport n. phr /ˈkɒn.tækt spɔːrt/ Thể thao tiếp xúc
+[p37] Water polo n. phr /ˈwɔː.tər ˈpoʊ.loʊ/ Bóng nước
+[p37] Archery n /ˈɑːr.tʃər.i/ Bắn cung
+[p37] Weightlifting n /ˈweɪtˌlɪf.tɪŋ/ Cử tạ
+[p37] 36
+[p38] Wrestling n /ˈrɛs.lɪŋ/ Đấu vật
+[p38] Bowling n /ˈboʊ.lɪŋ/ Bóng gỗ
+[p38] Lacrosse n /ləˈkrɒs/ Bóng vợt
+[p38] Hockey n /ˈhɒk.i/ Khúc côn cầu
+[p38] Referee n /ˌrɛf.əˈriː/ Trọng tài
+[p38] Dart n /dɑːrt/ Ném phi tiêu
+[p38] Synchronized
+[p38] swimming
+[p38] n. phr
+[p38] /ˈsɪŋ.krə.naɪzd
+[p38] ˈswɪm.ɪŋ/
+[p38] Bơi nghệ thuật
+[p38] SEA Games n. phr /ˈsiː ˌɡeɪmz/
+[p38] Đại hội Thể thao
+[p38] Đông Nam Á
+[p38] Host v /hoʊst/ Đăng cai, tổ chức
+[p38] Wushu n /ˈwuː.ʃuː/ (môn) võ wushu
+[p38] Sportsmanship n /ˈspɔːrts.mənˌʃɪp/ Tinh thần thể thao
+[p38] Captain n /ˈkæp.tən/ Đội trưởng
+[p38] Cross-country n /ˌkrɒsˈkʌn.tri/ Chạy việt dã
+[p38] 37
+[p39] 21. Từ vựng về quê hương
+[p39] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p39] Village n /ˈvɪl.ɪdʒ/ Ngôi làng
+[p39] Countryside n /ˈkʌn.tri.saɪd/ Nông thôn
+[p39] Cottage n /ˈkɒt.ɪdʒ/ Nhà tranh
+[p39] Winding adj /ˈwaɪn.dɪŋ/ Quanh co, uốn khúc
+[p39] Well n /wel/ Giếng
+[p39] Bu alo n /ˈbʌf.ə.ləʊ/ Con trâu
+[p39] Field n / ːld/ Cánh đồng
+[p39] Canal n /kəˈnæl/ Kênh
+[p39] River n /ˈrɪv.ər/ Sông
+[p39] Pond n /pɒnd/ Ao
+[p39] Folk music n. phr /ˈfoʊk ˌmju·zɪk/ Nhạc dân gian
+[p39] Farm n /fɑːm/ Trang trại
+[p39] Plow v /plaʊ/ Cày
+[p39] Agriculture n /ˈæɡ.rɪ.kʌl.tʃər/ Nông nghiệp
+[p39] Boat n /bəʊt/ Thuyền
+[p39] Peaceful adj /ˈpiːs.fəl/ Yên bình
+[p39] Bay n /beɪ/ Vịnh
+[p39] Hill n /hɪl/ Ngọn đồi
+[p39] Forest n /ˈfɒr.ɪst/ Rừng
+[p39] Mountain n /ˈmaʊn.tɪn/ Núi
+[p39] Port n /pɔːt/ Bến cảng
+[p39] 38
+[p40] Lake n /leɪk/ Hồ
+[p40] Sea n /siː/ Biển
+[p40] Sand n /sænd/ Cát
+[p40] Valley n /ˈvæl.i/ Thung lũng
+[p40] Waterfall n /ˈwɔː.tə.fɔːl/ Thác nước
+[p40] Barn n /bɑːn/ Kho thóc
+[p40] Harvest n /ˈhɑː.vɪst/ Vụ gặt
+[p40] Cattle n /ˈkæt.əl/ Gia súc
+[p40] Rural adj /ˈrʊə.rəl/ (thuộc) nông thôn
+[p40] Cli  n /klɪf/ Vách đá
+[p40] Landscape n /ˈlænd.skeɪp/ Phong cảnh
+[p40] Terraced house n. phr /ˈrəʊˌhaʊs/ Dãy nhà
+[p40] View n /vjuː/
+[p40] Khung cảnh, quang
+[p40] cảnh
+[p40] 39
+[p41] 22. Từ vựng về đám cưới
+[p41] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p41] Bride n /braɪd/ Cô dâu
+[p41] Vow n /vaʊ/ Lời thề
+[p41] Groomsman n /ˈɡruːmz.mən/ Phù rể
+[p41] Groom n /ɡruːm/ Chú rể
+[p41] Tuxedo n /tʌkˈsiː.dəʊ/ Áo ximôckinh
+[p41] Party n /ˈpɑː.ti/ Bữa tiệc
+[p41] Wedding n /ˈwed.ɪŋ/ Đám cưới
+[p41] Wedding card n. phr /ˈwed.ɪŋ kɑːd/ Thiệp mời đám cưới
+[p41] Reception n /rɪˈsep.ʃən/ Tiệc chiêu đãi
+[p41] Champagne n /ʃæmˈpeɪn/ Rượu sâm panh
+[p41] Bouquet n /buˈkeɪ/ Bó hoa
+[p41] Married adj /ˈmær.id/ Đã kết hôn
+[p41] Newlywed n /ˈnjuː.li.wed/ Người mới cưới
+[p41] Cake n /keɪk/ Bánh ngọt
+[p41] Ring n /rɪŋ/ Nhẫn
+[p41] Emblem n /ˈem.bləm/ Biểu tượng
+[p41] Band n /bænd/ Ban nhạc
+[p41] Congratulation n /kənˌɡrætʃ.əˈleɪ.ʃən/ Lời chúc mừng
+[p41] Jewelry n /ˈdʒuː.əl.ri/ Trang sức
+[p41] Wine n /waɪn/ Rượu vang
+[p41] Dowry n /ˈdaʊ.ri/ Của hồi môn
+[p41] 40
+[p42] Honeymoon n /ˈhʌn.i.muːn/ Tuần trăng mật
+[p42] Anniversary n /ˌæn.ɪˈvɜː.sər.i/ Ngày kỷ niệm
+[p42] Brother-in-law n /ˈbrʌð.ə.rɪn.lɔː/
+[p42] Anh/em rể, anh/em
+[p42] chồng, anh/em vợ
+[p42] Sister-in-law n /ˈsɪs.tə.rɪn.lɔː/
+[p42] Chị/em dâu, chị/em
+[p42] chồng, chị/em vợ
+[p42] Engaged v /ɪnˈɡeɪdʒd/
+[p42] Đã đính ước, hứa
+[p42] hôn
+[p42] Couple n /ˈkʌp.əl/
+[p42] Cặp đôi, đôi vợ
+[p42] chồng
+[p42] Husband n /ˈhʌz.bənd/ Chồng
+[p42] Wife n /waɪf/ Vợ
+[p42] Ceremony n /ˈser.ɪ.mə.ni/ Nghi lễ, nghi thức
+[p42] Betroth v /bɪˈtrəʊð/ Hứa hôn, đính hôn
+[p42] 41
+[p43] 23. Từ vựng về sân bay
+[p43] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p43] Switch o  phrasal v /swɪtʃ ɒf/ Tắt
+[p43] Lavatory n /ˈlæv.ə.tər.i/ Phòng vệ sinh
+[p43] Blanket n /ˈblæŋ.kɪt/ Tấm chăn, mền
+[p43] Oxygen mask n. phr /ˈɒk.sɪ.dʒən ˌmɑːsk/ Mặt nạ thở oxy
+[p43] Serve v /sɜːv/ Phục vụ
+[p43] Window seat n. phr /ˈwɪn.dəʊ ˌsiːt/ Ghế cạnh cửa sổ
+[p43] Airsick adj /ˈeə.sɪk/ Say máy bay
+[p43] Cockpit n /ˈkɒk.pɪt/ Buồng lái
+[p43] Fasten v /ˈfɑː.sən/ Thắt, buộc
+[p43] Take o  n. phr /teɪk ɒf/ Cất cánh
+[p43] Co-pilot n /ˈkəʊˌpaɪ.lət/ Phi công phụ
+[p43] Assist v /əˈsɪst/ Hỗ trợ, giúp đỡ
+[p43] First-class adj /ˌfɜːst ˈklɑːs/ (ghế) hạng nhất
+[p43] Con scate v /ˈkɒn.fɪ.skeɪt/ Tịch thu
+[p43] Turn on phrasal v /tɜːn ɒn/ Bật, mở
+[p43] 42
+[p44] 24. Từ vựng về sức khỏe
+[p44] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p44] Fever n /ˈ ːvɚ/ Sốt
+[p44] Cough n /kɔf/ Ho
+[p44] Hurt v /hɜːt/ Đau
+[p44] Swollen adj /ˈswoʊlən/ Bị sưng
+[p44] Pus n /pʌs/ Mủ
+[p44] Graze v /Greiz/ Trầy xước (da)
+[p44] Headache n /ˈhɛdeɪk/ Đau đầu
+[p44] Insomnia n /ɪnˈsɑːmniə/ Chứng mất ngủ
+[p44] Rash n /ræʃ/ Phát ban
+[p44] Black eye n. phr /blæk aɪ/ Thâm mắt
+[p44] Bruise n /bruːz/ Vết thâm
+[p44] Constipation n /ˌkɑːnstɪˈpeɪʃn/ Táo bón
+[p44] Diarrhea n /ˌdaɪəˈriːə/ Tiêu chảy
+[p44] Sore eyes n. phr /’so:r ais/ Đau mắt
+[p44] Runny nose n. phr /rʌniɳ nəʊz/ Sổ mũi
+[p44] Sni le v /sniflz/ Sổ mũi
+[p44] Sneeze v /sni:z/ Hắt hơi
+[p44] Bad breath n. phr /bæd breθ/ Hôi miệng
+[p44] Earache n /’iəreik/ Đau tai
+[p44] Nausea n /’nɔ:sjə/ Chứng buồn nôn
+[p44] Eating disorder n. phr /ˈiːtɪŋ dɪsˈɔːrdər/ Rối loạn ăn uống
+[p44] 43
+[p45] Asthma n /ˈæzmə/ Hen, suyễn
+[p45] Backache n /ˈbækeɪk bəʊn/ Bệnh đau lưng
+[p45] Chill n /tʃɪl/ Cảm lạnh
+[p45] Fever virus n. phr /’ :və ‘vaiərəs/ Sốt siêu vi
+[p45] Allergy n /ˈælərdʒi/ Dị ứng
+[p45] Paralyse v /ˈpærəlaɪz/ Liệt
+[p45] Infected v /in’dʤekʃn/ Nhiễm trùng
+[p45] Inflamed adj /ɪnˈfleɪmd/ Bị viêm
+[p45] Gout n /ɡaʊt/ Bệnh Gút
+[p45] Hepatitis n /ˌhepəˈtaɪtɪs/ Viêm gan
+[p45] Lump n /lʌmp/ U bướu
+[p45] Insect bite n. phr /ˈɪn.sekt baɪt/ Côn trùng đốt
+[p45] Stomachache n /ˈstʌmək-eɪk/ Đau dạ dày
+[p45] Toothache n /ˈtuːθ.eɪk/ Đau răng
+[p45] High blood pressure n. phr /haɪ blʌd ˈpreʃ.əʳ/ Cao huyết áp
+[p45] Sore throat n. phr /sɔːʳ θrəʊt/ Viêm họng
+[p45] Sprain n /spreɪn/ Bong gân
+[p45] Burn n /bɜːn/ Bỏng
+[p45] Malaria n /məˈleriə/ Sốt rét
+[p45] Scabies n /ˈskeɪbiːz/ Bệnh ghẻ
+[p45] Smallpox n /ˈsmɔːlpɑːks/ Bệnh đậu mùa
+[p45] Heart attack n. phr /hɑːrt əˈtæk/ Nhồi máu cơ tim
+[p45] Tuberculosis n /tuːˌbɜːrkjəˈloʊsɪs/ Bệnh lao
+[p45] 44
+[p46] Diabetes n /,daiə’bi:tiz/ Bệnh tiểu đường
+[p46] Cancer n /ˈkænsər/ Bệnh ung thư
+[p46] Pneumonia n /nuːˈmoʊniə/ Viêm phổi
+[p46] Chicken pox n. phr /ˈtʃɪkɪn pɑːks/ Bệnh thủy đậu
+[p46] Depression n /dɪˈpreʃn/ Trầm cảm
+[p46] Low blood pressure n. phr /loʊ blʌd ˈpreʃər/ Huyết áp thấp
+[p46] Hypertension n /ˌhaɪ.pəˈten.ʃən/ Huyết áp cao
+[p46] Measles n /ˈmiːzlz/ Bệnh sởi
+[p46] Migraine n /ˈmaɪɡreɪn/ Bệnh đau nửa đầu
+[p46] Mumps n /mʌmps/ Bệnh quai bị
+[p46] Rheumatism n /ˈruːmətɪzəm/ Bệnh thấp khớp
+[p46] 45
+[p47] 25. Từ vựng về rau, củ, quả
+[p47] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p47] Tomato n /təˈmɑːtəʊ/ Cà chua
+[p47] Spinach n /ˈspɪnɪtʃ/ Rau chân vịt
+[p47] Water Spinach n. phr /ˈwɔːtə(r) ˈspɪnɪtʃ/ Rau Muống
+[p47] Thai Basil n. phr /taɪ ˈbæz.əl/ Húng Quế
+[p47] Eggplant n /ˈeɡplɑːnt/ Cà tím
+[p47] Beet n /biːt/ Củ cải đường
+[p47] Pepper n /ˈpepə(r)/ Ớt
+[p47] Cauliflower n /’kɔliflauə/ Súp lơ
+[p47] Cilantro n /sɪˈlæn.trəʊ/ Rau mùi
+[p47] Marrow n /ˈmærəʊ/ Bí ngô
+[p47] Fish Mint n. phr /ˈfɪʃ mɪnt/ Diếp Cá
+[p47] Rice Paddy n. phr /ˈraɪs ˌpæd.i/ Ngò ôm
+[p47] Batata n /bæ’tɑ:tə/ Khoai lang
+[p47] Asparagus n /əˈspærəɡəs/ Măng tây
+[p47] Mustard Leaves n. phr /ˈmʌstəd li:vz/ Cải bẹ xanh
+[p47] Pumpkin buds n. phr /ˈpʌmp.kɪn bʌdz/ Bông bí
+[p47] Pumpkin n /ˈpʌmpkɪn/ Bí đỏ
+[p47] Corn n /kɔːn/ Ngô
+[p47] Pepper-elder n. phr /ˈpepə ˈeldə(r)/ Rau càng Cua
+[p47] Onion n /’ʌniən/ Củ hành
+[p47] Cress n /kres/ Rau cải xoong
+[p47] 46
+[p48] Celery n /ˈseləri/ Cần tây
+[p48] Potato n /pəˈteɪtəʊ/ Khoai tây
+[p48] Carrot n /ˈkærət/ Cà rốt
+[p48] Artichoke n /’ɑ:tit∫ouk/ Cây atiso
+[p48] Beetroot n /’bi:tru:t/ Củ dền
+[p48] 47
+[p49] 26. Từ vựng về thời gian
+[p49] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p49] Second n /ˈsek.ənd/ Giây
+[p49] Minute n /ˈmɪn.ɪt/ Phút
+[p49] Hour n /aʊr/ Tiếng
+[p49] Week n /wiːk/ Tuần
+[p49] Decade n /dekˈeɪd/ Thập niên
+[p49] Century n /ˈsen.tʃər.i/ Thế kỷ
+[p49] Weekend n /ˈwiːend/ Cuối tuần
+[p49] Month n /mʌnθ/ Tháng
+[p49] Year n /jɪr/ Năm
+[p49] Millennium n /mɪˈlen.i.əm/ Thiên niên kỷ
+[p49] Morning n /ˈmɔːnɪŋ/ Buổi sáng
+[p49] Afternoon n /ˌæf.tɚˈnuːn/ Buổi chiều
+[p49] Evening n /ˈiːnɪŋ/ Buổi tối
+[p49] Midnight n /ˈmɪd.naɪt/ Nửa đêm
+[p49] Dusk n /dʌsk/ Hoàng hôn
+[p49] Dawn n /dɑːn/ Bình minh
+[p49] 48
+[p50] 27. Từ vựng về giao thông
+[p50] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p50] Road n /roʊd/ Đường
+[p50] Tra c n /ˈtræfɪk/ Giao thông
+[p50] Vehicle n /ˈviːəkl/ Phương tiện
+[p50] Roadside n /ˈroʊdsaɪd/ Lề đường
+[p50] Car hire n. phr /kɑːr ˈhaɪər/ Việc thuê xe ô tô
+[p50] Ring road n. phr /rɪŋ roʊd/ Đường vành đai
+[p50] Petrol station n. phr /ˈpetrəl ˈsteɪʃn/ Trạm xăng
+[p50] Kerb n /kɜːrb/ Lề đường
+[p50] Road sign n. phr /roʊd saɪn/
+[p50] Biển báo giao
+[p50] thông
+[p50] Pedestrian crossing n. phr
+[p50] /pəˈdestriən
+[p50] ˈkrɔːsɪŋ/
+[p50] Lối qua đường
+[p50] Turning n /ˈtɜːrnɪŋ/ Chỗ rẽ, ngã rẽ
+[p50] Fork n /fɔːrk/ Ngã ba
+[p50] Toll n /toʊl/
+[p50] Lệ phí qua đường,
+[p50] qua cầu
+[p50] Toll road n. phr /toʊl roʊd/ Đường có thu phí
+[p50] Motorway n /ˈmoʊtərweɪ/ Xa lộ
+[p50] Hard shoulder n. phr /hɑːrd ˈʃoʊldə/
+[p50] Vạt đất cạnh xa lộ
+[p50] để dừng xe
+[p50] Dual carriageway n. phr /duːəl ˈkærɪdʒweɪ/ Xa lộ hai chiều
+[p50] One-way street n. phr /wʌn weɪ striːt/ Đường một chiều
+[p50] 49
+[p51] T-junction n /tiːˈdʒʌŋkʃn/ Ngã ba
+[p51] Roundabout n /ˈraʊndəbaʊt/ Bùng binh
+[p51] Accident n /ˈæksɪdənt/ Tai nạn
+[p51] Breathalyser n /ˈbreθəlaɪzər/
+[p51] Thiết bị kiểm tra độ
+[p51] cồn trong hơi thở
+[p51] Tra c warden n. phr /ˈtræfɪk ˈwɔːrdn/
+[p51] Nhân viên kiểm
+[p51] soát đỗ xe
+[p51] Parking-meter n /ˈpɑːrkɪŋ ˈmiːtər/ Đồng hồ đỗ xe
+[p51] Car park n. phr /kɑːr pɑːrk/ Bãi đỗ xe
+[p51] Parking space n. phr /ˈpɑːrkɪŋ speɪs/ Chỗ đỗ xe
+[p51] Multi-storey car
+[p51] park
+[p51] n. phr
+[p51] /ˈmʌlti ˈstɔːri kɑːr
+[p51] pɑːrk/
+[p51] Bãi đỗ xe nhiều
+[p51] tầng
+[p51] Parking ticket n. phr /ˈpɑːrkɪŋ ˈtɪkɪt/ Vé đỗ xe
+[p51] Driving licence n. phr /ˈdraɪvɪŋ ˈlaɪsns/ Bằng lái xe
+[p51] Reverse gear n. phr /rɪˈvɜːrs ɡɪr/ Số lùi (xe máy)
+[p51] Learner driver n. phr /ˈlɜːrnər ˈdraɪvər/ Người học lái xe
+[p51] Passenger n /ˈpæsɪndʒər/ Hành khách
+[p51] Stall v /stɔːl/ Làm chết máy
+[p51] Tyre pressure n. phr /ˈtaɪər ˈpreʃər/ Áp suất lốp xe
+[p51] Tra c light n. phr /ˈtræfɪk laɪt/ Đèn giao thông
+[p51] Speed limit n. phr /spiːd ˈlɪmɪt/ Giới hạn tốc độ
+[p51] Speeding  ne n. phr /ˈspiːdɪŋ faɪn/ Phạt tốc độ
+[p51] Level crossing n. phr /ˈlevl ˈkrɔːsɪŋ/ Chỗ chắn tàu
+[p51] Jump leads n. phr /dʒʌmp liːdz/ Dây sạc điện
+[p51] 50
+[p52] Oil n /ɔɪl/ Dầu
+[p52] Diesel n /ˈdiːzl/ Dầu diesel
+[p52] Petrol n /ˈpetrəl/ Xăng
+[p52] Unleaded adj /ˌʌnˈledɪd/ Không chì
+[p52] Petrol pump n. phr /ˈpetrəl pʌmp/ Bơm xăng
+[p52] Driver n /ˈdraɪvər/ Tài xế
+[p52] Drive n. phr /draɪv/ Lái xe
+[p52] Change gear n. phr /tʃeɪndʒ ɡɪr/ Chuyển số
+[p52] Jack n /dʒæk/ Đòn bẩy, palăng
+[p52] Flat tyre n. phr /flæt ˈtaɪər/ Lốp xì hơi
+[p52] Puncture n /ˈpʌŋktʃər/ Sự thủng xăm
+[p52] 51
+[p53] 28. Từ vựng về cảm xúc, cảm giác
+[p53] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p53] Angry adj /ˈæŋɡri/ Tức giận
+[p53] Sleepy adj /ˈsliːpi/ Buồn ngủ
+[p53] Surprised adj
+[p53] /səˈpraɪzd/ -
+[p53] /sərˈpraɪzd/
+[p53] Ngạc nhiên, bất
+[p53] ngờ
+[p53] Grateful adj /ˈɡreɪtfl/ Biết ơn
+[p53] Scared adj /skeəd/ - /skerd/ Sợ hãi
+[p53] Embarrassed adj /ɪmˈbærəst/ Bối rối, xấu hổ
+[p53] Confused adj /kənˈfjuːzd/ Lúng túng, bối rối
+[p53] Sad adj /sæd/ Buồn rầu
+[p53] Hungry adj /ˈhʌŋɡri/ Đói bụng
+[p53] Full adj /fʊl/ No
+[p53] Happy adj /ˈhæpi/ Vui, hạnh phúc
+[p53] Jealous adj /ˈdʒeləs/ Ghen, ghen tuông
+[p53] Nervous adj
+[p53] /ˈnɜːvəs/ -
+[p53] /ˈnɜːrvəs/
+[p53] Bồn chồn, lo lắng
+[p53] Thirsty adj /ˈθɜːsti/ - /ˈθɜːrsti/ Khát nước
+[p53] Comfortable adj
+[p53] /ˈkʌmftəbl/ -
+[p53] /ˈkʌmfətəbl/
+[p53] Thoải mái
+[p53] Tense adj /tens/ Căng thẳng
+[p53] Tired adj /ˈtaɪəd/ - /ˈtaɪərd/ Mệt mỏi
+[p53] Bored v /bɔːd/ - /bɔːrd/ Chán nản
+[p53] 52
+[p54] 29. Từ vựng về tính cách
+[p54] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p54] Reliable adj /rɪˈlaɪəbəl/ Đáng tin cậy
+[p54] Rude adj /ruːd/ Thô lỗ
+[p54] Sel sh adj /ˈsɛlfɪʃ/ Ích kỷ
+[p54] Sensitive adj /ˈsɛnsɪtɪv/ Nhạy cảm
+[p54] Stubborn adj /ˈstʌb.ərn/ Bướng bỉnh
+[p54] Patient adj /ˈpeɪʃənt/ Kiên nhẫn
+[p54] Humorous adj /ˈhjuː.mər.əs/ Hài hước
+[p54] Sincere adj /sɪnˈsɪr/ Chân thành
+[p54] Generous adj /ˈʤɛnərəs/ Hào phóng
+[p54] Honest adj /ˈɒn.ɪst/ Trung thực
+[p54] Kind adj /kaɪnd/ Tử tế, tốt bụng
+[p54] Loyal adj /lɔɪəl/ Trung thành
+[p54] Modest adj /ˈmɒd.ɪst/ Khiêm tốn
+[p54] Nasty adj /ˈnæsti/ Khó chịu
+[p54] Shy adj /ʃaɪ/ Nhút nhát
+[p54] Sociable adj /ˈsoʊʃəbəl/ Hòa đồng
+[p54] Reserved adj /ˈθɔːt.fəl/ Rụt rè, dè dặt
+[p54] Con dent adj /ˈkɑnfədənt/ Tự tin
+[p54] Pleasant adj /ˈplɛzənt/ Lịch sự, hòa nhã
+[p54] Clever adj /ˈklɛvər/ Thông minh
+[p54] Thoughtful adj /ˈθɔːt.fəl/ Ân cần, chu đáo
+[p54] 53
+[p55] Proud adj /praʊd/ Tự trọng
+[p55] Lazy adj /ˈleɪzi/ Lười biếng
+[p55] Crazy adj /ˈkreɪzi/ Ngu ngốc
+[p55] Silly adj /ˈsɪli/ Ngốc nghếch
+[p55] Bossy adj /ˈbɒs.i/ Hống hách
+[p55] Gossip n /ˈɡɒs.ɪp/ Người mách lẻo
+[p55] Extrovert n /ˈɛk.strə.vɜːt/ Người hướng ngoại
+[p55] Coward n /kaʊərd/ Người nhát gan
+[p55] Big-head n /ˈbɪɡ hɛd/ Người tự cao
+[p55] Snob n /snɒb/ Người hợm hĩnh
+[p55] Liar n /laɪər/ Người nói dối
+[p55] Ambitious adj /æmˈbɪʃəs/ Tham vọng
+[p55] Introvert n /ˈɪn.trə.vɜːt/ Người hướng nội
+[p55] Stingy adj /ˈstɪnʤi/ Keo kiệt
+[p55] Arrogant adj /ˈær.ə.ɡənt/ Kiêu căng
+[p55] Vain adj /veɪn/ Tự phụ
+[p55] Absent-minded adj
+[p55] /ˌæb.sənt
+[p55] ˈmaɪn.dɪd/
+[p55] Đãng trí
+[p55] Hostile adj /ˈhɒs.təl/ Thù địch
+[p55] 54
+[p56] 30. Từ vựng về đồ uống
+[p56] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p56] Juice n /dʒuːs/ Nước ép
+[p56] Lemonade n /ˌlɛm.əˈneɪd/ Nước chanh
+[p56] Beer n /bɪr/ Bia
+[p56] Soda n /ˈsoʊdə/ Sô-đa
+[p56] Cider n /ˈsaɪdər/ Rượu táo
+[p56] Rum n /rʌm/ Rượu rum
+[p56] Ginger ale n. phr /ˈʤɪnʤər eɪl/ Nước gừng
+[p56] Champagne n /ʃæmˈpeɪn/ Rượu sâm panh
+[p56] Bitter adj /ˈbɪtər/ Đắng
+[p56] Malt n /mɔːlt/ Mạch nha
+[p56] Barley n /ˈbɑːr.li/ Lúa mạch
+[p56] Distillery n /dɪˈstɪləri/ Nhà máy rượu
+[p56] Co ee n /ˈkɔː. / Cà phê
+[p56] Milk n /mɪlk/ Sữa
+[p56] Tea n /tiː/ Trà
+[p56] Red wine n. phr /rɛd waɪn/ Rượu vang đỏ
+[p56] Non-alcoholic adj /ˌnɑːn ˌæl.kəˈhɒl.ɪk/ Không cồn
+[p56] Full-cream adj /ˌfʊl ˈkriːm/ Nguyên kem
+[p56] Herbal adj /ˈhɜːr.bəl/ (chứa) thảo mộc
+[p56] Mineral water n. phr /ˈmɪn.ər.əl ˈwɔː.tər/ Nước khoáng
+[p56] 55
+[p57] 31. Từ vựng về các loài hoa
+[p57] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p57] Lotus n /ˈloʊtəs/ Hoa sen
+[p57] Lily adv /ˈlɪli/ Hoa loa kèn
+[p57] Poppy n /ˈpɒp.i/ Hoa anh túc
+[p57] Bougainvillea n /ˌbuː.ɡənˈvɪl.i.ə/ Hoa giấy
+[p57] Gerbera flower n /ˈɡɜːr.bər.ə ˈflaʊ.ər/ Hoa đồng tiền
+[p57] Tuberose n /ˈtuː.bəˌroʊz/ Hoa huệ
+[p57] Apricot blossom n. phr
+[p57] /ˈeɪ.prɪ.kɒt
+[p57] ˈblɒs.əm/
+[p57] Hoa mai
+[p57] Dahlia n /ˈdeɪ.li.ə/ Hoa thược dược
+[p57] Jasmine n /ˈʤæzmɪn/ Hoa lài
+[p57] Sunflower n /ˈsʌnˌflaʊ.ər/ Hoa hướng dương
+[p57] Marigold n /ˈmær.ɪˌɡoʊld/ Hoa cúc vạn thọ
+[p57] Orchid n /ˈɔːr.kɪd/ Hoa lan
+[p57] Rose n /roʊz/ Hoa hồng
+[p57] Carnation n /kɑːrˈneɪ.ʃən/ Hoa cẩm chướng
+[p57] Cherry blossom n. phr /ˈtʃɛr.i ˈblɒs.əm/ Hoa anh đào
+[p57] Poinsettia n /ˌpɔɪnˈsɛˌtiə/ Hoa trạng nguyên
+[p57] Flamboyant n /flæmˈbɔɪənt/ Hoa phượng
+[p57] Hibiscus n /hɪˈbɪs.kəs/ Hoa dâm bụt
+[p57] Peach blossom n. phr /piːtʃ ˈblɒs.əm/ Hoa đào
+[p57] 56
+[p58] 32. Từ vựng về phim ảnh
+[p58] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p58] Movie n /ˈmuː.vi/ Phim
+[p58] Famous adj /ˈfeɪməs/ Nổi tiếng
+[p58] Comedy n /ˈkɑmədi/ Hài kịch
+[p58] Audience n /ˈɔː.di.əns/ Khán giả
+[p58] Film Festival n. phr /fɪlm ˈfɛstɪvəl/ Liên hoan phim
+[p58] Trailer n /ˈtreɪlər/
+[p58] Đoạn phim quảng
+[p58] cáo
+[p58] Movie star n. phr /ˈmuː.vi stɑːr/ Ngôi sao điện ảnh
+[p58] Soundtrack n /ˈsaʊnˌtræk/ Nhạc phim
+[p58] Cartoon n /kɑːrˈtuːn/ Phim hoạt hình
+[p58] Drama n /ˈdrɑː.mə/ Vở kịch
+[p58] Action  lm n. phr /ˈækʃən fɪlm/ Phim hành động
+[p58] Celebrity n /səˈlɛbrɪti/ Người nổi tiếng
+[p58] Script n /skrɪpt/ Kịch bản
+[p58] Theater n /ˈθiː.ə.tər/ Nhà hát
+[p58] Actor n /ˈæktər/ Nam diễn viên
+[p58] Actress n /ˈæk.trɪs/ Nữ diễn viên
+[p58] Director n /dɪˈrɛktər/ Đạo diễn
+[p58] Romantic adj /roʊˈmæntɪk/ Lãng mạn
+[p58] Silent  lm n. phr /ˈsaɪlənt fɪlm/ Phim câm
+[p58] Movie ticket n. phr /ˈmuː.vi ˈtɪk.ɪt/ Vé xem phim
+[p58] 57
+[p59] 33. Từ vựng về bóng đá
+[p59] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p59] Stadium n /ˈsteɪdiəm/ Sân vận động
+[p59] Stand n /stænd/ Khán đài
+[p59] Pitch n /pɪʧ/ Sân
+[p59] Touchline n /ˈtʌtʃ.laɪn/ Đường biên
+[p59] Penalty area n. phr /ˈpɛnəlti ˈɛriə/ Khu phạt đền
+[p59] Goal n /goʊl/ Khung thành
+[p59] Penalty n /ˈpɛnəlti/ Phạt đền
+[p59] Corner kick n. phr /ˈkɔːr.nər kɪk/ Cú đá phạt góc
+[p59] Free kick n. phr /ˌfriː ˈkɪk/ Đá phạt trực tiếp
+[p59] Indirect free kick n. phr
+[p59] /ˌɪn.daɪˈrɛkt ˌfriː
+[p59] ˈkɪk/
+[p59] Đá phạt gián tiếp
+[p59] Kick o  phrasal v /ˈkɪk .ɔːf/ Bắt đầu, lăn bóng
+[p59] O side n /ˌɒfˈsaɪd/ Việt vị
+[p59] Corner flag n. phr /ˈkɔːr.nər flæɡ/
+[p59] Cờ cắm tại góc sân
+[p59] bóng đá
+[p59] Bet v /bɛt/ Cá độ
+[p59] The bench n. phr /ðə bɛnʧ/ Băng ghế dự bị
+[p59] Foul n /faʊl/ Lỗi, pha phạm lỗi
+[p59] Goal line n. phr /ˈɡoʊl laɪn/
+[p59] Vạch kẻ (khung
+[p59] thành)
+[p59] Shoot v /ʃuːt/ Ném, sút
+[p59] Goalkeeper n /ˈɡoʊlˌkiː.pər/ Thủ môn
+[p59] 58
+[p60] Defender n /dɪˈfɛn.dər/ Hậu vệ
+[p60] Centre back n. phr /ˈsɛn.tər bæk/ Trung vệ
+[p60] Mid elder n /ˈmɪdˌ ːl.dər/ Trung vệ
+[p60] Attacking
+[p60] mid elder
+[p60] n. phr
+[p60] /əˈtæk.ɪŋ
+[p60] ˈmɪdˌ ːl.dər/
+[p60] Tiền vệ tấn công
+[p60] Winger n /ˈwɪŋ.ər/ Cầu thủ chạy biên
+[p60] Referee n /ˌrɛf.əˈriː/ Trọng tài
+[p60] Commentator n /ˈkɒm.ənˌteɪ.tər/ Bình luận viên
+[p60] Supporter n /səˈpɔːr.tər/ Cổ động viên
+[p60] Linesman n /ˈlaɪnz.mən/ Trọng tài biên
+[p60] Hooligan n /ˈhuː.lɪ.ɡən/
+[p60] Kẻ côn đồ, quá
+[p60] khích
+[p60] Red card n. phr /ˈrɛd kɑːrd/ Thẻ đỏ
+[p60] Yellow card n. phr /ˈjɛl.oʊ kɑːrd/ Thẻ vàng
+[p60] Coach n /koʊtʃ/ Huấn luyện viên
+[p60] Reserve team n. phr /rɪˈzɜːrv tiːm/ Đội dự bị
+[p60] Caution n /ˈkɔː.ʃən/ Lời cảnh cáo
+[p60] Stimulant n /ˈstɪm.jʊ.lənt/ Chất kích thích
+[p60] Strategy n /ˈstræt.ə.dʒi/ Chiến lược
+[p60] Striker n /ˈstraɪ.kər/ Tiền đạo
+[p60] 59
+[p61] 34. Từ vựng về Giáng sinh
+[p61] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p61] Winter n /ˈwɪn.tər/ Mùa đông
+[p61] Candle n /ˈkæn.dəl/ Nến
+[p61] Snow n /snoʊ/ Tuyết
+[p61] Sack n /sæk/ Bao, túi
+[p61] Card n /kɑːrd/ Tấm thiệp
+[p61] Fireplace n /ˈfaɪərˌpleɪs/ Lò sưởi
+[p61] Chimney n /ˈtʃɪm.ni/ Ống khói
+[p61] Gift n /ɡɪft/ Quà tặng
+[p61] Christmas n /ˈkrɪs.məs/ Lễ Giáng Sinh
+[p61] Ornament n /ˈɔːr.nə.mənt/ Đồ trang trí
+[p61] Pine tree n. phr /paɪn triː/ Cây thông
+[p61] Sled v /slɛd/ Xe trượt tuyết
+[p61] Bell n /bɛl/ Chuông
+[p61] Snowflake n /ˈsnoʊˌfleɪk/ Bông tuyết
+[p61] Wreath n /riːθ/ Vòng hoa
+[p61] Scarf n /skɑːrf/ Khăn choàng cổ
+[p61] Christmas tree n. phr /ˈkrɪs.məs triː/
+[p61] Cây thông Giáng
+[p61] Sinh
+[p61] Christmas card n. phr /ˈkrɪs.məs kɑːrd/ Thiệp Giáng sinh
+[p61] 60
+[p62] 35. Từ vựng về đồ ăn
+[p62] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p62] Beef n /biːf/ Thịt bò
+[p62] Pork n /pɔːrk/ Thịt heo
+[p62] Bacon n /ˈbeɪ.kən/
+[p62] Thịt ba rọi xông
+[p62] khói
+[p62] Ham n /hæm/
+[p62] Thịt đùi, thịt xông
+[p62] khói
+[p62] Yoghurt n /ˈjoʊ.ɡərt/ Sữa chua
+[p62] Pie n /paɪ/ Bánh nướng
+[p62] Bread n /brɛd/ Bánh mì
+[p62] Cake n /keɪk/ Bánh ngọt
+[p62] Chip n /tʃɪp/ Khoai tây chiên
+[p62] Biscuit n /ˈbɪs.kɪt/ Bánh quy
+[p62] Noodle n /ˈnuː.dəl/ Mì, bún
+[p62] Butter n /ˈbʌt.ər/ Bơ
+[p62] Olive n /ˈɒl.ɪv/ Quả ô liu
+[p62] Soy n /sɔɪ/ Đậu nành
+[p62] Flour n /ˈflaʊər/ Bột
+[p62] Lunch n /lʌntʃ/ Bữa ăn trưa
+[p62] Mint n /mɪnt/ Bạc hà
+[p62] Vanilla n /vəˈnɪl.ə/ Vani
+[p62] Candy n /ˈkæn.di/ Kẹo
+[p62] 61
+[p63] Popcorn n /ˈpɒp.kɔːrn/ Bỏng ngô
+[p63] Snack n /snæk/ Bữa ăn nhẹ
+[p63] Barbecue n /ˈbɑːr.bɪ.kjuː/
+[p63] Tiệc nướng ngoài
+[p63] trời
+[p63] Fast food n. phr /ˌfæst ˈfuːd/ Thức ăn nhanh
+[p63] Junk food n. phr /ˈdʒʌŋk ˌfuːd/ Đồ ăn vặt
+[p63] Frozen food n. phr /ˈfroʊ.zən ˌfuːd/
+[p63] Thực phẩm đông
+[p63] lạnh
+[p63] Health food n. phr /ˈhɛlθ ˌfuːd/ Thực phẩm tự nhiên
+[p63] Distinctive adj /dɪˈstɪŋk.tɪv/
+[p63] Đặc trưng, khác
+[p63] biệt
+[p63] Flavor n /ˈfleɪ.vər/ Hương vị
+[p63] Balanced diet n. phr /ˈbæl.ənst ˈdaɪ.ət/
+[p63] Chế độ ăn uống
+[p63] cân bằng
+[p63] Stale adj /steɪl/ Ôi, thiu
+[p63] Sour adj /ˈsaʊ.ər/ Chua
+[p63] Burnt adj /bɜːrnt/ Cháy, khét
+[p63] Overdone adj /ˌoʊ.vərˈdʌn/ Quá chín, rục
+[p63] Underdone adj /ˌʌn.dərˈdʌn/ Chưa chín, tái
+[p63] Full adj /fʊl/ No
+[p63] Veal n /viːl/ Thịt bê
+[p63] Cereal n /ˈsɪər.i.əl/ Ngũ cốc
+[p63] Hot dog n. phr /ˈhɒt dɒɡ/
+[p63] Bánh mì kẹp xúc
+[p63] xích
+[p63] 62
+[p64] 36. Từ vựng về âm nhạc
+[p64] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p64] Music n /ˈmjuː.zɪk/ Âm nhạc
+[p64] Band n /bænd/
+[p64] Nhóm nhạc, ban
+[p64] nhạc
+[p64] Play v /pleɪ/ Chơi (nhạc cụ)
+[p64] Note n /noʊt/ Nốt nhạc
+[p64] Drum n /drʌm/ Trống
+[p64] Playlist n /ˈpleɪ.lɪst/ Danh sách bài hát
+[p64] Musician n /mjuˈzɪʃ.ən/ Nhạc sĩ
+[p64] Perform v /pərˈfɔːrm/
+[p64] Trình diễn, biểu
+[p64] diễn
+[p64] Rhythm n /ˈrɪð.əm/ Nhịp điệu
+[p64] Dance v /dæns/ Nhảy, khiêu vũ
+[p64] Listen v /ˈlɪs.ən/ Lắng nghe
+[p64] Volume n /ˈvɑːl.juːm/ Âm lượng
+[p64] Song n /sɔːŋ/ Bài hát
+[p64] Sing v /sɪŋ/ Hát, ca hát
+[p64] Piano n /piˈæn.oʊ/ Đàn piano
+[p64] Guitar n /ɡɪˈtɑːr/ Đàn ghi-ta
+[p64] Instrument n /ˈɪn.strə.mənt/ Nhạc cụ
+[p64] Harmony n /ˈhɑːr.mə.ni/ Hoà âm
+[p64] Melody n /ˈmɛl.ə.di/ Giai điệu
+[p64] 63
+[p65] String n /strɪŋ/ Dây đàn
+[p65] The brass n. phr /ðə bræs/ Dàn kèn đồng
+[p65] Symphony n /ˈsɪm.fə.ni/ Bản giao hưởng
+[p65] Overture n /ˈoʊ.vər.tʃʊr/ Khúc dạo đầu
+[p65] Conductor n /kənˈdʌk.tər/ Nhạc trưởng
+[p65] Composer n /kəmˈpoʊ.zər/ Nhà soạn nhạc
+[p65] Voice n /vɔɪs/
+[p65] Giọng nói, giọng
+[p65] hát
+[p65] Solo n /ˈsoʊ.loʊ/ Bài đơn ca
+[p65] Lead singer n. phr /liːd ˈsɪŋ.ər/ Ca sĩ hát chính
+[p65] Guitarist n /ɡɪˈtɑːr.ɪst/ Nghệ sĩ ghi-ta
+[p65] Drummer n /ˈdrʌm.ər/ Người đánh trống
+[p65] Lyrics n /ˈlɪr.ɪks/ Lời bài hát
+[p65] Chorus n /ˈkɔːr.əs/ Điệp khúc
+[p65] Opera n /ˈɑː.pə.rə/ Nhạc kịch, ô-pê-ra
+[p65] Folk music n. phr /ˈfoʊk ˌmjuː.zɪk/ Nhạc dân gian
+[p65] Album n /ˈæl.bəm/ Tuyển tập ca khúc
+[p65] Tune n /tjuːn/ Giai điệu
+[p65] Violin n /ˌvaɪəˈlɪn/ Đàn vi-ô-lông
+[p65] Classical music n. phr
+[p65] /ˈklæs.ɪ.kəl
+[p65] ˌmjuː.zɪk/
+[p65] Nhạc cổ điển
+[p65] 64
+[p66] 37. Từ vựng về tình yêu
+[p66] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p66] Date n /deɪt/ Buổi hẹn hò
+[p66] Engagement n /ɪnˈɡeɪdʒ.mənt/ Đính hôn
+[p66] Ring n /rɪŋ/ Nhẫn
+[p66] Romantic adj /roʊˈmæn.tɪk/ Lãng mạn
+[p66] Sweet adj /swiːt/ Ngọt ngào
+[p66] Alone adj /əˈloʊn/ Một mình
+[p66] Couple n /ˈkʌp.əl/ Cặp đôi
+[p66] Forever adv /fɔːrˈɛv.ər/ Mãi mãi
+[p66] Boyfriend n /ˈbɔɪ.frɛnd/ Bạn trai
+[p66] Girlfriend n /ˈɡɜːl.frɛnd/ Bạn gái
+[p66] Kiss v /kɪs/ Hôn
+[p66] Heart n /hɑːrt/ Trái tim
+[p66] Hug v /hʌɡ/ Ôm
+[p66] Propose v /prəˈpoʊz/ Cầu hôn
+[p66] Chocolate n /ˈtʃɒk.lɪt/ Sô-cô-la
+[p66] Wedding n /ˈwɛd.ɪŋ/ Đám cưới
+[p66] Anniversary n /ˌæn.ɪˈvɜː.sər.i/ Ngày kỷ niệm
+[p66] Darling n /ˈdɑːr.lɪŋ/ Em yêu, anh yêu
+[p66] Single adj /ˈsɪŋ.ɡəl/ Độc thân
+[p66] 65
+[p67] 38. Từ vựng về nhà hàng, khách sạn
+[p67] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p67] Restaurant n /ˈrɛs.tə.rɒnt/ Nhà hàng
+[p67] Main course n. phr /meɪn kɔːrs/ Món chính
+[p67] Napkin n /ˈnæp.kɪn/ Khăn ăn
+[p67] Wine n /waɪn/ Rượu vang
+[p67] Cutlery n /ˈkʌt.lə.ri/ Dụng cụ ăn
+[p67] Drink n /drɪŋk/ Đồ uống
+[p67] Combo n /ˈkɒm.boʊ/ Gói, bộ
+[p67] Side dish n. phr /saɪd dɪʃ/ Đồ ăn kèm
+[p67] Meal n /miːl/ Bữa ăn
+[p67] Order v /ˈɔːr.dər/ Gọi món
+[p67] Speciality n /ˌspeʃ.iˈæl.ə.ti/ Đặc sản
+[p67] Dessert n /dɪˈzɜːrt/ Món tráng miệng
+[p67] Salad n /ˈsæl.əd/ Rau trộn
+[p67] Menu n /ˈmɛnjuː/ Thực đơn
+[p67] Waiter n /ˈweɪ.tər/
+[p67] Người hầu bàn
+[p67] (nam)
+[p67] Guest n /ɡɛst/ Khách
+[p67] Coupon n /ˈkuː.pɒn/ Phiếu giảm giá
+[p67] Neat adj /niːt/
+[p67] Gọn gàng, ngăn
+[p67] nắp
+[p67] Animated adj /ˈæn.ɪˌmeɪ.tɪd/ Náo nhiệt, sôi nổi
+[p67] 66
+[p68] Hotel n /hoʊˈtɛl/ Khách sạn
+[p68] Hotel receptionist n. phr
+[p68] /hoʊˈtɛl
+[p68] rɪˈsɛp.ʃən.ɪst/
+[p68] Nhân viên lễ tân
+[p68] khách sạn
+[p68] Housekeeper n /ˈhaʊsˌkiː.pər/
+[p68] Nhân viên dọn
+[p68] phòng
+[p68] Hall n /hɔːl/ Hành lang
+[p68] Vacancy n /ˈveɪ.kən.si/ Phòng trống
+[p68] Lobby n /ˈlɒb.i/ Hành lang
+[p68] Concierge n /kɒn.siˈɛrʒ/
+[p68] Nhân viên hướng
+[p68] dẫn
+[p68] Check-in n /ˈtʃɛk.ɪn/ Việc nhận phòng
+[p68] Desk clerk n. phr /dɛsk klɜːrk/ Nhân viên lễ tân
+[p68] Double bed n. phr /ˈdʌb.əl bɛd/ Giường đôi
+[p68] Single bed n. phr /ˈsɪŋ.ɡəl bɛd/ Giường đơn
+[p68] Doorman n /ˈdɔːr.mən/ Nhân viên gác cửa
+[p68] Reception n /rɪˈsɛp.ʃən/ Quầy lễ tân
+[p68] Elevator n /ˈɛl.ɪˌveɪ.tər/ Thang máy
+[p68] Reservation n /ˌrɛz.ərˈveɪ.ʃən/ Sự đặt chỗ trước
+[p68] Bellboy n /ˈbɛl.bɔɪ/ Người trực tầng
+[p68] Check out phrasal v /ˈtʃɛk aʊt/ Trả phòng
+[p68] 67
+[p69] 39. Từ vựng về trường học
+[p69] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p69] Nursery school n. phr /ˈnɜː.sər.i skuːl/ Trường mẫu giáo
+[p69] Teacher n /ˈtiː.tʃər/ Giáo viên
+[p69] Classmate n /ˈklæs.meɪt/ Bạn cùng lớp
+[p69] Library n /ˈlaɪ.brər.i/ Thư viện
+[p69] Pen n /pɛn/ Bút mực
+[p69] Pencil n /ˈpɛn.səl/ Bút chì
+[p69] Ruler n /ˈruː.lər/ Cây thước
+[p69] Calculator n /ˈkæl.kjʊ.leɪ.tər/ Máy tính cầm tay
+[p69] Chalk n /tʃɔːk/ Phấn
+[p69] Student n /ˈstjuː.dənt/ Sinh viên, học sinh
+[p69] Classroom n /ˈklæs.ruːm/ Phòng học
+[p69] Primary school n. phr /ˈpraɪ.mə.ri skuːl/ Trường tiểu học
+[p69] Secondary school n. phr /ˈsɛk.ən.dər.i skuːl/
+[p69] Trường trung học
+[p69] cơ sở
+[p69] High school n. phr /haɪ skuːl/
+[p69] Trường trung học
+[p69] phổ thông
+[p69] Vocational school n. phr
+[p69] /voʊˈkeɪ.ʃən.əl
+[p69] skuːl/
+[p69] Trường dạy nghề
+[p69] College n /ˈkɒl.ɪdʒ/
+[p69] Trường đại học,
+[p69] cao đẳng
+[p69] University n /ˌjuː.nɪˈvɜː.sə.ti/ Trường đại học
+[p69] Principal n /ˈprɪn.sɪ.pəl/ Hiệu trưởng
+[p69] 68
+[p70] Blackboard n /ˈblæk.bɔːd/ Bảng đen
+[p70] Compass n /ˈkʌm.pəs/ Com-pa
+[p70] History n /ˈhɪs.tər.i/ Môn lịch sử
+[p70] Economics n /ˌiː.kəˈnɒm.ɪks/ Kinh tế học
+[p70] Chemistry n /ˈkɛm.ɪ.stri/ Hóa học
+[p70] Biology n /baɪˈɒl.ə.dʒi/ Sinh học
+[p70] IT n /aɪ ˈtiː/
+[p70] Công nghệ thông
+[p70] tin
+[p70] Geography n /dʒɪˈɒɡ.rə. / Địa lý
+[p70] Art n /ɑːrt/ Mỹ thuật
+[p70] Fail v /feɪl/ Rớt; đánh rớt
+[p70] Pass v /pɑːs/ Đậu, đỗ (kỳ thi)
+[p70] Graduate v /ˈɡrædʒ.u.eɪt/ Tốt nghiệp
+[p70] Degree n /dɪˈɡriː/ Bằng cấp
+[p70] Playground n /ˈpleɪ.ɡraʊnd/ Sân chơi
+[p70] Uniform n /ˈjuː.nɪ.fɔːm/ Đồng phục
+[p70] Grade n /ɡreɪd/ Điểm số
+[p70] Form teacher n. phr /fɔːm ˈtiː.tʃər/
+[p70] Giáo viên chủ
+[p70] nhiệm
+[p70] Proctor n /ˈprɒk.tər/ Giám thị
+[p70] School bag n. phr /skuːl bæg/ Cặp
+[p70] Dean n /diːn/ Trưởng khoa
+[p70] Lesson n /ˈles.ən/ Bài học
+[p70] 69
+[p71] Course n /kɔːs/ Khoá học
+[p71] 40. Từ vựng về màu sắc
+[p71] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p71] Red adj/n /rɛd/ Màu đỏ
+[p71] Cream adj/n /kriːm/ Màu kem
+[p71] Purple adj/n /ˈpɜːr.pəl/ Màu tía
+[p71] Black adj/n /blæk/ Màu đen
+[p71] Gray n/adj /ɡreɪ/ Màu xám
+[p71] Silver n/adj /ˈsɪl.vər/ Màu bạc
+[p71] Gold n/adj /ɡoʊld/ Màu vàng kim
+[p71] Copper n/adj /ˈkɒp.ər/ Màu đồng
+[p71] Green adj/n /ɡriːn/ Màu xanh lá cây
+[p71] Pink n/adj /pɪŋk/ Màu hồng
+[p71] Yellow n/adj /ˈjɛl.oʊ/ Màu vàng
+[p71] Brown n/adj /braʊn/ Màu nâu
+[p71] Blue n/adj /bluː/ Màu xanh da trời
+[p71] Chestnut n/adj /ˈtʃɛs.nʌt/ Màu nâu hạt dẻ
+[p71] Turquoise n/adj /ˈtɜːr.kɔɪz/ Màu ngọc lam
+[p71] Navy blue n. phr /ˈneɪ.vi bluː/ Màu xanh nước biển
+[p71] Bright red n. phr /braɪt rɛd/ (màu) đỏ tươi
+[p71] Vivid adj /ˈvɪv.ɪd/ Rực rỡ
+[p71] White adj/n /waɪt/ Màu trắng
+[p71] 70
+[p72] 41. Từ vựng về thời tiết
+[p72] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p72] Weather n /ˈwɛð.ər/ Thời tiết
+[p72] Warm adj /wɔːrm/ Ấm áp, ấm
+[p72] Wind n /wɪnd/ Gió
+[p72] Rain n /reɪn/ Mưa
+[p72] Temperature n /ˈtɛm.prə.tʃər/ Nhiệt độ
+[p72] Weather forecast n. phr /ˈwɛð.ər ˈfɔːr.kæst/
+[p72] Bản tin dự báo thời
+[p72] tiết
+[p72] Sunny n /ˈsʌn.i/ Có nắng
+[p72] Sunshine n /ˈsʌn.ʃaɪn/ Ánh nắng mặt trời
+[p72] Icy n /ˈaɪ.si/ Lạnh lẽo
+[p72] Atmosphere n /ˈæt.mə.sfɪər/ Bầu khí quyển
+[p72] Dry adj /draɪ/ Khô
+[p72] Sun n /sʌn/ Mặt trời
+[p72] Cloud n /klaʊd/ Đám mây
+[p72] Fog n /fɔːɡ/ Sương mù
+[p72] Snow n /snoʊ/ Tuyết
+[p72] Cold adj /koʊld/ Lạnh
+[p72] Cool adj /kuːl/ Mát mẻ
+[p72] Hot adj /hɒt/ Nóng
+[p72] Wet adj /wɛt/ Ẩm ướt
+[p72] Erratic adj /ɪˈræt.ɪk/ Thất thường
+[p72] 71
+[p73] Thunder n /ˈθʌn.dər/ Sấm
+[p73] Hailstone n /ˈheɪl.stoʊn/ Viên mưa đá
+[p73] Blustery adj /ˈblʌs.tər.i/ Có gió lớn
+[p73] Downpour n /ˈdaʊn.pɔːr/ Mưa lớn
+[p73] Raincoat n /ˈreɪn.koʊt/ Áo mưa
+[p73] Blizzard n /ˈblɪz.ərd/ Bão tuyết
+[p73] Rainbow n /ˈreɪn.boʊ/ Cầu vồng
+[p73] Dew n /djuː/ Sương
+[p73] Sleet n /sliːt/ Mưa tuyết
+[p73] Stormy adj /ˈstɔːr.mi/ Có bão
+[p73] Snowflake n /ˈsnoʊ.fleɪk/ Bông tuyết
+[p73] Puddle n /ˈpʌd.əl/ Vũng nước mưa
+[p73] Lightning n /ˈlaɪt.nɪŋ/ Tia chớp
+[p73] Mild adj /maɪld/ Ôn hoà
+[p73] Dull adj /dʌl/ U ám
+[p73] Shelter n /ˈʃɛl.tər/ Chỗ trú ẩn
+[p73] Celsius adj /ˈsɛl.si.əs/ (thuộc) độ C
+[p73] Fine n /faɪn/ Đẹp
+[p73] 72
+[p74] 42. Từ vựng về quần áo
+[p74] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p74] Skirt n /skɜːrt/ Váy
+[p74] Leggings n /ˈlɛɡ.ɪŋz/ Quần bó
+[p74] Overalls n /ˈoʊ.vər.ɔːlz/ Quần yếm
+[p74] Turtleneck n /ˈtɜːr.tl̩.nɛk/ Áo cổ lọ
+[p74] Bow tie n. phr /ˈboʊ taɪ/ Nơ con bướm
+[p74] Tie n /taɪ/ Cà vạt
+[p74] Tunic n /ˈtuː.nɪk/ Áo trùm hông
+[p74] Vest n /vɛst/ Áo gi-lê
+[p74] T-shirt n /ˈtiː.ʃɜːrt/ Áo thun
+[p74] Shirt n /ʃɜːrt/ Áo sơ mi
+[p74] Jeans n /dʒiːnz/ Quần jean
+[p74] Dress n /drɛs/ Áo đầm
+[p74] Coat n /koʊt/ Áo khoác
+[p74] Jacket n /ˈdʒæk.ɪt/ Áo khoác
+[p74] Sweater n /ˈswɛt.ər/ Áo len
+[p74] Jumpsuit n /ˈdʒʌmp.suːt/ Bộ áo liền quần
+[p74] Shorts n /ʃɔːrts/ Quần đùi
+[p74] Suit n /suːt/ Bộ com lê
+[p74] Anorak n /ˈæn.ə.ræk/
+[p74] Áo ngoài có mũ
+[p74] trùm đầu
+[p74] Hat n /hæt/ Mũ, nón
+[p74] 73
+[p75] Cap n /kæp/ Mũ lưỡi trai
+[p75] Glove n /ɡlʌv/ Găng tay
+[p75] Scarf n /skɑːrf/ Khăn choàng cổ
+[p75] Sandals n /ˈsæn.dəlz/ Giày xăng-đan
+[p75] Slippers n /ˈslɪp.ərz/ Đôi dép
+[p75] Pocket n /ˈpɒk.ɪt/ Túi (quần áo)
+[p75] Sleeve n /sliːv/ Tay áo
+[p75] Collar n /ˈkɒl.ər/ Cổ áo
+[p75] Zip n /zɪp/ Khóa kéo
+[p75] Blouse n /blaʊs/ Áo sơ mi nữ
+[p75] Button n /ˈbʌt.ən/ Khuy, nút
+[p75] Underwear n /ˈʌn.dərˌwɛər/ Đồ lót
+[p75] Bra n /brɑː/ Áo ngực
+[p75] Pants n /pænts/ Quần dài
+[p75] Belt n /bɛlt/ Dây nịt
+[p75] High heels n. phr /haɪ hiːlz/ Giày cao gót
+[p75] Try on phrasal v /traɪ ɒn/ Thử (quần áo)
+[p75] Size n /saɪz/ Kích cỡ
+[p75] 74
+[p76] 43. Từ vựng về bộ phận cơ thể
+[p76] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p76] Head n /hɛd/ Đầu
+[p76] Face n /feɪs/ Khuôn mặt
+[p76] Hair n /hɛr/ Tóc
+[p76] Ear n /ɪr/ Tai
+[p76] Neck n /nɛk/ Cổ
+[p76] Forehead n /ˈfɔːrˌhɛd/ Trán
+[p76] Beard n /bɪrd/ Râu
+[p76] Eye n /aɪ/ Mắt
+[p76] Nose n /noʊz/ Mũi
+[p76] Mouth n /maʊθ/ Miệng
+[p76] Chin n /tʃɪn/ Cằm
+[p76] Shoulder n /ˈʃoʊl.dər/ Vai
+[p76] Elbow n /ˈɛl.boʊ/ Khuỷu tay
+[p76] Arm n /ɑ:rm/ Cánh tay
+[p76] Chest n /tʃɛst/ Ngực
+[p76] Armpit n /ˈɑ:rmˌpɪt/ Nách
+[p76] Wrist n /rɪst/ Cổ tay
+[p76] Navel n /ˈneɪ.vəl/ Rún, rốn
+[p76] Ankle n /ˈæŋ.kəl/ Mắt cá chân
+[p76] Waist n /weɪst/ Eo
+[p76] Abdomen n /ˈæb.də.mən/ Bụng
+[p76] 75
+[p77] Leg n /lɛɡ/ Chân
+[p77] Thigh n /θaɪ/ Đùi
+[p77] Knee n /niː/ Đầu gối
+[p77] Hand n /hænd/ Bàn tay
+[p77] Thumb n /θʌm/ Ngón tay cái
+[p77] Back n /bæk/ Lưng
+[p77] Foot n /fʊt/ Bàn chân
+[p77] Finger n /ˈfɪŋ.ɡər/ Ngón tay
+[p77] Toe n /toʊ/ Ngón chân
+[p77] 76
+[p78] 44. Từ vựng về giáo dục
+[p78] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p78] Boarding school n. phr ˈbɔːrd.ɪŋ skuːl/ Trường nội trú
+[p78] Public school n. phr /ˈpʌb.lɪk skuːl/ Trường công lập
+[p78] Private school n. phr /ˈpraɪ.vɪt skuːl/ Trường tư thục
+[p78] Secondary school n. phr /ˈsɛk.ənˌdɛr.i skuːl/
+[p78] Trường trung học
+[p78] cơ sở
+[p78] High school n. phr /haɪ skuːl/
+[p78] Trường trung học
+[p78] phổ thông
+[p78] Primary school n /ˈpraɪˌmɛr.i skuːl/ Trường tiểu học
+[p78] Nursery school n. phr /ˈnɜːr.sər.i skuːl/ Trường mẫu giáo
+[p78] School n /skuːl/ Trường học
+[p78] College n /ˈkɒl.ɪdʒ/
+[p78] Trường đại học,
+[p78] cao đẳng
+[p78] University n /ˌjuː.nɪˈvɜːr.sə.ti/ Trường đại học
+[p78] Professor n /prəˈfɛs.ər/ Giáo sư
+[p78] Lecturer n /ˈlɛk.tʃər.ər/ Giảng viên
+[p78] Researcher n /rɪˈsɜːr.tʃər/ Nghiên cứu viên
+[p78] Graduate v /ˈɡrædʒ.u.eɪt/ Tốt nghiệp
+[p78] Degree n /dɪˈɡriː/ Bằng cấp
+[p78] Thesis n /ˈθiː.sɪs/ Luận văn, luận án
+[p78] Lecture n /ˈlɛk.tʃər/
+[p78] Bài giảng, bài
+[p78] thuyết trình
+[p78] Debate n /dɪˈbeɪt/ Cuộc tranh luận
+[p78] 77
+[p79] Higher education n. phr
+[p79] /ˈhaɪ.ər
+[p79] ˌɛdʒ.əˈkeɪ.ʃən/
+[p79] Giáo dục đại học
+[p79] Semester n /sɪˈmɛs.tər/ Học kỳ
+[p79] Student n /ˈstjuː.dənt/ Sinh viên, học sinh
+[p79] Student union n. phr
+[p79] /ˈstjuː.dənt
+[p79] ˈjuː.njən/
+[p79] Hội sinh viên
+[p79] Tuition fee n. phr /tjuːˈɪʃ.ən  ː/ Học phí
+[p79] Exam n /ɪɡˈzæm/ Bài thi, kì thi
+[p79] Fail v /feɪl/ Thi trượt
+[p79] Pass v /pæs/ Đậu, đỗ
+[p79] Study v /ˈstʌd.i/ Học
+[p79] Learn v /lɜːrn/ Học
+[p79] Curriculum n /kəˈrɪk.jə.ləm/
+[p79] Chương trình giảng
+[p79] dạy
+[p79] Course n /kɔːrs/ Khóa học
+[p79] Subject n /ˈsʌb.dʒɪkt/ Môn học
+[p79] Grade n /ɡreɪd/ Điểm số
+[p79] Mark n /mɑːrk/ Điểm số
+[p79] Quali cation n /ˌkwɒl.ɪ.fɪˈkeɪ.ʃən/
+[p79] Trình độ chuyên
+[p79] môn
+[p79] Attendance n /əˈtɛn.dəns/ Sự có mặt
+[p79] Absence n /ˈæb.səns/ Sự vắng mặt
+[p79] Projector n /prəˈdʒɛk.tər/ Máy chiếu
+[p79] Textbook n /ˈtɛkstˌbʊk/ Sách giáo khoa
+[p79] 78
+[p80] Question n /ˈkwɛs.tʃən/ Câu hỏi
+[p80] Answer v /ˈæn.sər/ Trả lời
+[p80] Mistake n /mɪˈsteɪk/ Sai lầm, lỗi
+[p80] Right adj /raɪt/ Đúng
+[p80] Wrong adj /rɒŋ/ Sai
+[p80] Register n /ˈrɛdʒ.ɪ.stər/ Sổ sách
+[p80] Assembly n /əˈsɛm.bli/ Cuộc họp
+[p80] Holiday n /ˈhɒl.ɪ.deɪ/ Kỳ nghỉ
+[p80] Teacher n /ˈtiː.tʃər/ Giáo viên
+[p80] Pupil n /ˈpjuː.pəl/ Học sinh
+[p80] Playground n /ˈpleɪ.ɡraʊnd/ Sân chơi
+[p80] Library n /ˈlaɪ.brər.i/ Thư viện
+[p80] Hall n /hɔːl/ Hội trường
+[p80] Dormitory n /ˈdɔːr.mɪ.tɔːr.i/ Ký túc xá
+[p80] Locker n /ˈlɒk.ər/ Tủ có khoá
+[p80] Classroom n /ˈklæs.ruːm/ Phòng học
+[p80] Chalk n /tʃɔːk/ Phấn
+[p80] Lesson n /ˈlɛs.ən/ Bài học
+[p80] Homework n /ˈhoʊm.wɜːrk/ Bài tập về nhà
+[p80] Test n /tɛst/ Bài kiểm tra
+[p80] 79
+[p81] 45. Từ vựng về gia đình
+[p81] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p81] Husband n /ˈhʌz.bənd/ Chồng
+[p81] Grandson n /ˈɡrænd.sʌn/
+[p81] Cháu trai (của ông
+[p81] bà)
+[p81] Uncle n /ˈʌŋ.kəl/ Chú, cậu,…
+[p81] Aunt n /ænt/ Cô, dì,…
+[p81] Niece n /niːs/
+[p81] Cháu gái (của cô,
+[p81] dì, chú)
+[p81] Nephew n /ˈnɛ.vjuː/
+[p81] Cháu trai (của cô,
+[p81] dì, chú)
+[p81] Son-in-law n /ˈsʌn ɪn lɔː/ Con rể
+[p81] Daughter-in-law n /ˈdɔː.tər ɪn lɔː/ Con dâu
+[p81] Granddaughter n /ˈɡrændˌdɔː.tər/
+[p81] Cháu gái (của ông
+[p81] bà)
+[p81] Grandfather n /ˈɡrændˌfɑː.ðər/ Ông nội, ông ngoại
+[p81] Wife n /waɪf/ Vợ
+[p81] Father n /ˈfɑː.ðər/ Bố
+[p81] Mother n /ˈmʌð.ər/ Mẹ
+[p81] Daughter n /ˈdɔː.tər/ Con gái
+[p81] Son n /sʌn/ Con trai
+[p81] Sister n /ˈsɪs.tər/ Chị gái, em gái
+[p81] Brother n /ˈbrʌð.ər/ Anh trai, em trai
+[p81] Grandmother n /ˈɡrændˌmʌð.ər/ Bà nội, bà ngoại
+[p81] 80
+[p82] Brother-in-law n /ˈbrʌð.ər ɪn lɔː/
+[p82] Anh/em rể, anh/em
+[p82] chồng, anh/em vợ
+[p82] Cousin n /ˈkʌz.ɪn/ Anh họ, em họ
+[p82] Parent n /ˈpɛr.ənt/ Bố, mẹ
+[p82] Relative n /ˈrɛl.ə.tɪv/
+[p82] Họ hàng, người
+[p82] thân
+[p82] Mother-in-law n /ˈmʌð.ər ɪn lɔː/ Mẹ chồng, mẹ vợ
+[p82] Father-in-law n /ˈfɑː.ðər ɪn lɔː/ Bố chồng, bố vợ
+[p82] Sister-in-law n /ˈsɪs.tər ɪn lɔː/
+[p82] Chị/em dâu, chị/em
+[p82] chồng, chị/em vợ
+[p82] Adopt v /əˈdɒpt/ Nhận con nuôi
+[p82] Children n /ˈtʃɪl.drən/ Con cái
+[p82] Take care of v. phr /teɪk kɛər əv/
+[p82] Chăm sóc, quan
+[p82] tâm
+[p82] Family tree n. phr /ˈfæm.ə.li triː/ Gia phả
+[p82] Anniversary n /ˌæn.ɪˈvɜː.sə.ri/ Ngày kỷ niệm
+[p82] Close-knit adj ˌkloʊsˈnɪt/ Khăng khít
+[p82] Stepchild n /ˈstɛpˌtʃaɪld/ Con riêng
+[p82] Half-brother n /ˈhɑːfˌbrʌð.ər/
+[p82] Anh trai, em trai
+[p82] (cùng cha/mẹ khác
+[p82] mẹ/cha)
+[p82] Half-sister n /ˈhɑːfˌsɪs.tər/
+[p82] Chị gái, em gái
+[p82] (cùng cha/mẹ khác
+[p82] mẹ/cha)
+[p82] Godfather n /ˈɡɒdˌfɑː.ðər/ Cha đỡ đầu
+[p82] Hereditary adj /həˈrɛd.ɪ.tər.i/ Di truyền
+[p82] 81
+[p83] Stepmother n /ˈstɛpˌmʌð.ər/ Mẹ kế
+[p83] Stepfather n /ˈstɛpˌfɑː.ðər/ Cha dượng
+[p83] Orphan n /ˈɔːr.fən/ Trẻ mồ côi
+[p83] Generation n /ˌdʒɛn.əˈreɪ.ʃən/ Thế hệ
+[p83] 82
+[p84] 46. Từ vựng về trái cây
+[p84] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p84] Orange n /ˈɔːr.ɪndʒ/ Quả cam
+[p84] Lemon n /ˈlɛm.ən/ Quả chanh
+[p84] Mango n /ˈmæŋ.ɡoʊ/ Quả xoài
+[p84] Apple n /ˈæp.əl/ Quả táo
+[p84] Tangerine n /ˌtæn.dʒəˈriːn/ Quả quýt
+[p84] Grape n /ɡreɪp/ Quả nho
+[p84] Strawberry n /ˈstrɔːˌbɛr.i/ Quả dâu tây
+[p84] Melon n /ˈmɛl.ən/ Quả dưa
+[p84] Passion fruit n. phr /ˈpæʃ.ən ˌfruːt/ Quả chanh dây
+[p84] Grapefruit n /ˈɡreɪpˌfruːt/ Quả bưởi chùm
+[p84] Watermelon n /ˈwɔː.tərˌmɛl.ən/ Quả dưa hấu
+[p84] Peach n /piːtʃ/ Quả đào
+[p84] Pear n /pɛr/ Quả lê
+[p84] Banana n /bəˈnæn.ə/ Quả chuối
+[p84] Plum n /plʌm/ Quả mận
+[p84] Papaya n /pəˈpaɪ.ə/ Quả đu đủ
+[p84] Avocado n /ˌæv.əˈkɑː.doʊ/ Quả bơ
+[p84] Starfruit n /ˈstɑːrˌfruːt/ Quả khế
+[p84] Pineapple n /ˈpaɪnˌæp.əl/ Quả dứa
+[p84] Coconut n /ˈkoʊ.kəˌnʌt/ Quả dừa
+[p84] Raspberry n /ˈræzˌbɛr.i/ Quả mâm xôi
+[p84] 83
+[p85] Nectarine n /ˈnɛk.təˌriːn/ Quả xuân đào
+[p85] Mulberry n /ˈmʌlˌbɛr.i/ Quả dâu tằm
+[p85] Raisin n /ˈreɪ.zən/ Nho khô
+[p85] Jackfruit n /ˈdʒækˌfruːt/ Quả mít
+[p85] Persimmon n /pərˈsɪm.ən/ Quả hồng
+[p85] Dragon fruit n. phr ˈdræɡ.ən ˌfruːt/ Quả thanh long
+[p85] Custard apple n. phr /ˈkʌs.tərd ˌæp.əl/ Quả na
+[p85] Quince n /kwɪns/ Quả mộc qua
+[p85] Cherry n /ˈtʃɛr.i/ Quả anh đào
+[p85] Kiwi n /ˈkiː.wi/ Quả kiwi
+[p85] Pomegranate n /ˈpɒm.ɪˌɡræn.ɪt/ Quả lựu
+[p85] Guava n /ˈɡwɑː.və/ Quả ổi
+[p85] Apricot n /ˈeɪ.prɪˌkɒt/ Quả mơ
+[p85] Blueberry n /ˈbluːˌbɛr.i/ Quả việt quất
+[p85] Durian n /ˈdʊr.i.ən/ Quả sầu riêng
+[p85] Lychee n /ˈlaɪ.tʃiː/ Quả vải
+[p85] Tamarind n /ˈtæm.ər.ɪnd/ Quả me
+[p85] Kumquat n ˈkʌm.kwɒt/ Quả quất
+[p85] 84
+[p86] 47. Từ vựng về động vật
+[p86] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p86] Piglet n /ˈpɪɡ.lɪt/ Lợn con
+[p86] Sow n /saʊ/ Lợn cái
+[p86] Pig n /pɪɡ/ Lợn
+[p86] Duck n /dʌk/ Vịt
+[p86] Animal n /ˈæn.ɪ.məl/ Động vật
+[p86] Goat n /ɡoʊt/ Dê
+[p86] Horse n /hɔːrs/ Ngựa
+[p86] Goose n /ɡuːs/ Ngỗng
+[p86] Donkey n /ˈdɒŋ.ki/ Lừa
+[p86] Sheep n /ʃiːp/ Cừu
+[p86] Ox n /ɒks/ Bò
+[p86] Dog n /dɒɡ/ Chó
+[p86] Cat n /kæt/ Mèo
+[p86] Chicken n /ˈtʃɪk.ɪn/ Gà
+[p86] Rooster n /ˈruː.stər/ Gà trống
+[p86] Hen n /hɛn/ Gà mái
+[p86] Cow n /kaʊ/ Bò cái
+[p86] Bull n /bʊl/ Bò đực
+[p86] Calf n /kɑːf/ Bê
+[p86] Rabbit n /ˈræb.ɪt/ Thỏ
+[p86] Owl n /aʊl/ Cú
+[p86] 85
+[p87] Deer n /dɪr/ Hươu, nai
+[p87] Bat n bæt/ Dơi
+[p87] Mink n /mɪŋk/ Chồn vizon
+[p87] Monkey n /ˈmʌŋ.ki/ Khỉ
+[p87] Snake n /sneɪk/ Rắn
+[p87] Lizard n /ˈlɪz.ərd/ Thằn lằn
+[p87] Gira e n /dʒəˈræf/ Hươu cao cổ
+[p87] Bear n /bɛr/ Gấu
+[p87] Rhino n /ˈraɪ.noʊ/ Tê giác
+[p87] Elephant n /ˈɛl.ɪ.fənt/ Voi
+[p87] Panther n /ˈpæn.θər/ Báo đen
+[p87] Leopard n /ˈlɛp.ərd/ Báo
+[p87] Tiger n /ˈtaɪ.ɡər/ Hổ
+[p87] Lion n /ˈlaɪ.ən/ Sư tử
+[p87] Fox n /fɒks/ Cáo
+[p87] Dinosaur n /ˈdaɪ.nəˌsɔːr/ Khủng long
+[p87] Turtle n /ˈtɜːr.təl/ Rùa biển
+[p87] Snail n /sneɪl/ Ốc sên
+[p87] Crow n /kroʊ/ Quạ
+[p87] Parrot n /ˈpær.ət/ Vẹt
+[p87] 86
+[p88] 48. Từ vựng về côn trùng
+[p88] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p88] Caterpillar n /ˈkæt.ərˌpɪl.ər/ Sâu bướm
+[p88] Cocoon n /kəˈkuːn/ Cái kén (tằm)
+[p88] Butterfly n /ˈbʌt.ərˌflaɪ/ Bướm
+[p88] Dragonfly n /ˈdræɡ.ənˌflaɪ/ Chuồn chuồn
+[p88] Cricket n /ˈkrɪk.ɪt/ Dế
+[p88] Grasshopper n /ˈɡræsˌhɒp.ər/ Châu chấu
+[p88] Cockroach n /ˈkɒkˌroʊtʃ/ Gián
+[p88] Beetle n /ˈbiː.təl/ Bọ cánh cứng
+[p88] Termite n /ˈtɜːr.maɪt/ Mối
+[p88] Ant n /ænt/ Kiến
+[p88] Mosquito n /məˈskiː.toʊ/ Muỗi
+[p88] Ladybug n /ˈleɪ.diˌbʌɡ/ Bọ rùa
+[p88] Spider n /ˈspaɪ.dər/ Nhện
+[p88] Firefly n /ˈfaɪrˌflaɪ/ Đom đóm
+[p88] Fly n /flaɪ/ Ruồi
+[p88] Bee n /biː/ Ong
+[p88] Wasp n /wɒsp/ Ong bắp cày
+[p88] Centipede n /ˈsɛn.tɪˌpiːd/ Rết
+[p88] 87
+[p89] 49. Từ vựng về học tập
+[p89] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p89] Class n /klæs/ Lớp học
+[p89] Classroom n /ˈklæsˌruːm/ Phòng học
+[p89] Textbook n /ˈtɛkstˌbʊk/ Sách giáo khoa
+[p89] Workbook n /ˈwɜːkˌbʊk/ Sách bài tập
+[p89] Reference book n. phr /ˈrɛf.ər.əns ˌbʊk/ Sách tham khảo
+[p89] Notebook n /ˈnoʊtˌbʊk/ Vở
+[p89] Notepad n /ˈnoʊtˌpæd/ Sổ ghi chép
+[p89] Pencil n /ˈpɛn.səl/ Bút chì
+[p89] Crayon n /ˈkreɪ.ɒn/ Bút chì màu
+[p89] Pencil sharpener n. phr /ˈpɛn.səl ˌʃɑːp.nər/ Đồ gọt bút chì
+[p89] Eraser n /ɪˈreɪ.zər/ Cục tẩy
+[p89] Pen n /pɛn/ Bút mực
+[p89] Ballpoint pen n. phr /ˈbɔːl.pɔɪnt ˌpɛn/ Bút bi
+[p89] Paper n /ˈpeɪ.pər/ Giấy
+[p89] Desk n /dɛsk/ Bàn học
+[p89] Map n /mæp/ Bản đồ
+[p89] Glue n /ɡluː/ Hồ dán
+[p89] Scissors n /ˈsɪz.ərz/ Kéo
+[p89] Ruler n /ˈruː.lər/ Thước
+[p89] Protractor n /prəˈtræk.tər/ Thước đo góc
+[p89] Ink n /ɪŋk/ Mực
+[p89] 88
+[p90] Chalk n /tʃɔːk/ Phấn
+[p90] Folder n /ˈfoʊl.dər/ Thư mục
+[p90] 89
+[p91] 50. Từ vựng về thực vật
+[p91] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p91] Tree n /triː/ Cây
+[p91] Pine n /paɪn/ Cây thông
+[p91] Cedar n /ˈsiː.dər/ Cây tuyết tùng
+[p91] Oak n /oʊk/ Cây sồi
+[p91] Ivy n /ˈaɪ.vi/ Dây thường xuân
+[p91] Moss n /mɔːs/ Rêu
+[p91] Mushroom n /ˈmʌʃ.rʊm/ Nấm
+[p91] Wheat n /wiːt/ Lúa mì
+[p91] Corn n /kɔːrn/ Bắp, ngô
+[p91] Flower n /ˈflaʊ.ər/ Hoa
+[p91] Grass n /ɡræs/ Cỏ
+[p91] Herb n /hɜːrb/ Thảo mộc
+[p91] Bush n /bʊʃ/ Bụi cây, bụi rậm
+[p91] Coconut tree n. phr /ˈkoʊ.kəˌnʌt triː/ Cây dừa
+[p91] Apple tree n. phr /ˈæpəl triː/ Cây táo
+[p91] Shrubland n /ˈʃrʌblænd/ Vùng cây bụi
+[p91] 90
+[p92] 51. Từ vựng về quốc gia
+[p92] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p92] Denmark n /ˈdɛnˌmɑːrk/ Đan Mạch
+[p92] England n /ˈɪŋ.ɡlənd/ Anh
+[p92] Sweden n /ˈswiː.dən/ Thụy Điển
+[p92] Austria n /ˈɒs.tri.ə/ Áo
+[p92] Australia n /ɒˈstreɪlɪə/ Úc
+[p92] France n /fræns/ Pháp
+[p92] Germany n /ˈdʒɜː.mə.ni/ Đức
+[p92] Switzerland n /ˈswɪtsərlənd/ Thụy Sĩ
+[p92] Greece n /ɡriːs/ Hy Lạp
+[p92] Italy n /ˈɪtəli/ Ý
+[p92] Spain n /speɪn/ Tây Ban Nha
+[p92] Russia n /ˈrʌʃə/ Nga
+[p92] Canada n /ˈkænədə/ Canada
+[p92] Mexico n /ˈmɛksɪkoʊ/ Mêxicô
+[p92] America n /əˈmɛrɪkə/ Mỹ
+[p92] Brazil n /brəˈzɪl/ Braxin
+[p92] Japan n /dʒəˈpæn/ Nhật Bản
+[p92] Korea n /kəˈriə/ Hàn Quốc
+[p92] China n /ˈtʃaɪ.nə/ Trung Quốc
+[p92] 91
+[p93] 52. Từ vựng về hải sản
+[p93] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p93] Herring n /ˈhɛr.ɪŋ/ Cá trích
+[p93] Skate n /skeɪt/ Cá đuối
+[p93] Salmon n /ˈsæmən/ Cá hồi
+[p93] Prawn n /prɔːn/ Tôm
+[p93] Cuttle sh n /ˈkʌtəl.fɪʃ/ Mực nang
+[p93] Lobster n /ˈlɒbstər/ Tôm hùm
+[p93] Squid n /skwɪd/ Mực ống
+[p93] Shrimp n /ʃrɪmp/ Tôm
+[p93] Oyster n /ˈɔɪ.stər/ Hàu
+[p93] Crab n /kræb/ Cua
+[p93] Cockle n /ˈkɒk.əl/ Sò
+[p93] Scallop n /ˈskɒl.əp/ Sò điệp
+[p93] Octopus n /ˈɒk.tə.pʊs/ Bạch tuộc
+[p93] Fish n /fɪʃ/ Cá
+[p93] Eel n /iːl/ Lươn
+[p93] Mussel n /ˈmʌsəl/ Vẹm
+[p93] Clam n /klæm/ Nghêu
+[p93] Jelly sh n /ˈdʒɛliˌfɪʃ/ Sứa
+[p93] 92
+[p94] 53. Từ vựng về năng lượng
+[p94] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p94] Charcoal n /ˈtʃɑːrˌkoʊl/ Than củi
+[p94] Battery n /ˈbætəri/ Pin
+[p94] Gasoline n /ˈɡæsəˌliːn/ Xăng
+[p94] Turbine n /ˈtɜr.baɪn/ Tua-bin
+[p94] Sun n /sʌn/ Mặt trời
+[p94] Wind n /wɪnd/ Gió
+[p94] Waterfall n /ˈwɔːtərˌfɔːl/ Thác nước
+[p94] Re nery n /rɪˈfaɪnəri/ Nhà máy lọc
+[p94] Nuclear reactor n. phr /ˈnjuː.kliər riˈæktər/
+[p94] Lò phản ứng hạt
+[p94] nhân
+[p94] Dam n /dæm/ Đập (thủy điện)
+[p94] Power plant n. phr /ˈpaʊər plænt/ Nhà máy điện
+[p94] Transformer n /trænsˈfɔːrmər/ Máy biến thế
+[p94] Heat v /hiːt/ Sưởi ấm, làm nóng
+[p94] Natural gas n. phr /ˈnætʃərəl ɡæs/ Khí tự nhiên
+[p94] Diesel n /ˈdiːzəl/ Dầu đi-ê-zen
+[p94] Solar power n. phr /ˈsoʊlər ˈpaʊər/ Năng lượng mặt trời
+[p94] 93
+[p95] 54. Từ vựng về nghề nghiệp
+[p95] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p95] Dancer n /ˈdæn.sər/ Vũ công
+[p95] Designer n /dɪˈzaɪ.nər/ Nhà thiết kế
+[p95] Magician n /məˈdʒɪʃ.ən/ Nhà ảo thuật
+[p95] Tour guide n. phr /tʊr ɡaɪd/
+[p95] Hướng dẫn viên du
+[p95] lịch
+[p95] Sailor n /ˈseɪ.lər/ Thủy thủ
+[p95] Commentator n /ˈkɒm.ənˌteɪ.tər/ Bình luận viên
+[p95] Dentist n /ˈdɛn.tɪst/ Nha sĩ
+[p95] Postman n /ˈpoʊst.mæn/ Người đưa thư
+[p95] Writer n /ˈraɪ.tər/ Nhà văn
+[p95] Pilot n /ˈpaɪ.lət/ Phi công
+[p95] Plumber n /ˈplʌm.ər/
+[p95] Thợ sửa chữa ống
+[p95] nước
+[p95] Tailor n /ˈteɪ.lər/ Thợ may
+[p95] Copywriter n /ˈkɒp.iˌraɪ.tər/
+[p95] Người viết bài
+[p95] (quảng cáo)
+[p95] Journalist n /ˈdʒɜː.nə.lɪst/ Nhà báo
+[p95] Grocer n /ˈɡroʊ.sər/ Người bán tạp hóa
+[p95] Clerk n /klɜrk/ Người thư ký
+[p95] Assistant n /əˈsɪs.tənt/ Trợ lý
+[p95] Model n /ˈmɒd.əl/ Người mẫu
+[p95] 94
+[p96] Freelancer n /ˈfriːˌlænsər/
+[p96] Người làm việc tự
+[p96] do
+[p96] Consultant n /kənˈsʌl.tənt/ Chuyên viên tư vấn
+[p96] Self-employed adj /ˌsɛlfɪmˈplɔɪd/ Tự làm chủ
+[p96] Supervisor n /ˈsuː.pərˌvaɪ.zər/ Giám sát viên
+[p96] Sales manager n. phr /seɪlz ˈmæn.ɪ.dʒər/
+[p96] Giám đốc kinh
+[p96] doanh
+[p96] Production
+[p96] manager
+[p96] n. phr
+[p96] /prəˈdʌk.ʃən
+[p96] ˈmæn.ɪ.dʒər/
+[p96] Giám đốc sản xuất
+[p96] Mechanic n /məˈkæn.ɪk/ Thợ cơ khí
+[p96] Managing director n. phr
+[p96] /ˈmæn.ɪ.dʒɪŋ
+[p96] dɪˈrɛktər/
+[p96] Giám đốc điều
+[p96] hành
+[p96] Personal assistant n. phr
+[p96] /ˈpɜː.sən.əl
+[p96] əˈsɪs.tənt/
+[p96] Trợ lý riêng
+[p96] Hairdresser n /ˈhɛərˌdrɛs.ər/ Thợ cắt tóc
+[p96] Architect n /ˈɑːrkɪˌtɛkt/ Kiến trúc sư
+[p96] Engineer n /ˌɛn.dʒɪˈnɪər/ Kỹ sư
+[p96] Vet n /vɛt/ Bác sĩ thú y
+[p96] Shoemaker n /ˈʃuːˌmeɪ.kər/ Thợ đóng giày
+[p96] Translator n /trænzˈleɪ.tər/ Biên dịch viên
+[p96] Interpreter n /ɪnˈtɜː.prɪ.tər/ Phiên dịch viên
+[p96] Sanitation worker n. phr
+[p96] /ˌsænɪˈteɪ.ʃən
+[p96] ˈwɜːrkər/
+[p96] Lao công
+[p96] Business manager n. phr
+[p96] /ˈbɪznɪs
+[p96] ˈmæn.ɪ.dʒər/
+[p96] Giám đốc kinh
+[p96] doanh
+[p96] Police o cer n. phr /pəˈliːs ˈɒfɪ.sər/ Cảnh sát
+[p96] 95
+[p97] Personnel manager n. phr
+[p97] /ˌpɜːrsəˈnɛl
+[p97] ˈmæn.ɪ.dʒər/
+[p97] Giám đốc nhân sự
+[p97] Teacher n /ˈtiː.tʃər/ Giáo viên
+[p97] Doctor n /ˈdɒk.tər/ Bác sĩ
+[p97] Nurse n /nɜrs/ Y tá
+[p97] Farmer n /ˈfɑː.mər/ Nông dân
+[p97] 96
+[p98] 55. Từ vựng về chế độ ăn uống
+[p98] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p98] Keep- t n /kiːp-fɪt/ Thể dục
+[p98] Regular adj /ˈrɛɡ.jʊ.lər/ Thường xuyên
+[p98] Diabetes n /ˌdaɪəˈbiːtiːz/ Bệnh tiểu đường
+[p98] Dietitian n /ˌdaɪɪˈtɪʃən/
+[p98] Chuyên gia về dinh
+[p98] dưỡng
+[p98] Goiter n /ˈɡɔɪtər/ Bướu cổ
+[p98] Body n /ˈbɒdi/ Cơ thể
+[p98] Thin adj /θɪn/ Gầy, ốm
+[p98] Dietary adj /ˈdaɪəˌtɛri/
+[p98] (thuộc) chế độ ăn
+[p98] uống
+[p98] Fat adj /fæt/ Mập
+[p98] Overweight adj /ˌoʊvərˈweɪt/ Béo, thừa cân
+[p98] Eating disorder n. phr /ˈiːtɪŋ dɪsˈɔːrdər/ Rối loạn ăn uống
+[p98] Nutrient n /ˈnuːtriənt/ Chất dinh dưỡng
+[p98] Ingredient n /ɪnˈɡriːdiənt/
+[p98] Thành phần,
+[p98] nguyên liệu
+[p98] Allergy n /ˈælədʒi/ Dị ứng
+[p98] Vitamin n /ˈvaɪtəmɪn/ Vi-ta-min
+[p98] Overeat v /ˌoʊvərˈiːt/ Ăn quá nhiều
+[p98] Nutritious adj /njuˈtrɪʃəs/ Bổ dưỡng
+[p98] Vegetarian n /ˌvɛdʒɪˈtɛəriən/ Người ăn chay
+[p98] Mineral n /ˈmɪnərəl/ Khoáng chất
+[p98] 97
+[p99] 56. Từ vựng về thảm họa thiên nhiên
+[p99] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p99] Earthquake n /ˈɜːrθˌkweɪk/ Động đất
+[p99] Aftershock n /ˈæftərˌʃɒk/ Dư chấn
+[p99] Flood n /flʌd/ Lũ lụt
+[p99] Drought n draʊt/ Hạn hán
+[p99] Famine n /ˈfæmɪn/ Nạn đói
+[p99] Avalanche n /ˈævəˌlæntʃ/ Tuyết lở
+[p99] Blizzard n /ˈblɪzərd/ Bão tuyết
+[p99] Tornado n /tɔrˈneɪdoʊ/ Lốc xoáy
+[p99] Forest  re n. phr /ˈfɔːrɪst ˌfaɪər/ Cháy rừng
+[p99] Hurricane n /ˈhɜːrɪˌkeɪn/ Bão
+[p99] Storm n /stɔːrm/ Bão
+[p99] Evacuation n /ɪˌvækjuˈeɪʃən/ Sự sơ tán
+[p99] Evacuate v /ɪˈvækjuˌeɪt/ Sơ tán
+[p99] Catastrophic adj /ˌkætəˈstrɒfɪk/ Thảm khốc
+[p99] Nationwide adj /ˌneɪʃənˈwaɪd/ Toàn quốc
+[p99] Precaution n /prɪˈkɔːʃən/ Sự phòng ngừa
+[p99] 98
+[p100] 57. Từ vựng về chỉ đường
+[p100] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p100] Avenue n /ˈævəˌnjuː/ Đại lộ
+[p100] Between pre /bɪˈtwiːn/ Ở giữa
+[p100] Beside pre bɪˈsaɪd/ Bên cạnh
+[p100] Behind pre /bɪˈhaɪnd/ Ở phía sau
+[p100] Curve v /kɜːrv/ Uốn cong
+[p100] In front of pre /ɪn frʌnt əv/
+[p100] (vị trí) ở phía trước,
+[p100] ở đằng trước
+[p100] Opposite pre /ˈɒpəzɪt/ Trước mặt, đối diện
+[p100] Near pre /nɪər/ Gần
+[p100] Turn right v. phr /tɜrn raɪt/ Rẽ phải
+[p100] Turn left v. phr /tɜrn lɛft/ Rẽ trái
+[p100] Junction n /ˈdʒʌŋkʃən/ Giao lộ
+[p100] Turning n /ˈtɜrnɪŋ/ Ngã rẽ
+[p100] Roundabout n /ˈraʊndəˌbaʊt/ Bùng binh
+[p100] Pavement n /ˈpeɪvmənt/ Vỉa hè
+[p100] 99
+[p101] 58. Từ vựng về phòng khách sạn
+[p101] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p101] Bar n /bɑːr/ Quầy bán rượu
+[p101] Chef n /ʃɛf/ Đầu bếp
+[p101] Waiter n /ˈweɪtər/
+[p101] Người hầu bàn
+[p101] (nam)
+[p101] Waitress n /ˈweɪtrəs/ Người hầu bàn (nữ)
+[p101] Bill n /bɪl/ Hóa đơn
+[p101] Service n /ˈsɜːr.vɪs/ Dịch vụ
+[p101] Tip n /tɪp/ Tiền boa
+[p101] Knife n /naɪf/ Dao
+[p101] Bowl n /boʊl/ Bát
+[p101] Teapot n /ˈtiːˌpɒt/ Bình trà
+[p101] Glass n /ɡlæs/ Ly
+[p101] Breakfast n /ˈbrɛk.fəst/ Bữa ăn sáng
+[p101] Dinner n /ˈdɪn.ər/ Bữa ăn tối
+[p101] Lunch n /lʌntʃ/ Bữa ăn trưa
+[p101] Booking o ce n. phr /ˈbʊkɪŋ ˈɒfɪs/ Phòng bán vé
+[p101] Menu n /ˈmɛnjuː/ Thực đơn
+[p101] Starter n /ˈstɑːr.tər/ Món khai vị
+[p101] Main course n. phr /meɪn kɔːrs/ Món chính
+[p101] Dessert n /dɪˈzɜːrt/ Món tráng miệng
+[p101] 100
+[p102] 59. Từ vựng về bưu điện
+[p102] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p102] Advanced adj /ədˈvænst/ Tiên tiến
+[p102] Equip v /ɪˈkwɪp/ Trang bị
+[p102] Express mail n. phr /ɪkˈsprɛs meɪl/
+[p102] Thư chuyển phát
+[p102] nhanh
+[p102] Graphic adj /ˈɡræfɪk/ Thuộc đồ họa
+[p102] Messenger Call
+[p102] Service
+[p102] n. phr
+[p102] /ˈmɛsɪndʒər kɔːl
+[p102] ˈsɜːrvɪs/
+[p102] Dịch vụ Điện thoại
+[p102] Notify v /ˈnoʊtɪˌfaɪ/ Thông báo
+[p102] Parcel n /ˈpɑːrsəl/ Bưu kiện, bưu phẩm
+[p102] Press n /prɛs/ Báo chí
+[p102] Receive v /rɪˈsiːv/ Nhận
+[p102] Recipient n rɪˈsɪpiənt/ Người nhận
+[p102] Secure adj /sɪˈkjʊr/
+[p102] (cảm giác) yên
+[p102] tâm, an toàn
+[p102] Service n /ˈsɜːrvɪs/ Dịch vụ
+[p102] Spacious adj /ˈspeɪʃəs/ Rộng rãi
+[p102] Speedy adj /ˈspiːdi/ Nhanh chóng
+[p102] Sta  n /stæf/ Nhân viên
+[p102] Subscribe v /səbˈskraɪb/ Đặt mua
+[p102] Surface mail n. phr /ˈsɜːrfɪs meɪl/
+[p102] Thư gửi bằng
+[p102] đường bộ
+[p102] Technology n /tɛkˈnɒlədʒi/ Công nghệ
+[p102] 101
+[p103] Thoughtful adj /ˈθɔːtfəl/ Ân cần, chu đáo
+[p103] Transfer v /trænsˈfɜːr/ Chuyển
+[p103] Transmit v /trænzˈmɪt/ Truyền
+[p103] Well-trained adj /wɛl treɪnd/
+[p103] Được đào tạo bài
+[p103] bản
+[p103] 102
+[p104] 60. Từ vựng về ngân hàng
+[p104] Từ vựng Từ loại Phiên âm Ý nghĩa
+[p104] Sta  movements n. phr /stæf ˈmuːvmənts/
+[p104] Luân chuyển nhân
+[p104] sự
+[p104] Retire v /rɪˈtaɪər/ Nghỉ hưu
+[p104] Dismiss v /dɪsˈmɪs/ Sa thải
+[p104] Finance n /ˈfaɪnæns/ Tài chính
+[p104] Appointment n /əˈpɔɪntmənt/ Sự bổ nhiệm
+[p104] Multinational adj /ˌmʌltɪˈnæʃənəl/ Đa quốc gia
+[p104] Investor n /ɪnˈvɛstər/ Nhà đầu tư
+[p104] Inherit v /ɪnˈhɛrɪt/ Thừa kế
+[p104] Accountant n /əˈkaʊntənt/ Nhân viên kế toán
+[p104] Lend v /lɛnd/ Cho vay
+[p104] Borrow v /ˈbɒroʊ/ Vay, mượn
+[p104] Rent v /rɛnt/ Thuê
+[p104] Distribution n /ˌdɪstrɪˈbjuːʃən/
+[p104] Sự phân phối, phân
+[p104] phát
+[p104] Co-ordinate v /koʊˈɔrdəˌneɪt/ Phối hợp, sắp xếp
+[p104] Purchase v /ˈpɜrʧəs/ Mua
+[p104] Stock exchange n. phr /stɒk ɪksˈʧeɪndʒ/
+[p104] Sàn giao dịch
+[p104] chứng khoán
+[p104] Stock market n. phr /stɒk ˈmɑrkɪt/
+[p104] Thị trường chứng
+[p104] khoán
+[p104] Opportunity n /ˌɒpərˈtunɪti/ Cơ hội
+[p104] 103
+[p105] Challenge n /ˈʧæləndʒ/ Thử thách
+[p105] Career n /kəˈrɪər/
+[p105] Nghề nghiệp, sự
+[p105] nghiệp
+[p105] Intensive course n. phr /ɪnˈtɛnsɪv kɔrs/ Khóa học cấp tốc
+[p105] Commerce n /ˈkɑːmɜrs/ Thương mại
+[p105] Costly adj /ˈkɒstli/ Tốn kém
+[p105] Responsible adj /rɪˈspɒnsəbl/ Chịu trách nhiệm
+[p105] Communicate v /kəˈmjuːnɪˌkeɪt/ Giao tiếp
+[p105] Abroad adv /əˈbrɔd/ Ở nước ngoài
+[p105] Inheritance n /ɪnˈhɛrɪtəns/ Sự thừa kế
+[p105] Fortune n /ˈfɔrʧən/ Tài sản, vận may
+[p105] Property n /ˈprɒpərti/ Tài sản
+[p105] Cash machine n. phr /kæʃ məˈʃiːn/ Máy rút tiền
+[p105] Online account n. phr /ˈɒnˌlaɪn əˈkaʊnt/
+[p105] Tài khoản trực
+[p105] tuyến
+[p105] Insurance policy n. phr /ɪnˈʃʊrəns ˈpɒlɪsi/ Hợp đồng bảo hiểm
+[p105] Credit card n. phr /ˈkrɛdɪt kɑrd/ Thẻ tín dụng
+[p105] Debit card n. phr /ˈdɛbɪt kɑrd/ Thẻ ghi nợ
+[p105] Rental contract n. phr /ˈrɛntəl ˈkɒntrækt/ Hợp đồng cho thuê
+[p105] Discount n /ˈdɪskaʊnt/
+[p105] Sự giảm giá, chiết
+[p105] khấu
+[p105] Credit limit n. phr /ˈkrɛdɪt ˈlɪmɪt/ Hạn mức tín dụng
+[p105] Survey n /ˈsɜːrveɪ/ Khảo sát
+[p105] Possession n /pəˈzɛʃən/ Sự sở hữu
+[p105] 104
+[p106] Equality n /ɪˈkwɒlɪti/
+[p106] Sự ngang bằng
+[p106] nhau
+[p106] Poverty n /ˈpɒvərti/ Sự nghèo
+[p106] Charge n /ʧɑrdʒ/ Phí, tiền phải trả
+[p106] Outsource v /ˈaʊtsɔrs/ Thuê ngoài
+[p106] Grant n /ɡrænt/ Trợ cấp, công nhận
+[p106] Warehouse n /ˈwɛrˌhaʊs/ Kho hàng
+[p106] Lease v /liːs/ Cho thuê
+[p106] In-house adj /ˈɪnhaʊs/
+[p106] Tiến hành trong
+[p106] một tổ chức
+[p106] Potential adj/n /pəˈtɛnʃəl/ Tiềm lực , tiềm tàng
+[p106] Back-o ce n /bæk ˈɒfɪs/
+[p106] Văn phòng hành
+[p106] chính
+[p106] Campaign n /kæmˈpeɪn/ Chiến dịch
+[p106] Insecurity n /ˌɪnsɪˈkjʊrɪti/ Tính ko an toàn
+[p106] Insurance provider n. phr
+[p106] /ɪnˈʃʊrəns
+[p106] prəˈvaɪdər/
+[p106] Nhà cung cấp bảo
+[p106] hiểm
+[p106] Compensation n /ˌkɒmpənˈseɪʃən/
+[p106] Sự đền bù, bồi
+[p106] thường
+[p106] Commit v /kəˈmɪt/ Cam kết
+[p106] Short-term cost n. phr /ˈʃɔrtˌtɜrm kɒst/ Chi phí ngắn hạn
+[p106] Long-term gain n. phr /ˈlɒŋˌtɜrm ɡeɪn/
+[p106] Tiền kiếm được dài
+[p106] hạn
+[p106] Expense n /ɪkˈspɛns/ Phí tổn
+[p106] Invoice n /ˈɪnvɔɪs/ Hóa đơn
+[p106] 105
+[p107] Bribery n /ˈbraɪbəri/ Sự đút lót, hối lộ
+[p107] Corrupt v /kəˈrʌpt/ Tham nhũng
+[p107] Balance of
+[p107] payment
+[p107] n. phr
+[p107] /ˈbælɪns əv
+[p107] ˈpeɪmənt/
+[p107] Cán cân thanh toán
+[p107] quốc tế
+[p107] Balance of trade n. phr /ˈbælɪns əv treɪd/
+[p107] Cán cân thương
+[p107] mại
+[p107] Budget n /ˈbʌdʒɪt/ Ngân sách
+[p107] Cost of borrowing n. phr /kɒst əv ˈbɒroʊɪŋ/ Chi phí vay
+[p107] Consumer price
+[p107] index
+[p107] n. phr
+[p107] /kənˈsumər praɪs
+[p107] ˈɪndɛks/
+[p107] Chỉ số giá tiêu dùng
+[p107] Retail banking n. phr /ˈriːteɪl ˈbæŋkɪŋ/ Ngân hàng bán lẻ
+[p107] Commercial bank n. phr /kəˈmɜrʃəl bæŋk/
+[p107] Ngân hàng thương
+[p107] mại
+[p107] Central bank n. phr /ˈsɛntrəl bæŋk/
+[p107] Ngân hàng trung
+[p107] ương
+[p107] Treasury n /ˈtrɛʒəri/ Kho bạc
+[p107] Investment bank n. phr /ɪnˈvɛstmənt bæŋk/ Ngân hàng đầu tư
+[p107] 106

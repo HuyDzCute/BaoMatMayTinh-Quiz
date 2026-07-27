@@ -1,0 +1,8 @@
+Audit: thêm 14 vocab còn thiếu qua rà soát thủ công với PDF nguồn
+
+Bổ sung:
+- Family (TS2): to get married, to account for something
+- Education (TS5): nursery school, culture shock, part-time job, to favour A over B, stress management, problem-solving skills, invaluable life lessons, homesickness, frustration, make new friends, different way of living, living on your own (12 cards)
+
+Re-audit pass: 1507 cards total, 0 duplicate IDs, 0 empty fields, 0 bad IPA, 0 typos
+TypeScript build: PASS

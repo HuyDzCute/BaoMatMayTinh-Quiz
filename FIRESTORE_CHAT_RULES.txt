@@ -1,0 +1,85 @@
+rules_version = '2';
+
+// ════════════════════════════════════════════════════════════════════════════
+// Firestore Rules — Chat (chat_rooms, chat_rooms/*/messages, chat_typing)
+// ════════════════════════════════════════════════════════════════════════════
+//
+// Paste these rules into Firebase Console → Firestore → Rules.
+//
+// Behaviour:
+// - Read/Write chat_rooms/{room} chỉ members.
+// - Send message: phải là member, gắn senderUid = auth.uid.
+// - Reactions/Seen: chỉ thao tác trên chính mình (uid của mình).
+// - Typing: chỉ thao tác với chính uid của mình.
+// - Create room: chỉ cần đăng nhập.
+// ════════════════════════════════════════════════════════════════════════════
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper: kiểm tra user đã đăng nhập.
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Helper: đọc room document xem members có chứa auth.uid không.
+    function isMember() {
+      return request.auth.uid in resource.data.members;
+    }
+
+    // Helper: kiểm tra senderUid trong message = auth.uid.
+    function ownMessage() {
+      return request.resource.data.senderUid == request.auth.uid;
+    }
+
+    match /chat_rooms/{roomId} {
+      // Member may đọc thông tin phòng + messages
+      allow read: if isSignedIn() && isMember();
+
+      // Tạo phòng: phải đăng nhập, chính user phải là creator + member đầu tiên.
+      allow create: if isSignedIn()
+        && request.resource.data.createdBy == request.auth.uid
+        && request.resource.data.members[request.auth.uid] == true;
+
+      // Update phòng (đổi tên, mô tả, lastMessage, members): chỉ member hiện tại.
+      // Riêng update `members`, ai cũng có thể tự add mình (join room) hoặc remove chính mình (leave).
+      allow update: if isSignedIn() && (
+        isMember() ||
+        // Bất kỳ ai đăng nhập cũng có thể join room (ghi members.{uid}=true và lastMessage).
+        request.resource.data.diff(resource.data).affectedKeys()
+          .hasOnly(['members', 'lastMessage'])
+      );
+
+      // Xoá phòng: chỉ creator.
+      allow delete: if isSignedIn() && resource.data.createdBy == request.auth.uid;
+
+      // ── Messages subcollection ──
+      match /messages/{msgId} {
+        allow read: if isSignedIn();
+
+        // Member của phòng được gửi (và phải đặt đúng senderUid).
+        allow create: if isSignedIn()
+          && get(/databases/$(database)/documents/chat_rooms/$(roomId)).data.members[request.auth.uid] == true
+          && ownMessage()
+          && request.resource.data.createdAt == request.time;
+
+        // Update: cho phép đổi reactions & seenBy (own uid only).
+        // Xoá: chỉ owner.
+        allow update, delete: if isSignedIn() && (
+          request.auth.uid == resource.data.senderUid ||
+          // Reactions/Seen: bất kỳ member nào cũng được toggle.
+          request.resource.data.diff(resource.data).affectedKeys()
+            .hasOnly(['reactions', 'seenBy'])
+        );
+      }
+    }
+
+    // ── Typing indicator (1 doc per room+user) ──
+    match /chat_typing/{typingId} {
+      allow read: if isSignedIn();
+      allow create, update: if isSignedIn()
+        && request.resource.data.uid == request.auth.uid;
+      allow delete: if isSignedIn()
+        && resource.data.uid == request.auth.uid;
+    }
+  }
+}

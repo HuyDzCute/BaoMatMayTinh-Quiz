@@ -1,0 +1,34 @@
+Add AI Coach chat (/ai-coach) with Firestore + Gemini server proxy
+
+Tính năng mới:
+- Trang /ai-coach: dark chat UI giống ảnh mẫu (gradient avatar
+  "HuyDz AI Assistant", Online pulse, message bubbles tròn, suggestion
+  chips, input dark với nút Send gradient).
+- Sidebar liệt kê lịch sử conversations với nút tạo mới + xoá.
+- Polling 4-5s để cập nhật conversations/messages (không cần stream
+  Firestore, gọn khi dùng REST API).
+
+Backend (server-side only, không lộ API key ở frontend):
+- POST /api/gemini: proxy sang Google Gemini REST API. System prompt
+  mặc định chuyên về IELTS + QTHTM. Có safetySettings + validation
+  (giới hạn 50 messages, 4000 ký tự/message).
+- GET/POST/DELETE /api/chat/conversations[/id][/messages]: CRUD qua
+  Firestore REST API, forward `Authorization: Bearer <idToken>` từ
+  client để xác thực. Decode uid từ idToken để đảm bảo user chỉ
+  thao tác data của chính họ.
+
+Firestore data model:
+  chats/{conversationId}
+    ├── userId, title, messageCount, createdAt, updatedAt
+    └── messages/{messageId}
+         ├── userId, role ('user'|'model'), content, createdAt
+
+Cấu hình:
+- .env.local.example: liệt kê GEMINI_API_KEY + FIREBASE_PROJECT_ID
+  (server-side) và NEXT_PUBLIC_FIREBASE_* (client).
+- docs/env-setup.md: hướng dẫn setup + kiến trúc + Security Rules gợi ý.
+
+Không dùng localStorage, SQLite, hay file JSON để lưu chat.
+Header thêm nav link "AI Coach" (icon Sparkles).
+
+TypeScript: tsc --noEmit pass.
