@@ -1,0 +1,151 @@
+/* ============================================================
+   Toast notifications — global viewport + card styles
+   ============================================================ */
+
+.toast-viewport {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+  max-width: min(420px, calc(100vw - 48px));
+}
+
+@media (max-width: 640px) {
+  .toast-viewport {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}
+
+.toast-card {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--toast-bg, #ffffff);
+  color: var(--toast-text, #0f172a);
+  border-radius: 12px;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 8px 24px rgba(15, 23, 42, 0.08),
+    0 16px 40px rgba(15, 23, 42, 0.06);
+  border: 1px solid var(--toast-border, rgba(15, 23, 42, 0.08));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: toast-in 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+  position: relative;
+  overflow: hidden;
+}
+
+.toast-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--toast-accent, #64748b);
+}
+
+.toast-card.toast--success::before {
+  background: #10b981;
+}
+.toast-card.toast--error::before {
+  background: #ef4444;
+}
+.toast-card.toast--info::before {
+  background: #3b82f6;
+}
+.toast-card.toast--warning::before {
+  background: #f59e0b;
+}
+
+.toast-icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  margin-top: 1px;
+}
+
+.toast-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.toast-message {
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.toast-action {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #3b82f6;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.toast-action:hover {
+  text-decoration: underline;
+}
+
+.toast-close {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  padding: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--toast-text-muted, #64748b);
+  display: grid;
+  place-items: center;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+.toast-close:hover {
+  background: rgba(15, 23, 42, 0.06);
+  color: var(--toast-text, #0f172a);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Dark mode */
+:root[data-theme="dark"] .toast-card,
+.dark .toast-card,
+[data-theme="dark"] .toast-card {
+  --toast-bg: rgba(15, 23, 42, 0.92);
+  --toast-text: #f1f5f9;
+  --toast-text-muted: #94a3b8;
+  --toast-border: rgba(255, 255, 255, 0.08);
+  color-scheme: dark;
+}

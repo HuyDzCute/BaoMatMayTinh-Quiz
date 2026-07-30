@@ -1,0 +1,23 @@
+rà soát kỹ: bổ sung từ còn thiếu cho các bộ VOCAB-IELTS
+
+Vocabulary fixes — vocabulary card additions to match the original PDFs from IELTS Nguyễn Huyền:
+
+1. lib/flashcards-ielts-vocab-2.ts (Family + Friendship + Cohabitation):
+   - Friendship: thêm 5 cards (get your back, make friends, find similar interests, give a hand, stand by you)
+   - Cohabitation SYNONYMS: thêm 10 cards (forge a family, cohabitation, fear of, possibility of, collapse, drive somebody, move in with, pitfall, divorce, be worth)
+
+2. lib/flashcards-ielts-vocab-4.ts (Daily Routines + Free Time):
+   - Free Time: thêm 2 cards (have a bit of spare time, hang out with someone)
+
+3. lib/flashcards-ielts-vocab-5.ts (Education + Environment):
+   - Global Warming synonyms: thêm 2 cards (threatened+endangered animals, to be important)
+   - Plastic Pollution: thêm 5 cards (strangled by, reduce the urge to eat, break down into, disposable packaging, work towards)
+   - GM Food: thêm 4 cards (raise unanticipated health effects, enhance safety, enhance soil fertility, selectively bred)
+   - Cập nhật env-syn-renewable để thêm "= solar, wind or water power"
+
+4. lib/flashcards-ielts-vocab-9.ts (Writing Task 1):
+   - Process natural: thêm 1 card (the hatching process)
+   - Map - Sự thay đổi: thêm 1 card (Nơi nào đó + appear / disappear)
+
+Tổng cộng: 720 cards đầy đủ, 0 trùng ID, 0 lỗi spelling, 0 IPA sai format.
+TypeScript build OK.

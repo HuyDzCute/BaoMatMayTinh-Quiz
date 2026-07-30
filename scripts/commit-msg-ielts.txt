@@ -1,0 +1,21 @@
+Add VOCAB-IELTS flashcard sets (15 bộ, 690 cards) từ 20 PDF IELTS Nguyễn Huyền
+
+- Prefix & Suffix (anti-, re-, over-, mis-, -tion, -ment, -able, ...)
+- Appearance & Character Traits (round face, introverted, bubbly, ...)
+- Family & Relationships (cohabitation + family + friendship)
+- Covid-19 & Health (pandemic, vaccine, + health idioms)
+- Crime & Punishment (commit, rehabilitation, behind bars, ...)
+- Daily Life (daily routines + free time)
+- Education (study abroad, core subjects, + 10 idioms)
+- Environment (global warming + GM food + plastic pollution + synonyms)
+- Languages (mother tongue, translation apps, linguistic diversity)
+- Makeup & Beauty (wear makeup, products, + beauty idioms)
+- Money & Finance (credit score, save for retirement, + 11 idioms)
+- Poverty (extreme poverty, malnutrition, + phrases)
+- Social Media (compulsively check phone, data breaches, ...)
+- Work & Career (productivity, work from home, + paraphrase clusters)
+- Writing Task 1 (process man-made/natural + map + synonyms)
+
+Đăng ký vào builtinFlashcardSets trong lib/flashcards-data.ts.
+
+Co-Authored-By: Claude <noreply@anthropic.com>

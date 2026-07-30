@@ -1,0 +1,836 @@
+Watercolour	/ˈwɔː.təˌkʌl.ər/	Màu nước	Từ vựng về đồ dùng học tập
+Thumbtack	/ˈθʌm.tæk/	Đinh ghim	Từ vựng về đồ dùng học tập
+Textbook	/ˈtekst.bʊk/	Sách giáo khoa	Từ vựng về đồ dùng học tập
+Stencil	/ˈsten.səl/	Giấy nến	Từ vựng về đồ dùng học tập
+Stapler	/ˈsteɪ.plər/	Đồ dập ghim	Từ vựng về đồ dùng học tập
+Scissors	/ˈsɪz.əz/	Kéo	Từ vựng về đồ dùng học tập
+Ruler	/ˈruː.lər/	Thước	Từ vựng về đồ dùng học tập
+Ribbon	/ˈrɪb.ən/	Ruy-băng	Từ vựng về đồ dùng học tập
+Protractor	/prəˈtræk.tər/	Thước đo góc	Từ vựng về đồ dùng học tập
+Palette	/ˈpæl.ət/	Bảng màu	Từ vựng về đồ dùng học tập
+Paintbrush	/ˈpeɪntˌbrʌʃ/	Chổi sơn	Từ vựng về đồ dùng học tập
+Notebook	/ˈnəʊt.bʊk/	Cuốn sổ, vở	Từ vựng về đồ dùng học tập
+Highlighter	/ˈhaɪˌlaɪ.tər/	Bút đánh dấu màu	Từ vựng về đồ dùng học tập
+Glue	/ɡluː/	Keo	Từ vựng về đồ dùng học tập
+Globe	/ɡləʊb/	Quả địa cầu	Từ vựng về đồ dùng học tập
+Duster	/ˈdʌs.tər/	Khăn lau bảng	Từ vựng về đồ dùng học tập
+Dossier	/ˈdɒs.i.eɪ/	Hồ sơ	Từ vựng về đồ dùng học tập
+Crayon	/ˈkreɪ.ɒn/	Bút chì màu	Từ vựng về đồ dùng học tập
+Compass	/ˈkʌm.pəs/	Com-pa	Từ vựng về đồ dùng học tập
+Clamp	/klæmp/	Kẹp	Từ vựng về đồ dùng học tập
+Chalk	/tʃɔːk/	Phấn	Từ vựng về đồ dùng học tập
+Calculator	/ˈkæl.kjə.leɪ.tər/	Máy tính cầm tay	Từ vựng về đồ dùng học tập
+Bookcase	/ˈbʊk.keɪs/	Giá sách	Từ vựng về đồ dùng học tập
+Blackboard	/ˈblæk.bɔːd/	Bảng đen	Từ vựng về đồ dùng học tập
+Binder	/ˈbaɪn.dər/	Bìa rời (báo, tạp chí)	Từ vựng về đồ dùng học tập
+Beaker	/ˈbiː.kər/	Cốc bêse	Từ vựng về đồ dùng học tập
+Bag	/bæɡ/	Cặp sách	Từ vựng về đồ dùng học tập
+Backpack	/ˈbæk.pæk/	Ba lô	Từ vựng về đồ dùng học tập
+Funnel	/ˈfʌn.əl/	Cái phễu	Từ vựng về đồ dùng học tập
+Paste	/peist/	Dán	Từ vựng về hành động
+Rake	/reik/	Cào, cời	Từ vựng về hành động
+Row	/rou/	Chèo thuyền	Từ vựng về hành động
+Scrub	/skrʌb/	Lau, chùi, cọ rửa	Từ vựng về hành động
+Set	/set/	Để, đặt	Từ vựng về hành động
+Sew	/soʊ/	May, khâu	Từ vựng về hành động
+Skate	/skeit/	Trượt băng	Từ vựng về hành động
+Skip	/skip/	Nhảy	Từ vựng về hành động
+Sneeze	/sni:z/	Hắt hơi	Từ vựng về hành động
+Spin	/spɪn/	Quay	Từ vựng về hành động
+Swing	/swɪŋ/	Đu đưa	Từ vựng về hành động
+Gardening	/ˈɡɑː.dən.ɪŋ/	Làm vườn	Từ vựng về hoạt động thường ngày
+Meditation	/ˌmed.ɪˈteɪ.ʃən/	Thiền	Từ vựng về hoạt động thường ngày
+Shave	/ʃeɪv/	Cạo râu	Từ vựng về hoạt động thường ngày
+Harbor	/ˈhɑːr.bɚ/	Cảng biển	Từ vựng về chủ đề biển
+Lighthouse	/ˈlaɪthaʊs/	Hải đăng	Từ vựng về chủ đề biển
+Submarine	/ˌsʌbmərˈiːn/	Tàu ngầm	Từ vựng về chủ đề biển
+Fisherman	/ˈfɪʃəmən/	Ngư dân	Từ vựng về chủ đề biển
+Lifeguard	/ˈlaɪfɡɑːd/	Người cứu hộ	Từ vựng về chủ đề biển
+Seashore	/ˈsiːʃɔːr/	Bờ biển	Từ vựng về chủ đề biển
+Beach	/biːtʃ/	Bãi biển	Từ vựng về chủ đề biển
+Seagull	/ˈsiː.ɡʌl/	Mòng biển	Từ vựng về chủ đề biển
+Whale	/weɪl/	Cá voi	Từ vựng về chủ đề biển
+Shark	/ʃɑːk/	Cá mập	Từ vựng về chủ đề biển
+Dolphin	/ˈdɒlfɪn/	Cá heo	Từ vựng về chủ đề biển
+Octopus	/ˈɑːktəpəs/	Bạch tuộc	Từ vựng về chủ đề biển
+Jellyfish	/ˈdʒel.i.fɪʃ/	Sứa	Từ vựng về chủ đề biển
+Seaweed	/ˈsiːwiːd/	Rong biển	Từ vựng về chủ đề biển
+Coral	/ˈkɒrəl/	San hô	Từ vựng về chủ đề biển
+Shellfish	/ˈʃel.fɪʃ/	Động vật có vỏ	Từ vựng về chủ đề biển
+Clam	/klæm/	Nghêu	Từ vựng về chủ đề biển
+Starfish	/ˈstɑːr.fɪʃ/	Sao biển	Từ vựng về chủ đề biển
+Seal	/siːl/	Hải cẩu	Từ vựng về chủ đề biển
+Turtle	/ˈtɜːtl/	Rùa biển	Từ vựng về chủ đề biển
+Crab	/kræb/	Cua	Từ vựng về chủ đề biển
+Decimal	/ˈdes.ɪ.məl/	Số thập phân	Từ vựng về số
+Fraction	/ˈfræk.ʃən/	Phân số	Từ vựng về số
+Arithmetic	/əˈrɪθ.mə.tɪk/	Số học	Từ vựng về số
+Plus	/plʌs/	Cộng	Từ vựng về số
+Minus	/ˈmaɪ.nəs/	Trừ	Từ vựng về số
+Around	/əˈraʊnd/	Khoảng	Từ vựng về số
+Cashier	/kæʃˈɪər/	Nhân viên thu ngân	Từ vựng về mua sắm
+Attendant	/əˈten.dənt/	Người phục vụ	Từ vựng về mua sắm
+Wallet	/ˈwɒl.ɪt/	Ví tiền	Từ vựng về mua sắm
+Purse	/pɜːs/	Ví tiền (nữ)	Từ vựng về mua sắm
+Counter	/ˈkaʊn.tər/	Quầy hàng	Từ vựng về mua sắm
+Trolley	/ˈtrɒl.i/	Xe đẩy	Từ vựng về mua sắm
+Basket	/ˈbɑː.skɪt/	Rổ, giỏ	Từ vựng về mua sắm
+Bag	/bæɡ/	Túi	Từ vựng về mua sắm
+Greengrocer	/ˈɡriːŋ.ɡrəʊ.sər/	Cửa hàng bán rau quả	Từ vựng về mua sắm
+Housewares	/ˈhaʊs.weəz/	Đồ gia dụng	Từ vựng về mua sắm
+Bargain	/ˈbɑː.ɡɪn/	Mặc cả	Từ vựng về mua sắm
+Brochure	/ˈbrəʊ.ʃər/	Tập quảng cáo	Từ vựng về mua sắm
+Drugstore	/ˈdrʌɡ.stɔːr/	Tiệm thuốc	Từ vựng về mua sắm
+Florist	/ˈflɒr.ɪst/	Người bán hoa	Từ vựng về mua sắm
+Butcher	/ˈbʊtʃ.ər/	Người bán thịt	Từ vựng về mua sắm
+Refund	/ˈriː.fʌnd/	Hoàn lại, trả lại	Từ vựng về mua sắm
+Pillowcase	/ˈpɪl.əʊ.keɪs/	Bao gối	Từ vựng về phòng ngủ
+Bed	/bed/	Giường	Từ vựng về phòng ngủ
+Cushion	/ˈkʊʃ.ən/	Đệm	Từ vựng về phòng ngủ
+Wardrobe	/ˈwɔː.drəʊb/	Tủ quần áo	Từ vựng về phòng ngủ
+Wallpaper	/ˈwɔːlˌpeɪ.pər/	Giấy dán tường	Từ vựng về phòng ngủ
+Pillow	/ˈpɪl.əʊ/	Gối	Từ vựng về phòng ngủ
+Mattress	/ˈmæt.rəs/	Nệm	Từ vựng về phòng ngủ
+Bedspread	/ˈbed.spred/	Khăn trải giường	Từ vựng về phòng ngủ
+Blanket	/ˈblæŋ.kɪt/	Tấm chăn, mền	Từ vựng về phòng ngủ
+Comforter	/ˈkʌm.fə.tər/	Chăn bông	Từ vựng về phòng ngủ
+Hanger	/ˈhæŋ.ər/	Móc treo (quần áo)	Từ vựng về phòng ngủ
+Comb	/kəʊm/	Lược	Từ vựng về phòng ngủ
+Classmate	/ˈklɑːs.meɪt/	Bạn cùng lớp	Từ vựng về tình bạn
+Schoolmate	/ˈskuːl.meɪt/	Bạn cùng trường	Từ vựng về tình bạn
+Roommate	/ˈruːm.meɪt/	Bạn cùng phòng	Từ vựng về tình bạn
+Soulmate	/ˈsəʊl.meɪt/	Tri kỷ	Từ vựng về tình bạn
+Comradeship	/ˈkɒm.reɪd.ʃɪp/	Tình bạn, tình đồng chí	Từ vựng về tình bạn
+Associate	/əˈsəʊ.si.eɪt/	Bạn đồng liêu, đồng minh	Từ vựng về tình bạn
+Buddy	/ˈbʌd.i/	Bạn thân	Từ vựng về tình bạn
+Ally	/ˈæl.aɪ/	Đồng minh	Từ vựng về tình bạn
+Companion	/kəmˈpæn.jən/	Bạn đồng hành	Từ vựng về tình bạn
+Pal	/pæl/	Bạn (từ lóng)	Từ vựng về tình bạn
+Close	/kləʊz/	Thân thiết	Từ vựng về tình bạn
+Dishwasher	/ˈdɪʃˌwɒʃ.ər/	Máy rửa chén	Từ vựng về nhà bếp
+Steamer	/ˈstiː.mər/	Nồi hấp	Từ vựng về nhà bếp
+Colander	/ˈkɒl.ən.dər/	Cái chao	Từ vựng về nhà bếp
+Lid	/lɪd/	Nắp, vung	Từ vựng về nhà bếp
+Blender	/ˈblen.dər/	Máy xay sinh tố	Từ vựng về nhà bếp
+Toaster	/ˈtəʊ.stər/	Lò nướng bánh	Từ vựng về nhà bếp
+Dishtowel	/ˈdɪʃ.taʊəl/	Khăn lau chén	Từ vựng về nhà bếp
+Freezer	/ˈfriː.zər/	Tủ đông	Từ vựng về nhà bếp
+Cabinet	/ˈkæb.ɪ.nət/	Tủ (có nhiều ngăn)	Từ vựng về nhà bếp
+Microwave	/ˈmaɪ.krə.weɪv/	Lò vi sóng	Từ vựng về nhà bếp
+Jar	/dʒɑːr/	Lọ	Từ vựng về nhà bếp
+Sponge	/spʌndʒ/	Bọt biển	Từ vựng về nhà bếp
+Chopstick	/ˈtʃɒp.stɪk/	Đũa	Từ vựng về nhà bếp
+Cooker	/ˈkʊk.ər/	Bếp, nồi nấu	Từ vựng về nhà bếp
+Mug	/mʌɡ/	Cốc lớn	Từ vựng về nhà bếp
+Kettle	/ˈket.əl/	Ấm đun nước	Từ vựng về nhà bếp
+Teapot	/ˈtiː.pɒt/	Ấm pha trà	Từ vựng về nhà bếp
+Grill	/ɡrɪl/	Vỉ nướng	Từ vựng về nhà bếp
+Tray	/treɪ/	Cái khay, cái mâm	Từ vựng về nhà bếp
+Whisk	/wɪsk/	Máy đánh trứng	Từ vựng về nhà bếp
+Earring	/ˈɪə.rɪŋ/	Bông tai	Từ vựng về đồ trang sức
+Necklace	/ˈnek.ləs/	Dây chuyền	Từ vựng về đồ trang sức
+Bracelet	/ˈbreɪ.slət/	Vòng tay	Từ vựng về đồ trang sức
+Brooch	/brəʊtʃ/	Trâm cài	Từ vựng về đồ trang sức
+Jeweler	/ˈdʒuː.ə.lɚ/	Thợ kim hoàn	Từ vựng về đồ trang sức
+Anklet	/ˈæŋ.klət/	Vòng chân	Từ vựng về đồ trang sức
+Noble	/ˈnəʊ.bəl/	Quý	Từ vựng về đồ trang sức
+Luxurious	/lʌɡˈʒʊə.ri.əs/	Sang trọng, xa hoa	Từ vựng về đồ trang sức
+Twinkle	/ˈtwɪŋ.kəl/	Lấp lánh	Từ vựng về đồ trang sức
+Bead	/biːd/	Hạt (của chuỗi hạt)	Từ vựng về đồ trang sức
+Tiepin	/ˈtaɪ.pɪn/	Ghim cà vạt	Từ vựng về đồ trang sức
+Pollute	/pəˈluːt/	Làm ô nhiễm	Từ vựng về môi trường
+Decompose	/ˌdiː.kəmˈpəʊz/	Phân hủy	Từ vựng về môi trường
+Balance	/ˈbæl.əns/	Sự cân bằng	Từ vựng về môi trường
+Biodiversity	/ˌbaɪ.əʊ.daɪˈvɜː.sə.ti/	Đa dạng sinh học	Từ vựng về môi trường
+Ecology	/iˈkɒl.ə.dʒi/	Sinh thái học	Từ vựng về môi trường
+Air	/eər/	Không khí	Từ vựng về môi trường
+Flora	/ˈflɔː.rə/	Hệ thực vật	Từ vựng về môi trường
+Reproduction	/ˌriː.prəˈdʌk.ʃən/	Sự sinh sản	Từ vựng về môi trường
+Sewage	/ˈsuː.ɪdʒ/	Nước thải	Từ vựng về môi trường
+Fauna	/ˈfɔː.nə/	Hệ động vật	Từ vựng về môi trường
+Drapes	/dreɪps/	Màn cửa	Từ vựng về phòng khách
+Cushion	/ˈkʊʃ.ən/	Đệm ngồi	Từ vựng về phòng khách
+Sofa	/ˈsəʊ.fə/	Ghế sô-pha	Từ vựng về phòng khách
+Rug	/rʌɡ/	Tấm thảm	Từ vựng về phòng khách
+Banister	/ˈbæn.ɪ.stər/	Lan can	Từ vựng về phòng khách
+Bookcase	/ˈbʊk.keɪs/	Tủ sách	Từ vựng về phòng khách
+Lampshade	/ˈlæmp.ʃeɪd/	Chụp đèn	Từ vựng về phòng khách
+Mantelpiece	/ˈmæn.təl.piːs/	Bệ lò sưởi	Từ vựng về phòng khách
+Stereo	/ˈster.i.əʊ/	Máy xtê-rê-ô	Từ vựng về phòng khách
+Vase	/vɑːz/	Cái bình, lọ	Từ vựng về phòng khách
+Calendar	/ˈkæl.ən.dər/	Lịch	Từ vựng về phòng khách
+Stool	/stuːl/	Ghế đẩu	Từ vựng về phòng khách
+Ashtray	/ˈæʃ.treɪ/	Đồ gạt tàn thuốc	Từ vựng về phòng khách
+Bookshelf	/ˈbʊk.ʃelf/	Kệ sách	Từ vựng về phòng khách
+Fuse	/fjuːz/	Cầu chì	Từ vựng về phòng khách
+Couch	/kaʊtʃ/	Trường kỷ	Từ vựng về phòng khách
+Radiologist	/ˌreɪ.diˈɒl.ə.dʒɪst/	Bác sĩ chụp X-quang	Từ vựng về bệnh viện
+Obstetrician	/ˌɒb.stəˈtrɪʃ.ən/	Bác sĩ sản khoa	Từ vựng về bệnh viện
+Pharmacy	/ˈfɑː.mə.si/	Tiệm thuốc	Từ vựng về bệnh viện
+Gurney	/ˈɡɜː.ni/	Xe đẩy tay	Từ vựng về bệnh viện
+Surgeon	/ˈsɜː.dʒən/	Bác sĩ phẫu thuật	Từ vựng về bệnh viện
+Midwife	/ˈmɪd.waɪf/	Bà đỡ	Từ vựng về bệnh viện
+Injection	/ɪnˈdʒek.ʃən/	Việc tiêm thuốc	Từ vựng về bệnh viện
+Calcium	/ˈkæl.si.əm/	Canxi	Từ vựng về bệnh viện
+Crutch	/krʌtʃ/	Cái nạng	Từ vựng về bệnh viện
+Wheelchair	/ˈwiːl.tʃeər/	Xe lăn	Từ vựng về bệnh viện
+Paramedic	/ˌpær.əˈmed.ɪk/	Nhân viên y tế	Từ vựng về bệnh viện
+Stretcher	/ˈstretʃ.ər/	Cáng cứu thương	Từ vựng về bệnh viện
+Recovery	/rɪˈkʌv.ər.i/	Sự bình phục	Từ vựng về bệnh viện
+Deteriorate	/dɪˈtɪə.ri.ə.reɪt/	Xấu đi, tệ hơn	Từ vựng về bệnh viện
+Coma	/ˈkəʊ.mə/	Sự hôn mê	Từ vựng về bệnh viện
+Scanner	/ˈskæn.ər/	Máy quét	Từ vựng về máy tính
+Close	/kləʊz/	Đóng, tắt	Từ vựng về máy tính
+Delete	/dɪˈliːt/	Xóa, loại bỏ	Từ vựng về máy tính
+Insert	/ɪnˈsɜːt/	Cho vào, chèn	Từ vựng về máy tính
+Merge	/mɜːdʒ/	Sát nhập	Từ vựng về máy tính
+Helpline	/ˈhelp.laɪn/	Đường dây trợ giúp	Từ vựng về máy tính
+CD-ROM	/ˌsiː.diːˈrɒm/	Đĩa CD dữ liệu	Từ vựng về máy tính
+Toolbar	/ˈtuːl.bɑːr/	Thanh công cụ	Từ vựng về máy tính
+Database	/ˈdeɪ.tə.beɪs/	Cơ sở dữ liệu	Từ vựng về máy tính
+Hacker	/ˈhæk.ər/	Tin tặc	Từ vựng về máy tính
+Battery	/ˈbæt.ər.i/	Pin	Từ vựng về máy tính
+Folder	/ˈfəʊl.dər/	Thư mục	Từ vựng về máy tính
+Dusting	/ˈdʌs.tɪŋ/	Việc quét bụi	Từ vựng về công việc nhà
+Ironing	/ˈaɪə.nɪŋ/	Việc ủi đồ	Từ vựng về công việc nhà
+Wipe	/waɪp/	Chùi, lau sạch	Từ vựng về công việc nhà
+Vacuum	/ˈvæk.juːm/	Hút bụi	Từ vựng về công việc nhà
+Cleaning	/ˈkliː.nɪŋ/	Việc dọn dẹp	Từ vựng về công việc nhà
+Polish	/ˈpɒl.ɪʃ/	Đánh bóng	Từ vựng về công việc nhà
+Scrub	/skrʌb/	Chà, cọ rửa	Từ vựng về công việc nhà
+Tighten	/ˈtaɪ.tən/	Thắt, vặn (chặt)	Từ vựng về công việc nhà
+Dishwashing	/dɪʃˈwɒʃ.ɪŋ/	Việc rửa chén	Từ vựng về công việc nhà
+Bakery	/ˈbeɪ.kər.i/	Tiệm bánh	Từ vựng về cửa hàng
+Bookshop	/ˈbʊk.ʃɒp/	Tiệm sách	Từ vựng về cửa hàng
+Butcher's	/ˈbʊtʃ.ər/	Cửa hàng thịt	Từ vựng về cửa hàng
+Greengrocer	/ˈɡriːŋ.ɡrəʊ.sər/	Cửa hàng bán rau quả	Từ vựng về cửa hàng
+Dry-cleaner's	/ˌdraɪˈkliː.nəz/	Tiệm giặt ủi	Từ vựng về cửa hàng
+Barbershop	/ˈbɑː.bə.ʃɒp/	Tiệm cắt tóc nam	Từ vựng về cửa hàng
+Bookstall	/ˈbʊk.stɔːl/	Quầy bán sách	Từ vựng về cửa hàng
+Circus	/ˈsɜː.kəs/	Rạp xiếc	Từ vựng về giải trí
+Orchestra	/ˈɔː.kɪ.strə/	Ban nhạc, dàn nhạc	Từ vựng về giải trí
+Opera	/ˈɒp.ər.ə/	Nhạc kịch, ô-pê-ra	Từ vựng về giải trí
+Applaud	/əˈplɔːd/	Vỗ tay (tán thưởng)	Từ vựng về giải trí
+Casino	/kəˈsiː.nəʊ/	Sòng bạc	Từ vựng về giải trí
+Pub	/pʌb/	Quán rượu	Từ vựng về giải trí
+Voyage	/ˈvɔɪ.ɪdʒ/	Chuyến hải hành	Từ vựng về du lịch
+Homestay	/ˈhəʊm.steɪ/	(dịch vụ) lưu trú tại nhà dân bản địa	Từ vựng về du lịch
+Souvenir	/ˌsuː.vənˈɪər/	Quà lưu niệm	Từ vựng về du lịch
+Excursion	/ɪkˈskɜː.ʃən/	Chuyến tham quan	Từ vựng về du lịch
+Luggage	/ˈlʌɡ.ɪdʒ/	Hành lý	Từ vựng về du lịch
+Eager	/ˈiː.ɡər/	Háo hức	Từ vựng về du lịch
+Sunglasses	/ˈsʌŋˌɡlɑː.sɪz/	Kính mát	Từ vựng về du lịch
+Safari	/səˈfɑː.ri/	Chuyến thám hiểm thiên nhiên	Từ vựng về du lịch
+Mask	/mɑːsk/	Mặt nạ	Từ vựng về Tết trung thu
+Banyan	/ˈbæn.jæn/	Cây đa	Từ vựng về Tết trung thu
+Lantern	/ˈlæn.tən/	Lồng đèn	Từ vựng về Tết trung thu
+Bamboo	/bæmˈbuː/	Tre	Từ vựng về Tết trung thu
+Rabbit	/ˈræb.ɪt/	Thỏ	Từ vựng về Tết trung thu
+Walking	/ˈwɔː.kɪŋ/	Đi bộ, tản bộ	Từ vựng về thể thao
+Boxing	/ˈbɒk.sɪŋ/	Quyền anh	Từ vựng về thể thao
+Basketball	/ˈbæs.kɪtˌbɔːl/	Bóng rổ	Từ vựng về thể thao
+Badminton	/ˈbæd.mɪn.tən/	Cầu lông	Từ vựng về thể thao
+Baseball	/ˈbeɪs.bɔːl/	Bóng chày	Từ vựng về thể thao
+Cycling	/ˈsaɪ.klɪŋ/	Đua xe đạp, đạp xe	Từ vựng về thể thao
+Archery	/ˈɑːr.tʃər.i/	Bắn cung	Từ vựng về thể thao
+Weightlifting	/ˈweɪtˌlɪf.tɪŋ/	Cử tạ	Từ vựng về thể thao
+Wrestling	/ˈrɛs.lɪŋ/	Đấu vật	Từ vựng về thể thao
+Bowling	/ˈboʊ.lɪŋ/	Bóng gỗ	Từ vựng về thể thao
+Lacrosse	/ləˈkrɒs/	Bóng vợt	Từ vựng về thể thao
+Referee	/ˌrɛf.əˈriː/	Trọng tài	Từ vựng về thể thao
+Dart	/dɑːrt/	Ném phi tiêu	Từ vựng về thể thao
+Wushu	/ˈwuː.ʃuː/	(môn) võ wushu	Từ vựng về thể thao
+Sportsmanship	/ˈspɔːrts.mənˌʃɪp/	Tinh thần thể thao	Từ vựng về thể thao
+Cross-country	/ˌkrɒsˈkʌn.tri/	Chạy việt dã	Từ vựng về thể thao
+Cottage	/ˈkɒt.ɪdʒ/	Nhà tranh	Từ vựng về quê hương
+Winding	/ˈwaɪn.dɪŋ/	Quanh co, uốn khúc	Từ vựng về quê hương
+Buffalo	/ˈbʌf.ə.ləʊ/	Con trâu	Từ vựng về quê hương
+Canal	/kəˈnæl/	Kênh	Từ vựng về quê hương
+Pond	/pɒnd/	Ao	Từ vựng về quê hương
+Plow	/plaʊ/	Cày	Từ vựng về quê hương
+Agriculture	/ˈæɡ.rɪ.kʌl.tʃər/	Nông nghiệp	Từ vựng về quê hương
+Bay	/beɪ/	Vịnh	Từ vựng về quê hương
+Waterfall	/ˈwɔː.tə.fɔːl/	Thác nước	Từ vựng về quê hương
+Barn	/bɑːn/	Kho thóc	Từ vựng về quê hương
+Harvest	/ˈhɑː.vɪst/	Vụ gặt	Từ vựng về quê hương
+Cattle	/ˈkæt.əl/	Gia súc	Từ vựng về quê hương
+Cliff	/klɪf/	Vách đá	Từ vựng về quê hương
+Vow	/vaʊ/	Lời thề	Từ vựng về đám cưới
+Groomsman	/ˈɡruːmz.mən/	Phù rể	Từ vựng về đám cưới
+Groom	/ɡruːm/	Chú rể	Từ vựng về đám cưới
+Tuxedo	/tʌkˈsiː.dəʊ/	Áo ximôckinh	Từ vựng về đám cưới
+Champagne	/ʃæmˈpeɪn/	Rượu sâm panh	Từ vựng về đám cưới
+Bouquet	/buˈkeɪ/	Bó hoa	Từ vựng về đám cưới
+Newlywed	/ˈnjuː.li.wed/	Người mới cưới	Từ vựng về đám cưới
+Ring	/rɪŋ/	Nhẫn	Từ vựng về đám cưới
+Emblem	/ˈem.bləm/	Biểu tượng	Từ vựng về đám cưới
+Band	/bænd/	Ban nhạc	Từ vựng về đám cưới
+Congratulation	/kənˌɡrætʃ.əˈleɪ.ʃən/	Lời chúc mừng	Từ vựng về đám cưới
+Dowry	/ˈdaʊ.ri/	Của hồi môn	Từ vựng về đám cưới
+Honeymoon	/ˈhʌn.i.muːn/	Tuần trăng mật	Từ vựng về đám cưới
+Anniversary	/ˌæn.ɪˈvɜː.sər.i/	Ngày kỷ niệm	Từ vựng về đám cưới
+Brother-in-law	/ˈbrʌð.ə.rɪn.lɔː/	Anh/em rể, anh/em chồng, anh/em vợ	Từ vựng về đám cưới
+Sister-in-law	/ˈsɪs.tə.rɪn.lɔː/	Chị/em dâu, chị/em chồng, chị/em vợ	Từ vựng về đám cưới
+Betroth	/bɪˈtrəʊð/	Hứa hôn, đính hôn	Từ vựng về đám cưới
+Lavatory	/ˈlæv.ə.tər.i/	Phòng vệ sinh	Từ vựng về sân bay
+Blanket	/ˈblæŋ.kɪt/	Tấm chăn, mền	Từ vựng về sân bay
+Airsick	/ˈeə.sɪk/	Say máy bay	Từ vựng về sân bay
+Cockpit	/ˈkɒk.pɪt/	Buồng lái	Từ vựng về sân bay
+Co-pilot	/ˈkəʊˌpaɪ.lət/	Phi công phụ	Từ vựng về sân bay
+Assist	/əˈsɪst/	Hỗ trợ, giúp đỡ	Từ vựng về sân bay
+First-class	/ˌfɜːst ˈklɑːs/	(ghế) hạng nhất	Từ vựng về sân bay
+Confiscate	/ˈkɒn.fɪ.skeɪt/	Tịch thu	Từ vựng về sân bay
+Cough	/kɔf/	Ho	Từ vựng về sức khỏe
+Swollen	/ˈswoʊlən/	Bị sưng	Từ vựng về sức khỏe
+Pus	/pʌs/	Mủ	Từ vựng về sức khỏe
+Graze	/Greiz/	Trầy xước (da)	Từ vựng về sức khỏe
+Insomnia	/ɪnˈsɑːmniə/	Chứng mất ngủ	Từ vựng về sức khỏe
+Rash	/ræʃ/	Phát ban	Từ vựng về sức khỏe
+Bruise	/bruːz/	Vết thâm	Từ vựng về sức khỏe
+Constipation	/ˌkɑːnstɪˈpeɪʃn/	Táo bón	Từ vựng về sức khỏe
+Diarrhea	/ˌdaɪəˈriːə/	Tiêu chảy	Từ vựng về sức khỏe
+Sniff	/snɪf/	Hít, hắt hơi (bằng mũi)	Từ vựng về sức khỏe
+Sneeze	/sni:z/	Hắt hơi	Từ vựng về sức khỏe
+Earache	/ˈɪə.reɪk/	Đau tai	Từ vựng về sức khỏe
+Nausea	/ˈnɔː.zi.ə/	Chứng buồn nôn	Từ vựng về sức khỏe
+Asthma	/ˈæzmə/	Hen, suyễn	Từ vựng về sức khỏe
+Backache	/ˈbæk.eɪk/	Bệnh đau lưng	Từ vựng về sức khỏe
+Chill	/tʃɪl/	Cảm lạnh	Từ vựng về sức khỏe
+Allergy	/ˈælərdʒi/	Dị ứng	Từ vựng về sức khỏe
+Paralyse	/ˈpærəlaɪz/	Liệt	Từ vựng về sức khỏe
+Infected	/ɪnˈfek.tɪd/	Bị nhiễm trùng	Từ vựng về sức khỏe
+Inflamed	/ɪnˈfleɪmd/	Bị viêm	Từ vựng về sức khỏe
+Gout	/ɡaʊt/	Bệnh Gút	Từ vựng về sức khỏe
+Hepatitis	/ˌhepəˈtaɪtɪs/	Viêm gan	Từ vựng về sức khỏe
+Lump	/lʌmp/	U bướu	Từ vựng về sức khỏe
+Stomachache	/ˈstʌmək-eɪk/	Đau dạ dày	Từ vựng về sức khỏe
+Toothache	/ˈtuːθ.eɪk/	Đau răng	Từ vựng về sức khỏe
+Sprain	/spreɪn/	Bong gân	Từ vựng về sức khỏe
+Malaria	/məˈleriə/	Sốt rét	Từ vựng về sức khỏe
+Scabies	/ˈskeɪbiːz/	Bệnh ghẻ	Từ vựng về sức khỏe
+Smallpox	/ˈsmɔːlpɑːks/	Bệnh đậu mùa	Từ vựng về sức khỏe
+Tuberculosis	/tuːˌbɜːrkjəˈloʊsɪs/	Bệnh lao	Từ vựng về sức khỏe
+Diabetes	/ˌdaɪ.əˈbiː.tiːz/	Bệnh tiểu đường	Từ vựng về sức khỏe
+Pneumonia	/nuːˈmoʊniə/	Viêm phổi	Từ vựng về sức khỏe
+Depression	/dɪˈpreʃn/	Trầm cảm	Từ vựng về sức khỏe
+Hypertension	/ˌhaɪ.pəˈten.ʃən/	Huyết áp cao	Từ vựng về sức khỏe
+Measles	/ˈmiːzlz/	Bệnh sởi	Từ vựng về sức khỏe
+Migraine	/ˈmaɪɡreɪn/	Bệnh đau nửa đầu	Từ vựng về sức khỏe
+Mumps	/mʌmps/	Bệnh quai bị	Từ vựng về sức khỏe
+Rheumatism	/ˈruːmətɪzəm/	Bệnh thấp khớp	Từ vựng về sức khỏe
+Spinach	/ˈspɪnɪtʃ/	Rau chân vịt	Từ vựng về rau, củ, quả
+Eggplant	/ˈeɡplɑːnt/	Cà tím	Từ vựng về rau, củ, quả
+Beet	/biːt/	Củ cải đường	Từ vựng về rau, củ, quả
+Cauliflower	/ˈkɒl.ɪ.flaʊ.ər/	Súp lơ	Từ vựng về rau, củ, quả
+Cilantro	/sɪˈlæn.trəʊ/	Rau mùi	Từ vựng về rau, củ, quả
+Marrow	/ˈmærəʊ/	Bí ngô	Từ vựng về rau, củ, quả
+Batata	/bəˈtɑː.tə/	Khoai lang	Từ vựng về rau, củ, quả
+Asparagus	/əˈspærəɡəs/	Măng tây	Từ vựng về rau, củ, quả
+Pumpkin	/ˈpʌmpkɪn/	Bí đỏ	Từ vựng về rau, củ, quả
+Pepper-elder	/ˈpepə ˈeldə(r)/	Rau càng Cua	Từ vựng về rau, củ, quả
+Cress	/kres/	Rau cải xoong	Từ vựng về rau, củ, quả
+Celery	/ˈseləri/	Cần tây	Từ vựng về rau, củ, quả
+Artichoke	/ˈɑː.tɪ.tʃəʊk/	Cây atiso	Từ vựng về rau, củ, quả
+Beetroot	/ˈbiːt.ruːt/	Củ dền	Từ vựng về rau, củ, quả
+Second	/ˈsek.ənd/	Giây	Từ vựng về thời gian
+Minute	/ˈmɪn.ɪt/	Phút	Từ vựng về thời gian
+Millennium	/mɪˈlen.i.əm/	Thiên niên kỷ	Từ vựng về thời gian
+Afternoon	/ˌæf.tɚˈnuːn/	Buổi chiều	Từ vựng về thời gian
+Dusk	/dʌsk/	Hoàng hôn	Từ vựng về thời gian
+Dawn	/dɑːn/	Bình minh	Từ vựng về thời gian
+Roadside	/ˈroʊdsaɪd/	Lề đường	Từ vựng về giao thông
+Kerb	/kɜːrb/	Lề đường	Từ vựng về giao thông
+Turning	/ˈtɜːrnɪŋ/	Chỗ rẽ, ngã rẽ	Từ vựng về giao thông
+Toll	/toʊl/	Lệ phí qua đường, qua cầu	Từ vựng về giao thông
+Motorway	/ˈmoʊtərweɪ/	Xa lộ	Từ vựng về giao thông
+T-junction	/tiːˈdʒʌŋkʃn/	Ngã ba	Từ vựng về giao thông
+Roundabout	/ˈraʊndəbaʊt/	Bùng binh	Từ vựng về giao thông
+Accident	/ˈæksɪdənt/	Tai nạn	Từ vựng về giao thông
+Breathalyser	/ˈbreθəlaɪzər/	Thiết bị kiểm tra độ cồn trong hơi thở	Từ vựng về giao thông
+Parking-meter	/ˈpɑːrkɪŋ ˈmiːtər/	Đồng hồ đỗ xe	Từ vựng về giao thông
+Stall	/stɔːl/	Làm chết máy	Từ vựng về giao thông
+Diesel	/ˈdiːzl/	Dầu diesel	Từ vựng về giao thông
+Petrol	/ˈpetrəl/	Xăng	Từ vựng về giao thông
+Unleaded	/ˌʌnˈledɪd/	Không chì	Từ vựng về giao thông
+Jack	/dʒæk/	Đòn bẩy, palăng	Từ vựng về giao thông
+Puncture	/ˈpʌŋktʃər/	Sự thủng xăm	Từ vựng về giao thông
+Angry	/ˈæŋɡri/	Tức giận	Từ vựng về cảm xúc, cảm giác
+Sleepy	/ˈsliːpi/	Buồn ngủ	Từ vựng về cảm xúc, cảm giác
+Jealous	/ˈdʒeləs/	Ghen, ghen tuông	Từ vựng về cảm xúc, cảm giác
+Tense	/tens/	Căng thẳng	Từ vựng về cảm xúc, cảm giác
+Selfish	/ˈsel.fɪʃ/	Ích kỷ	Từ vựng về tính cách
+Stubborn	/ˈstʌb.ərn/	Bướng bỉnh	Từ vựng về tính cách
+Kind	/kaɪnd/	Tử tế, tốt bụng	Từ vựng về tính cách
+Loyal	/lɔɪəl/	Trung thành	Từ vựng về tính cách
+Modest	/ˈmɒd.ɪst/	Khiêm tốn	Từ vựng về tính cách
+Nasty	/ˈnæsti/	Khó chịu	Từ vựng về tính cách
+Sociable	/ˈsoʊʃəbəl/	Hòa đồng	Từ vựng về tính cách
+Reserved	/rɪˈzɜːvd/	Rụt rè, dè dặt	Từ vựng về tính cách
+Thoughtful	/ˈθɔːt.fəl/	Ân cần, chu đáo	Từ vựng về tính cách
+Bossy	/ˈbɒs.i/	Hống hách	Từ vựng về tính cách
+Gossip	/ˈɡɒs.ɪp/	Người mách lẻo	Từ vựng về tính cách
+Extrovert	/ˈɛk.strə.vɜːt/	Người hướng ngoại	Từ vựng về tính cách
+Coward	/kaʊərd/	Người nhát gan	Từ vựng về tính cách
+Big-head	/ˈbɪɡ hɛd/	Người tự cao	Từ vựng về tính cách
+Snob	/snɒb/	Người hợm hĩnh	Từ vựng về tính cách
+Liar	/laɪər/	Người nói dối	Từ vựng về tính cách
+Ambitious	/æmˈbɪʃəs/	Tham vọng	Từ vựng về tính cách
+Introvert	/ˈɪn.trə.vɜːt/	Người hướng nội	Từ vựng về tính cách
+Stingy	/ˈstɪnʤi/	Keo kiệt	Từ vựng về tính cách
+Arrogant	/ˈær.ə.ɡənt/	Kiêu căng	Từ vựng về tính cách
+Vain	/veɪn/	Tự phụ	Từ vựng về tính cách
+Absent-minded	/ˌæb.səntˈmaɪn.dɪd/	Đãng trí	Từ vựng về tính cách
+Hostile	/ˈhɒs.taɪl/	Thù địch	Từ vựng về tính cách
+Lemonade	/ˌlɛm.əˈneɪd/	Nước chanh	Từ vựng về đồ uống
+Soda	/ˈsoʊdə/	Sô-đa	Từ vựng về đồ uống
+Cider	/ˈsaɪdər/	Rượu táo	Từ vựng về đồ uống
+Rum	/rʌm/	Rượu rum	Từ vựng về đồ uống
+Champagne	/ʃæmˈpeɪn/	Rượu sâm panh	Từ vựng về đồ uống
+Malt	/mɔːlt/	Mạch nha	Từ vựng về đồ uống
+Barley	/ˈbɑːr.li/	Lúa mạch	Từ vựng về đồ uống
+Distillery	/dɪˈstɪləri/	Nhà máy rượu	Từ vựng về đồ uống
+Non-alcoholic	/ˌnɑːnˌæl.kəˈhɒl.ɪk/	Không cồn	Từ vựng về đồ uống
+Full-cream	/ˌfʊl ˈkriːm/	Nguyên kem	Từ vựng về đồ uống
+Herbal	/ˈhɜːr.bəl/	(chứa) thảo mộc	Từ vựng về đồ uống
+Lotus	/ˈloʊtəs/	Hoa sen	Từ vựng về các loài hoa
+Lily	/ˈlɪli/	Hoa loa kèn	Từ vựng về các loài hoa
+Poppy	/ˈpɒp.i/	Hoa anh túc	Từ vựng về các loài hoa
+Bougainvillea	/ˌbuː.ɡənˈvɪl.i.ə/	Hoa giấy	Từ vựng về các loài hoa
+Tuberose	/ˈtuː.bəˌroʊz/	Hoa huệ	Từ vựng về các loài hoa
+Dahlia	/ˈdeɪ.li.ə/	Hoa thược dược	Từ vựng về các loài hoa
+Jasmine	/ˈʤæzmɪn/	Hoa lài	Từ vựng về các loài hoa
+Sunflower	/ˈsʌnˌflaʊ.ər/	Hoa hướng dương	Từ vựng về các loài hoa
+Marigold	/ˈmær.ɪˌɡoʊld/	Hoa cúc vạn thọ	Từ vựng về các loài hoa
+Orchid	/ˈɔːr.kɪd/	Hoa lan	Từ vựng về các loài hoa
+Rose	/roʊz/	Hoa hồng	Từ vựng về các loài hoa
+Carnation	/kɑːrˈneɪ.ʃən/	Hoa cẩm chướng	Từ vựng về các loài hoa
+Poinsettia	/ˌpɔɪnˈsɛˌtiə/	Hoa trạng nguyên	Từ vựng về các loài hoa
+Flamboyant	/flæmˈbɔɪənt/	Hoa phượng	Từ vựng về các loài hoa
+Hibiscus	/hɪˈbɪs.kəs/	Hoa dâm bụt	Từ vựng về các loài hoa
+Audience	/ˈɔː.di.əns/	Khán giả	Từ vựng về phim ảnh
+Trailer	/ˈtreɪlər/	Đoạn phim quảng cáo	Từ vựng về phim ảnh
+Soundtrack	/ˈsaʊnˌtræk/	Nhạc phim	Từ vựng về phim ảnh
+Actor	/ˈæktər/	Nam diễn viên	Từ vựng về phim ảnh
+Actress	/ˈæk.trɪs/	Nữ diễn viên	Từ vựng về phim ảnh
+Touchline	/ˈtʌtʃ.laɪn/	Đường biên	Từ vựng về bóng đá
+Penalty	/ˈpɛnəlti/	Phạt đền	Từ vựng về bóng đá
+Offside	/ˌɒfˈsaɪd/	Việt vị	Từ vựng về bóng đá
+Foul	/faʊl/	Lỗi, pha phạm lỗi	Từ vựng về bóng đá
+Goalkeeper	/ˈɡoʊlˌkiː.pər/	Thủ môn	Từ vựng về bóng đá
+Defender	/dɪˈfɛn.dər/	Hậu vệ	Từ vựng về bóng đá
+Midfielder	/ˈmɪdˌfiːl.dər/	Tiền vệ	Từ vựng về bóng đá
+Winger	/ˈwɪŋ.ər/	Cầu thủ chạy biên	Từ vựng về bóng đá
+Referee	/ˌrɛf.əˈriː/	Trọng tài	Từ vựng về bóng đá
+Commentator	/ˈkɒm.ənˌteɪ.tər/	Bình luận viên	Từ vựng về bóng đá
+Linesman	/ˈlaɪnz.mən/	Trọng tài biên	Từ vựng về bóng đá
+Hooligan	/ˈhuː.lɪ.ɡən/	Kẻ côn đồ, quá khích	Từ vựng về bóng đá
+Caution	/ˈkɔː.ʃən/	Lời cảnh cáo	Từ vựng về bóng đá
+Stimulant	/ˈstɪm.jʊ.lənt/	Chất kích thích	Từ vựng về bóng đá
+Striker	/ˈstraɪ.kər/	Tiền đạo	Từ vựng về bóng đá
+Candle	/ˈkæn.dəl/	Nến	Từ vựng về Giáng sinh
+Sack	/sæk/	Bao, túi	Từ vựng về Giáng sinh
+Fireplace	/ˈfaɪərˌpleɪs/	Lò sưởi	Từ vựng về Giáng sinh
+Chimney	/ˈtʃɪm.ni/	Ống khói	Từ vựng về Giáng sinh
+Christmas	/ˈkrɪs.məs/	Lễ Giáng Sinh	Từ vựng về Giáng sinh
+Ornament	/ˈɔːr.nə.mənt/	Đồ trang trí	Từ vựng về Giáng sinh
+Sled	/slɛd/	Xe trượt tuyết	Từ vựng về Giáng sinh
+Snowflake	/ˈsnoʊˌfleɪk/	Bông tuyết	Từ vựng về Giáng sinh
+Wreath	/riːθ/	Vòng hoa	Từ vựng về Giáng sinh
+Scarf	/skɑːrf/	Khăn choàng cổ	Từ vựng về Giáng sinh
+Beef	/biːf/	Thịt bò	Từ vựng về đồ ăn
+Pork	/pɔːrk/	Thịt heo	Từ vựng về đồ ăn
+Bacon	/ˈbeɪ.kən/	Thịt ba rọi xông khói	Từ vựng về đồ ăn
+Ham	/hæm/	Thịt đùi, thịt xông khói	Từ vựng về đồ ăn
+Yoghurt	/ˈjoʊ.ɡərt/	Sữa chua	Từ vựng về đồ ăn
+Pie	/paɪ/	Bánh nướng	Từ vựng về đồ ăn
+Biscuit	/ˈbɪs.kɪt/	Bánh quy	Từ vựng về đồ ăn
+Noodle	/ˈnuː.dəl/	Mì, bún	Từ vựng về đồ ăn
+Olive	/ˈɒl.ɪv/	Quả ô liu	Từ vựng về đồ ăn
+Soy	/sɔɪ/	Đậu nành	Từ vựng về đồ ăn
+Mint	/mɪnt/	Bạc hà	Từ vựng về đồ ăn
+Vanilla	/vəˈnɪl.ə/	Vani	Từ vựng về đồ ăn
+Popcorn	/ˈpɒp.kɔːrn/	Bỏng ngô	Từ vựng về đồ ăn
+Snack	/snæk/	Bữa ăn nhẹ	Từ vựng về đồ ăn
+Barbecue	/ˈbɑːr.bɪ.kjuː/	Tiệc nướng ngoài trời	Từ vựng về đồ ăn
+Distinctive	/dɪˈstɪŋk.tɪv/	Đặc trưng, khác biệt	Từ vựng về đồ ăn
+Flavor	/ˈfleɪ.vər/	Hương vị	Từ vựng về đồ ăn
+Stale	/steɪl/	Ôi, thiu	Từ vựng về đồ ăn
+Sour	/ˈsaʊ.ər/	Chua	Từ vựng về đồ ăn
+Burnt	/bɜːrnt/	Cháy, khét	Từ vựng về đồ ăn
+Overdone	/ˌoʊ.vərˈdʌn/	Quá chín, rục	Từ vựng về đồ ăn
+Underdone	/ˌʌn.dərˈdʌn/	Chưa chín, tái	Từ vựng về đồ ăn
+Veal	/viːl/	Thịt bê	Từ vựng về đồ ăn
+Cereal	/ˈsɪər.i.əl/	Ngũ cốc	Từ vựng về đồ ăn
+Band	/bænd/	Nhóm nhạc, ban nhạc	Từ vựng về âm nhạc
+Playlist	/ˈpleɪ.lɪst/	Danh sách bài hát	Từ vựng về âm nhạc
+Harmony	/ˈhɑːr.mə.ni/	Hoà âm	Từ vựng về âm nhạc
+Melody	/ˈmɛl.ə.di/	Giai điệu	Từ vựng về âm nhạc
+Symphony	/ˈsɪm.fə.ni/	Bản giao hưởng	Từ vựng về âm nhạc
+Overture	/ˈoʊ.vər.tʃʊr/	Khúc dạo đầu	Từ vựng về âm nhạc
+Conductor	/kənˈdʌk.tər/	Nhạc trưởng	Từ vựng về âm nhạc
+Composer	/kəmˈpoʊ.zər/	Nhà soạn nhạc	Từ vựng về âm nhạc
+Solo	/ˈsoʊ.loʊ/	Bài đơn ca	Từ vựng về âm nhạc
+Guitarist	/ɡɪˈtɑːr.ɪst/	Nghệ sĩ ghi-ta	Từ vựng về âm nhạc
+Drummer	/ˈdrʌm.ər/	Người đánh trống	Từ vựng về âm nhạc
+Lyrics	/ˈlɪr.ɪks/	Lời bài hát	Từ vựng về âm nhạc
+Chorus	/ˈkɔːr.əs/	Điệp khúc	Từ vựng về âm nhạc
+Opera	/ˈɑː.pə.rə/	Nhạc kịch, ô-pê-ra	Từ vựng về âm nhạc
+Album	/ˈæl.bəm/	Tuyển tập ca khúc	Từ vựng về âm nhạc
+Violin	/ˌvaɪəˈlɪn/	Đàn vi-ô-lông	Từ vựng về âm nhạc
+Engagement	/ɪnˈɡeɪdʒ.mənt/	Đính hôn	Từ vựng về tình yêu
+Ring	/rɪŋ/	Nhẫn	Từ vựng về tình yêu
+Alone	/əˈloʊn/	Một mình	Từ vựng về tình yêu
+Hug	/hʌɡ/	Ôm	Từ vựng về tình yêu
+Anniversary	/ˌæn.ɪˈvɜː.sər.i/	Ngày kỷ niệm	Từ vựng về tình yêu
+Darling	/ˈdɑːr.lɪŋ/	Em yêu, anh yêu	Từ vựng về tình yêu
+Napkin	/ˈnæp.kɪn/	Khăn ăn	Từ vựng về nhà hàng, khách sạn
+Cutlery	/ˈkʌt.lə.ri/	Dụng cụ ăn	Từ vựng về nhà hàng, khách sạn
+Combo	/ˈkɒm.boʊ/	Gói, bộ	Từ vựng về nhà hàng, khách sạn
+Speciality	/ˌspeʃ.iˈæl.ə.ti/	Đặc sản	Từ vựng về nhà hàng, khách sạn
+Coupon	/ˈkuː.pɒn/	Phiếu giảm giá	Từ vựng về nhà hàng, khách sạn
+Animated	/ˈæn.ɪˌmeɪ.tɪd/	Náo nhiệt, sôi nổi	Từ vựng về nhà hàng, khách sạn
+Housekeeper	/ˈhaʊsˌkiː.pər/	Nhân viên dọn phòng	Từ vựng về nhà hàng, khách sạn
+Vacancy	/ˈveɪ.kən.si/	Phòng trống	Từ vựng về nhà hàng, khách sạn
+Lobby	/ˈlɒb.i/	Hành lang	Từ vựng về nhà hàng, khách sạn
+Concierge	/kɒn.siˈɛrʒ/	Nhân viên hướng dẫn	Từ vựng về nhà hàng, khách sạn
+Check-in	/ˈtʃɛk.ɪn/	Việc nhận phòng	Từ vựng về nhà hàng, khách sạn
+Doorman	/ˈdɔːr.mən/	Nhân viên gác cửa	Từ vựng về nhà hàng, khách sạn
+Bellboy	/ˈbɛl.bɔɪ/	Người trực tầng	Từ vựng về nhà hàng, khách sạn
+Classmate	/ˈklæs.meɪt/	Bạn cùng lớp	Từ vựng về trường học
+Ruler	/ˈruː.lər/	Cây thước	Từ vựng về trường học
+Calculator	/ˈkæl.kjʊ.leɪ.tər/	Máy tính cầm tay	Từ vựng về trường học
+Chalk	/tʃɔːk/	Phấn	Từ vựng về trường học
+Blackboard	/ˈblæk.bɔːd/	Bảng đen	Từ vựng về trường học
+Compass	/ˈkʌm.pəs/	Com-pa	Từ vựng về trường học
+Economics	/ˌiː.kəˈnɒm.ɪks/	Kinh tế học	Từ vựng về trường học
+Art	/ɑːrt/	Mỹ thuật	Từ vựng về trường học
+Playground	/ˈpleɪ.ɡraʊnd/	Sân chơi	Từ vựng về trường học
+Proctor	/ˈprɒk.tər/	Giám thị	Từ vựng về trường học
+Dean	/diːn/	Trưởng khoa	Từ vựng về trường học
+Copper	/ˈkɒp.ər/	Màu đồng	Từ vựng về màu sắc
+Chestnut	/ˈtʃɛs.nʌt/	Màu nâu hạt dẻ	Từ vựng về màu sắc
+Turquoise	/ˈtɜːr.kɔɪz/	Màu ngọc lam	Từ vựng về màu sắc
+Vivid	/ˈvɪv.ɪd/	Rực rỡ	Từ vựng về màu sắc
+Wind	/wɪnd/	Gió	Từ vựng về thời tiết
+Sunny	/ˈsʌn.i/	Có nắng	Từ vựng về thời tiết
+Sunshine	/ˈsʌn.ʃaɪn/	Ánh nắng mặt trời	Từ vựng về thời tiết
+Icy	/ˈaɪ.si/	Lạnh lẽo	Từ vựng về thời tiết
+Atmosphere	/ˈæt.mə.sfɪər/	Bầu khí quyển	Từ vựng về thời tiết
+Fog	/fɔːɡ/	Sương mù	Từ vựng về thời tiết
+Erratic	/ɪˈræt.ɪk/	Thất thường	Từ vựng về thời tiết
+Thunder	/ˈθʌn.dər/	Sấm	Từ vựng về thời tiết
+Hailstone	/ˈheɪl.stoʊn/	Viên mưa đá	Từ vựng về thời tiết
+Blustery	/ˈblʌs.tər.i/	Có gió lớn	Từ vựng về thời tiết
+Downpour	/ˈdaʊn.pɔːr/	Mưa lớn	Từ vựng về thời tiết
+Raincoat	/ˈreɪn.koʊt/	Áo mưa	Từ vựng về thời tiết
+Blizzard	/ˈblɪz.ərd/	Bão tuyết	Từ vựng về thời tiết
+Rainbow	/ˈreɪn.boʊ/	Cầu vồng	Từ vựng về thời tiết
+Dew	/djuː/	Sương	Từ vựng về thời tiết
+Sleet	/sliːt/	Mưa tuyết	Từ vựng về thời tiết
+Stormy	/ˈstɔːr.mi/	Có bão	Từ vựng về thời tiết
+Snowflake	/ˈsnoʊ.fleɪk/	Bông tuyết	Từ vựng về thời tiết
+Puddle	/ˈpʌd.əl/	Vũng nước mưa	Từ vựng về thời tiết
+Lightning	/ˈlaɪt.nɪŋ/	Tia chớp	Từ vựng về thời tiết
+Dull	/dʌl/	U ám	Từ vựng về thời tiết
+Celsius	/ˈsɛl.si.əs/	(thuộc) độ C	Từ vựng về thời tiết
+Leggings	/ˈlɛɡ.ɪŋz/	Quần bó	Từ vựng về quần áo
+Overalls	/ˈoʊ.vər.ɔːlz/	Quần yếm	Từ vựng về quần áo
+Turtleneck	/ˈtɜːr.tl̩.nɛk/	Áo cổ lọ	Từ vựng về quần áo
+Tunic	/ˈtuː.nɪk/	Áo trùm hông	Từ vựng về quần áo
+Vest	/vɛst/	Áo gi-lê	Từ vựng về quần áo
+Jumpsuit	/ˈdʒʌmp.suːt/	Bộ áo liền quần	Từ vựng về quần áo
+Shorts	/ʃɔːrts/	Quần đùi	Từ vựng về quần áo
+Anorak	/ˈæn.ə.ræk/	Áo ngoài có mũ trùm đầu	Từ vựng về quần áo
+Scarf	/skɑːrf/	Khăn choàng cổ	Từ vựng về quần áo
+Sandals	/ˈsæn.dəlz/	Giày xăng-đan	Từ vựng về quần áo
+Slippers	/ˈslɪp.ərz/	Đôi dép	Từ vựng về quần áo
+Sleeve	/sliːv/	Tay áo	Từ vựng về quần áo
+Collar	/ˈkɒl.ər/	Cổ áo	Từ vựng về quần áo
+Zip	/zɪp/	Khóa kéo	Từ vựng về quần áo
+Blouse	/blaʊs/	Áo sơ mi nữ	Từ vựng về quần áo
+Bra	/brɑː/	Áo ngực	Từ vựng về quần áo
+Forehead	/ˈfɔːrˌhɛd/	Trán	Từ vựng về bộ phận cơ thể
+Beard	/bɪrd/	Râu	Từ vựng về bộ phận cơ thể
+Chin	/tʃɪn/	Cằm	Từ vựng về bộ phận cơ thể
+Elbow	/ˈɛl.boʊ/	Khuỷu tay	Từ vựng về bộ phận cơ thể
+Arm	/ɑːm/	Cánh tay	Từ vựng về bộ phận cơ thể
+Armpit	/ˈɑːmˌpɪt/	Nách	Từ vựng về bộ phận cơ thể
+Wrist	/rɪst/	Cổ tay	Từ vựng về bộ phận cơ thể
+Navel	/ˈneɪ.vəl/	Rún, rốn	Từ vựng về bộ phận cơ thể
+Ankle	/ˈæŋ.kəl/	Mắt cá chân	Từ vựng về bộ phận cơ thể
+Waist	/weɪst/	Eo	Từ vựng về bộ phận cơ thể
+Abdomen	/ˈæb.də.mən/	Bụng	Từ vựng về bộ phận cơ thể
+Thigh	/θaɪ/	Đùi	Từ vựng về bộ phận cơ thể
+Thumb	/θʌm/	Ngón tay cái	Từ vựng về bộ phận cơ thể
+Back	/bæk/	Lưng	Từ vựng về bộ phận cơ thể
+Lecturer	/ˈlɛk.tʃər.ər/	Giảng viên	Từ vựng về giáo dục
+Thesis	/ˈθiː.sɪs/	Luận văn, luận án	Từ vựng về giáo dục
+Semester	/sɪˈmɛs.tər/	Học kỳ	Từ vựng về giáo dục
+Curriculum	/kəˈrɪk.jə.ləm/	Chương trình giảng dạy	Từ vựng về giáo dục
+Attendance	/əˈtɛn.dəns/	Sự có mặt	Từ vựng về giáo dục
+Absence	/ˈæb.səns/	Sự vắng mặt	Từ vựng về giáo dục
+Projector	/prəˈdʒɛk.tər/	Máy chiếu	Từ vựng về giáo dục
+Textbook	/ˈtɛkstˌbʊk/	Sách giáo khoa	Từ vựng về giáo dục
+Answer	/ˈæn.sər/	Trả lời	Từ vựng về giáo dục
+Assembly	/əˈsɛm.bli/	Cuộc họp	Từ vựng về giáo dục
+Pupil	/ˈpjuː.pəl/	Học sinh	Từ vựng về giáo dục
+Playground	/ˈpleɪ.ɡraʊnd/	Sân chơi	Từ vựng về giáo dục
+Dormitory	/ˈdɔːr.mɪ.tɔːr.i/	Ký túc xá	Từ vựng về giáo dục
+Locker	/ˈlɒk.ər/	Tủ có khoá	Từ vựng về giáo dục
+Chalk	/tʃɔːk/	Phấn	Từ vựng về giáo dục
+Grandson	/ˈɡrænd.sʌn/	Cháu trai (của ông bà)	Từ vựng về gia đình
+Aunt	/ænt/	Cô, dì,…	Từ vựng về gia đình
+Niece	/niːs/	Cháu gái (của cô, dì, chú)	Từ vựng về gia đình
+Nephew	/ˈnɛ.vjuː/	Cháu trai (của cô, dì, chú)	Từ vựng về gia đình
+Son-in-law	/ˈsʌn ɪn lɔː/	Con rể	Từ vựng về gia đình
+Daughter-in-law	/ˈdɔː.tər ɪn lɔː/	Con dâu	Từ vựng về gia đình
+Granddaughter	/ˈɡrændˌdɔː.tər/	Cháu gái (của ông bà)	Từ vựng về gia đình
+Brother-in-law	/ˈbrʌð.ərɪnlɔː/	Anh/em rể, anh/em chồng, anh/em vợ	Từ vựng về gia đình
+Mother-in-law	/ˈmʌð.ər ɪn lɔː/	Mẹ chồng, mẹ vợ	Từ vựng về gia đình
+Father-in-law	/ˈfɑː.ðər ɪn lɔː/	Bố chồng, bố vợ	Từ vựng về gia đình
+Sister-in-law	/ˈsɪs.tərɪnlɔː/	Chị/em dâu, chị/em chồng, chị/em vợ	Từ vựng về gia đình
+Adopt	/əˈdɒpt/	Nhận con nuôi	Từ vựng về gia đình
+Children	/ˈtʃɪl.drən/	Con cái	Từ vựng về gia đình
+Anniversary	/ˌæn.ɪˈvɜː.sə.ri/	Ngày kỷ niệm	Từ vựng về gia đình
+Close-knit	/ˌkloʊsˈnɪt/	Khăng khít	Từ vựng về gia đình
+Stepchild	/ˈstɛpˌtʃaɪld/	Con riêng	Từ vựng về gia đình
+Half-brother	/ˈhɑːfˌbrʌð.ər/	Anh trai, em trai (cùng cha/mẹ khác mẹ/cha)	Từ vựng về gia đình
+Half-sister	/ˈhɑːfˌsɪs.tər/	Chị gái, em gái (cùng cha/mẹ khác mẹ/cha)	Từ vựng về gia đình
+Godfather	/ˈɡɒdˌfɑː.ðər/	Cha đỡ đầu	Từ vựng về gia đình
+Hereditary	/həˈrɛd.ɪ.tər.i/	Di truyền	Từ vựng về gia đình
+Stepmother	/ˈstɛpˌmʌð.ər/	Mẹ kế	Từ vựng về gia đình
+Stepfather	/ˈstɛpˌfɑː.ðər/	Cha dượng	Từ vựng về gia đình
+Orphan	/ˈɔːr.fən/	Trẻ mồ côi	Từ vựng về gia đình
+Mango	/ˈmæŋ.ɡoʊ/	Quả xoài	Từ vựng về trái cây
+Apple	/ˈæp.əl/	Quả táo	Từ vựng về trái cây
+Tangerine	/ˌtæn.dʒəˈriːn/	Quả quýt	Từ vựng về trái cây
+Grape	/ɡreɪp/	Quả nho	Từ vựng về trái cây
+Strawberry	/ˈstrɔːˌbɛr.i/	Quả dâu tây	Từ vựng về trái cây
+Melon	/ˈmɛl.ən/	Quả dưa	Từ vựng về trái cây
+Grapefruit	/ˈɡreɪpˌfruːt/	Quả bưởi chùm	Từ vựng về trái cây
+Watermelon	/ˈwɔː.tərˌmɛl.ən/	Quả dưa hấu	Từ vựng về trái cây
+Peach	/piːtʃ/	Quả đào	Từ vựng về trái cây
+Pear	/pɛr/	Quả lê	Từ vựng về trái cây
+Banana	/bəˈnæn.ə/	Quả chuối	Từ vựng về trái cây
+Plum	/plʌm/	Quả mận	Từ vựng về trái cây
+Papaya	/pəˈpaɪ.ə/	Quả đu đủ	Từ vựng về trái cây
+Avocado	/ˌæv.əˈkɑː.doʊ/	Quả bơ	Từ vựng về trái cây
+Starfruit	/ˈstɑːrˌfruːt/	Quả khế	Từ vựng về trái cây
+Pineapple	/ˈpaɪnˌæp.əl/	Quả dứa	Từ vựng về trái cây
+Coconut	/ˈkoʊ.kəˌnʌt/	Quả dừa	Từ vựng về trái cây
+Raspberry	/ˈræzˌbɛr.i/	Quả mâm xôi	Từ vựng về trái cây
+Nectarine	/ˈnɛk.təˌriːn/	Quả xuân đào	Từ vựng về trái cây
+Mulberry	/ˈmʌlˌbɛr.i/	Quả dâu tằm	Từ vựng về trái cây
+Raisin	/ˈreɪ.zən/	Nho khô	Từ vựng về trái cây
+Jackfruit	/ˈdʒækˌfruːt/	Quả mít	Từ vựng về trái cây
+Persimmon	/pərˈsɪm.ən/	Quả hồng	Từ vựng về trái cây
+Quince	/kwɪns/	Quả mộc qua	Từ vựng về trái cây
+Cherry	/ˈtʃɛr.i/	Quả anh đào	Từ vựng về trái cây
+Kiwi	/ˈkiː.wi/	Quả kiwi	Từ vựng về trái cây
+Pomegranate	/ˈpɒm.ɪˌɡræn.ɪt/	Quả lựu	Từ vựng về trái cây
+Guava	/ˈɡwɑː.və/	Quả ổi	Từ vựng về trái cây
+Apricot	/ˈeɪ.prɪˌkɒt/	Quả mơ	Từ vựng về trái cây
+Blueberry	/ˈbluːˌbɛr.i/	Quả việt quất	Từ vựng về trái cây
+Durian	/ˈdʊr.i.ən/	Quả sầu riêng	Từ vựng về trái cây
+Lychee	/ˈlaɪ.tʃiː/	Quả vải	Từ vựng về trái cây
+Tamarind	/ˈtæm.ər.ɪnd/	Quả me	Từ vựng về trái cây
+Kumquat	/ˈkʌm.kwɒt/	Quả quất	Từ vựng về trái cây
+Piglet	/ˈpɪɡ.lɪt/	Lợn con	Từ vựng về động vật
+Sow	/saʊ/	Lợn cái	Từ vựng về động vật
+Duck	/dʌk/	Vịt	Từ vựng về động vật
+Animal	/ˈæn.ɪ.məl/	Động vật	Từ vựng về động vật
+Goat	/ɡoʊt/	Dê	Từ vựng về động vật
+Goose	/ɡuːs/	Ngỗng	Từ vựng về động vật
+Donkey	/ˈdɒŋ.ki/	Lừa	Từ vựng về động vật
+Ox	/ɒks/	Bò	Từ vựng về động vật
+Rooster	/ˈruː.stər/	Gà trống	Từ vựng về động vật
+Hen	/hɛn/	Gà mái	Từ vựng về động vật
+Bull	/bʊl/	Bò đực	Từ vựng về động vật
+Calf	/kɑːf/	Bê	Từ vựng về động vật
+Rabbit	/ˈræb.ɪt/	Thỏ	Từ vựng về động vật
+Owl	/aʊl/	Cú	Từ vựng về động vật
+Deer	/dɪr/	Hươu, nai	Từ vựng về động vật
+Bat	/bæt/	Dơi	Từ vựng về động vật
+Mink	/mɪŋk/	Chồn vizon	Từ vựng về động vật
+Lizard	/ˈlɪz.ərd/	Thằn lằn	Từ vựng về động vật
+Giraffe	/dʒəˈræf/	Hươu cao cổ	Từ vựng về động vật
+Bear	/bɛr/	Gấu	Từ vựng về động vật
+Rhino	/ˈraɪ.noʊ/	Tê giác	Từ vựng về động vật
+Panther	/ˈpæn.θər/	Báo đen	Từ vựng về động vật
+Leopard	/ˈlɛp.ərd/	Báo	Từ vựng về động vật
+Tiger	/ˈtaɪ.ɡər/	Hổ	Từ vựng về động vật
+Fox	/fɒks/	Cáo	Từ vựng về động vật
+Dinosaur	/ˈdaɪ.nəˌsɔːr/	Khủng long	Từ vựng về động vật
+Turtle	/ˈtɜːr.təl/	Rùa biển	Từ vựng về động vật
+Snail	/sneɪl/	Ốc sên	Từ vựng về động vật
+Crow	/kroʊ/	Quạ	Từ vựng về động vật
+Parrot	/ˈpær.ət/	Vẹt	Từ vựng về động vật
+Caterpillar	/ˈkæt.ərˌpɪl.ər/	Sâu bướm	Từ vựng về côn trùng
+Cocoon	/kəˈkuːn/	Cái kén (tằm)	Từ vựng về côn trùng
+Butterfly	/ˈbʌt.ərˌflaɪ/	Bướm	Từ vựng về côn trùng
+Dragonfly	/ˈdræɡ.ənˌflaɪ/	Chuồn chuồn	Từ vựng về côn trùng
+Cricket	/ˈkrɪk.ɪt/	Dế	Từ vựng về côn trùng
+Grasshopper	/ˈɡræsˌhɒp.ər/	Châu chấu	Từ vựng về côn trùng
+Cockroach	/ˈkɒkˌroʊtʃ/	Gián	Từ vựng về côn trùng
+Beetle	/ˈbiː.təl/	Bọ cánh cứng	Từ vựng về côn trùng
+Termite	/ˈtɜːr.maɪt/	Mối	Từ vựng về côn trùng
+Ant	/ænt/	Kiến	Từ vựng về côn trùng
+Mosquito	/məˈskiː.toʊ/	Muỗi	Từ vựng về côn trùng
+Ladybug	/ˈleɪ.diˌbʌɡ/	Bọ rùa	Từ vựng về côn trùng
+Firefly	/ˈfaɪrˌflaɪ/	Đom đóm	Từ vựng về côn trùng
+Bee	/biː/	Ong	Từ vựng về côn trùng
+Wasp	/wɒsp/	Ong bắp cày	Từ vựng về côn trùng
+Centipede	/ˈsɛn.tɪˌpiːd/	Rết	Từ vựng về côn trùng
+Textbook	/ˈtɛkstˌbʊk/	Sách giáo khoa	Từ vựng về học tập
+Workbook	/ˈwɜːkˌbʊk/	Sách bài tập	Từ vựng về học tập
+Notebook	/ˈnoʊtˌbʊk/	Vở	Từ vựng về học tập
+Notepad	/ˈnoʊtˌpæd/	Sổ ghi chép	Từ vựng về học tập
+Crayon	/ˈkreɪ.ɒn/	Bút chì màu	Từ vựng về học tập
+Eraser	/ɪˈreɪ.zər/	Cục tẩy	Từ vựng về học tập
+Glue	/ɡluː/	Hồ dán	Từ vựng về học tập
+Scissors	/ˈsɪz.ərz/	Kéo	Từ vựng về học tập
+Ruler	/ˈruː.lər/	Thước	Từ vựng về học tập
+Protractor	/prəˈtræk.tər/	Thước đo góc	Từ vựng về học tập
+Ink	/ɪŋk/	Mực	Từ vựng về học tập
+Chalk	/tʃɔːk/	Phấn	Từ vựng về học tập
+Folder	/ˈfoʊl.dər/	Thư mục	Từ vựng về học tập
+Pine	/paɪn/	Cây thông	Từ vựng về thực vật
+Cedar	/ˈsiː.dər/	Cây tuyết tùng	Từ vựng về thực vật
+Oak	/oʊk/	Cây sồi	Từ vựng về thực vật
+Ivy	/ˈaɪ.vi/	Dây thường xuân	Từ vựng về thực vật
+Moss	/mɔːs/	Rêu	Từ vựng về thực vật
+Mushroom	/ˈmʌʃ.rʊm/	Nấm	Từ vựng về thực vật
+Wheat	/wiːt/	Lúa mì	Từ vựng về thực vật
+Herb	/hɜːrb/	Thảo mộc	Từ vựng về thực vật
+Shrubland	/ˈʃrʌblænd/	Vùng cây bụi	Từ vựng về thực vật
+Denmark	/ˈdɛnˌmɑːrk/	Đan Mạch	Từ vựng về quốc gia
+England	/ˈɪŋ.ɡlənd/	Anh	Từ vựng về quốc gia
+Sweden	/ˈswiː.dən/	Thụy Điển	Từ vựng về quốc gia
+Austria	/ˈɒs.tri.ə/	Áo	Từ vựng về quốc gia
+Australia	/ɒˈstreɪlɪə/	Úc	Từ vựng về quốc gia
+France	/fræns/	Pháp	Từ vựng về quốc gia
+Germany	/ˈdʒɜː.mə.ni/	Đức	Từ vựng về quốc gia
+Switzerland	/ˈswɪtsərlənd/	Thụy Sĩ	Từ vựng về quốc gia
+Greece	/ɡriːs/	Hy Lạp	Từ vựng về quốc gia
+Italy	/ˈɪtəli/	Ý	Từ vựng về quốc gia
+Spain	/speɪn/	Tây Ban Nha	Từ vựng về quốc gia
+Russia	/ˈrʌʃə/	Nga	Từ vựng về quốc gia
+Canada	/ˈkænədə/	Canada	Từ vựng về quốc gia
+Mexico	/ˈmɛksɪkoʊ/	Mêxicô	Từ vựng về quốc gia
+America	/əˈmɛrɪkə/	Mỹ	Từ vựng về quốc gia
+Brazil	/brəˈzɪl/	Braxin	Từ vựng về quốc gia
+Japan	/dʒəˈpæn/	Nhật Bản	Từ vựng về quốc gia
+Korea	/kəˈriə/	Hàn Quốc	Từ vựng về quốc gia
+China	/ˈtʃaɪ.nə/	Trung Quốc	Từ vựng về quốc gia
+Herring	/ˈhɛr.ɪŋ/	Cá trích	Từ vựng về hải sản
+Skate	/skeɪt/	Cá đuối	Từ vựng về hải sản
+Salmon	/ˈsæmən/	Cá hồi	Từ vựng về hải sản
+Prawn	/prɔːn/	Tôm	Từ vựng về hải sản
+Cuttlefish	/ˈkʌt.əl.fɪʃ/	Mực nang	Từ vựng về hải sản
+Lobster	/ˈlɒbstər/	Tôm hùm	Từ vựng về hải sản
+Squid	/skwɪd/	Mực ống	Từ vựng về hải sản
+Shrimp	/ʃrɪmp/	Tôm	Từ vựng về hải sản
+Oyster	/ˈɔɪ.stər/	Hàu	Từ vựng về hải sản
+Crab	/kræb/	Cua	Từ vựng về hải sản
+Cockle	/ˈkɒk.əl/	Sò	Từ vựng về hải sản
+Scallop	/ˈskɒl.əp/	Sò điệp	Từ vựng về hải sản
+Octopus	/ˈɒk.tə.pʊs/	Bạch tuộc	Từ vựng về hải sản
+Eel	/iːl/	Lươn	Từ vựng về hải sản
+Mussel	/ˈmʌsəl/	Vẹm	Từ vựng về hải sản
+Clam	/klæm/	Nghêu	Từ vựng về hải sản
+Jellyfish	/ˈdʒel.i.fɪʃ/	Sứa	Từ vựng về hải sản
+Charcoal	/ˈtʃɑːrˌkoʊl/	Than củi	Từ vựng về năng lượng
+Battery	/ˈbætəri/	Pin	Từ vựng về năng lượng
+Gasoline	/ˈɡæsəˌliːn/	Xăng	Từ vựng về năng lượng
+Turbine	/ˈtɜr.baɪn/	Tua-bin	Từ vựng về năng lượng
+Wind	/wɪnd/	Gió	Từ vựng về năng lượng
+Waterfall	/ˈwɔːtərˌfɔːl/	Thác nước	Từ vựng về năng lượng
+Refinery	/rɪˈfaɪ.nər.i/	Nhà máy lọc	Từ vựng về năng lượng
+Dam	/dæm/	Đập (thủy điện)	Từ vựng về năng lượng
+Transformer	/trænsˈfɔːrmər/	Máy biến thế	Từ vựng về năng lượng
+Diesel	/ˈdiːzəl/	Dầu đi-ê-zen	Từ vựng về năng lượng
+Magician	/məˈdʒɪʃ.ən/	Nhà ảo thuật	Từ vựng về nghề nghiệp
+Commentator	/ˈkɒm.ənˌteɪ.tər/	Bình luận viên	Từ vựng về nghề nghiệp
+Postman	/ˈpoʊst.mæn/	Người đưa thư	Từ vựng về nghề nghiệp
+Plumber	/ˈplʌm.ər/	Thợ sửa chữa ống nước	Từ vựng về nghề nghiệp
+Tailor	/ˈteɪ.lər/	Thợ may	Từ vựng về nghề nghiệp
+Copywriter	/ˈkɒp.iˌraɪ.tər/	Người viết bài (quảng cáo)	Từ vựng về nghề nghiệp
+Grocer	/ˈɡroʊ.sər/	Người bán tạp hóa	Từ vựng về nghề nghiệp
+Assistant	/əˈsɪs.tənt/	Trợ lý	Từ vựng về nghề nghiệp
+Freelancer	/ˈfriːˌlænsər/	Người làm việc tự do	Từ vựng về nghề nghiệp
+Consultant	/kənˈsʌl.tənt/	Chuyên viên tư vấn	Từ vựng về nghề nghiệp
+Self-employed	/ˌsɛlf.ɪmˈplɔɪd/	Tự làm chủ	Từ vựng về nghề nghiệp
+Supervisor	/ˈsuː.pərˌvaɪ.zər/	Giám sát viên	Từ vựng về nghề nghiệp
+Mechanic	/məˈkæn.ɪk/	Thợ cơ khí	Từ vựng về nghề nghiệp
+Hairdresser	/ˈhɛərˌdrɛs.ər/	Thợ cắt tóc	Từ vựng về nghề nghiệp
+Architect	/ˈɑːrkɪˌtɛkt/	Kiến trúc sư	Từ vựng về nghề nghiệp
+Vet	/vɛt/	Bác sĩ thú y	Từ vựng về nghề nghiệp
+Shoemaker	/ˈʃuːˌmeɪ.kər/	Thợ đóng giày	Từ vựng về nghề nghiệp
+Translator	/trænzˈleɪ.tər/	Biên dịch viên	Từ vựng về nghề nghiệp
+Interpreter	/ɪnˈtɜː.prɪ.tər/	Phiên dịch viên	Từ vựng về nghề nghiệp
+Keep-fit	/kiːp-fɪt/	Thể dục	Từ vựng về chế độ ăn uống
+Diabetes	/ˌdaɪəˈbiːtiːz/	Bệnh tiểu đường	Từ vựng về chế độ ăn uống
+Dietitian	/ˌdaɪɪˈtɪʃən/	Chuyên gia về dinh dưỡng	Từ vựng về chế độ ăn uống
+Goiter	/ˈɡɔɪ.tər/	Bướu cổ	Từ vựng về chế độ ăn uống
+Dietary	/ˈdaɪəˌtɛri/	(thuộc) chế độ ăn uống	Từ vựng về chế độ ăn uống
+Overweight	/ˌoʊvərˈweɪt/	Béo, thừa cân	Từ vựng về chế độ ăn uống
+Nutrient	/ˈnuːtriənt/	Chất dinh dưỡng	Từ vựng về chế độ ăn uống
+Allergy	/ˈælədʒi/	Dị ứng	Từ vựng về chế độ ăn uống
+Overeat	/ˌoʊvərˈiːt/	Ăn quá nhiều	Từ vựng về chế độ ăn uống
+Nutritious	/njuˈtrɪʃəs/	Bổ dưỡng	Từ vựng về chế độ ăn uống
+Vegetarian	/ˌvɛdʒɪˈtɛəriən/	Người ăn chay	Từ vựng về chế độ ăn uống
+Aftershock	/ˈæftərˌʃɒk/	Dư chấn	Từ vựng về thảm họa thiên nhiên
+Drought	/draʊt/	Hạn hán	Từ vựng về thảm họa thiên nhiên
+Famine	/ˈfæmɪn/	Nạn đói	Từ vựng về thảm họa thiên nhiên
+Avalanche	/ˈævəˌlæntʃ/	Tuyết lở	Từ vựng về thảm họa thiên nhiên
+Blizzard	/ˈblɪzərd/	Bão tuyết	Từ vựng về thảm họa thiên nhiên
+Tornado	/tɔrˈneɪdoʊ/	Lốc xoáy	Từ vựng về thảm họa thiên nhiên
+Evacuation	/ɪˌvækjuˈeɪʃən/	Sự sơ tán	Từ vựng về thảm họa thiên nhiên
+Evacuate	/ɪˈvækjuˌeɪt/	Sơ tán	Từ vựng về thảm họa thiên nhiên
+Catastrophic	/ˌkætəˈstrɒfɪk/	Thảm khốc	Từ vựng về thảm họa thiên nhiên
+Nationwide	/ˌneɪʃənˈwaɪd/	Toàn quốc	Từ vựng về thảm họa thiên nhiên
+Precaution	/prɪˈkɔːʃən/	Sự phòng ngừa	Từ vựng về thảm họa thiên nhiên
+Avenue	/ˈævəˌnjuː/	Đại lộ	Từ vựng về chỉ đường
+Beside	/bɪˈsaɪd/	Bên cạnh	Từ vựng về chỉ đường
+Junction	/ˈdʒʌŋkʃən/	Giao lộ	Từ vựng về chỉ đường
+Turning	/ˈtɜrnɪŋ/	Ngã rẽ	Từ vựng về chỉ đường
+Roundabout	/ˈraʊndəˌbaʊt/	Bùng binh	Từ vựng về chỉ đường
+Pavement	/ˈpeɪvmənt/	Vỉa hè	Từ vựng về chỉ đường
+Bar	/bɑːr/	Quầy bán rượu	Từ vựng về phòng khách sạn
+Waitress	/ˈweɪtrəs/	Người hầu bàn (nữ)	Từ vựng về phòng khách sạn
+Teapot	/ˈtiːˌpɒt/	Bình trà	Từ vựng về phòng khách sạn
+Starter	/ˈstɑːr.tər/	Món khai vị	Từ vựng về phòng khách sạn
+Advanced	/ədˈvænst/	Tiên tiến	Từ vựng về bưu điện
+Equip	/ɪˈkwɪp/	Trang bị	Từ vựng về bưu điện
+Graphic	/ˈɡræfɪk/	Thuộc đồ họa	Từ vựng về bưu điện
+Notify	/ˈnoʊtɪˌfaɪ/	Thông báo	Từ vựng về bưu điện
+Parcel	/ˈpɑːrsəl/	Bưu kiện, bưu phẩm	Từ vựng về bưu điện
+Recipient	/rɪˈsɪpiənt/	Người nhận	Từ vựng về bưu điện
+Spacious	/ˈspeɪʃəs/	Rộng rãi	Từ vựng về bưu điện
+Speedy	/ˈspiːdi/	Nhanh chóng	Từ vựng về bưu điện
+Subscribe	/səbˈskraɪb/	Đặt mua	Từ vựng về bưu điện
+Thoughtful	/ˈθɔːt.fəl/	Ân cần, chu đáo	Từ vựng về bưu điện
+Transmit	/trænzˈmɪt/	Truyền	Từ vựng về bưu điện
+Well-trained	/wɛltreɪnd/	Được đào tạo bài bản	Từ vựng về bưu điện
+Appointment	/əˈpɔɪntmənt/	Sự bổ nhiệm	Từ vựng về ngân hàng
+Multinational	/ˌmʌltɪˈnæʃənəl/	Đa quốc gia	Từ vựng về ngân hàng
+Investor	/ɪnˈvɛstər/	Nhà đầu tư	Từ vựng về ngân hàng
+Inherit	/ɪnˈhɛrɪt/	Thừa kế	Từ vựng về ngân hàng
+Accountant	/əˈkaʊntənt/	Nhân viên kế toán	Từ vựng về ngân hàng
+Co-ordinate	/koʊˈɔrdəˌneɪt/	Phối hợp, sắp xếp	Từ vựng về ngân hàng
+Commerce	/ˈkɑːmɜrs/	Thương mại	Từ vựng về ngân hàng
+Costly	/ˈkɒstli/	Tốn kém	Từ vựng về ngân hàng
+Abroad	/əˈbrɔd/	Ở nước ngoài	Từ vựng về ngân hàng
+Inheritance	/ɪnˈhɛrɪtəns/	Sự thừa kế	Từ vựng về ngân hàng
+Equality	/ɪˈkwɒlɪti/	Sự ngang bằng nhau	Từ vựng về ngân hàng
+Outsource	/ˈaʊtsɔrs/	Thuê ngoài	Từ vựng về ngân hàng
+Warehouse	/ˈwɛrˌhaʊs/	Kho hàng	Từ vựng về ngân hàng
+Lease	/liːs/	Cho thuê	Từ vựng về ngân hàng
+In-house	/ˈɪnhaʊs/	Tiến hành trong một tổ chức	Từ vựng về ngân hàng
+Back-office	/ˈbæk ɒf.ɪs/	Văn phòng hành chính	Từ vựng về ngân hàng
+Insecurity	/ˌɪnsɪˈkjʊrɪti/	Tính không an toàn	Từ vựng về ngân hàng
+Compensation	/ˌkɒmpənˈseɪ.ʃən/	Sự đền bù, bồi thường	Từ vựng về ngân hàng
+Invoice	/ˈɪnvɔɪs/	Hóa đơn	Từ vựng về ngân hàng
+Bribery	/ˈbraɪbəri/	Sự đút lót, hối lộ	Từ vựng về ngân hàng
+Corrupt	/kəˈrʌpt/	Tham nhũng	Từ vựng về ngân hàng
+Treasury	/ˈtrɛʒəri/	Kho bạc	Từ vựng về ngân hàng

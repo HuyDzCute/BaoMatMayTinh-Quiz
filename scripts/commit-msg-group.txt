@@ -1,0 +1,9 @@
+Group VOCAB-IELTS sets into collapsible group (15 bộ thẻ → 1 nhóm riêng)
+
+- Thêm ieltsVocabSets filter vào page.tsx
+- Tạo group "VOCAB-IELTS" mới, icon 📘, màu #0ea5e9
+- Dùng variant="card" (grid 3 cột) giống VOCAB-PARAPHRASING
+- expandedGroups mặc định mở
+- 15 bộ thẻ trước đây nằm rời rạc trong "Other Built-in Sets" giờ được gộp gọn vào 1 nhóm riêng
+
+Co-Authored-By: Claude <noreply@anthropic.com>

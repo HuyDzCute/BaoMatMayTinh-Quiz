@@ -1,0 +1,62 @@
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null",
+
+    "presence": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth != null"
+      }
+    },
+
+    "chat_rooms": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$roomId": {
+        ".read": "auth != null",
+        ".write": "auth != null",
+        "members": {
+          ".read": "auth != null",
+          ".write": "auth != null"
+        },
+        "messages": {
+          ".read": "auth != null",
+          ".write": "auth != null"
+        }
+      }
+    },
+
+    "chat_typing": {
+      ".read": "auth != null",
+      ".write": "auth != null",
+      "$typingId": {
+        ".read": "auth != null",
+        ".write": "auth != null && (
+          !data.exists() ||
+          data.child('uid').val() === auth.uid ||
+          newData.child('uid').val() === auth.uid
+        )"
+      }
+    },
+
+    "users": {
+      ".read": "auth != null",
+      "$uid": {
+        ".read": "auth != null",
+        ".write": "auth != null && (auth.uid === $uid || !data.exists())",
+        "history": {
+          ".read": "auth != null && auth.uid === $uid",
+          ".write": "auth != null && auth.uid === $uid"
+        }
+      }
+    },
+
+    "leaderboard": {
+      ".read": "auth != null",
+      ".write": "auth != null"
+    }
+  }
+}

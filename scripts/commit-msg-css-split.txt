@@ -1,0 +1,25 @@
+Fix CSS truncation: tách globals.css thành 2 file
+
+Vấn đề: Next.js 16 dev server (Turbopack) đôi khi truncate file CSS
+khi kích thước > ~220KB, làm mất hoàn toàn các class ở cuối file
+(`.fc-group`, `.fc-set-row`, `.fc-filter-chip`, ...). Triệu chứng:
+trang render đúng HTML nhưng mất toàn bộ styles ở phần sau.
+
+Sửa:
+- Tách 339 dòng cuối của globals.css (chứa fc-group, fc-set-row,
+  fc-filter-chip, light-mode overrides...) thành app/globals-extra.css
+- Import globals-extra.css trong app/layout.tsx (sau globals.css)
+- Di chuyển toàn bộ CSS AI Coach (aicoach-*) ra file riêng
+  app/ai-coach/chat.css, import qua app/ai-coach/layout.tsx
+- Thêm experimental.cssChunking: false vào next.config.ts (chỉ áp
+  dụng cho build, không ảnh hưởng dev, nhưng giúp production output
+  dễ debug hơn)
+
+Sau khi tách:
+- globals.css: 6529 dòng (~190KB compiled)
+- globals-extra.css: 339 dòng (~28KB compiled)
+- chat.css: 533 dòng (~12KB compiled)
+- Mỗi file dưới ngưỡng 220KB → không bị truncate
+
+Cũng tạo app/ai-coach/layout.tsx để wrap AI Coach route và import
+chat.css riêng — tránh ship CSS của AI Coach cho các trang khác.

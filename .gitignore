@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Next.js build
+.next/
+out/
+build/
+
+# Environment
+.env.local
+.env*.local
+
+# Logs
+logs/
+*.log
+
+# Cache
+.tsbuildinfo
+*.tsbuildinfo
+
+# Package lock (use yarn/pnpm)
+package-lock.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

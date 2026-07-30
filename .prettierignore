@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+build
+.next/cache
+public
+coverage
+*.min.js
+*.bundle.js
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+database.rules.json

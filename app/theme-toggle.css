@@ -1,0 +1,56 @@
+/* ============================================================
+   Theme toggle (light / dark / system)
+   ============================================================ */
+
+.theme-toggle-group {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.06);
+  border-radius: 10px;
+  padding: 3px;
+  gap: 2px;
+}
+
+:root[data-theme="dark"] .theme-toggle-group,
+.dark .theme-toggle-group,
+[data-theme="dark"] .theme-toggle-group {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: #64748b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.18s,
+    color 0.18s,
+    transform 0.18s;
+}
+
+.theme-toggle-btn:hover {
+  color: #0f172a;
+}
+
+.theme-toggle-btn.is-active {
+  background: #fff;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+:root[data-theme="dark"] .theme-toggle-btn.is-active,
+.dark .theme-toggle-btn.is-active,
+[data-theme="dark"] .theme-toggle-btn.is-active {
+  background: rgba(255, 255, 255, 0.14);
+  color: #f1f5f9;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.94);
+}
