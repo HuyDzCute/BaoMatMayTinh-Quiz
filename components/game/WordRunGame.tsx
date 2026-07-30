@@ -19,6 +19,9 @@ import { loadGame, saveGame, clearSave } from "@/lib/wordrun-save";
 import { WORLD } from "./WorldScene";
 import type { GameState, Vector3 } from "@/lib/wordrun-types";
 import { GamePlayer, GamePlayerIntegrated } from "@/lib/game/player";
+import { LANE_Z, SIDE_CAMERA_Z, SIDE_CAMERA_Y } from "@/lib/world-constants";
+import { isPhase1SideScrollEnabled } from "@/lib/game/integration/phase1/feature-flag";
+import { Phase1SideScrollPlayer } from "@/lib/game/integration/phase1/Phase1SideScrollPlayer";
 
 // Extended input state with forward/backward and run
 interface ExtendedInputState {
@@ -44,12 +47,16 @@ export default function WordRunGame() {
     run: false,
   });
 
-  // ── Player position ──
+  // ── Player position (2.5D - X is gameplay axis, Z is locked at LANE_Z) ──
   const playerPosRef = useRef<Vector3>({
     x: WORLD.START_X,
-    y: WORLD.GROUND_Y + WORLD.PLAYER_RADIUS,
-    z: 0,
+    y: WORLD.GROUND_Y + 0.55,  // Player feet at ground
+    z: LANE_Z,                  // Locked at gameplay lane
   });
+
+  // ── Player velocity (for camera look-ahead) ──
+  const playerVelocityRef = useRef({ vx: 0, vz: 0 });
+  const lastPlayerPos = useRef<{ x: number; z: number }>({ x: WORLD.START_X, z: LANE_Z });
 
   // ── Game state ──
   const [gameState, setGameState] = useState<GameState>({
@@ -373,32 +380,60 @@ export default function WordRunGame() {
           gl.shadowMap.type = THREE.PCFShadowMap;
           gl.outputColorSpace = THREE.SRGBColorSpace;
         }}
-        camera={{ position: [WORLD.START_X + 4, 3, 10], fov: 52 }}
+        camera={{ position: [WORLD.START_X, SIDE_CAMERA_Y, SIDE_CAMERA_Z], fov: 55 }}
         frameloop="always"
         style={{ display: "block", width: "100%", height: 400 }}
       >
-        <CameraController
-          playerPosRef={playerPosRef}
-          dialogueOpen={showDialogue}
-          targetNPCX={
-            showDialogue && activeDialogueNPC !== null
-              ? NPC_POSITIONS[activeDialogueNPC]
-              : null
-          }
-        />
+        <CameraController playerPosRef={playerPosRef} />
         <WorldScene />
-        <GamePlayerIntegrated
-          initialPosition={{
-            x: WORLD.START_X,
-            y: WORLD.GROUND_Y + WORLD.PLAYER_RADIUS,
-            z: 0,
-          }}
-          externalInputRef={inputRef}
-          enableCamera={false}
-          onPositionUpdate={(pos: { x: number; y: number; z: number }) => {
-            playerPosRef.current = pos;
-          }}
-        />
+        {isPhase1SideScrollEnabled() ? (
+          // ═══════════════════════════════════════════════════════════════════
+          // PHASE 1 (validated 2.5D modules): small validation area only.
+          // Disabled by default. Enable via env var:
+          //   NEXT_PUBLIC_ENABLE_PHASE1_SIDESCROLL=true
+          // ═══════════════════════════════════════════════════════════════════
+          <Phase1SideScrollPlayer
+            externalInputRef={inputRef}
+            onPositionUpdate={(pos: { x: number; y: number; z: number }) => {
+              playerPosRef.current = {
+                x: pos.x,
+                y: pos.y,
+                z: LANE_Z,
+              };
+              playerVelocityRef.current.vx =
+                (pos.x - lastPlayerPos.current.x) * 60;
+              playerVelocityRef.current.vz = 0;
+              lastPlayerPos.current.x = pos.x;
+              lastPlayerPos.current.z = LANE_Z;
+            }}
+          />
+        ) : (
+          // ═══════════════════════════════════════════════════════════════════
+          // LEGACY (production baseline, unchanged). Default branch.
+          // ═══════════════════════════════════════════════════════════════════
+          <GamePlayerIntegrated
+            initialPosition={{
+              x: WORLD.START_X,
+              y: WORLD.GROUND_Y + 0.55,
+              z: LANE_Z,
+            }}
+            externalInputRef={inputRef}
+            enableCamera={false}
+            onPositionUpdate={(pos: { x: number; y: number; z: number }) => {
+              // Update position (preserve Z = LANE_Z if internal system drifts)
+              playerPosRef.current = {
+                x: pos.x,
+                y: pos.y,
+                z: LANE_Z,
+              };
+              // Calculate velocity for camera look-ahead
+              playerVelocityRef.current.vx = (pos.x - lastPlayerPos.current.x) * 60;
+              playerVelocityRef.current.vz = 0; // Z is locked
+              lastPlayerPos.current.x = pos.x;
+              lastPlayerPos.current.z = LANE_Z;
+            }}
+          />
+        )}
         <NPCController
           interacted={npcsInteracted}
           playerPosRef={playerPosRef}

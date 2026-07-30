@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+<rect x="0" y="0" width="800" height="500" fill="#1a1a2e" />
+<line x1="0" y1="180" x2="800" y2="180" stroke="#334155" stroke-width="1" stroke-dasharray="4,4" />
+<rect x="-130" y="278" width="1060" height="6" fill="#a89078" />
+<line x1="-56" y1="272" x2="-56" y2="288" stroke="#475569" stroke-width="0.5" /><text x="-56" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">6</text><line x1="4" y1="272" x2="4" y2="288" stroke="#475569" stroke-width="0.5" /><text x="4" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">7</text><line x1="64" y1="272" x2="64" y2="288" stroke="#475569" stroke-width="0.5" /><text x="64" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">8</text><line x1="124" y1="272" x2="124" y2="288" stroke="#475569" stroke-width="0.5" /><text x="124" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">9</text><line x1="184.00000000000003" y1="272" x2="184.00000000000003" y2="288" stroke="#475569" stroke-width="0.5" /><text x="184.00000000000003" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">10</text><line x1="244.00000000000003" y1="272" x2="244.00000000000003" y2="288" stroke="#475569" stroke-width="0.5" /><text x="244.00000000000003" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">11</text><line x1="304" y1="272" x2="304" y2="288" stroke="#475569" stroke-width="0.5" /><text x="304" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">12</text><line x1="364" y1="272" x2="364" y2="288" stroke="#475569" stroke-width="0.5" /><text x="364" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">13</text><line x1="424" y1="272" x2="424" y2="288" stroke="#475569" stroke-width="0.5" /><text x="424" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">14</text><line x1="484" y1="272" x2="484" y2="288" stroke="#475569" stroke-width="0.5" /><text x="484" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">15</text><line x1="544" y1="272" x2="544" y2="288" stroke="#475569" stroke-width="0.5" /><text x="544" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">16</text><line x1="604" y1="272" x2="604" y2="288" stroke="#475569" stroke-width="0.5" /><text x="604" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">17</text><line x1="664" y1="272" x2="664" y2="288" stroke="#475569" stroke-width="0.5" /><text x="664" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">18</text><line x1="724" y1="272" x2="724" y2="288" stroke="#475569" stroke-width="0.5" /><text x="724" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">19</text><line x1="784" y1="272" x2="784" y2="288" stroke="#475569" stroke-width="0.5" /><text x="784" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">20</text><line x1="844" y1="272" x2="844" y2="288" stroke="#475569" stroke-width="0.5" /><text x="844" y="302" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">21</text>
+<polygon points="-198.5,130 -138.5,130 -93.5,130 -153.5,130" fill="#cfd6e2" stroke="#000" stroke-width="1" /><polygon points="-138.5,280 -93.5,280 -93.5,130 -138.5,130" fill="#69707c" stroke="#000" stroke-width="1" /><polygon points="-198.5,280 -138.5,280 -138.5,130 -198.5,130" fill="#9ca3af" stroke="#000" stroke-width="1" />
+<text x="-146" y="100" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">WALL</text>
+<polygon points="-738.5,220 -678.5,220 -633.5,220 -693.5,220" fill="#c57341" stroke="#000" stroke-width="1" /><polygon points="-678.5,280 -633.5,280 -633.5,220 -678.5,220" fill="#5f0d00" stroke="#000" stroke-width="1" /><polygon points="-738.5,280 -678.5,280 -678.5,220 -738.5,220" fill="#92400e" stroke="#000" stroke-width="1" />
+<text x="-686" y="190" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">DESK</text>
+
+    <rect x="52" y="170" width="24" height="110" rx="6" fill="#16a34a" stroke="#14532d" stroke-width="1.5" />
+    <circle cx="64" cy="160" r="15" fill="#fcd9bd" stroke="#92400e" stroke-width="1" />
+  
+<circle cx="-596.0000000000001" cy="208" r="18" fill="#fbbf24" stroke="#b45309" stroke-width="2" opacity="0.95" />
+
+    <rect x="376" y="178" width="48" height="102" rx="24" ry="24" fill="#3b82f6" stroke="#1e3a8a" stroke-width="1.5" />
+    <circle cx="408.4" cy="208.6" r="2" fill="#0f172a" />
+    <circle cx="391.6" cy="208.6" r="2" fill="#0f172a" />
+  
+<circle cx="-716" cy="100" r="3" fill="#f43f5e" />
+<text x="-708" y="92" font-family="monospace" font-size="10" fill="#f43f5e">CAM</text>
+<rect x="0" y="0" width="800" height="40" fill="rgba(0,0,0,0.7)" />
+<text x="20" y="26" font-family="monospace" font-size="16" fill="#22c55e" font-weight="bold">END BOUNDARY — Player at X=13.6 (right edge)</text>
+<rect x="560" y="400" width="220" height="80" fill="rgba(0,0,0,0.85)" rx="8" />
+<text x="570" y="422" font-family="monospace" font-size="11" fill="#22c55e">PLAYER.X = 13.60</text>
+<text x="570" y="440" font-family="monospace" font-size="11" fill="#22c55e">PLAYER.Z = 0.000 (locked)</text>
+<text x="570" y="458" font-family="monospace" font-size="11" fill="#22c55e">CAM.Z = -10 (fixed)</text>
+<text x="570" y="476" font-family="monospace" font-size="11" fill="#22c55e">CAM.Y = 3 (fixed)</text>
+</svg>

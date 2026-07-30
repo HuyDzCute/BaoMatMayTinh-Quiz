@@ -53,14 +53,14 @@ function GameNPCInternal({
   });
 
   // Get all spawned NPCs
-  const npcs = useMemo(() => {
+  const npcs: INPCEntity[] = useMemo(() => {
     return npcManager.getAll().filter((npc: INPCEntity) => npc.isSpawned());
   }, [npcManager]);
 
   return (
     <>
       {/* Render all NPCs */}
-      {npcs.map((npc) => (
+      {npcs.map((npc: INPCEntity) => (
         <NPCEntity key={npc.id} npc={npc} animate={animate} />
       ))}
 
@@ -238,14 +238,14 @@ function GameNPCManagerInternal({
   });
 
   // Get all spawned NPCs
-  const npcs = useMemo(() => {
+  const npcs: INPCEntity[] = useMemo(() => {
     return npcManager.getAll().filter((npc: INPCEntity) => npc.isSpawned());
   }, [npcManager]);
 
   return (
     <>
       {/* Render all NPCs */}
-      {npcs.map((npc) => (
+      {npcs.map((npc: INPCEntity) => (
         <NPCEntity key={npc.id} npc={npc} animate={animate} />
       ))}
 

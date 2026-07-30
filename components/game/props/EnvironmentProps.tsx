@@ -1,14 +1,33 @@
 /**
- * Props - Environment Props
- * Phase 1 Refactor
+ * Environment Props - Redesigned for Gameplay
+ * 
+ * Environment Layout Pass
+ * 
+ * Design Philosophy:
+ * - Clear functional zones
+ * - Camera-friendly placement
+ * - Props support gameplay, not obstruct it
+ * - Scale-consistent placement
  */
 "use client";
 
 import { WORLD } from "@/lib/world-constants";
 import { ColoredLocker } from "../environment/Lockers";
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// CONSTANTS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const CORRIDOR_WIDTH = WORLD.CORRIDOR_WIDTH;
+const WALL_Z_LEFT = -CORRIDOR_WIDTH / 2;
+const WALL_Z_RIGHT = CORRIDOR_WIDTH / 2;
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// COMPONENTS
+// ═══════════════════════════════════════════════════════════════════════════════
+
 export function Bench({ x, side }: { x: number; side: "left" | "right" }) {
-  const z = side === "left" ? -WORLD.CORRIDOR_WIDTH / 2 + 0.6 : WORLD.CORRIDOR_WIDTH / 2 - 0.6;
+  const z = side === "left" ? WALL_Z_LEFT + 0.6 : WALL_Z_RIGHT - 0.6;
 
   return (
     <group position={[x, 0, z]}>
@@ -41,7 +60,7 @@ export function Bench({ x, side }: { x: number; side: "left" | "right" }) {
 }
 
 export function WaterCooler({ x, side }: { x: number; side: "left" | "right" }) {
-  const z = side === "left" ? -WORLD.CORRIDOR_WIDTH / 2 + 0.15 : WORLD.CORRIDOR_WIDTH / 2 - 0.15;
+  const z = side === "left" ? WALL_Z_LEFT + 0.15 : WALL_Z_RIGHT - 0.15;
 
   return (
     <group position={[x, 0, z]}>
@@ -79,7 +98,7 @@ export function WaterCooler({ x, side }: { x: number; side: "left" | "right" }) 
 }
 
 export function VendingMachine({ x, side }: { x: number; side: "left" | "right" }) {
-  const z = side === "left" ? -WORLD.CORRIDOR_WIDTH / 2 + 0.25 : WORLD.CORRIDOR_WIDTH / 2 - 0.25;
+  const z = side === "left" ? WALL_Z_LEFT + 0.25 : WALL_Z_RIGHT - 0.25;
   const rotationY = side === "left" ? 0 : Math.PI;
 
   return (
@@ -125,7 +144,7 @@ export function VendingMachine({ x, side }: { x: number; side: "left" | "right" 
 }
 
 export function PottedPlant({ x, side, scale = 1 }: { x: number; side: "left" | "right"; scale?: number }) {
-  const z = side === "left" ? -WORLD.CORRIDOR_WIDTH / 2 + 0.2 : WORLD.CORRIDOR_WIDTH / 2 - 0.2;
+  const z = side === "left" ? WALL_Z_LEFT + 0.2 : WALL_Z_RIGHT - 0.2;
 
   return (
     <group position={[x, 0, z]} scale={[scale, scale, scale]}>
@@ -174,7 +193,7 @@ export function CeilingVent({ x }: { x: number }) {
 }
 
 export function ACUnit({ x, side }: { x: number; side: "left" | "right" }) {
-  const z = side === "left" ? -WORLD.CORRIDOR_WIDTH / 2 + 0.15 : WORLD.CORRIDOR_WIDTH / 2 - 0.15;
+  const z = side === "left" ? WALL_Z_LEFT + 0.15 : WALL_Z_RIGHT - 0.15;
   const rotationY = side === "left" ? 0 : Math.PI;
 
   return (
@@ -206,7 +225,7 @@ export function ACUnit({ x, side }: { x: number; side: "left" | "right" }) {
 }
 
 export function FloorMat({ x, side }: { x: number; side: "left" | "right" }) {
-  const z = side === "left" ? -WORLD.CORRIDOR_WIDTH / 2 + 0.08 : WORLD.CORRIDOR_WIDTH / 2 - 0.08;
+  const z = side === "left" ? WALL_Z_LEFT + 0.08 : WALL_Z_RIGHT - 0.08;
 
   return (
     <group position={[x, 0.005, z]}>
@@ -244,7 +263,7 @@ export function FloorArrow({ x, rotation }: { x: number; rotation: number }) {
 }
 
 export function CleaningSign({ x, side }: { x: number; side: "left" | "right" }) {
-  const z = side === "left" ? -WORLD.CORRIDOR_WIDTH / 2 + 0.04 : WORLD.CORRIDOR_WIDTH / 2 - 0.04;
+  const z = side === "left" ? WALL_Z_LEFT + 0.04 : WALL_Z_RIGHT - 0.04;
   const rotationY = side === "left" ? 0 : Math.PI;
 
   return (
@@ -273,81 +292,178 @@ export function CleaningSign({ x, side }: { x: number; side: "left" | "right" })
   );
 }
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// MAIN COMPONENT: EnvironmentProps
+// ═══════════════════════════════════════════════════════════════════════════════
+
 export function EnvironmentProps() {
-  const benches: { x: number; side: "left" | "right" }[] = [
-    { x: 12, side: "left" },
-    { x: 30, side: "right" },
-    { x: 48, side: "left" },
+  // ==========================================
+  // ZONE 1: ENTRANCE HALLWAY (x: -5 to 8)
+  // Clear path, welcoming area
+  // ==========================================
+  const entranceBenches: { x: number; side: "left" | "right" }[] = [
+    { x: 2, side: "left" },
+    { x: 5, side: "right" },
   ];
-
-  const waterCoolers: { x: number; side: "left" | "right" }[] = [
-    { x: 6, side: "left" },
-    { x: 24, side: "right" },
-    { x: 42, side: "left" },
+  
+  const entrancePlants: { x: number; side: "left" | "right"; scale: number }[] = [
+    { x: -2, side: "right", scale: 1.0 },
+    { x: 3, side: "left", scale: 0.9 },
   ];
-
+  
+  // ==========================================
+  // ZONE 2: CLASSROOM A (x: 8 to 25)
+  // Academic area - minimal props
+  // ==========================================
+  const classroomAPlants: { x: number; side: "left" | "right"; scale: number }[] = [
+    { x: 20, side: "right", scale: 0.85 },
+  ];
+  
+  // ==========================================
+  // ZONE 3: TRANSITION (x: 25 to 30)
+  // Clear movement path
+  // ==========================================
+  
+  // ==========================================
+  // ZONE 4: CLASSROOM B (x: 30 to 47)
+  // Academic area
+  // ==========================================
+  const classroomBPlants: { x: number; side: "left" | "right"; scale: number }[] = [
+    { x: 40, side: "left", scale: 0.9 },
+  ];
+  
+  // ==========================================
+  // ZONE 5: LOCKER AREA (x: 47 to 55)
+  // Organized storage
+  // ==========================================
+  const lockerAreaPlants: { x: number; side: "left" | "right"; scale: number }[] = [
+    { x: 50, side: "right", scale: 1.0 },
+    { x: 54, side: "left", scale: 0.85 },
+  ];
+  
+  // ==========================================
+  // ZONE 6: END AREA (x: 55 to 65)
+  // Decorative terminus
+  // ==========================================
+  const endAreaPlants: { x: number; side: "left" | "right"; scale: number }[] = [
+    { x: 58, side: "right", scale: 1.1 },
+    { x: 62, side: "left", scale: 0.9 },
+  ];
+  
+  // ==========================================
+  // UTILITY: Vending Machines
+  // Placed at zone transitions
+  // ==========================================
   const vendingMachines: { x: number; side: "left" | "right" }[] = [
-    { x: 3, side: "right" },
-    { x: 35, side: "left" },
-    { x: 53, side: "right" },
+    { x: 8, side: "right" },
+    { x: 30, side: "left" },
+    { x: 55, side: "right" },
   ];
-
-  const plants: { x: number; side: "left" | "right"; scale: number }[] = [
-    { x: 2, side: "left", scale: 1.0 },
-    { x: 18, side: "right", scale: 0.9 },
-    { x: 36, side: "left", scale: 1.1 },
-    { x: 54, side: "right", scale: 0.85 },
-    { x: -30, side: "right", scale: 1.2 },
-    { x: 32, side: "right", scale: 0.95 },
+  
+  // ==========================================
+  // UTILITY: Water Coolers
+  // Near classrooms
+  // ==========================================
+  const waterCoolers: { x: number; side: "left" | "right" }[] = [
+    { x: 12, side: "left" },
+    { x: 35, side: "right" },
   ];
-
+  
+  // ==========================================
+  // UTILITY: Ceiling Vents
+  // Evenly spaced throughout
+  // ==========================================
   const vents = [5, 15, 25, 35, 45, 55];
-
+  
+  // ==========================================
+  // UTILITY: AC Units
+  // Near zones that need climate control
+  // ==========================================
   const acUnits: { x: number; side: "left" | "right" }[] = [
-    { x: 10, side: "left" },
-    { x: 28, side: "right" },
-    { x: 46, side: "left" },
+    { x: 15, side: "left" },
+    { x: 38, side: "right" },
   ];
-
+  
+  // ==========================================
+  // UTILITY: Floor Mats
+  // At zone entrances
+  // ==========================================
   const floorMats: { x: number; side: "left" | "right" }[] = [
-    { x: 10, side: "left" },
-    { x: 28, side: "right" },
-    { x: 46, side: "left" },
+    { x: 8, side: "left" },
+    { x: 25, side: "right" },
+    { x: 47, side: "left" },
   ];
-
+  
+  // ==========================================
+  // UTILITY: Direction Arrows
+  // Guide player toward objectives
+  // ==========================================
   const floorArrows: { x: number; rotation: number }[] = [
-    { x: 19, rotation: 0 },
-    { x: 37, rotation: 0 },
-    { x: 55, rotation: 0 },
+    { x: 18, rotation: 0 },
+    { x: 40, rotation: 0 },
   ];
-
-  const cleaningSigns: { x: number; side: "left" | "right" }[] = [
-    { x: 14, side: "right" },
-    { x: 32, side: "left" },
-    { x: 50, side: "right" },
-  ];
-
-  const extraLockers: { x: number; z: number; index: number }[] = [
-    { x: -25, z: WORLD.CORRIDOR_WIDTH / 2 - 0.15, index: 0 },
-    { x: -23, z: WORLD.CORRIDOR_WIDTH / 2 - 0.15, index: 1 },
-    { x: -21, z: WORLD.CORRIDOR_WIDTH / 2 - 0.15, index: 2 },
-    { x: 60, z: -WORLD.CORRIDOR_WIDTH / 2 + 0.15, index: 3 },
-    { x: 62, z: -WORLD.CORRIDOR_WIDTH / 2 + 0.15, index: 4 },
-    { x: 64, z: -WORLD.CORRIDOR_WIDTH / 2 + 0.15, index: 5 },
+  
+  // ==========================================
+  // LOCKERS: Along walls
+  // ==========================================
+  const wallLockers: { x: number; z: number; index: number }[] = [
+    // Left wall lockers (negative Z)
+    { x: 48, z: WALL_Z_LEFT + 0.25, index: 0 },
+    { x: 49, z: WALL_Z_LEFT + 0.25, index: 1 },
+    { x: 50, z: WALL_Z_LEFT + 0.25, index: 2 },
+    { x: 51, z: WALL_Z_LEFT + 0.25, index: 3 },
+    { x: 52, z: WALL_Z_LEFT + 0.25, index: 4 },
+    // Right wall lockers (positive Z)
+    { x: 53, z: WALL_Z_RIGHT - 0.25, index: 5 },
+    { x: 54, z: WALL_Z_RIGHT - 0.25, index: 6 },
   ];
 
   return (
     <group>
-      {benches.map((b, i) => <Bench key={`bench-${i}`} x={b.x} side={b.side} />)}
-      {waterCoolers.map((wc, i) => <WaterCooler key={`cooler-${i}`} x={wc.x} side={wc.side} />)}
-      {vendingMachines.map((vm, i) => <VendingMachine key={`vending-${i}`} x={vm.x} side={vm.side} />)}
-      {plants.map((p, i) => <PottedPlant key={`plant-${i}`} x={p.x} side={p.side} scale={p.scale} />)}
-      {vents.map((v, i) => <CeilingVent key={`vent-${i}`} x={v} />)}
-      {acUnits.map((ac, i) => <ACUnit key={`ac-${i}`} x={ac.x} side={ac.side} />)}
-      {floorMats.map((fm, i) => <FloorMat key={`mat-${i}`} x={fm.x} side={fm.side} />)}
-      {floorArrows.map((fa, i) => <FloorArrow key={`arrow-${i}`} x={fa.x} rotation={fa.rotation} />)}
-      {cleaningSigns.map((cs, i) => <CleaningSign key={`clean-${i}`} x={cs.x} side={cs.side} />)}
-      {extraLockers.map((el, i) => <ColoredLocker key={`locker-${i}`} x={el.x} z={el.z} index={el.index} />)}
+      {/* Benches - Rest areas */}
+      {entranceBenches.map((b, i) => (
+        <Bench key={`bench-${i}`} x={b.x} side={b.side} />
+      ))}
+      
+      {/* Water Coolers */}
+      {waterCoolers.map((wc, i) => (
+        <WaterCooler key={`cooler-${i}`} x={wc.x} side={wc.side} />
+      ))}
+      
+      {/* Vending Machines */}
+      {vendingMachines.map((vm, i) => (
+        <VendingMachine key={`vending-${i}`} x={vm.x} side={vm.side} />
+      ))}
+      
+      {/* Plants - Scattered throughout */}
+      {[...entrancePlants, ...classroomAPlants, ...classroomBPlants, ...lockerAreaPlants, ...endAreaPlants].map((p, i) => (
+        <PottedPlant key={`plant-${i}`} x={p.x} side={p.side} scale={p.scale} />
+      ))}
+      
+      {/* Ceiling Vents */}
+      {vents.map((v, i) => (
+        <CeilingVent key={`vent-${i}`} x={v} />
+      ))}
+      
+      {/* AC Units */}
+      {acUnits.map((ac, i) => (
+        <ACUnit key={`ac-${i}`} x={ac.x} side={ac.side} />
+      ))}
+      
+      {/* Floor Mats */}
+      {floorMats.map((fm, i) => (
+        <FloorMat key={`mat-${i}`} x={fm.x} side={fm.side} />
+      ))}
+      
+      {/* Floor Arrows */}
+      {floorArrows.map((fa, i) => (
+        <FloorArrow key={`arrow-${i}`} x={fa.x} rotation={fa.rotation} />
+      ))}
+      
+      {/* Lockers - Aligned along walls */}
+      {wallLockers.map((el, i) => (
+        <ColoredLocker key={`locker-${i}`} x={el.x} z={el.z} index={el.index} />
+      ))}
     </group>
   );
 }

@@ -22,6 +22,7 @@ import type {
   NPCSerializedState,
   NPCInteractionEvent,
   Vector3D,
+  INPCManager,
 } from "../types";
 import { getNPCManager } from "../controller";
 import { NPC_REGISTRY } from "../data";

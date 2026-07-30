@@ -169,7 +169,7 @@ export function GamePlayerIntegrated({
   pantsColor,
   skinColor,
   hairColor,
-  enableCamera = true,
+  enableCamera = false, // Default false - CameraController handles camera
   cameraOffset,
   cameraSmoothing,
   externalInputRef,
@@ -200,7 +200,7 @@ export function GamePlayerIntegrated({
 }
 
 function GamePlayerIntegratedInternal({
-  enableCamera,
+  enableCamera = false, // Default to FALSE - CameraController handles camera
   cameraOffset,
   cameraSmoothing,
   shirtColor,

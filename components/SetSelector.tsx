@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { playSfx } from "@/lib/sound";
 
-const iconMap: Record<string, React.ElementType> = {
+const iconMap: Record<string, React.FC<{ size?: number; style?: React.CSSProperties }>> = {
   "book-open": BookOpen,
   "graduation-cap": GraduationCap,
   terminal: Terminal,
@@ -23,7 +23,7 @@ const iconMap: Record<string, React.ElementType> = {
   globe: Globe,
 };
 
-const sectionIconMap: Record<string, React.ElementType> = {
+const sectionIconMap: Record<string, React.FC<{ size?: number; style?: React.CSSProperties }>> = {
   reading: BookText,
   speaking: Mic,
 };
@@ -37,7 +37,7 @@ export default function SetSelector({ onSelect }: SetSelectorProps) {
 
   const handleSetClick = (setId: string) => {
     playSfx("click");
-    setExpandedSet(expandedSet === setId ? null : setId);
+    setExpandedSet((prev) => (prev === setId ? null : setId));
   };
 
   const handleSubSetClick = (setId: string, subSetId: string, questionCount: number) => {
